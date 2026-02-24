@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://b0l3jwc40s1xq"]
+[gd_scene format=3 uid="uid://bpabjkk03bhhh"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_4hhu5"]
-[ext_resource type="Texture2D" uid="uid://cbxqlrrrg87b8" path="res://Assets/Textures/garden.jpg" id="2_oy1xr"]
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_vtipk"]
+[ext_resource type="Texture2D" uid="uid://rq4el8ctt0mw" path="res://Assets/Textures/forest.jpg" id="2_0uunn"]
 
-[node name="Garden" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[node name="Forest" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchors_preset = 15
@@ -13,12 +13,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_4hhu5")
-place_name = "garden"
-button_left = NodePath("Buttons/Left")
-place_left = "forest"
+script = ExtResource("1_vtipk")
 button_right = NodePath("Buttons/Right")
-place_right = "castle_outside"
+place_right = "garden"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -27,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_oy1xr")
+texture = ExtResource("2_0uunn")
 expand_mode = 1
 
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
@@ -39,6 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
