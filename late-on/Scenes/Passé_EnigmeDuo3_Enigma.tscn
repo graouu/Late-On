@@ -1,0 +1,444 @@
+[gd_scene format=3 uid="uid://60svxxoqguj2"]
+
+[ext_resource type="Texture2D" uid="uid://dkmbud3qpirwr" path="res://icon.svg" id="1_idapx"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/ending2.png" id="2_4wghx"]
+[ext_resource type="Script" uid="uid://dyennbsns6ia6" path="res://Scenes/SpaceDrop.gd" id="4_i5y8v"]
+[ext_resource type="Script" uid="uid://bybpawqctnmii" path="res://Scripts/DropableIcon.gd" id="5_boa88"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
+size = Vector2(5.2400002, 5.6399994)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
+size = Vector2(128, 127.5)
+
+[node name="Control" type="Node2D" unique_id=28566512]
+
+[node name="BlockInside1" type="StaticBody2D" parent="." unique_id=2125899611 groups=["dropable_perso"]]
+position = Vector2(103.00001, 1271)
+scale = Vector2(5.0485497, 5.048549)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside1" unique_id=1230570643]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside1" unique_id=1872592643]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside2" type="StaticBody2D" parent="." unique_id=1746438890 groups=["dropable_perso"]]
+position = Vector2(267, 1267)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside2" unique_id=1453973369]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside2" unique_id=1999507415]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside3" type="StaticBody2D" parent="." unique_id=883970909 groups=["dropable_perso"]]
+position = Vector2(428.00003, 1272)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside3" unique_id=2146396815]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside3" unique_id=665118140]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside4" type="StaticBody2D" parent="." unique_id=895306580 groups=["dropable_perso"]]
+position = Vector2(587.99994, 1277)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside4" unique_id=213656828]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside4" unique_id=1076301371]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside5" type="StaticBody2D" parent="." unique_id=1641874507 groups=["dropable_perso"]]
+position = Vector2(762, 1278)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside5" unique_id=382782852]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside5" unique_id=281980463]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside6" type="StaticBody2D" parent="." unique_id=708635356 groups=["dropable_perso"]]
+position = Vector2(92, 1070)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside6" unique_id=666040726]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside6" unique_id=1718320655]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside7" type="StaticBody2D" parent="." unique_id=528611064 groups=["dropable_perso"]]
+position = Vector2(276, 1070.0001)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside7" unique_id=1772168270]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside7" unique_id=399860162]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside8" type="StaticBody2D" parent="." unique_id=300857713 groups=["dropable_perso"]]
+position = Vector2(436.99997, 1070.9999)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside8" unique_id=1186514911]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside8" unique_id=1962005529]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside9" type="StaticBody2D" parent="." unique_id=656096669 groups=["dropable_perso"]]
+position = Vector2(596.99994, 1074.9999)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside9" unique_id=70165623]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside9" unique_id=1001061640]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside10" type="StaticBody2D" parent="." unique_id=1360261132 groups=["dropable_perso"]]
+position = Vector2(762.99994, 1070.9999)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside10" unique_id=415881106]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside10" unique_id=1337916433]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside11" type="StaticBody2D" parent="." unique_id=2083950431 groups=["dropable_perso"]]
+position = Vector2(106, 1456)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside11" unique_id=249899426]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside11" unique_id=1244922452]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside12" type="StaticBody2D" parent="." unique_id=2089740013 groups=["dropable_perso"]]
+position = Vector2(275.00003, 1452)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside12" unique_id=199786594]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside12" unique_id=1487887243]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside13" type="StaticBody2D" parent="." unique_id=636729670 groups=["dropable_perso"]]
+position = Vector2(436.99997, 1446.9999)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside13" unique_id=110056376]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside13" unique_id=407635404]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockInside14" type="StaticBody2D" parent="." unique_id=1769690572 groups=["dropable_perso"]]
+position = Vector2(601.99994, 1451.9999)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockInside14" unique_id=80666879]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockInside14" unique_id=108419172]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlockMenteur" type="StaticBody2D" parent="." unique_id=1102373997 groups=["dropable_perso"]]
+position = Vector2(911.99994, 1628.9999)
+scale = Vector2(5, 5)
+script = ExtResource("4_i5y8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockMenteur" unique_id=1758356670]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="BlockMenteur" unique_id=1284153689]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2078142667]
+z_index = -1
+position = Vector2(-106, 931)
+scale = Vector2(4.9577007, 4.9815845)
+texture = ExtResource("2_4wghx")
+
+[node name="Perso1" type="Node2D" parent="." unique_id=1947470154 groups=["perso"]]
+z_index = 1
+position = Vector2(91, 731)
+
+[node name="Area2D" type="Area2D" parent="Perso1" unique_id=844041903]
+script = ExtResource("5_boa88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perso1/Area2D" unique_id=1057812132]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="IconPerso1" type="Sprite2D" parent="Perso1/Area2D" unique_id=564394127]
+modulate = Color(0, 0, 0.011764706, 1)
+texture = ExtResource("1_idapx")
+
+[node name="Perso2" type="Node2D" parent="." unique_id=1701192431]
+z_index = 1
+position = Vector2(233, 734)
+
+[node name="Area2D" type="Area2D" parent="Perso2" unique_id=776307010]
+script = ExtResource("5_boa88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perso2/Area2D" unique_id=594719001]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="IconPerso2" type="Sprite2D" parent="Perso2/Area2D" unique_id=1862553809]
+modulate = Color(0.8144524, 0.12763807, 0.7886616, 1)
+texture = ExtResource("1_idapx")
+
+[node name="Perso3" type="Node2D" parent="." unique_id=46140507]
+z_index = 1
+position = Vector2(378, 729)
+
+[node name="Area2D" type="Area2D" parent="Perso3" unique_id=1654075885]
+script = ExtResource("5_boa88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perso3/Area2D" unique_id=138127113]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="IconPerso3" type="Sprite2D" parent="Perso3/Area2D" unique_id=1000978096]
+modulate = Color(0.41960785, 1, 1, 1)
+texture = ExtResource("1_idapx")
+
+[node name="Perso4" type="Node2D" parent="." unique_id=1638093171]
+z_index = 1
+position = Vector2(521, 728)
+
+[node name="Area2D" type="Area2D" parent="Perso4" unique_id=1894546698]
+script = ExtResource("5_boa88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perso4/Area2D" unique_id=805009125]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="IconPerso4" type="Sprite2D" parent="Perso4/Area2D" unique_id=1945532344]
+modulate = Color(0.9764706, 1, 0, 1)
+texture = ExtResource("1_idapx")
+
+[node name="Perso5" type="Node2D" parent="." unique_id=1965181129]
+z_index = 1
+position = Vector2(665, 731)
+
+[node name="Area2D" type="Area2D" parent="Perso5" unique_id=1336134444]
+script = ExtResource("5_boa88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perso5/Area2D" unique_id=1736657549]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="IconPerso5" type="Sprite2D" parent="Perso5/Area2D" unique_id=1629358451]
+modulate = Color(1, 0.24705882, 0.05882353, 1)
+texture = ExtResource("1_idapx")
+
+[node name="Perso6" type="Node2D" parent="." unique_id=746629059]
+z_index = 1
+position = Vector2(825, 736)
+
+[node name="Area2D" type="Area2D" parent="Perso6" unique_id=404911699]
+script = ExtResource("5_boa88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perso6/Area2D" unique_id=1028148548]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="IconPerso6" type="Sprite2D" parent="Perso6/Area2D" unique_id=1631467633]
+modulate = Color(0.14901961, 1, 0.08627451, 1)
+texture = ExtResource("1_idapx")
+
+[connection signal="body_entered" from="Perso1/Area2D" to="Perso1/Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Perso1/Area2D" to="Perso1/Area2D" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Perso1/Area2D" to="Perso1/Area2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Perso1/Area2D" to="Perso1/Area2D" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Perso2/Area2D" to="Perso2/Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Perso2/Area2D" to="Perso2/Area2D" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Perso2/Area2D" to="Perso2/Area2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Perso2/Area2D" to="Perso2/Area2D" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Perso3/Area2D" to="Perso3/Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Perso3/Area2D" to="Perso3/Area2D" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Perso3/Area2D" to="Perso3/Area2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Perso3/Area2D" to="Perso3/Area2D" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Perso4/Area2D" to="Perso4/Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Perso4/Area2D" to="Perso4/Area2D" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Perso4/Area2D" to="Perso4/Area2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Perso4/Area2D" to="Perso4/Area2D" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Perso5/Area2D" to="Perso5/Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Perso5/Area2D" to="Perso5/Area2D" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Perso5/Area2D" to="Perso5/Area2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Perso5/Area2D" to="Perso5/Area2D" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Perso6/Area2D" to="Perso6/Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Perso6/Area2D" to="Perso6/Area2D" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Perso6/Area2D" to="Perso6/Area2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Perso6/Area2D" to="Perso6/Area2D" method="_on_area_2d_mouse_exited"]
