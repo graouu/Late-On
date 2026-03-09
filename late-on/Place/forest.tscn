@@ -1,21 +1,26 @@
 [gd_scene format=3 uid="uid://bpabjkk03bhhh"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_vtipk"]
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/place.gd" id="1_vtipk"]
 [ext_resource type="Texture2D" uid="uid://rq4el8ctt0mw" path="res://Assets/Textures/forest.jpg" id="2_0uunn"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scenes/interactable.gd" id="3_vkcwy"]
+[ext_resource type="Texture2D" uid="uid://cf76ol2sku3ds" path="res://Assets/Buttons_Proto/Shop_Grimoire1.png" id="4_05uty"]
 
-[node name="Forest" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right")]
+[node name="Forest" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_vtipk")
+place_name = "forest"
 button_right = NodePath("Buttons/Right")
 place_right = "garden"
+interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -34,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
 visible = false
@@ -91,3 +97,26 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=293435384]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38500002
+anchor_top = 0.537
+anchor_right = 0.51600003
+anchor_bottom = 0.68200004
+offset_left = 94.19998
+offset_top = 400.95996
+offset_right = 93.71997
+offset_bottom = 401.35986
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_05uty")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_vkcwy")
+dialogue_text = "\"Un livre?? Dans une Forêt? C'est un prank??"
+dialogue_texture = ExtResource("4_05uty")
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]

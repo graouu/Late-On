@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b0l3jwc40s1xq" path="res://Place/garden.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
-[ext_resource type="Script" uid="uid://bmty0vl5mj7sp" path="res://Scenes/audio_dialogue.gd" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://bmty0vl5mj7sp" path="res://Scripts/audio_dialogue.gd" id="5_pbw6q"]
 
 [sub_resource type="FontVariation" id="FontVariation_pbw6q"]
 variation_embolden = 1.03
@@ -120,7 +120,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_idj7w")
-place_control = NodePath("VBoxContainer/Control")
+place_control = NodePath("VBoxContainer/PlaceContainer")
 black_anim = NodePath("ColorRect/AnimationPlayer")
 dialogues = NodePath("Dialogue")
 
@@ -137,14 +137,15 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(1080, 640)
 layout_mode = 2
 
-[node name="Control" type="Control" parent="VBoxContainer" unique_id=722058883]
+[node name="PlaceContainer" type="Control" parent="VBoxContainer" unique_id=722058883]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Garden" parent="VBoxContainer/Control" unique_id=975123972 instance=ExtResource("1_r150o")]
+[node name="Garden" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("1_r150o")]
 layout_mode = 1
+offset_bottom = 426.23993
 
-[node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "sound_player", "dialogue_timer")]
+[node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "dialogue_texture", "sound_player", "dialogue_timer")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -155,6 +156,7 @@ grow_vertical = 2
 script = ExtResource("3_kln2b")
 dialogue_label = NodePath("ColorRect/ColorRect/DialogueText")
 name_label = NodePath("ColorRect/ColorRect/Name")
+dialogue_texture = NodePath("ColorRect/DialogueObject")
 sound_player = NodePath("AudioStreamPlayer")
 dialogue_timer = NodePath("Timer")
 
@@ -166,6 +168,21 @@ offset_right = 1080.0
 offset_bottom = 1920.0
 size_flags_vertical = 3
 color = Color(0, 0, 0, 0.42352942)
+
+[node name="DialogueObject" type="TextureRect" parent="Dialogue/ColorRect" unique_id=1291847530]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="VBoxContainer" parent="Dialogue/ColorRect" unique_id=162503297]
 custom_minimum_size = Vector2(0, 400)

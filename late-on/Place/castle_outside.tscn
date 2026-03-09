@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://owrfs12eafmm"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_hmyji"]
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/place.gd" id="1_hmyji"]
 [ext_resource type="Texture2D" uid="uid://dsa3nrqplibsx" path="res://Assets/Textures/castle_outside.jpg" id="2_hmyji"]
 
 [node name="Castle Outside" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_up", "button_down")]
@@ -9,11 +9,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_hmyji")
+place_name = "castle_outside"
 button_up = NodePath("Buttons/Up")
 place_up = "castle_inside"
 button_down = NodePath("Buttons/Down")

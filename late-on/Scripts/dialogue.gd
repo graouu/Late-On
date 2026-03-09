@@ -4,6 +4,8 @@ class_name Dialogue extends Control
 @export var dialogue_label : RichTextLabel
 #Le Label qui affiche le nom de la personne
 @export var name_label : Label
+#La texture de l'objet/personne du dialogue
+@export var dialogue_texture : TextureRect
 #Le Node qui joue les Sons
 @export var sound_player : AudioStreamPlayer
 #Le Timer qui gère le temps que prend le dialogue à se jouer
@@ -12,11 +14,15 @@ class_name Dialogue extends Control
 var next_dialogue : String
 var tween : Tween
 
-func play_dialogue(text : String, character : String):
+func play_dialogue(text : String, character : String, texture : Texture2D = null):
 	dialogue_timer.wait_time = 0.02*text.length()
 	dialogue_label.text = ""
 	name_label.text = character
 	next_dialogue = text
+	if texture != null:
+		dialogue_texture.texture = texture
+	else:
+		dialogue_texture.texture = null
 	show()
 	tween = create_tween()
 	tween.tween_property(dialogue_label, "text", next_dialogue, dialogue_timer.wait_time)

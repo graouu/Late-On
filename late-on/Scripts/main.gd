@@ -15,6 +15,7 @@ func _ready() -> void:
 	load_places()
 	current_place = place_control.get_child(0)
 	current_place.go_to.connect(move)
+	current_place.open_dialogue.connect(dialogues.play_dialogue)
 	dialogues.play_dialogue("Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Moi")
 	
 
@@ -34,6 +35,8 @@ func move(place : String):
 	place_control.get_child(0).queue_free()
 	current_place = place_dic[place].instantiate()
 	place_control.add_child(current_place)
+	current_place.position = Vector2(0,0)
 	current_place.go_to.connect(move)
+	current_place.open_dialogue.connect(dialogues.play_dialogue)
 	
 	black_anim.play('detransition')
