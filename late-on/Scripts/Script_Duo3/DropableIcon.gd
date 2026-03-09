@@ -15,15 +15,20 @@ func _process(_delta: float) -> void:
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			global.is_dragging = true
+			global.type = "perso"
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
 			global.is_dragging = false
+			global.type = "empty"
 			var tween = get_tree().create_tween()
 			#Snap inside area when released inside droppable area
 			if is_inside_dropable:
 				tween.tween_property(self,"global_position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 				body_ref.is_inside_empty = false
+				body_ref.name_inside = self.name
+				print("Icon remplie:")
+				print (body_ref.name_inside)
 				current_body = body_ref
 			#Return to original pos when released outside droppable area
 			else:
@@ -49,6 +54,9 @@ func _on_area_2d_body_entered(body:StaticBody2D):
 		# libérer les cases vides
 		if current_body and current_body != body_ref:
 			current_body.is_inside_empty = true
+			current_body.name_inside = "empty"
+			print("Icon vidé:")
+			print (current_body.name_inside)
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group('dropable_perso'):

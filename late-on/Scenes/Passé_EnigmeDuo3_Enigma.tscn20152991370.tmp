@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dkmbud3qpirwr" path="res://icon.svg" id="1_idapx"]
 [ext_resource type="Script" uid="uid://c4gghxguabcvd" path="res://EnigmeDuo3.gd" id="1_xprkb"]
 [ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/ending2.png" id="2_4wghx"]
-[ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="2_msgg5"]
-[ext_resource type="Script" uid="uid://dyennbsns6ia6" path="res://Scripts/Script_Duo3/SpaceDrop.gd" id="4_i5y8v"]
-[ext_resource type="Script" uid="uid://bybpawqctnmii" path="res://Scripts/Script_Duo3/DropableIcon.gd" id="5_boa88"]
-[ext_resource type="Script" uid="uid://cn4uwo2katieh" path="res://Scripts/Script_Duo3/Dropable_Job.gd" id="5_isc6h"]
+[ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/SpaceDrop_Job.gd" id="2_msgg5"]
+[ext_resource type="Script" uid="uid://dyennbsns6ia6" path="res://Scripts/SpaceDrop.gd" id="4_i5y8v"]
+[ext_resource type="Script" uid="uid://bybpawqctnmii" path="res://Scripts/DropableIcon.gd" id="5_boa88"]
+[ext_resource type="Script" uid="uid://cn4uwo2katieh" path="res://Scripts/Dropable_Job.gd" id="5_isc6h"]
 [ext_resource type="Texture2D" uid="uid://bw5j32dxjyyqg" path="res://Assets/Buttons_Proto/placeHolderLover.png" id="5_lk2ia"]
 [ext_resource type="Texture2D" uid="uid://buwb8kn0hxyr7" path="res://Assets/Buttons_Proto/placeHolderMoney.png" id="6_isc6h"]
 [ext_resource type="Texture2D" uid="uid://dnxth3ibqrxsg" path="res://Assets/Buttons_Proto/placeHolderNobility.png" id="7_msgg5"]
@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Buttons_Proto/placeHolderScribe.png" id="9_7i1vl"]
 [ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Buttons_Proto/keyReturn.png" id="10_fkr11"]
 [ext_resource type="Texture2D" uid="uid://o23n8qww3lvo" path="res://Assets/Buttons_Proto/placeHolderForge.png" id="11_eam4g"]
-[ext_resource type="Script" uid="uid://dojgu5tpdnexg" path="res://Scripts/Script_Duo3/button_return.gd" id="14_7i1vl"]
-[ext_resource type="Script" uid="uid://bh6yoaeattsro" path="res://Scripts/Script_Duo3/button_validate.gd" id="16_fkr11"]
+[ext_resource type="Script" uid="uid://dojgu5tpdnexg" path="res://Scenes/button_return.gd" id="14_7i1vl"]
+[ext_resource type="Script" uid="uid://bh6yoaeattsro" path="res://Scenes/button_validate.gd" id="16_fkr11"]
 [ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Buttons_Proto/LittleTxt.png" id="17_eam4g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
@@ -1087,13 +1087,11 @@ text = "Menteur :"
 [node name="PopUp" type="Node2D" parent="." unique_id=813955419]
 
 [node name="ShapePopUp" type="Sprite2D" parent="PopUp" unique_id=201039772]
-z_index = 1
 position = Vector2(937.50006, 1008)
 scale = Vector2(2.6125, 4.05)
 texture = ExtResource("17_eam4g")
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
-z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

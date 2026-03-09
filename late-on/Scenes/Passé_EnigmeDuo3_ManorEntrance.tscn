@@ -2,11 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://g24xtidgqyd2" path="res://Assets/Textures/castle_inside.jpg" id="1_w0tjc"]
 [ext_resource type="Texture2D" uid="uid://i0vtosiwbboa" path="res://Assets/Perso_Proto/Perso1.png" id="2_ereqj"]
+[ext_resource type="Script" uid="uid://b4ltvo5efx7s5" path="res://Scripts/Script_Duo3/button_perso_1.gd" id="3_f32dv"]
 [ext_resource type="Texture2D" uid="uid://b3yyidor1tmax" path="res://Assets/Perso_Proto/Perso2.png" id="3_lsebk"]
 [ext_resource type="Texture2D" uid="uid://clryjn8cpdu3u" path="res://Assets/Perso_Proto/Perso3.png" id="4_d6nqx"]
 [ext_resource type="Texture2D" uid="uid://bfvoxe6s0i7x6" path="res://Assets/Perso_Proto/Perso4.png" id="5_f32dv"]
+[ext_resource type="Script" uid="uid://d0a5va7yfo21e" path="res://Scripts/Script_Duo3/button_perso_2.gd" id="5_l62s1"]
 [ext_resource type="Texture2D" uid="uid://cnvs2stumugqt" path="res://Assets/Perso_Proto/Perso5.png" id="6_2bso6"]
 [ext_resource type="Texture2D" uid="uid://cckicedbct76w" path="res://Assets/Perso_Proto/Perso6.png" id="7_6il2e"]
+[ext_resource type="Script" uid="uid://8h4c8k4huv6w" path="res://Scripts/Script_Duo3/button_perso_3.gd" id="7_rrpn1"]
+[ext_resource type="Script" uid="uid://dyay54yiht2e3" path="res://Scripts/Script_Duo3/button_perso_4.gd" id="9_auq0r"]
+[ext_resource type="Texture2D" uid="uid://cf76ol2sku3ds" path="res://Assets/Buttons_Proto/Shop_Grimoire1.png" id="9_u77i8"]
+[ext_resource type="Script" uid="uid://vnuno1ensco4" path="res://Scripts/Script_Duo3/PopUpBlabla.gd" id="10_l62s1"]
+[ext_resource type="Script" uid="uid://bkhr4wdp44koy" path="res://Scripts/Script_Duo3/button_perso_5.gd" id="11_m5l1x"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Buttons_Proto/LittleTxt.png" id="11_vn2dm"]
+[ext_resource type="Script" uid="uid://c60kkpfo4qdes" path="res://Scripts/Script_Duo3/button_perso_6.gd" id="13_abbq2"]
+[ext_resource type="Script" uid="uid://cjnbmmsyuqdw" path="res://Scripts/Script_Duo3/button_Book.gd" id="15_h1wka"]
 
 [node name="Control" type="Control" unique_id=1327342452]
 layout_mode = 3
@@ -55,6 +65,7 @@ offset_bottom = -745.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("2_ereqj")
+script = ExtResource("3_f32dv")
 
 [node name="Button_Perso2" type="TextureButton" parent="." unique_id=1242026023]
 layout_mode = 1
@@ -71,6 +82,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("3_lsebk")
 stretch_mode = 5
+script = ExtResource("5_l62s1")
 
 [node name="Button_Perso3" type="TextureButton" parent="." unique_id=1616391142]
 layout_mode = 1
@@ -87,6 +99,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("4_d6nqx")
 stretch_mode = 5
+script = ExtResource("7_rrpn1")
 
 [node name="Button_Perso4" type="TextureButton" parent="." unique_id=1595014019]
 layout_mode = 1
@@ -103,6 +116,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("5_f32dv")
 stretch_mode = 5
+script = ExtResource("9_auq0r")
 
 [node name="Button_Perso5" type="TextureButton" parent="." unique_id=1839131022]
 layout_mode = 1
@@ -119,6 +133,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("6_2bso6")
 stretch_mode = 5
+script = ExtResource("11_m5l1x")
 
 [node name="Button_Perso6" type="TextureButton" parent="." unique_id=2068157799]
 layout_mode = 1
@@ -135,3 +150,59 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("7_6il2e")
 stretch_mode = 5
+script = ExtResource("13_abbq2")
+
+[node name="Button_Book" type="TextureButton" parent="." unique_id=1921447372]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -523.0
+offset_top = -221.0
+offset_right = -368.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("9_u77i8")
+stretch_mode = 5
+script = ExtResource("15_h1wka")
+
+[node name="PopUp" type="Node2D" parent="." unique_id=482245195]
+z_index = 1
+script = ExtResource("10_l62s1")
+
+[node name="LittleTxt" type="Sprite2D" parent="PopUp" unique_id=127888315]
+position = Vector2(616.00006, 1794.0001)
+scale = Vector2(11.05, 4.5625033)
+texture = ExtResource("11_vn2dm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PopUp" unique_id=277867485]
+offset_left = 183.0
+offset_top = 1716.0
+offset_right = 1043.0
+offset_bottom = 1874.0
+theme_override_font_sizes/normal_font_size = 32
+
+[connection signal="mouse_entered" from="Button_Perso1" to="Button_Perso1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Perso1" to="Button_Perso1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Perso1" to="Button_Perso1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Perso2" to="Button_Perso2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Perso2" to="Button_Perso2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Perso2" to="Button_Perso2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Perso3" to="Button_Perso3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Perso3" to="Button_Perso3" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Perso3" to="Button_Perso3" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Perso4" to="Button_Perso4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Perso4" to="Button_Perso4" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Perso4" to="Button_Perso4" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Perso5" to="Button_Perso5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Perso5" to="Button_Perso5" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Perso5" to="Button_Perso5" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Perso6" to="Button_Perso6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Perso6" to="Button_Perso6" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Perso6" to="Button_Perso6" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Book" to="Button_Book" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Book" to="Button_Book" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Book" to="Button_Book" method="_on_pressed"]
