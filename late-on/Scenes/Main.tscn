@@ -2,6 +2,23 @@
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://b0l3jwc40s1xq" path="res://Place/garden.tscn" id="1_r150o"]
+[ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
+[ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
+[ext_resource type="Script" uid="uid://bmty0vl5mj7sp" path="res://Scenes/audio_dialogue.gd" id="5_pbw6q"]
+
+[sub_resource type="FontVariation" id="FontVariation_pbw6q"]
+variation_embolden = 1.03
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbw6q"]
+font = SubResource("FontVariation_pbw6q")
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idj7w"]
+content_margin_left = 40.0
+content_margin_top = 20.0
+content_margin_right = 40.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.5176471)
 
 [sub_resource type="Animation" id="Animation_idj7w"]
 length = 0.001
@@ -16,6 +33,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_rgh2o"]
@@ -33,6 +62,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_kln2b"]
 resource_name = "transition"
@@ -49,6 +90,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rgh2o"]
 _data = {
@@ -57,7 +110,7 @@ _data = {
 &"transition": SubResource("Animation_kln2b")
 }
 
-[node name="Control" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "black_anim")]
+[node name="Control2" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "black_anim", "dialogues")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,6 +122,7 @@ size_flags_vertical = 3
 script = ExtResource("1_idj7w")
 place_control = NodePath("VBoxContainer/Control")
 black_anim = NodePath("ColorRect/AnimationPlayer")
+dialogues = NodePath("Dialogue")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
 layout_mode = 1
@@ -90,7 +144,63 @@ size_flags_vertical = 3
 [node name="Garden" parent="VBoxContainer/Control" unique_id=975123972 instance=ExtResource("1_r150o")]
 layout_mode = 1
 
+[node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "sound_player", "dialogue_timer")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_kln2b")
+dialogue_label = NodePath("ColorRect/ColorRect/DialogueText")
+name_label = NodePath("ColorRect/ColorRect/Name")
+sound_player = NodePath("AudioStreamPlayer")
+dialogue_timer = NodePath("Timer")
+
+[node name="ColorRect" type="ColorRect" parent="Dialogue" unique_id=1453163356]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 0
+offset_top = 640.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.42352942)
+
+[node name="ColorRect" type="VBoxContainer" parent="Dialogue/ColorRect" unique_id=162503297]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -359.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Name" type="Label" parent="Dialogue/ColorRect/ColorRect" unique_id=1109448770]
+layout_mode = 2
+text = "Lorem Ipsum"
+label_settings = SubResource("LabelSettings_pbw6q")
+vertical_alignment = 1
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/ColorRect/ColorRect" unique_id=1892270292]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_idj7w")
+text = "Ceci est un test de dialogue."
+scroll_following = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialogue" unique_id=158385038]
+stream = ExtResource("4_rgh2o")
+parameters/looping = true
+script = ExtResource("5_pbw6q")
+
+[node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15

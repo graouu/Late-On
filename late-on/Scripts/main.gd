@@ -8,11 +8,14 @@ extends Control
 @export var place_dic : Dictionary[String, PackedScene]
 #Animateur de la texture noire pour la transition
 @export var black_anim : AnimationPlayer
+#Node qui gère les dialogues
+@export var dialogues : Dialogue
 
 func _ready() -> void:
 	load_places()
 	current_place = place_control.get_child(0)
 	current_place.go_to.connect(move)
+	dialogues.play_dialogue("Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Moi")
 	
 
 #Charge toutes les scènes d'endroits dans le dossier Place
