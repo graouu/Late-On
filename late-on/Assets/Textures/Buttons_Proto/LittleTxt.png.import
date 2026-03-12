@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3yyidor1tmax"
-path="res://.godot/imported/Perso2.png-07e70760a217ffdff893e07d0bd6209f.ctex"
+uid="uid://dned2wl2vkbu5"
+path="res://.godot/imported/LittleTxt.png-ac9b1c736fbc38c53e775e7fbd1a9f21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Perso_Proto/Perso2.png"
-dest_files=["res://.godot/imported/Perso2.png-07e70760a217ffdff893e07d0bd6209f.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/LittleTxt.png"
+dest_files=["res://.godot/imported/LittleTxt.png-ac9b1c736fbc38c53e775e7fbd1a9f21.ctex"]
 
 [params]
 

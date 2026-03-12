@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o23n8qww3lvo"
-path="res://.godot/imported/placeHolderForge.png-d2de1bab9783092e4d49ac88ecc9ac72.ctex"
+uid="uid://dhuxg3o3dst5g"
+path="res://.godot/imported/LittlePopUp.png-c98cfe5711966688aa203dcc106b4e6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/placeHolderForge.png"
-dest_files=["res://.godot/imported/placeHolderForge.png-d2de1bab9783092e4d49ac88ecc9ac72.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/LittlePopUp.png"
+dest_files=["res://.godot/imported/LittlePopUp.png-c98cfe5711966688aa203dcc106b4e6f.ctex"]
 
 [params]
 

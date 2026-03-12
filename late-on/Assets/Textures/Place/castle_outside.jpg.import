@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct86qufd28ivc"
-path="res://.godot/imported/placeHolderPriest.png-3af9596cdb8c8208686c8280b25a4186.ctex"
+uid="uid://dsa3nrqplibsx"
+path="res://.godot/imported/castle_outside.jpg-65efb8a39e6213b540ad47d546d64830.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/placeHolderPriest.png"
-dest_files=["res://.godot/imported/placeHolderPriest.png-3af9596cdb8c8208686c8280b25a4186.ctex"]
+source_file="res://Assets/Textures/Place/castle_outside.jpg"
+dest_files=["res://.godot/imported/castle_outside.jpg-65efb8a39e6213b540ad47d546d64830.ctex"]
 
 [params]
 

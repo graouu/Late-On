@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnxth3ibqrxsg"
-path="res://.godot/imported/placeHolderNobility.png-3d9ad90025bf94dad815665de579dbf5.ctex"
+uid="uid://dtjeku4bw5ui5"
+path="res://.godot/imported/ending2.png-88bc8c608b55b3bc76bc6f9600c2a05d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/placeHolderNobility.png"
-dest_files=["res://.godot/imported/placeHolderNobility.png-3d9ad90025bf94dad815665de579dbf5.ctex"]
+source_file="res://Assets/Textures/Place/ending2.png"
+dest_files=["res://.godot/imported/ending2.png-88bc8c608b55b3bc76bc6f9600c2a05d.ctex"]
 
 [params]
 

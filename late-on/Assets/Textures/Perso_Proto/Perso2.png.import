@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buwb8kn0hxyr7"
-path="res://.godot/imported/placeHolderMoney.png-40d52daa23e919da235bdf0e8dc273c2.ctex"
+uid="uid://b3yyidor1tmax"
+path="res://.godot/imported/Perso2.png-d44a82126ffcaba8bdb001c33c3e2b5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/placeHolderMoney.png"
-dest_files=["res://.godot/imported/placeHolderMoney.png-40d52daa23e919da235bdf0e8dc273c2.ctex"]
+source_file="res://Assets/Textures/Perso_Proto/Perso2.png"
+dest_files=["res://.godot/imported/Perso2.png-d44a82126ffcaba8bdb001c33c3e2b5b.ctex"]
 
 [params]
 

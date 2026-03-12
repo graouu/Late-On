@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clryjn8cpdu3u"
-path="res://.godot/imported/Perso3.png-d54c53f3a66589ae2f35640f5f60415f.ctex"
+uid="uid://g24xtidgqyd2"
+path="res://.godot/imported/castle_inside.jpg-a1dfe631e4d9b32a4227189370668194.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Perso_Proto/Perso3.png"
-dest_files=["res://.godot/imported/Perso3.png-d54c53f3a66589ae2f35640f5f60415f.ctex"]
+source_file="res://Assets/Textures/Place/castle_inside.jpg"
+dest_files=["res://.godot/imported/castle_inside.jpg-a1dfe631e4d9b32a4227189370668194.ctex"]
 
 [params]
 

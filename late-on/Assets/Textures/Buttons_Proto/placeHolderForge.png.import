@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsa3nrqplibsx"
-path="res://.godot/imported/castle_outside.jpg-44ab1a1f0d51ce3435c2dde5c3aa967b.ctex"
+uid="uid://o23n8qww3lvo"
+path="res://.godot/imported/placeHolderForge.png-816b5c0dd10ce1992abf8be9e5dcb8a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/castle_outside.jpg"
-dest_files=["res://.godot/imported/castle_outside.jpg-44ab1a1f0d51ce3435c2dde5c3aa967b.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/placeHolderForge.png"
+dest_files=["res://.godot/imported/placeHolderForge.png-816b5c0dd10ce1992abf8be9e5dcb8a1.ctex"]
 
 [params]
 

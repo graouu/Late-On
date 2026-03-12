@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i0vtosiwbboa"
-path="res://.godot/imported/Perso1.png-2670b327c6e53b23ddee93da9aa813a9.ctex"
+uid="uid://dnxth3ibqrxsg"
+path="res://.godot/imported/placeHolderNobility.png-e50256fa20dcb54e0ca72d5279f655b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Perso_Proto/Perso1.png"
-dest_files=["res://.godot/imported/Perso1.png-2670b327c6e53b23ddee93da9aa813a9.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/placeHolderNobility.png"
+dest_files=["res://.godot/imported/placeHolderNobility.png-e50256fa20dcb54e0ca72d5279f655b4.ctex"]
 
 [params]
 

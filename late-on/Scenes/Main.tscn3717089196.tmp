@@ -114,7 +114,7 @@ _data = {
 &"transition": SubResource("Animation_kln2b")
 }
 
-[node name="Main" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "black_anim", "dialogue_manager")]
+[node name="Control2" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "black_anim", "dialogues")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -126,7 +126,7 @@ size_flags_vertical = 3
 script = ExtResource("1_idj7w")
 place_control = NodePath("VBoxContainer/PlaceContainer")
 black_anim = NodePath("ColorRect/AnimationPlayer")
-dialogue_manager = NodePath("Dialogue")
+dialogues = NodePath("Dialogue")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
 layout_mode = 1

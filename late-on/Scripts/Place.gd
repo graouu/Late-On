@@ -1,7 +1,7 @@
 class_name Place extends Control
 
 signal go_to
-signal open_dialogue
+signal open_dialogue(array_dialogue : Array[DialogueLine])
 
 @export var place_name : String
 
@@ -46,5 +46,5 @@ func pressed_button_up():
 func pressed_button_down():
 	go_to.emit(place_down)
 
-func send_dialogue_request(dialogue_text, dialogue_name, dialogue_texture):
-	open_dialogue.emit(dialogue_text, dialogue_name, dialogue_texture)
+func send_dialogue_request(dialogue_array : Array[DialogueLine]):
+	open_dialogue.emit(dialogue_array)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://eyuvnxpi2g61"]
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/place.gd" id="1_verb4"]
-[ext_resource type="Texture2D" uid="uid://g24xtidgqyd2" path="res://Assets/Textures/castle_inside.jpg" id="2_verb4"]
+[ext_resource type="Texture2D" uid="uid://g24xtidgqyd2" path="res://Assets/Textures/Place/castle_inside.jpg" id="2_verb4"]
 
 [node name="Castle Inside" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_down")]
 custom_minimum_size = Vector2(1080, 1280)

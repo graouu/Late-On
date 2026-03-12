@@ -1,4 +1,4 @@
-class_name Dialogue extends Control
+class_name DialogueManager extends Control
 
 #Le Label qui affiche le texte
 @export var dialogue_label : RichTextLabel
@@ -14,13 +14,21 @@ class_name Dialogue extends Control
 var next_dialogue : String
 var tween : Tween
 
-func play_dialogue(text : String, character : String, texture : Texture2D = null):
-	dialogue_timer.wait_time = 0.02*text.length()
+signal is_done
+
+func play_dialogue_array(dialogue_array : Array[DialogueLine]):
+	for dialogue in dialogue_array:
+		play_dialogue(dialogue)
+		await is_done
+	hide()
+
+func play_dialogue(dialogue : DialogueLine):
+	dialogue_timer.wait_time = 0.02*dialogue.text.length()
 	dialogue_label.text = ""
-	name_label.text = character
-	next_dialogue = text
-	if texture != null:
-		dialogue_texture.texture = texture
+	name_label.text = dialogue.name
+	next_dialogue = dialogue.text
+	if dialogue.texture != null:
+		dialogue_texture.texture = dialogue.texture
 	else:
 		dialogue_texture.texture = null
 	show()
@@ -35,7 +43,7 @@ func play_dialogue(text : String, character : String, texture : Texture2D = null
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		if dialogue_timer.is_stopped():
-			hide()
+			is_done.emit()
 		else:
 			tween.kill()
 			dialogue_label.text = next_dialogue

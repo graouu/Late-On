@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g24xtidgqyd2"
-path="res://.godot/imported/castle_inside.jpg-bb0a611c9801f0473a539c1a2314f28b.ctex"
+uid="uid://buwb8kn0hxyr7"
+path="res://.godot/imported/placeHolderMoney.png-e562844c2066caae7f12c76b4db2b583.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/castle_inside.jpg"
-dest_files=["res://.godot/imported/castle_inside.jpg-bb0a611c9801f0473a539c1a2314f28b.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/placeHolderMoney.png"
+dest_files=["res://.godot/imported/placeHolderMoney.png-e562844c2066caae7f12c76b4db2b583.ctex"]
 
 [params]
 

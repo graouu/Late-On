@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtjeku4bw5ui5"
-path="res://.godot/imported/ending2.png-325f00c34fa295142252c73c882daab6.ctex"
+uid="uid://cf76ol2sku3ds"
+path="res://.godot/imported/Shop_Grimoire1.png-e962347bb9d1d7a3479279526978e070.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/ending2.png"
-dest_files=["res://.godot/imported/ending2.png-325f00c34fa295142252c73c882daab6.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/Shop_Grimoire1.png"
+dest_files=["res://.godot/imported/Shop_Grimoire1.png-e962347bb9d1d7a3479279526978e070.ctex"]
 
 [params]
 

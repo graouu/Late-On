@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueLine" format=3 uid="uid://dyypygfv8ki2u"]
+
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="1_hjjcr"]
+[ext_resource type="Texture2D" uid="uid://cf76ol2sku3ds" path="res://Assets/Textures/Buttons_Proto/Shop_Grimoire1.png" id="2_ifi53"]
+
+[resource]
+script = ExtResource("1_hjjcr")
+text = "Un livre?? Sur le sol?? Dans une forêt?? On est vraiment dans un test..."
+name = "Thomas"
+texture = ExtResource("2_ifi53")
+metadata/_custom_type_script = "uid://c3h3244feas37"

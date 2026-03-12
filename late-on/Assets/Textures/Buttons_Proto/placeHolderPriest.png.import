@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btp8mpfd3mjxk"
-path="res://.godot/imported/placeHolderScribe.png-24edd2ea8ef0cf2bfd7124ce6f1a5223.ctex"
+uid="uid://ct86qufd28ivc"
+path="res://.godot/imported/placeHolderPriest.png-64837fae47b6b54d5bc95a140c553dcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/placeHolderScribe.png"
-dest_files=["res://.godot/imported/placeHolderScribe.png-24edd2ea8ef0cf2bfd7124ce6f1a5223.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/placeHolderPriest.png"
+dest_files=["res://.godot/imported/placeHolderPriest.png-64837fae47b6b54d5bc95a140c553dcf.ctex"]
 
 [params]
 

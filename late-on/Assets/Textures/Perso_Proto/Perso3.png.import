@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmqpmmbsvmv65"
-path="res://.godot/imported/SmallMap.png-c90c828589765ad889d0ae03061f3e82.ctex"
+uid="uid://clryjn8cpdu3u"
+path="res://.godot/imported/Perso3.png-ee0c66ab4d5c0c75b567b602970c8bf6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/SmallMap.png"
-dest_files=["res://.godot/imported/SmallMap.png-c90c828589765ad889d0ae03061f3e82.ctex"]
+source_file="res://Assets/Textures/Perso_Proto/Perso3.png"
+dest_files=["res://.godot/imported/Perso3.png-ee0c66ab4d5c0c75b567b602970c8bf6.ctex"]
 
 [params]
 

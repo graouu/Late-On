@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://omu6vnm5pd1m"
-path="res://.godot/imported/keyReturn.png-cbd6b3c53e6ef2f1b014509c1c955ef1.ctex"
+uid="uid://btp8mpfd3mjxk"
+path="res://.godot/imported/placeHolderScribe.png-df97ac7b4ad3a2723c45e1ba51e7d8d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/keyReturn.png"
-dest_files=["res://.godot/imported/keyReturn.png-cbd6b3c53e6ef2f1b014509c1c955ef1.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png"
+dest_files=["res://.godot/imported/placeHolderScribe.png-df97ac7b4ad3a2723c45e1ba51e7d8d6.ctex"]
 
 [params]
 
