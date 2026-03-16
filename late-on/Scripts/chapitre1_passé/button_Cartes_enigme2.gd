@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	if global.enigme2_fini == false:
-		get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Enigme2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Enigme2.tscn")
 
 func _on_mouse_entered() -> void:
 	if global.enigme2_fini == false:

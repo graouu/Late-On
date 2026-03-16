@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://caqslyn0arnsy"]
 
-[ext_resource type="Texture2D" uid="uid://codwjb6e0glwb" path="res://Assets/Buttons_Proto/BoxCorrectSize.png" id="1_k056j"]
+[ext_resource type="Texture2D" uid="uid://codwjb6e0glwb" path="res://Assets/Textures/Buttons_Proto/BoxCorrectSize.png" id="1_k056j"]
 [ext_resource type="Script" uid="uid://bw74juvp2ypwp" path="res://Scripts/chapitre1_futur/button_Boite_enigme1f.gd" id="2_w7i4o"]
-[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Buttons_Proto/placeHolderScribe.png" id="3_e6xxk"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="3_e6xxk"]
 [ext_resource type="Script" uid="uid://bsfqc8n4na11o" path="res://Scripts/chapitre1_futur/button_Cartes_enigme2f.gd" id="4_oic6l"]
 [ext_resource type="Texture2D" uid="uid://d1rmoh1w8iwcx" path="res://Assets/Textures/Ordi.png" id="5_w7i4o"]
 
