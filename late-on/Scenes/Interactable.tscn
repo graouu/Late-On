@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bye7rhhna77oi"]
+
+[ext_resource type="Texture2D" uid="uid://cf76ol2sku3ds" path="res://Assets/Textures/Buttons_Proto/Shop_Grimoire1.png" id="1_pi15k"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="2_v6xsw"]
+
+[node name="Control" type="TextureButton" unique_id=1019186070]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_pi15k")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_v6xsw")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

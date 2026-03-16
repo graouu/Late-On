@@ -1,9 +1,11 @@
 class_name Place extends Control
 
 signal go_to
+signal open_dialogue(array_dialogue : Array[DialogueLine])
 
 @export var place_name : String
 
+@export_category("MOVEMENT PROPERTIES")
 #Leave the Place
 @export var button_left : Button
 @export var place_left : String
@@ -17,23 +19,32 @@ signal go_to
 @export var button_down : Button
 @export var place_down : String
 
+@export_category("INTERACTABLES")
+
+@export var interactable_list : Array[Interactable]
+
 func _ready() -> void:
 	var functions : Array[Callable] = [pressed_button_left,pressed_button_right,pressed_button_up,pressed_button_down]
 	var buttons : Array[Button] = [button_left, button_right, button_up, button_down]
 	var i := 0
-	while i < 4 :
+	while i < buttons.size() :
 		if buttons[i]:
 			buttons[i].pressed.connect(functions[i])
 		i+=1
+	for interactable in interactable_list:
+		interactable.open_dialogue.connect(send_dialogue_request)
 
-func pressed_button_left(next_place : String):
+func pressed_button_left():
 	go_to.emit(place_left)
 
-func pressed_button_right(next_place : String):
+func pressed_button_right():
 	go_to.emit(place_right)
 	
-func pressed_button_up(next_place : String):
+func pressed_button_up():
 	go_to.emit(place_up)
 	
-func pressed_button_down(next_place : String):
+func pressed_button_down():
 	go_to.emit(place_down)
+
+func send_dialogue_request(dialogue_array : Array[DialogueLine]):
+	open_dialogue.emit(dialogue_array)

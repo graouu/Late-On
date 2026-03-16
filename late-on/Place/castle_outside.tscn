@@ -1,24 +1,25 @@
-[gd_scene format=3 uid="uid://b0l3jwc40s1xq"]
+[gd_scene format=3 uid="uid://owrfs12eafmm"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/place.gd" id="1_4hhu5"]
-[ext_resource type="Texture2D" uid="uid://cbxqlrrrg87b8" path="res://Assets/Textures/Place/garden.jpg" id="2_oy1xr"]
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/place.gd" id="1_hmyji"]
+[ext_resource type="Texture2D" uid="uid://dsa3nrqplibsx" path="res://Assets/Textures/Place/castle_outside.jpg" id="2_hmyji"]
 
-[node name="Garden" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[node name="Castle Outside" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_up", "button_down")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.66700006
-offset_bottom = -0.6401367
+anchor_bottom = 1.0
+offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_4hhu5")
-place_name = "garden"
-button_left = NodePath("Buttons/Left")
-place_left = "forest"
-button_right = NodePath("Buttons/Right")
-place_right = "castle_outside"
+script = ExtResource("1_hmyji")
+place_name = "castle_outside"
+button_up = NodePath("Buttons/Up")
+place_up = "castle_inside"
+button_down = NodePath("Buttons/Down")
+place_down = "garden"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -27,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_oy1xr")
+texture = ExtResource("2_hmyji")
 expand_mode = 1
 
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
@@ -39,6 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -51,6 +53,7 @@ theme_override_font_sizes/font_size = 40
 text = "left"
 
 [node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -66,7 +69,6 @@ theme_override_font_sizes/font_size = 40
 text = "right"
 
 [node name="Up" type="Button" parent="Buttons" unique_id=147683360]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -79,7 +81,6 @@ theme_override_font_sizes/font_size = 40
 text = "up"
 
 [node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
