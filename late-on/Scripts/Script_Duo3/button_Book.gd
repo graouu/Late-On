@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Passé_EnigmeDuo3_Enigma.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Passé/Passé_EnigmeDuo3_Enigma.tscn")
 
 func _on_mouse_entered() -> void:
 	scale = Vector2(1.05,1.05)

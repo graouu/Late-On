@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://60svxxoqguj2"]
 
 [ext_resource type="Texture2D" uid="uid://dkmbud3qpirwr" path="res://icon.svg" id="1_idapx"]
-[ext_resource type="Script" uid="uid://c4gghxguabcvd" path="res://EnigmeDuo3.gd" id="1_xprkb"]
+[ext_resource type="Script" uid="uid://c4gghxguabcvd" path="res://Scripts/Script_Duo3/EnigmeDuo3.gd" id="1_xprkb"]
 [ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/ending2.png" id="2_4wghx"]
 [ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="2_msgg5"]
 [ext_resource type="Script" uid="uid://dyennbsns6ia6" path="res://Scripts/Script_Duo3/SpaceDrop.gd" id="4_i5y8v"]

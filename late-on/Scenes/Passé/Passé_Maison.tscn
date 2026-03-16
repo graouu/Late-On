@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://nckqn82d5dao"]
+
+[ext_resource type="Texture2D" uid="uid://codwjb6e0glwb" path="res://Assets/Buttons_Proto/BoxCorrectSize.png" id="1_r4v18"]
+[ext_resource type="Script" uid="uid://cawyglynwcgo2" path="res://Scripts/chapitre1_passé/button_Boite_enigme1.gd" id="2_y67j2"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Buttons_Proto/placeHolderScribe.png" id="3_ksnaa"]
+[ext_resource type="Script" uid="uid://2mqyguwox642" path="res://Scripts/chapitre1_passé/button_Cartes_enigme2.gd" id="4_r4v18"]
+[ext_resource type="Texture2D" uid="uid://nm3fwd05s7rv" path="res://Assets/Textures/atelier.jpg" id="7_6j3mt"]
+
+[node name="Control" type="Control" unique_id=1327342452]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1604058810]
+z_index = 1
+custom_minimum_size = Vector2(1080, 640)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=722058883]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_Boite" type="TextureButton" parent="." unique_id=1616391142]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -608.0
+offset_right = 233.0
+offset_bottom = -232.51245
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("1_r4v18")
+stretch_mode = 5
+script = ExtResource("2_y67j2")
+
+[node name="Button_Cartes" type="TextureButton" parent="." unique_id=1921447372]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_top = -818.0
+offset_right = -40.0
+offset_bottom = -613.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_ksnaa")
+stretch_mode = 5
+script = ExtResource("4_r4v18")
+
+[node name="Atelier" type="Sprite2D" parent="." unique_id=1901310815]
+z_index = -1
+position = Vector2(552.00006, 1273)
+scale = Vector2(4.7605934, 4.760593)
+texture = ExtResource("7_6j3mt")
+
+[connection signal="mouse_entered" from="Button_Boite" to="Button_Boite" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Boite" to="Button_Boite" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Boite" to="Button_Boite" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Cartes" to="Button_Cartes" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Cartes" to="Button_Cartes" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Cartes" to="Button_Cartes" method="_on_pressed"]
