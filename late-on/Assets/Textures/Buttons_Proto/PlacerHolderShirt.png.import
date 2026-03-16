@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qitpwqa1y3f"
-path="res://.godot/imported/PlacerHolderShirt.png-7549eb1251c30d088af085274c2fe3d1.ctex"
+path="res://.godot/imported/PlacerHolderShirt.png-b77a44823a7d87b3e8d38f6d50052c87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/PlacerHolderShirt.png"
-dest_files=["res://.godot/imported/PlacerHolderShirt.png-7549eb1251c30d088af085274c2fe3d1.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/PlacerHolderShirt.png"
+dest_files=["res://.godot/imported/PlacerHolderShirt.png-b77a44823a7d87b3e8d38f6d50052c87.ctex"]
 
 [params]
 

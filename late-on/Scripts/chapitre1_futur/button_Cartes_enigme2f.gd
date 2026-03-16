@@ -1,7 +1,7 @@
 extends TextureButton
 
-var texture_initial = preload("res://Assets/Buttons_Proto/placeHolderScribe.png")
-var texture_final = preload("res://Assets/Buttons_Proto/SmallMap.png")
+var texture_initial = preload("res://Assets/Textures/Buttons_Proto/placeHolderScribe.png")
+var texture_final = preload("res://Assets/Textures/Buttons_Proto/SmallMap.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

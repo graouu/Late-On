@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8jeo4377iqxo"
-path="res://.godot/imported/PlacerHolderWindmill.png-adff939e2392773cfcb009486492ccb0.ctex"
+path="res://.godot/imported/PlacerHolderWindmill.png-eecf9d6b8fc38ed5edac621de8004efe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons_Proto/PlacerHolderWindmill.png"
-dest_files=["res://.godot/imported/PlacerHolderWindmill.png-adff939e2392773cfcb009486492ccb0.ctex"]
+source_file="res://Assets/Textures/Buttons_Proto/PlacerHolderWindmill.png"
+dest_files=["res://.godot/imported/PlacerHolderWindmill.png-eecf9d6b8fc38ed5edac621de8004efe.ctex"]
 
 [params]
 
