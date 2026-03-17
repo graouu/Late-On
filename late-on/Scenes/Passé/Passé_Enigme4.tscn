@@ -1,0 +1,379 @@
+[gd_scene format=3 uid="uid://bjxxk0u14rhq6"]
+
+[ext_resource type="Script" uid="uid://dulu7x4o0b3pu" path="res://Scripts/chapitre1_passé/Enigme2Past.gd" id="1_7y5k0"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="2_6kypf"]
+[ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="3_12fvw"]
+[ext_resource type="Script" uid="uid://cn4uwo2katieh" path="res://Scripts/Script_Duo3/Dropable_Job.gd" id="4_j1ak1"]
+[ext_resource type="Texture2D" uid="uid://bmqpmmbsvmv65" path="res://Assets/Textures/Buttons_Proto/SmallMap.png" id="5_fch47"]
+[ext_resource type="Texture2D" uid="uid://o3c7uymxvoe8" path="res://Assets/Textures/Buttons_Proto/plume.png" id="6_de8qc"]
+[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Textures/Buttons_Proto/PlacerHolderWindmill.png" id="7_piems"]
+[ext_resource type="Texture2D" uid="uid://qitpwqa1y3f" path="res://Assets/Textures/Buttons_Proto/PlacerHolderShirt.png" id="8_q4p0y"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_434rj"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_yt0a5"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_1m5hj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
+size = Vector2(5.2400002, 5.6399994)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
+size = Vector2(128, 127.5)
+
+[node name="Control" type="Node2D" unique_id=28566512]
+script = ExtResource("1_7y5k0")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2078142667]
+z_index = -1
+position = Vector2(-48.732113, 989.5625)
+scale = Vector2(5.1366625, 5.2430243)
+texture = ExtResource("2_6kypf")
+
+[node name="SpaceTypeMap1" type="StaticBody2D" parent="." unique_id=550985851 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(245.00003, 1161)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap1" unique_id=363056687]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap1" unique_id=922671647]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap5" type="StaticBody2D" parent="." unique_id=169166464 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(146, 709)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap5" unique_id=1486322619]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap5" unique_id=823195355]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap6" type="StaticBody2D" parent="." unique_id=1947754281 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(393, 705)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap6" unique_id=1875058801]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap6" unique_id=55692885]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap7" type="StaticBody2D" parent="." unique_id=1868354121 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(651, 702)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap7" unique_id=1132314614]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap7" unique_id=687103689]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap8" type="StaticBody2D" parent="." unique_id=1105592699 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(894, 698)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap8" unique_id=1229524876]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap8" unique_id=1847977631]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap2" type="StaticBody2D" parent="." unique_id=1032136184 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(462, 1161)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap2" unique_id=1726349601]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap2" unique_id=1642403505]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap3" type="StaticBody2D" parent="." unique_id=1426551527 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(705, 1164)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap3" unique_id=791209221]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap3" unique_id=1434213147]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceTypeMap4" type="StaticBody2D" parent="." unique_id=507525881 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(952, 1158)
+scale = Vector2(4, 4)
+script = ExtResource("3_12fvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap4" unique_id=919069790]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="SpaceTypeMap4" unique_id=1801030490]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TypeMap1" type="Node2D" parent="." unique_id=752903855 groups=["job"]]
+z_index = 1
+position = Vector2(392, 710.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751]
+script = ExtResource("4_j1ak1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap1/TypeMap1" unique_id=1293272795]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="Sprite2D" type="Sprite2D" parent="TypeMap1/TypeMap1" unique_id=1736216379]
+texture = ExtResource("5_fch47")
+
+[node name="TypeMap2" type="Node2D" parent="." unique_id=1615009566 groups=["job"]]
+z_index = 1
+position = Vector2(143.00006, 713.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781]
+script = ExtResource("4_j1ak1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap2/TypeMap2" unique_id=1631313715]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="PlaceHolderMoney" type="Sprite2D" parent="TypeMap2/TypeMap2" unique_id=2045570607]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("6_de8qc")
+
+[node name="TypeMap3" type="Node2D" parent="." unique_id=2042054624 groups=["job"]]
+z_index = 1
+position = Vector2(656, 699.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455]
+script = ExtResource("4_j1ak1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap3/TypeMap3" unique_id=1309479811]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="PlaceHolderNobility" type="Sprite2D" parent="TypeMap3/TypeMap3" unique_id=2076171473]
+scale = Vector2(4, 4)
+texture = ExtResource("7_piems")
+
+[node name="TypeMap4" type="Node2D" parent="." unique_id=159153813 groups=["job"]]
+z_index = 1
+position = Vector2(896, 695.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723]
+script = ExtResource("4_j1ak1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap4/TypeMap4" unique_id=744732967]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="PlaceHolderPriest" type="Sprite2D" parent="TypeMap4/TypeMap4" unique_id=1341252645]
+scale = Vector2(4, 4)
+texture = ExtResource("8_q4p0y")
+
+[node name="Button_Return" type="Button" parent="." unique_id=953520752]
+offset_left = 825.0
+offset_top = 1708.0
+offset_right = 937.0
+offset_bottom = 1816.0
+icon = ExtResource("9_434rj")
+
+[node name="Button_Validate" type="Button" parent="." unique_id=568960645]
+visible = false
+offset_left = 665.0
+offset_top = 1396.0
+offset_right = 1009.0
+offset_bottom = 1540.0
+theme_override_font_sizes/font_size = 46
+text = "Valider"
+
+[node name="Info1_Enigma" type="RichTextLabel" parent="." unique_id=199201805]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = 172.0
+offset_right = 1079.0
+offset_bottom = 572.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 36
+text = "Je t'ai rapporté les manuscrits, merci pour le pres.
+Comme tu aimes les énigmes essaye donc de les ranger sans avoir à les ouvrir, juste en suivant mes indices:
+
+- La carte de la ville n'est pas à côté de la facture du tisserant
+- Le plan du moulin est à côté de la missive
+- La facture du tisserant est directement à gauche du plan du moulin"
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="PopUp" type="Node2D" parent="." unique_id=813955419]
+visible = false
+position = Vector2(-711, 176)
+
+[node name="ShapePopUp" type="Sprite2D" parent="PopUp" unique_id=201039772]
+z_index = 1
+position = Vector2(1013.00006, 1305.5)
+scale = Vector2(5.0749993, 7.0249996)
+texture = ExtResource("10_yt0a5")
+
+[node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 810.0
+offset_top = 1165.0
+offset_right = 1216.0
+offset_bottom = 1444.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+theme_override_font_sizes/normal_font_size = 32
+
+[node name="PlaceHolderScribe" type="Sprite2D" parent="." unique_id=873155954]
+position = Vector2(161, 1013.74994)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_1m5hj")
+
+[node name="PlaceHolderScribe2" type="Sprite2D" parent="." unique_id=798181834]
+position = Vector2(406, 1013.74994)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_1m5hj")
+
+[node name="PlaceHolderScribe3" type="Sprite2D" parent="." unique_id=1659869211]
+position = Vector2(654, 1013.74994)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_1m5hj")
+
+[node name="PlaceHolderScribe4" type="Sprite2D" parent="." unique_id=1986924168]
+position = Vector2(893.99994, 1016.74994)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_1m5hj")
+
+[connection signal="body_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="TypeMap2/TypeMap2" to="TypeMap2/TypeMap2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TypeMap2/TypeMap2" to="TypeMap2/TypeMap2" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="TypeMap2/TypeMap2" to="TypeMap2/TypeMap2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="TypeMap2/TypeMap2" to="TypeMap2/TypeMap2" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="TypeMap3/TypeMap3" to="TypeMap3/TypeMap3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TypeMap3/TypeMap3" to="TypeMap3/TypeMap3" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="TypeMap3/TypeMap3" to="TypeMap3/TypeMap3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="TypeMap3/TypeMap3" to="TypeMap3/TypeMap3" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Validate" to="." method="_on_button_validate_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Validate" to="." method="_on_button_validate_mouse_exited"]
+[connection signal="pressed" from="Button_Validate" to="." method="_on_button_validate_pressed"]
