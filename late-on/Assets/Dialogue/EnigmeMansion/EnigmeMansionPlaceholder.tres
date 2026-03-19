@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLine" format=3 uid="uid://bimn713ceg28o"]
+
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="1_cxh38"]
+
+[resource]
+script = ExtResource("1_cxh38")
+text = "Bla, bla, je ne suis pas en charge des dialogues"
+name = "Monstre Placeholder"
+metadata/_custom_type_script = "uid://c3h3244feas37"
