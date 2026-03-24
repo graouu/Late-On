@@ -55,8 +55,6 @@ func _on_area_2d_body_entered(body:StaticBody2D):
 		if current_body and current_body != body_ref:
 			current_body.is_inside_empty = true
 			current_body.name_inside = "empty"
-			print("Icon vidé:")
-			print (current_body.name_inside)
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group('dropable_perso'):

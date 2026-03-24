@@ -1,0 +1,787 @@
+[gd_scene format=3 uid="uid://do10okj2o7pvo"]
+
+[ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
+[ext_resource type="Texture2D" uid="uid://vymb4kvstjvb" path="res://Assets/Textures/Buttons_Proto/backgroundTable.PNG" id="2_k4k01"]
+[ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
+[ext_resource type="Texture2D" uid="uid://uph8tdrg2w12" path="res://Assets/Textures/Buttons_Proto/Up.PNG" id="5_vjhe2"]
+[ext_resource type="Texture2D" uid="uid://tlw4it1ylrq2" path="res://Assets/Textures/Buttons_Proto/Right.PNG" id="6_g7yw5"]
+[ext_resource type="Texture2D" uid="uid://bmtdp3gmuerk" path="res://Assets/Textures/Buttons_Proto/Left.PNG" id="7_rfaug"]
+[ext_resource type="Texture2D" uid="uid://t5cyqpsfx3wu" path="res://Assets/Textures/Buttons_Proto/Down.PNG" id="8_ttexe"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_d1hrw"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_7og1i"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_6e0vd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7yw5"]
+size = Vector2(19, 118)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfaug"]
+radius = 30.149628
+
+[node name="Control" type="Node2D" unique_id=28566512]
+script = ExtResource("1_rfaug")
+
+[node name="BackgroundTable" type="Sprite2D" parent="." unique_id=723698975]
+position = Vector2(692, 996.00006)
+scale = Vector2(4.3529983, 7.044554)
+texture = ExtResource("2_k4k01")
+
+[node name="Maze" type="Node2D" parent="." unique_id=596364562]
+position = Vector2(15, -133)
+
+[node name="BackgroundMaze" type="ColorRect" parent="Maze" unique_id=1384118698]
+offset_left = 230.0
+offset_top = 714.0
+offset_right = 870.0
+offset_bottom = 1354.0
+color = Color(0.1843993, 0.060916826, 0.0304168, 1)
+
+[node name="RandomWall" type="StaticBody2D" parent="Maze" unique_id=552169867]
+position = Vector2(230, 734)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall" unique_id=1623414521]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall" unique_id=1342895194]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall" unique_id=2017171295]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Histoire"
+horizontal_alignment = 1
+
+[node name="RandomWall2" type="StaticBody2D" parent="Maze" unique_id=2001792031]
+position = Vector2(230, 855)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall2" unique_id=2128938212]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall2" unique_id=55382951]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall2" unique_id=532945697]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Voyage"
+horizontal_alignment = 1
+
+[node name="RandomWall3" type="StaticBody2D" parent="Maze" unique_id=904974327]
+position = Vector2(231, 976)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall3" unique_id=1883725097]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall3" unique_id=245488904]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall3" unique_id=941427346]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Prière"
+horizontal_alignment = 1
+
+[node name="RandomWall8" type="StaticBody2D" parent="Maze" unique_id=109463121]
+position = Vector2(229, 1095)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall8" unique_id=578704986]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall8" unique_id=507469176]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall8" unique_id=1141440006]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Fabliau"
+horizontal_alignment = 1
+
+[node name="RandomWall4" type="StaticBody2D" parent="Maze" unique_id=184594966]
+position = Vector2(231, 1213)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall4" unique_id=1666739773]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall4" unique_id=1495435070]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall4" unique_id=1816161834]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Eternel"
+horizontal_alignment = 1
+
+[node name="RandomWall5" type="StaticBody2D" parent="Maze" unique_id=2066027026]
+position = Vector2(346, 738)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall5" unique_id=1456704010]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall5" unique_id=1934232768]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall5" unique_id=933715896]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Poème"
+horizontal_alignment = 1
+
+[node name="RandomWall7" type="StaticBody2D" parent="Maze" unique_id=1032456880]
+position = Vector2(477, 859)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall7" unique_id=869637709]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall7" unique_id=1477695384]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall7" unique_id=521351015]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall19" type="StaticBody2D" parent="Maze" unique_id=569105637]
+position = Vector2(846, 737)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall19" unique_id=1528731676]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall19" unique_id=937808514]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall19" unique_id=1921788246]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Verger"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RandomWall20" type="StaticBody2D" parent="Maze" unique_id=1362307099]
+position = Vector2(846, 848)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall20" unique_id=1059798347]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall20" unique_id=1251277277]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall20" unique_id=2056081200]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Union"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RandomWall22" type="StaticBody2D" parent="Maze" unique_id=965309060]
+position = Vector2(846, 1079)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall22" unique_id=977769795]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall22" unique_id=1404779483]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall22" unique_id=1349708649]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall23" type="StaticBody2D" parent="Maze" unique_id=384677296]
+position = Vector2(848, 1199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall23" unique_id=225357602]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall23" unique_id=238544818]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall23" unique_id=1936046005]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall9" type="StaticBody2D" parent="Maze" unique_id=978313032]
+position = Vector2(369, 715)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall9" unique_id=708317535]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall9" unique_id=615209938]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall9" unique_id=1532950307]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall10" type="StaticBody2D" parent="Maze" unique_id=1030913910]
+position = Vector2(602, 717)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall10" unique_id=1532610823]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall10" unique_id=779528852]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall10" unique_id=255963031]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall11" type="StaticBody2D" parent="Maze" unique_id=1235759474]
+position = Vector2(722, 717)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall11" unique_id=1080657524]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall11" unique_id=1691187147]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall11" unique_id=1795885820]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall14" type="StaticBody2D" parent="Maze" unique_id=553687162]
+position = Vector2(374, 1335)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall14" unique_id=2052679953]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall14" unique_id=292638615]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall14" unique_id=452105390]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall15" type="StaticBody2D" parent="Maze" unique_id=2105674907]
+position = Vector2(494, 1333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall15" unique_id=2018923222]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall15" unique_id=1469581717]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall15" unique_id=901907843]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall16" type="StaticBody2D" parent="Maze" unique_id=396502548]
+position = Vector2(613, 1333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall16" unique_id=1694016913]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall16" unique_id=455898892]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall16" unique_id=404153060]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall17" type="StaticBody2D" parent="Maze" unique_id=627039758]
+position = Vector2(728, 1333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall17" unique_id=560986548]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall17" unique_id=464703448]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall17" unique_id=296014999]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall18" type="StaticBody2D" parent="Maze" unique_id=255203589]
+position = Vector2(851, 1331)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall18" unique_id=1808091990]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall18" unique_id=2080381948]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall18" unique_id=516176788]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall12" type="StaticBody2D" parent="Maze" unique_id=818182566]
+position = Vector2(844, 715)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall12" unique_id=1118086923]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall12" unique_id=1063536201]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall12" unique_id=1933012022]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall13" type="StaticBody2D" parent="Maze" unique_id=2041278927]
+position = Vector2(619, 850)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall13" unique_id=1744448577]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall13" unique_id=1391263736]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall13" unique_id=30202465]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall24" type="StaticBody2D" parent="Maze" unique_id=452467384]
+position = Vector2(376, 1201)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall24" unique_id=1446880030]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall24" unique_id=565430827]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall24" unique_id=2052238673]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall25" type="StaticBody2D" parent="Maze" unique_id=681197048]
+position = Vector2(617, 1196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall25" unique_id=2051408688]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall25" unique_id=886596492]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall25" unique_id=1465752429]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall26" type="StaticBody2D" parent="Maze" unique_id=1453773791]
+position = Vector2(737, 1196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall26" unique_id=651847670]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall26" unique_id=2138244948]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall26" unique_id=1067526360]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall27" type="StaticBody2D" parent="Maze" unique_id=9675499]
+position = Vector2(843, 963)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall27" unique_id=448523680]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall27" unique_id=921982768]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall27" unique_id=1046084042]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="RandomWall28" type="StaticBody2D" parent="Maze" unique_id=1351279488]
+position = Vector2(727, 963)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall28" unique_id=606490391]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall28" unique_id=1442806475]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall28" unique_id=1707046168]
+offset_left = -120.0
+offset_bottom = 20.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "RandomBlabla"
+
+[node name="Wall_Key1" type="StaticBody2D" parent="Maze" unique_id=1977080557]
+position = Vector2(371, 1088)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key1" unique_id=27505983]
+position = Vector2(-60, 10)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key1" unique_id=2129277456]
+offset_right = 20.0
+offset_bottom = 120.0
+rotation = 1.5707964
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key1" unique_id=834379109]
+offset_left = -120.0
+offset_top = -2.0
+offset_bottom = 18.0
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Pur"
+horizontal_alignment = 1
+
+[node name="WallOff_Key1" type="StaticBody2D" parent="Maze" unique_id=1423623767]
+position = Vector2(477, 979)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key1" unique_id=1834628102]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key1" unique_id=1151095187]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key1" unique_id=1273068437]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Décent"
+horizontal_alignment = 1
+
+[node name="Wall_Key2" type="StaticBody2D" parent="Maze" unique_id=527129103]
+position = Vector2(846, 968)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key2" unique_id=391949123]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key2" unique_id=1754920034]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key2" unique_id=1451776965]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Vavasseur"
+horizontal_alignment = 1
+
+[node name="WallOff_Key2" type="StaticBody2D" parent="Maze" unique_id=353791740]
+position = Vector2(714, 735)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key2" unique_id=988753877]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key2" unique_id=404438014]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key2" unique_id=1788903196]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+text = "Mariage"
+horizontal_alignment = 1
+
+[node name="Wall_Key6" type="StaticBody2D" parent="Maze" unique_id=1518199892]
+position = Vector2(477, 738)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key6" unique_id=1835960658]
+position = Vector2(9.5, 60)
+shape = SubResource("RectangleShape2D_g7yw5")
+
+[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key6" unique_id=1121327789]
+offset_right = 20.0
+offset_bottom = 120.0
+color = Color(0.70886326, 0.6879254, 0.7917454, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key6" unique_id=971169345]
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 140.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Joie"
+horizontal_alignment = 1
+
+[node name="Ball" type="CharacterBody2D" parent="Maze" unique_id=1086981326]
+position = Vector2(298, 798)
+
+[node name="Sprite2D" type="Sprite2D" parent="Maze/Ball" unique_id=1164224572]
+scale = Vector2(2, 2)
+texture = ExtResource("3_g7yw5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Ball" unique_id=796264831]
+shape = SubResource("CircleShape2D_rfaug")
+
+[node name="GlasseMaze" type="ColorRect" parent="." unique_id=969430746]
+visible = false
+offset_left = 245.0
+offset_top = 581.0
+offset_right = 885.0
+offset_bottom = 1221.0
+color = Color(0.4764691, 0.563753, 0.5996934, 0.1254902)
+
+[node name="Button_Return" type="Button" parent="." unique_id=953520752]
+offset_left = 825.0
+offset_top = 1708.0
+offset_right = 937.0
+offset_bottom = 1816.0
+icon = ExtResource("9_d1hrw")
+
+[node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
+offset_left = 706.0
+offset_top = 1303.0
+offset_right = 1014.0
+offset_bottom = 1600.0
+icon = ExtResource("11_6e0vd")
+flat = true
+expand_icon = true
+
+[node name="Button_Up" type="Button" parent="." unique_id=435473685]
+offset_left = 234.0
+offset_top = 1354.0
+offset_right = 377.0
+offset_bottom = 1489.0
+icon = ExtResource("5_vjhe2")
+flat = true
+expand_icon = true
+
+[node name="Button_Right" type="Button" parent="." unique_id=1602582602]
+offset_left = 370.0
+offset_top = 1493.0
+offset_right = 513.0
+offset_bottom = 1628.0
+icon = ExtResource("6_g7yw5")
+flat = true
+expand_icon = true
+
+[node name="Button_Left" type="Button" parent="." unique_id=503525865]
+offset_left = 101.0
+offset_top = 1490.0
+offset_right = 244.0
+offset_bottom = 1625.0
+icon = ExtResource("7_rfaug")
+flat = true
+expand_icon = true
+
+[node name="Button_Down" type="Button" parent="." unique_id=1852277812]
+offset_left = 241.0
+offset_top = 1635.0
+offset_right = 384.0
+offset_bottom = 1770.0
+icon = ExtResource("8_ttexe")
+flat = true
+expand_icon = true
+
+[node name="PopUp" type="Node2D" parent="." unique_id=813955419]
+position = Vector2(-737, -1108)
+
+[node name="ShapePopUp" type="Sprite2D" parent="PopUp" unique_id=201039772]
+z_index = 1
+position = Vector2(1283, 1366.5)
+scale = Vector2(11.825, 10.075)
+texture = ExtResource("10_7og1i")
+
+[node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 825.0
+offset_top = 1176.0
+offset_right = 1744.0
+offset_bottom = 1558.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+theme_override_font_sizes/normal_font_size = 32
+
+[connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Fabliau" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Fabliau" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Fabliau" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Up" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Up" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Up" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Right" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Right" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Right" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Left" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Left" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Left" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Down" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Down" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Down" to="." method="_on_button_return_pressed"]
