@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	#A changer quand je fais l'énigme1
-	#get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Enigme2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Enigme2.tscn")
 	global.enigme1f_fini = true
 
 func _on_mouse_entered() -> void:
