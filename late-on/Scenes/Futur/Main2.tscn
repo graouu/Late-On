@@ -1,0 +1,275 @@
+[gd_scene format=3 uid="uid://cjqlkkd5sknxd"]
+
+[ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_yaovl"]
+[ext_resource type="PackedScene" uid="uid://28rtqkwgfnij" path="res://Place/login.tscn" id="2_gbstf"]
+[ext_resource type="Texture2D" uid="uid://g5exml6x7lk5" path="res://Assets/Textures/Items_Placeholder/screen_render.png" id="2_hvuyj"]
+[ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
+[ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_23hvo"]
+[ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
+
+[sub_resource type="FontVariation" id="FontVariation_pbw6q"]
+variation_embolden = 1.03
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbw6q"]
+font = SubResource("FontVariation_pbw6q")
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idj7w"]
+content_margin_left = 40.0
+content_margin_top = 20.0
+content_margin_right = 40.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.5176471)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pbw6q"]
+random_pitch = 1.587401
+streams_count = 1
+stream_0/stream = ExtResource("4_23hvo")
+
+[sub_resource type="Animation" id="Animation_idj7w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rgh2o"]
+resource_name = "detransition"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kln2b"]
+resource_name = "transition"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rgh2o"]
+_data = {
+&"RESET": SubResource("Animation_idj7w"),
+&"detransition": SubResource("Animation_rgh2o"),
+&"transition": SubResource("Animation_kln2b")
+}
+
+[node name="Main2" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_yaovl")
+place_control = NodePath("VBoxContainer/PlaceContainer")
+label_place = NodePath("VBoxContainer/Panel/Label")
+puzzle_control = NodePath("PuzzleContainer")
+black_anim = NodePath("ColorRect/AnimationPlayer")
+dialogue_manager = NodePath("Dialogue")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1604058810]
+custom_minimum_size = Vector2(1080, 640)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=1937576611]
+layout_mode = 0
+offset_top = -55.0
+offset_right = 1080.0
+theme_override_font_sizes/font_size = 40
+text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlaceContainer" type="Control" parent="VBoxContainer" unique_id=722058883]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="login" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_gbstf")]
+layout_mode = 1
+offset_bottom = 426.23993
+
+[node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "dialogue_texture", "sound_player", "dialogue_timer")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_xbf76")
+dialogue_label = NodePath("ColorRect/ColorRect/DialogueText")
+name_label = NodePath("ColorRect/ColorRect/Name")
+dialogue_texture = NodePath("ColorRect/DialogueObject")
+sound_player = NodePath("AudioStreamPlayer")
+dialogue_timer = NodePath("Timer")
+
+[node name="ColorRect" type="ColorRect" parent="Dialogue" unique_id=1453163356]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 0
+offset_top = 640.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.42352942)
+
+[node name="DialogueObject" type="TextureRect" parent="Dialogue/ColorRect" unique_id=1291847530]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="VBoxContainer" parent="Dialogue/ColorRect" unique_id=162503297]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -359.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Name" type="Label" parent="Dialogue/ColorRect/ColorRect" unique_id=1109448770]
+layout_mode = 2
+text = "Lorem Ipsum"
+label_settings = SubResource("LabelSettings_pbw6q")
+vertical_alignment = 1
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue/ColorRect/ColorRect" unique_id=1892270292]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_idj7w")
+text = "Ceci est un test de dialogue."
+scroll_following = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialogue" unique_id=158385038]
+stream = SubResource("AudioStreamRandomizer_pbw6q")
+
+[node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
+libraries/ = SubResource("AnimationLibrary_rgh2o")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1494347851]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -22.0
+offset_right = 1080.0
+offset_bottom = 640.0
+texture = ExtResource("2_hvuyj")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=143931187]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 51.0
+offset_right = 949.0
+offset_bottom = 504.0
+texture = ExtResource("6_gbstf")
+expand_mode = 1
+
+[node name="PuzzleContainer" type="Control" parent="." unique_id=1421887023]
+visible = false
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
