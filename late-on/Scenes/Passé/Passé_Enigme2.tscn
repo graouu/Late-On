@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://boa3aroi7ggpu"]
 
 [ext_resource type="Script" uid="uid://dulu7x4o0b3pu" path="res://Scripts/chapitre1_passé/Enigme2Past.gd" id="1_wbkpr"]
-[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/ending2.png" id="3_v2hdq"]
-[ext_resource type="Texture2D" uid="uid://bmqpmmbsvmv65" path="res://Assets/Buttons_Proto/SmallMap.png" id="5_wbkpr"]
-[ext_resource type="Texture2D" uid="uid://o3c7uymxvoe8" path="res://Assets/Buttons_Proto/plume.png" id="6_jflg5"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="3_v2hdq"]
+[ext_resource type="Texture2D" uid="uid://bmqpmmbsvmv65" path="res://Assets/Textures/Buttons_Proto/SmallMap.png" id="5_wbkpr"]
+[ext_resource type="Texture2D" uid="uid://o3c7uymxvoe8" path="res://Assets/Textures/Buttons_Proto/plume.png" id="6_jflg5"]
 [ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="6_pn1p6"]
 [ext_resource type="Script" uid="uid://cn4uwo2katieh" path="res://Scripts/Script_Duo3/Dropable_Job.gd" id="7_51p3o"]
-[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Buttons_Proto/PlacerHolderWindmill.png" id="7_rujxb"]
-[ext_resource type="Texture2D" uid="uid://qitpwqa1y3f" path="res://Assets/Buttons_Proto/PlacerHolderShirt.png" id="8_uob1a"]
-[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Buttons_Proto/placeHolderScribe.png" id="12_sg66q"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Buttons_Proto/keyReturn.png" id="14_88y4i"]
-[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Buttons_Proto/LittleTxt.png" id="17_8skwg"]
+[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Textures/Buttons_Proto/PlacerHolderWindmill.png" id="7_rujxb"]
+[ext_resource type="Texture2D" uid="uid://qitpwqa1y3f" path="res://Assets/Textures/Buttons_Proto/PlacerHolderShirt.png" id="8_uob1a"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="12_sg66q"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="14_88y4i"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="17_8skwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
 size = Vector2(5.2400002, 5.6399994)
@@ -354,6 +354,34 @@ texture = ExtResource("12_sg66q")
 position = Vector2(893.99994, 1016.74994)
 scale = Vector2(6.8, 9.916665)
 texture = ExtResource("12_sg66q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1013063333]
+offset_left = 193.0
+offset_top = 1109.0
+offset_right = 297.0
+offset_bottom = 1213.0
+color = Color(0.23031491, 0.23031494, 0.23031488, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1732858849]
+offset_left = 410.0
+offset_top = 1109.0
+offset_right = 514.0
+offset_bottom = 1213.0
+color = Color(0.23031491, 0.23031494, 0.23031488, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1075008586]
+offset_left = 654.0
+offset_top = 1111.0
+offset_right = 758.0
+offset_bottom = 1215.0
+color = Color(0.23031491, 0.23031494, 0.23031488, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=807180522]
+offset_left = 900.0
+offset_top = 1105.0
+offset_right = 1004.0
+offset_bottom = 1209.0
+color = Color(0.23031491, 0.23031494, 0.23031488, 1)
 
 [connection signal="body_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_exited"]

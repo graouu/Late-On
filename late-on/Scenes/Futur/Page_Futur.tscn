@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://bsu3te4tdvuqa"]
+[gd_scene format=3 uid="uid://ctj7kafbmqf1j"]
 
-[ext_resource type="Script" uid="uid://cyot8ku8hh1se" path="res://Scripts/chapitre1_passé/fabliau_passé.gd" id="1_8k6yt"]
-[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="1_wlbcb"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="2_0ogdy"]
-[ext_resource type="Script" uid="uid://bteb50ki426q7" path="res://Scripts/chapitre1_passé/button_return.gd" id="3_jaohx"]
+[ext_resource type="Script" uid="uid://cyot8ku8hh1se" path="res://Scripts/chapitre1_passé/fabliau_passé.gd" id="1_4orp8"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="2_o8j6l"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="3_7bq0r"]
+[ext_resource type="Script" uid="uid://dim4gbwajwjhe" path="res://Scripts/chapitre1_futur/button_return_futur.gd" id="4_i1mch"]
 
 [node name="FabliauPassé" type="Node2D" unique_id=449457060]
-script = ExtResource("1_8k6yt")
+script = ExtResource("1_4orp8")
 
 [node name="Ending2" type="Sprite2D" parent="." unique_id=410019186]
-position = Vector2(1376, 969.00006)
-scale = Vector2(5.305804, 5.3058033)
-texture = ExtResource("1_wlbcb")
+position = Vector2(1349, 977.00006)
+scale = Vector2(5.4622765, 5.7154016)
+texture = ExtResource("2_o8j6l")
 
 [node name="Titre_Fabliau" type="RichTextLabel" parent="." unique_id=1988056071]
 offset_left = 14.0
@@ -19,105 +19,93 @@ offset_top = 138.0
 offset_right = 1074.0
 offset_bottom = 283.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/bold_font_size = 56
+theme_override_font_sizes/bold_font_size = 46
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "[b]Belle Isabeau, pucelle bien apprise[/b]
-				[i]par Audefroi le Bâtard[/i]"
+text = "[b]De zéro à un: Comment construire le futur[/b]
+				[i]de Peter Thiel avec Blake Masters[/i]"
 horizontal_alignment = 1
 
 [node name="Texte_Fabliau" type="RichTextLabel" parent="." unique_id=279600867]
-offset_left = 36.0
-offset_top = 328.0
-offset_right = 1044.0
-offset_bottom = 549.0
+offset_left = 28.0
+offset_top = 341.0
+offset_right = 1036.0
+offset_bottom = 559.0
 theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent.
-									[b][i]Gérard attend la joie[/i][/b]"
+text = "	Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison."
 
 [node name="Texte_Fabliau2" type="RichTextLabel" parent="." unique_id=1680569132]
-visible = false
-offset_left = 37.0
-offset_top = 547.0
-offset_right = 1045.0
-offset_bottom = 722.0
+offset_left = 31.0
+offset_top = 575.0
+offset_right = 1039.0
+offset_bottom = 781.0
 theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	Une si belle union fut troublée tout-à-coup: les parents de la pucelle l'accordèrent en mariage à un vavasseur.
-									[b][i]Gérard attend la joie[/i][/b]
+text = "	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avecnir plus grand et plus radieux.
 "
 
 [node name="Texte_Fabliau3" type="RichTextLabel" parent="." unique_id=2019970555]
-visible = false
-offset_left = 36.0
-offset_top = 708.0
-offset_right = 1044.0
-offset_bottom = 994.0
+offset_left = 33.0
+offset_top = 817.0
+offset_right = 1041.0
+offset_bottom = 1047.0
 theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	Gérard vient comme avant lui parler de sa tendresse, mais elle répondit que, ne pouvant désormais le voir sans crime, elle renonçait à lui pour toujours et le pria même de ne jamais se représenter devant elle.
-									[b][i]Gérard attend la joie[/i][/b]
-"
+text = "	Selon la doxa de la \"Nouvelle Economie\", le nombre de pages consultées sur Internet était considéré comme un indicateur financier plus fiable et plus prospectif qu'un critère aussi prosaïque que le bénéfice net."
 
 [node name="Texte_Fabliau4" type="RichTextLabel" parent="." unique_id=1441044215]
-visible = false
-offset_left = 40.0
-offset_top = 967.0
-offset_right = 1048.0
-offset_bottom = 1248.0
+offset_left = 32.0
+offset_top = 1055.0
+offset_right = 1040.0
+offset_bottom = 1223.0
 theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	De désespoir, Gérard se croise pour la Terre Sainte. Cependant, il veut, avant de partir, voir encore une fois sa chère Isabeau. Il se rend chez elle et la trouve dans son verger.
-									[b][i]Gérard attend la joie[/i][/b]
-"
+text = "	C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de \"bulle\"."
 
 [node name="Texte_Fabliau5" type="RichTextLabel" parent="." unique_id=959253023]
-visible = false
-offset_left = 38.0
-offset_top = 1238.0
-offset_right = 1046.0
-offset_bottom = 1513.0
+offset_left = 34.0
+offset_top = 1253.0
+offset_right = 1042.0
+offset_bottom = 1528.0
 theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	Ses adieux sont si touchants qu'ils réveillent tout l'amour que la dame avait pour lui; elle fond en larmes, elle l'embrasse pour la dernière fois et tombre, comme Gérard, sans connaissance.
-									[b][i]Gérard attend la joie[/i][/b]"
+text = "	Mais les distorsions qu'entraînent les bulles ne disparaissent pas dès qu'elles éclatent. La folie Internet des années 1990 était la plus grosse bulle depuis le krach de 1929 et les leçons qu'on a retenues définissent et altèrent presque toute la vision technologique actuelle."
 
 [node name="Texte_Fabliau6" type="RichTextLabel" parent="." unique_id=1486995091]
-visible = false
-offset_left = 35.0
-offset_top = 1510.0
-offset_right = 1043.0
-offset_bottom = 1673.0
+offset_left = 39.0
+offset_top = 1547.0
+offset_right = 1047.0
+offset_bottom = 1710.0
 theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	Le mari, qui voit de sa fenêtre le spectacle, en meurt de douleur, et cette mort donne à Gérard la joie d'épouser sa maîtresse."
+text = "	La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé."
 
 [node name="Button_Return" type="Button" parent="." unique_id=1822020871]
 offset_left = 896.0
-offset_top = 1663.0
+offset_top = 1723.0
 offset_right = 1010.0
-offset_bottom = 1781.0
-icon = ExtResource("2_0ogdy")
-script = ExtResource("3_jaohx")
+offset_bottom = 1841.0
+icon = ExtResource("3_7bq0r")
+script = ExtResource("4_i1mch")
 
 [connection signal="mouse_entered" from="Button_Return" to="Button_Return" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="Button_Return" method="_on_mouse_exited"]

@@ -5,6 +5,11 @@ var is_dragging = false
 var type = "empty"
 
 #Chapitre1 passé
+var enigme1_Wall1 = false
+var enigme1_Wall2 = false
+var enigme1_Wall3 = false
+var enigme1_Wall4 = false
+var enigme1_Wall5 = false
 var enigme1_fini = false
 var enigme2_fini = false
 
