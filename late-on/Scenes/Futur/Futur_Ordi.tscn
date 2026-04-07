@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://caqslyn0arnsy"]
 
+[ext_resource type="Script" uid="uid://ck5ip4b2qe3hf" path="res://Scripts/chapitre1_futur/futur_ordi.gd" id="1_fvqum"]
 [ext_resource type="Texture2D" uid="uid://codwjb6e0glwb" path="res://Assets/Textures/Buttons_Proto/BoxCorrectSize.png" id="1_k056j"]
-[ext_resource type="Script" uid="uid://bw74juvp2ypwp" path="res://Scripts/chapitre1_futur/button_Boite_enigme1f.gd" id="2_w7i4o"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="3_e6xxk"]
-[ext_resource type="Script" uid="uid://bsfqc8n4na11o" path="res://Scripts/chapitre1_futur/button_Cartes_enigme2f.gd" id="4_oic6l"]
 [ext_resource type="Texture2D" uid="uid://d1rmoh1w8iwcx" path="res://Assets/Textures/Ordi.png" id="5_w7i4o"]
-[ext_resource type="Script" uid="uid://744d2wffkxmh" path="res://Scripts/chapitre1_futur/button_Page_enigme1f.gd" id="6_oic6l"]
 
 [node name="Control" type="Control" unique_id=1327342452]
 layout_mode = 3
@@ -16,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_fvqum")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
 layout_mode = 1
@@ -50,7 +49,6 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("3_e6xxk")
 stretch_mode = 5
-script = ExtResource("4_oic6l")
 
 [node name="Ordi" type="Sprite2D" parent="." unique_id=622137527]
 z_index = -1
@@ -81,7 +79,6 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("1_k056j")
 stretch_mode = 5
-script = ExtResource("2_w7i4o")
 
 [node name="Button_Page" type="TextureButton" parent="." unique_id=589815949]
 layout_mode = 1
@@ -98,14 +95,13 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("3_e6xxk")
 stretch_mode = 5
-script = ExtResource("6_oic6l")
 
-[connection signal="mouse_entered" from="Button_Cartes" to="Button_Cartes" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Cartes" to="Button_Cartes" method="_on_mouse_exited"]
-[connection signal="pressed" from="Button_Cartes" to="Button_Cartes" method="_on_pressed"]
-[connection signal="mouse_entered" from="Button_Boite" to="Button_Boite" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Boite" to="Button_Boite" method="_on_mouse_exited"]
-[connection signal="pressed" from="Button_Boite" to="Button_Boite" method="_on_pressed"]
-[connection signal="mouse_entered" from="Button_Page" to="Button_Page" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Page" to="Button_Page" method="_on_mouse_exited"]
-[connection signal="pressed" from="Button_Page" to="Button_Page" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Cartes" to="." method="_on_button_cartes_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Cartes" to="." method="_on_button_cartes_mouse_exited"]
+[connection signal="pressed" from="Button_Cartes" to="." method="_on_button_cartes_pressed"]
+[connection signal="mouse_entered" from="Button_Boite" to="." method="_on_button_boite_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Boite" to="." method="_on_button_boite_mouse_exited"]
+[connection signal="pressed" from="Button_Boite" to="." method="_on_button_boite_pressed"]
+[connection signal="mouse_entered" from="Button_Page" to="." method="_on_button_page_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Page" to="." method="_on_button_page_mouse_exited"]
+[connection signal="pressed" from="Button_Page" to="." method="_on_button_page_pressed"]

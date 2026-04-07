@@ -17,6 +17,8 @@ var enigme2_fini = false
 var enigme1f_fini = false
 var enigme2f_fini = false
 var enigme2f_Nbtry = 0
+var enigme3f_fini = false
+var enigme4f_fini = false
 
 #Pharses de l'énigme 3 en Duo
 var Duo3_sentence1 = false
