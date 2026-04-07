@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://do10okj2o7pvo"]
+[gd_scene format=3 uid="uid://d4l6mmjl8c4yj"]
 
-[ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
-[ext_resource type="Texture2D" uid="uid://vymb4kvstjvb" path="res://Assets/Textures/Buttons_Proto/backgroundTable.PNG" id="2_k4k01"]
-[ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
-[ext_resource type="Texture2D" uid="uid://uph8tdrg2w12" path="res://Assets/Textures/Buttons_Proto/Up.PNG" id="5_vjhe2"]
-[ext_resource type="Texture2D" uid="uid://tlw4it1ylrq2" path="res://Assets/Textures/Buttons_Proto/Right.PNG" id="6_g7yw5"]
-[ext_resource type="Texture2D" uid="uid://bmtdp3gmuerk" path="res://Assets/Textures/Buttons_Proto/Left.PNG" id="7_rfaug"]
-[ext_resource type="Texture2D" uid="uid://t5cyqpsfx3wu" path="res://Assets/Textures/Buttons_Proto/Down.PNG" id="8_ttexe"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_d1hrw"]
-[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_7og1i"]
-[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_6e0vd"]
+[ext_resource type="Script" uid="uid://dmmyp14oe8062" path="res://Scripts/chapitre1_futur/Enigme1Futur.gd" id="1_jyxcw"]
+[ext_resource type="Texture2D" uid="uid://d1rmoh1w8iwcx" path="res://Assets/Textures/Ordi.png" id="2_jyxcw"]
+[ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_eoiil"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="4_xgjnp"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="5_t3sp7"]
+[ext_resource type="Texture2D" uid="uid://uph8tdrg2w12" path="res://Assets/Textures/Buttons_Proto/Up.PNG" id="6_5bkw0"]
+[ext_resource type="Texture2D" uid="uid://tlw4it1ylrq2" path="res://Assets/Textures/Buttons_Proto/Right.PNG" id="7_i5plb"]
+[ext_resource type="Texture2D" uid="uid://bmtdp3gmuerk" path="res://Assets/Textures/Buttons_Proto/Left.PNG" id="8_1n2vv"]
+[ext_resource type="Texture2D" uid="uid://t5cyqpsfx3wu" path="res://Assets/Textures/Buttons_Proto/Down.PNG" id="9_d34vq"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_8erd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7yw5"]
 size = Vector2(49.5, 125)
@@ -21,22 +21,22 @@ size = Vector2(46.75, 116)
 radius = 30.149628
 
 [node name="Control" type="Node2D" unique_id=28566512]
-script = ExtResource("1_rfaug")
+script = ExtResource("1_jyxcw")
 
-[node name="BackgroundTable" type="Sprite2D" parent="." unique_id=723698975]
-position = Vector2(699, 1020.00006)
-scale = Vector2(4.3529983, 7.044554)
-texture = ExtResource("2_k4k01")
+[node name="Ordi" type="Sprite2D" parent="." unique_id=167802512]
+position = Vector2(389.00003, 1038)
+scale = Vector2(18.195623, 18.195623)
+texture = ExtResource("2_jyxcw")
 
 [node name="Maze" type="Node2D" parent="." unique_id=596364562]
-position = Vector2(15, -133)
+position = Vector2(31, -157)
 
 [node name="BackgroundMaze" type="ColorRect" parent="Maze" unique_id=1384118698]
 offset_left = 105.0
 offset_top = 645.0
 offset_right = 955.0
 offset_bottom = 1495.0
-color = Color(0.1843993, 0.060916826, 0.0304168, 1)
+color = Color(0.143255, 0.24849063, 0.48770642, 1)
 
 [node name="RandomWall" type="StaticBody2D" parent="Maze" unique_id=552169867]
 position = Vector2(105, 702)
@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_top = -7.0
 offset_right = 50.0
 offset_bottom = 143.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07302862, 0.050443776, 0.23236877, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall" unique_id=2017171295]
 offset_top = 143.0
@@ -58,7 +58,7 @@ offset_bottom = 193.0
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Histoire"
+text = "Livre"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_left = -9.0
 offset_right = 41.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall2" unique_id=532945697]
 offset_left = -8.0
@@ -84,7 +84,7 @@ rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
 theme_override_font_sizes/bold_font_size = 24
-text = "Voyage"
+text = "Gagner"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -100,7 +100,7 @@ offset_left = -11.0
 offset_top = 1.0
 offset_right = 39.0
 offset_bottom = 151.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall3" unique_id=941427346]
 offset_left = -11.0
@@ -110,7 +110,7 @@ offset_bottom = 201.00002
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Prière"
+text = "Evident"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -124,7 +124,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall8" unique_id=507469176]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall8" unique_id=1141440006]
 offset_top = 148.0
@@ -133,7 +133,7 @@ offset_bottom = 198.00003
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Fabliau"
+text = "1990"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -147,7 +147,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall4" unique_id=1495435070]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall4" unique_id=1816161834]
 offset_top = 150.0
@@ -156,7 +156,7 @@ offset_bottom = 200.00003
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Eternel"
+text = "perdre"
 horizontal_alignment = 1
 
 [node name="RandomWall5" type="StaticBody2D" parent="Maze" unique_id=2066027026]
@@ -169,7 +169,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall5" unique_id=1934232768]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall5" unique_id=933715896]
 offset_left = 1.0
@@ -179,7 +179,7 @@ offset_bottom = 197.99997
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Poème"
+text = "Essaie"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -193,7 +193,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall7" unique_id=1477695384]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall7" unique_id=521351015]
 offset_top = 149.0
@@ -216,7 +216,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall19" unique_id=937808514]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall19" unique_id=1921788246]
 offset_top = 149.0
@@ -239,7 +239,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall20" unique_id=1251277277]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall20" unique_id=2056081200]
 offset_top = 150.0
@@ -262,7 +262,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/RandomWall22" unique_id=1404779483]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall22" unique_id=1349708649]
 offset_top = 150.0
@@ -271,7 +271,7 @@ offset_bottom = 198.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Toujours"
+text = "Fin"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -288,7 +288,7 @@ offset_top = -8.0
 offset_right = 50.0
 offset_bottom = 142.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall9" unique_id=1532950307]
@@ -297,7 +297,7 @@ offset_top = -8.0
 offset_bottom = 41.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Chanson"
+text = "Histoire"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -313,7 +313,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall10" unique_id=255963031]
@@ -338,7 +338,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall11" unique_id=1795885820]
@@ -363,14 +363,14 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall14" unique_id=452105390]
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Langdoc"
+text = "Krash"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -386,7 +386,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall21" unique_id=1097964799]
 offset_left = -151.0
@@ -410,14 +410,14 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall15" unique_id=901907843]
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Beau"
+text = "Critère"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -433,14 +433,14 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall16" unique_id=404153060]
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Troublé"
+text = "Actuelle"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -456,14 +456,16 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall17" unique_id=296014999]
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Embrasse"
+text = "Gagner"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RandomWall13" type="StaticBody2D" parent="Maze" unique_id=2041278927]
 position = Vector2(633, 821)
@@ -478,7 +480,7 @@ offset_left = -27.0
 offset_right = 23.0
 offset_bottom = 123.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall13" unique_id=30202465]
 offset_left = -150.0
@@ -502,7 +504,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall24" unique_id=2052238673]
 offset_left = -150.0
@@ -526,7 +528,7 @@ offset_left = -2.0
 offset_right = 48.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall29" unique_id=1387082234]
@@ -535,7 +537,7 @@ offset_right = -2.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Fenêtre"
+text = "Tout"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -551,7 +553,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall25" unique_id=1465752429]
 offset_left = -149.0
@@ -575,7 +577,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall28" unique_id=1707046168]
 offset_left = -149.0
@@ -599,14 +601,14 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key1" unique_id=834379109]
 offset_left = -150.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Pur"
+text = "Raison"
 horizontal_alignment = 1
 
 [node name="WallOff_Key1" type="StaticBody2D" parent="Maze" unique_id=1423623767]
@@ -619,7 +621,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key1" unique_id=1151095187]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key1" unique_id=1273068437]
 offset_top = 150.0
@@ -628,7 +630,7 @@ offset_bottom = 199.64474
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Décent"
+text = "Argent"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -642,7 +644,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key2" unique_id=1754920034]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key2" unique_id=1451776965]
 offset_top = 151.0
@@ -651,7 +653,7 @@ offset_bottom = 199.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 28
-text = "Vavasseur"
+text = "Investir"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -666,7 +668,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key2" unique_id=404438014]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key2" unique_id=1788903196]
 offset_top = 149.0
@@ -675,7 +677,7 @@ offset_bottom = 200.46002
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Mariage"
+text = "Croyance"
 horizontal_alignment = 1
 
 [node name="Wall_Key3" type="StaticBody2D" parent="Maze" unique_id=255203589]
@@ -690,14 +692,14 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key3" unique_id=516176788]
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 28
-text = "Tendresse"
+text = "Indicateur"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -713,7 +715,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_top = 40.0
 offset_right = 50.0
 offset_bottom = 168.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key3" unique_id=2101749486]
 offset_left = -1.0
@@ -723,7 +725,7 @@ offset_bottom = 217.96008
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Crime"
+text = "Doxa"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -737,7 +739,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 [node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key4" unique_id=238544818]
 offset_right = 50.0
 offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key4" unique_id=1936046005]
 offset_top = 150.0
@@ -746,7 +748,7 @@ offset_bottom = 198.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 28
-text = "Désespoir"
+text = "Croyances"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -762,7 +764,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key4" unique_id=1046084042]
 offset_left = -149.0
@@ -770,7 +772,7 @@ offset_right = 1.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Maison"
+text = "Vraies"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -786,7 +788,7 @@ shape = SubResource("RectangleShape2D_g7yw5")
 offset_right = 50.0
 offset_bottom = 150.0
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+color = Color(0.07450981, 0.050980393, 0.23137255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key5" unique_id=1933012022]
@@ -794,7 +796,7 @@ offset_left = -150.0
 offset_bottom = 49.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Adieux"
+text = "Bulle"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -817,7 +819,7 @@ offset_bottom = 199.64474
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Joie"
+text = "Un"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -829,7 +831,7 @@ shape = SubResource("CircleShape2D_rfaug")
 
 [node name="Sprite2D" type="Sprite2D" parent="Maze/Ball" unique_id=1164224572]
 scale = Vector2(2, 2)
-texture = ExtResource("3_g7yw5")
+texture = ExtResource("3_eoiil")
 
 [node name="RayCastDown" type="RayCast2D" parent="Maze/Ball" unique_id=1719136652]
 target_position = Vector2(0, 720)
@@ -851,54 +853,54 @@ offset_bottom = 1362.0
 color = Color(0.4764691, 0.563753, 0.5996934, 0.1254902)
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
-offset_left = 864.0
-offset_top = 1744.0
-offset_right = 976.0
-offset_bottom = 1852.0
-icon = ExtResource("9_d1hrw")
+offset_left = 924.0
+offset_top = 1763.0
+offset_right = 1036.0
+offset_bottom = 1871.0
+icon = ExtResource("4_xgjnp")
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
-offset_left = 612.0
-offset_top = 1392.0
-offset_right = 920.0
-offset_bottom = 1689.0
-icon = ExtResource("11_6e0vd")
+offset_left = 591.0
+offset_top = 1437.0
+offset_right = 899.0
+offset_bottom = 1734.0
+icon = ExtResource("5_t3sp7")
 flat = true
 expand_icon = true
 
 [node name="Button_Up" type="Button" parent="." unique_id=435473685]
-offset_left = 248.0
-offset_top = 1440.0
-offset_right = 391.0
-offset_bottom = 1575.0
-icon = ExtResource("5_vjhe2")
+offset_left = 167.0
+offset_top = 1506.0
+offset_right = 310.0
+offset_bottom = 1641.0
+icon = ExtResource("6_5bkw0")
 flat = true
 expand_icon = true
 
 [node name="Button_Right" type="Button" parent="." unique_id=1602582602]
-offset_left = 376.0
-offset_top = 1568.0
-offset_right = 519.0
-offset_bottom = 1703.0
-icon = ExtResource("6_g7yw5")
+offset_left = 295.0
+offset_top = 1634.0
+offset_right = 438.0
+offset_bottom = 1769.0
+icon = ExtResource("7_i5plb")
 flat = true
 expand_icon = true
 
 [node name="Button_Left" type="Button" parent="." unique_id=503525865]
-offset_left = 120.0
-offset_top = 1568.0
-offset_right = 263.0
-offset_bottom = 1703.0
-icon = ExtResource("7_rfaug")
+offset_left = 39.0
+offset_top = 1634.0
+offset_right = 182.0
+offset_bottom = 1769.0
+icon = ExtResource("8_1n2vv")
 flat = true
 expand_icon = true
 
 [node name="Button_Down" type="Button" parent="." unique_id=1852277812]
-offset_left = 248.0
-offset_top = 1696.0
-offset_right = 391.0
-offset_bottom = 1831.0
-icon = ExtResource("8_ttexe")
+offset_left = 167.0
+offset_top = 1762.0
+offset_right = 310.0
+offset_bottom = 1897.0
+icon = ExtResource("9_d34vq")
 flat = true
 expand_icon = true
 
@@ -909,7 +911,7 @@ position = Vector2(-737, -1108)
 z_index = 1
 position = Vector2(1283, 1366.5)
 scale = Vector2(11.825, 10.075)
-texture = ExtResource("10_7og1i")
+texture = ExtResource("10_8erd2")
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
 z_index = 1

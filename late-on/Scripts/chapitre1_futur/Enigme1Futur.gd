@@ -34,9 +34,10 @@ var initialPos: Vector2
 func _ready() -> void:
 	#PopUpText.text = "Cette boite s'ouvre en faisant en sorte que la bille du labyrinthe active les bons mots. En cas d'oubli, j'ai toujours le fabliaux me permettant de me souvenir des mots et de leur ordre."
 	if global.enigme1_Wall1 == false:
-		PopUpText.text = "Il faut connaitre mon fabliaux préférer pour ouvrir cette boite. 	 Il commence par: Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent."
+		PopUpText.text = "Commence ta journée de travail en déloquant l'ordinateur :) Tu as sécurisé ton compte avec une page de ton livre préféré. Il faut que tu repères les mots les plus <<impactants >> ;) "
+		PopUpText.text += '\n' + "<<Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>"
 	else :
-		PopUpText.text = "Repartons du premier paragraphe du fabliau. Gérard attend la joie mais j'aimerais bien qu'il l'atteigne"
+		PopUpText.text = "Repartons du premier paragraphe: <<	Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>"
 
 	initialPos = Ball.global_position
 
@@ -53,58 +54,48 @@ func _process(delta: float) -> void:
 		tweenBounce.tween_property(Ball,"global_position", Bounce, 0.2).set_ease(Tween.EASE_OUT)
 
 		if CollisionWall == Wall1 :
-			global.enigme1_Wall1 = true
 			tweenWall.tween_property(Wall1,"modulate:a", 0,0.6)
 			Wall1.process_mode = Node.PROCESS_MODE_DISABLED
 			tweenWall.tween_property(WallOff1,"modulate:a", 0,0.6)
 			WallOff1.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
-			if global.enigme1_Wall2 == false:
-				PopUpText.text = "Une si belle union fut troublée tout-à-coup: les parents de la pucelle l'accordèrent en mariage à un vavasseur."
+			PopUpText.text = "Bravo! tu te souviens de la première étape :) 2ème paragraphe: <<	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avecnir plus grand et plus radieux.>>"
 
 		elif CollisionWall == Wall2 :
-			global.enigme1_Wall2 = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
 			KeyOk = true
-			if global.enigme1_Wall3 == false:
-				PopUpText.text = "Gérard vient comme avant lui parler de sa tendresse, mais elle répondit que, ne pouvant désormais le voir sans crime, elle renonçait à lui pour toujours et le pria même de ne jamais se représenter devant elle."
+			PopUpText.text = "Tu t'en sors vraiment bien! continuons avec le 3ème paragraphe: <<	Selon la doxa de la <<Nouvelle Economie>>, le nombre de pages consultées sur Internet était considéré comme un indicateur financier plus fiable et plus prospectif qu'un critère aussi prosaïque que le bénéfice net.>>"
 
 		elif CollisionWall == Wall3 :
-			global.enigme1_Wall3 = true
 			tweenWall.tween_property(WallOff3,"modulate:a", 1,0.6)
 			KeyOk = true
-			if global.enigme1_Wall4 == false:
-				PopUpText.text = "De désespoir, Gérard se croise pour la Terre Sainte. Cependant, il veut, avant de partir, voir encore une fois sa chère Isabeau. Il se rend chez elle et la trouve dans son verger."
+			PopUpText.text = "Tu y es presque! 4ème paragraphe: <<	C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de <<bulle>>.>>"
 
 		elif CollisionWall == Wall4 :
-			global.enigme1_Wall4 = true
 			tweenWall.tween_property(WallOff1,"modulate:a", 1,0.6)
 			tweenWall.tween_property(WallOff4,"modulate:a", 0,0.6)
 			WallOff4.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
-			if global.enigme1_Wall5 == false:
-				PopUpText.text = "Ses adieux sont si touchants qu'ils réveillent tout l'amour que la dame avait pour lui; elle fond en larmes, elle l'embrasse pour la dernière fois et tombe, comme Gérard, sans connaissance."
+			PopUpText.text = "Tu es arrivé si loin! est-ce que tu trouveras le 5° paragraphe aussi? <<	Mais les distorsions qu'entraînent les bulles ne disparaissent pas dès qu'elles éclatent. La folie Internet des années 1990 était la plus grosse bulle depuis le krach de 1929 et les leçons qu'on a retenues définissent et altèrent presque toute la vision technologique actuelle.>>"
 
 		elif CollisionWall == Wall5 :
-			global.enigme1_Wall5 = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 0,0.6)
 			WallOff2.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
-			if global.enigme1_fini == false:
-				PopUpText.text = "Le mari, qui voit de sa fenêtre le spectacle, en meurt de douleur, et cette mort donne à Gérard la joie d'épouser sa maîtresse."
+			PopUpText.text = "Wahoo! dernier paragraphe: <<	La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé.>>"
 
 		elif CollisionWall == Wall6 :
-			global.enigme1_fini = true
+			global.enigme1f_fini = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
-			PopUpText.text = "C'est la bonne combianaison, la boite vient de se déverouiller!"
+			PopUpText.text = "C'est la bonne combinaison! Ton compte est ouvert! Félicitations petit employé :)"
 			await get_tree().create_timer(3).timeout
-			get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Maison.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
 
 		else:
 			tweenMove.kill()
 			tweenBounce.kill()
 			var tweenBall = get_tree().create_tween() 
-			PopUpText.text = "Le mécanisme ne fait pas le bruit correcte, j'ai dût faire une erreur dans la combinaison. Aurais-je oublié l'histoire du Fabliau?"
+			PopUpText.text = "Oh non, ce n'est pas le bon mot :( . Mais ne t'en fais pas, tu vas y arriver ^^"
 			tweenBall.tween_property(Ball,"modulate:a", 0,0.3)
 			Ball.global_position = initialPos
 			Wall1.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -121,10 +112,10 @@ func _process(delta: float) -> void:
 
 #Gestion des boutons
 func _on_button_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Maison.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
 
 func _on_button_fabliau_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Passé/Fabliau_passé.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Futur/Page_Futur.tscn")
 
 # mouvement de la balle
 func _on_button_up_pressed() -> void:

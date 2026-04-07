@@ -9,8 +9,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Enigme1.tscn")
-	global.enigme1f_fini = true
+	get_tree().change_scene_to_file("res://Scenes/Futur/Page_Futur.tscn")
 
 func _on_mouse_entered() -> void:
 	scale = Vector2(1.05,1.05)
