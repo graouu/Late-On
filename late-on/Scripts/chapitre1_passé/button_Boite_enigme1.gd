@@ -9,11 +9,13 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	#A changer quand je fais l'énigme1
-	get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Enigme1.tscn")
+	if global.enigme1_fini == false:
+		get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Enigme1.tscn")
 
 func _on_mouse_entered() -> void:
-	scale = Vector2(1.05,1.05)
+	if global.enigme1_fini == false:
+		scale = Vector2(1.05,1.05)
 
 func _on_mouse_exited() -> void:
-	scale = Vector2(1,1)
+	if global.enigme1_fini == false:
+		scale = Vector2(1,1)

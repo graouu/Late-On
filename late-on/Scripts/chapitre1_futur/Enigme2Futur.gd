@@ -36,6 +36,9 @@ func _on_button_validate_pressed() -> void:
 	if SpaceTypeMap1.name_inside == "TypeMap4" and SpaceTypeMap2.name_inside == "TypeMap3" and SpaceTypeMap3.name_inside == "TypeMap2" and SpaceTypeMap4.name_inside == "TypeMap1":
 		PopUpText.text = "Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 500 points! Je suis heureux de t'avoir comme employé"
 		global.enigme2f_fini = true
+		await get_tree().create_timer(3).timeout
+		get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
+
 	else:
 		global.enigme2f_Nbtry = global.enigme2f_Nbtry +1
 		if global.enigme2f_Nbtry == 1:
