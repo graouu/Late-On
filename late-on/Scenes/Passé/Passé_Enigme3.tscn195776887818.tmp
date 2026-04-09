@@ -1,0 +1,956 @@
+[gd_scene format=3 uid="uid://c16mlk2x4w7f8"]
+
+[ext_resource type="Script" uid="uid://shr1kp8cwwop" path="res://Scripts/chapitre1_passé/Enigme3Past.gd" id="1_k1wg7"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="2_d2h0x"]
+[ext_resource type="Texture2D" uid="uid://boyc1aftxsx0g" path="res://Assets/Textures/Buttons_Proto/enigme3/Epouv2.png" id="5_ju0f3"]
+[ext_resource type="Texture2D" uid="uid://c3lp6qwc0e4xs" path="res://Assets/Textures/Buttons_Proto/enigme3/Epouv1.png" id="6_byyji"]
+[ext_resource type="Texture2D" uid="uid://m6q1itcm44y0" path="res://Assets/Textures/Buttons_Proto/enigme3/Epouv3.png" id="7_06ru2"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_x12kq"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_4bh6m"]
+[ext_resource type="Texture2D" uid="uid://cuvfo602dtbug" path="res://Assets/Textures/Buttons_Proto/enigme3/titleFlour.png" id="10_k1wg7"]
+[ext_resource type="Script" uid="uid://c5d8iub1j6kyg" path="res://Scripts/chapitre1_passé/Dropable_epouv1.gd" id="11_byyji"]
+[ext_resource type="Texture2D" uid="uid://duru5vi41r2b5" path="res://Assets/Textures/Buttons_Proto/enigme3/titleGrass.png" id="11_jpgf1"]
+[ext_resource type="Texture2D" uid="uid://dmlhfmfknq3ti" path="res://Assets/Textures/Buttons_Proto/enigme3/titleSalat.png" id="12_f7be4"]
+[ext_resource type="Texture2D" uid="uid://dsb5w6dex42ex" path="res://Assets/Textures/Buttons_Proto/enigme3/tilteRed.png" id="12_k1wg7"]
+[ext_resource type="Script" uid="uid://84c2mac40o3r" path="res://Scripts/chapitre1_passé/Dropable_epouv2.gd" id="13_k1wg7"]
+[ext_resource type="Texture2D" uid="uid://bscocdcooioh2" path="res://Assets/Textures/Buttons_Proto/enigme3/titleWine.png" id="13_x12kq"]
+[ext_resource type="Script" uid="uid://bpot5gewrmuvt" path="res://Scripts/chapitre1_passé/SpaceDrop_enigme3.gd" id="14_byyji"]
+[ext_resource type="Texture2D" uid="uid://bcebq5h41dkyt" path="res://Assets/Textures/Buttons_Proto/enigme3/tilteGreen.png" id="15_f7be4"]
+[ext_resource type="Script" uid="uid://b6vqguenehdel" path="res://Scripts/chapitre1_passé/Dropable_epouv3.gd" id="15_jpgf1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
+size = Vector2(5.2400002, 5.6399994)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
+size = Vector2(128, 127.5)
+
+[node name="Control" type="Node2D" unique_id=28566512]
+script = ExtResource("1_k1wg7")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2078142667]
+z_index = -1
+position = Vector2(-48.732113, 989.5625)
+scale = Vector2(5.1366625, 5.2430243)
+texture = ExtResource("2_d2h0x")
+
+[node name="01" type="StaticBody2D" parent="." unique_id=550985851 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(104, 904)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="01" unique_id=363056687]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="01" unique_id=922671647]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="02" type="StaticBody2D" parent="." unique_id=1032136184 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(104, 1088)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="02" unique_id=1726349601]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="02" unique_id=1642403505]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="03" type="StaticBody2D" parent="." unique_id=1426551527 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(104, 1264)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="03" unique_id=791209221]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="03" unique_id=1434213147]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_Return" type="Button" parent="." unique_id=953520752]
+offset_left = 825.0
+offset_top = 1708.0
+offset_right = 937.0
+offset_bottom = 1816.0
+icon = ExtResource("9_x12kq")
+
+[node name="Button_Validate" type="Button" parent="." unique_id=568960645]
+visible = false
+offset_left = 665.0
+offset_top = 1396.0
+offset_right = 1009.0
+offset_bottom = 1540.0
+theme_override_font_sizes/font_size = 46
+text = "Valider"
+
+[node name="Info1_Enigma" type="RichTextLabel" parent="." unique_id=199201805]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = 172.0
+offset_right = 1079.0
+offset_bottom = 572.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 36
+text = "Le paysan possède 3 épouvantails. 
+Comment les agencer pour lui permettre d'obtenir de meilleures récolte?
+Le blé est très attaquée et doit être doublement protégée.
+La vigne nécessite 1 épouvantail.
+Les salades s'en sortent avec ou sans épouvantial.
+Les zones en friche ont besoin d'oiseaux."
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="PopUp" type="Node2D" parent="." unique_id=813955419]
+visible = false
+position = Vector2(-711, 176)
+
+[node name="ShapePopUp" type="Sprite2D" parent="PopUp" unique_id=201039772]
+z_index = 1
+position = Vector2(1013.00006, 1305.5)
+scale = Vector2(5.0749993, 7.0249996)
+texture = ExtResource("10_4bh6m")
+
+[node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 810.0
+offset_top = 1165.0
+offset_right = 1216.0
+offset_bottom = 1444.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+theme_override_font_sizes/normal_font_size = 32
+
+[node name="Champ" type="Node2D" parent="." unique_id=1309990000]
+position = Vector2(168, 0)
+
+[node name="TitleFlour" type="Sprite2D" parent="Champ" unique_id=693609534]
+position = Vector2(528, 1152)
+scale = Vector2(4, 4)
+texture = ExtResource("10_k1wg7")
+
+[node name="TitleGrass" type="Sprite2D" parent="Champ" unique_id=1434900435]
+position = Vector2(272, 896)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass2" type="Sprite2D" parent="Champ" unique_id=190517672]
+position = Vector2(272, 1024)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass3" type="Sprite2D" parent="Champ" unique_id=707219178]
+position = Vector2(400, 896)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass4" type="Sprite2D" parent="Champ" unique_id=1162240202]
+position = Vector2(400, 1024)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass5" type="Sprite2D" parent="Champ" unique_id=1758130906]
+position = Vector2(528, 1280)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass6" type="Sprite2D" parent="Champ" unique_id=2053451402]
+position = Vector2(656, 1280)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass7" type="Sprite2D" parent="Champ" unique_id=1616737500]
+position = Vector2(784, 896)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleGrass8" type="Sprite2D" parent="Champ" unique_id=796111311]
+position = Vector2(784, 1024)
+scale = Vector2(4, 4)
+texture = ExtResource("11_jpgf1")
+
+[node name="TitleSalat" type="Sprite2D" parent="Champ" unique_id=998608698]
+position = Vector2(144, 896)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat2" type="Sprite2D" parent="Champ" unique_id=962784329]
+position = Vector2(144, 1024)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat3" type="Sprite2D" parent="Champ" unique_id=236405996]
+position = Vector2(400, 1152)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat4" type="Sprite2D" parent="Champ" unique_id=1692088710]
+position = Vector2(400, 1280)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat5" type="Sprite2D" parent="Champ" unique_id=1035969986]
+position = Vector2(528, 896)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat6" type="Sprite2D" parent="Champ" unique_id=2070688596]
+position = Vector2(656, 896)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat7" type="Sprite2D" parent="Champ" unique_id=1225311672]
+position = Vector2(784, 1152)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleSalat8" type="Sprite2D" parent="Champ" unique_id=1495027265]
+position = Vector2(784, 1280)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f7be4")
+
+[node name="TitleWine" type="Sprite2D" parent="Champ" unique_id=251143075]
+position = Vector2(144, 1152)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="TitleWine2" type="Sprite2D" parent="Champ" unique_id=2018739104]
+position = Vector2(144, 1280)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="TitleWine3" type="Sprite2D" parent="Champ" unique_id=1081756272]
+position = Vector2(272, 1152)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="TitleWine4" type="Sprite2D" parent="Champ" unique_id=251680143]
+position = Vector2(272, 1280)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="TitleWine5" type="Sprite2D" parent="Champ" unique_id=2072007733]
+position = Vector2(528, 1024)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="TitleWine6" type="Sprite2D" parent="Champ" unique_id=1482749382]
+position = Vector2(656, 1024)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="TitleWine7" type="Sprite2D" parent="Champ" unique_id=1244143967]
+position = Vector2(656, 1152)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x12kq")
+
+[node name="PositionGrid" type="Node2D" parent="." unique_id=2119683007]
+
+[node name="A1" type="StaticBody2D" parent="PositionGrid" unique_id=507525881 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(312, 896)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/A1" unique_id=919069790]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/A1" unique_id=1801030490]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="A2" type="StaticBody2D" parent="PositionGrid" unique_id=169166464 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(312, 1024)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/A2" unique_id=1486322619]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/A2" unique_id=823195355]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="A3" type="StaticBody2D" parent="PositionGrid" unique_id=1947754281 groups=["Wine", "dropable_job"]]
+z_index = 1
+position = Vector2(312, 1152)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/A3" unique_id=1875058801]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/A3" unique_id=55692885]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="A4" type="StaticBody2D" parent="PositionGrid" unique_id=1868354121 groups=["Wine", "dropable_job"]]
+z_index = 1
+position = Vector2(312, 1280)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/A4" unique_id=1132314614]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/A4" unique_id=687103689]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="B1" type="StaticBody2D" parent="PositionGrid" unique_id=1105592699 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(440, 896)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/B1" unique_id=1229524876]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/B1" unique_id=1847977631]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="B2" type="StaticBody2D" parent="PositionGrid" unique_id=444086354 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(440, 1024)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/B2" unique_id=1379693573]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/B2" unique_id=1628153722]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="B3" type="StaticBody2D" parent="PositionGrid" unique_id=561286750 groups=["dropable_job"]]
+z_index = 1
+position = Vector2(440, 1152)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/B3" unique_id=959709069]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/B3" unique_id=506812037]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="B4" type="StaticBody2D" parent="PositionGrid" unique_id=1778316771 groups=["Wine", "dropable_job"]]
+z_index = 1
+position = Vector2(440, 1280)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/B4" unique_id=666444226]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/B4" unique_id=866879049]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="C1" type="StaticBody2D" parent="PositionGrid" unique_id=1412581989 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(568, 896)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/C1" unique_id=1102012845]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/C1" unique_id=728793522]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="C2" type="StaticBody2D" parent="PositionGrid" unique_id=136777617 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(568, 1024)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/C2" unique_id=2079683711]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/C2" unique_id=572438693]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="C3" type="StaticBody2D" parent="PositionGrid" unique_id=1557170015 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(568, 1152)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/C3" unique_id=22663435]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/C3" unique_id=1876377214]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="C4" type="StaticBody2D" parent="PositionGrid" unique_id=489594769 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(568, 1280)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/C4" unique_id=678214177]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/C4" unique_id=681914433]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="D1" type="StaticBody2D" parent="PositionGrid" unique_id=1804567540 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(696, 896)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/D1" unique_id=567937617]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/D1" unique_id=1691394247]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="D2" type="StaticBody2D" parent="PositionGrid" unique_id=1841521973 groups=["Wine", "dropable_job"]]
+z_index = 1
+position = Vector2(696, 1024)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/D2" unique_id=98902891]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/D2" unique_id=2130507139]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="D3" type="StaticBody2D" parent="PositionGrid" unique_id=1746649596 groups=["Flour", "dropable_job"]]
+z_index = 1
+position = Vector2(696, 1152)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/D3" unique_id=1372186462]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/D3" unique_id=1868578235]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="D4" type="StaticBody2D" parent="PositionGrid" unique_id=468153179 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(696, 1280)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/D4" unique_id=522789408]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/D4" unique_id=1987248509]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="E1" type="StaticBody2D" parent="PositionGrid" unique_id=1131170803 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(824, 896)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/E1" unique_id=1472012961]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/E1" unique_id=1213504915]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="E2" type="StaticBody2D" parent="PositionGrid" unique_id=88051247 groups=["Wine", "dropable_job"]]
+z_index = 1
+position = Vector2(824, 1024)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/E2" unique_id=913128241]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/E2" unique_id=352954656]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="E3" type="StaticBody2D" parent="PositionGrid" unique_id=1582808573 groups=["Wine", "dropable_job"]]
+z_index = 1
+position = Vector2(824, 1152)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/E3" unique_id=532245670]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/E3" unique_id=152323028]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="E4" type="StaticBody2D" parent="PositionGrid" unique_id=1385071272 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(824, 1280)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/E4" unique_id=922329881]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/E4" unique_id=285714457]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="F1" type="StaticBody2D" parent="PositionGrid" unique_id=97022637 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(952, 896)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/F1" unique_id=555895178]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/F1" unique_id=965900431]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="F2" type="StaticBody2D" parent="PositionGrid" unique_id=604121356 groups=["Grass", "dropable_job"]]
+z_index = 1
+position = Vector2(952, 1024)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/F2" unique_id=1803032113]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/F2" unique_id=1286286443]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="F3" type="StaticBody2D" parent="PositionGrid" unique_id=681216966 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(952, 1152)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/F3" unique_id=1317985503]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/F3" unique_id=1017279343]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="F4" type="StaticBody2D" parent="PositionGrid" unique_id=1225541575 groups=["Salat", "dropable_job"]]
+z_index = 1
+position = Vector2(952, 1280)
+scale = Vector2(4, 4)
+script = ExtResource("14_byyji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositionGrid/F4" unique_id=1739446056]
+shape = SubResource("RectangleShape2D_i5y8v")
+
+[node name="ColorRect" type="ColorRect" parent="PositionGrid/F4" unique_id=1547215954]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Epouv1" type="Node2D" parent="." unique_id=752903855 groups=["job"]]
+z_index = 2
+position = Vector2(104, 904)
+scale = Vector2(0.8, 0.8)
+
+[node name="Epouv1" type="Area2D" parent="Epouv1" unique_id=47875751]
+rotation = 1.5707964
+script = ExtResource("11_byyji")
+
+[node name="Sprite2D" type="Sprite2D" parent="Epouv1/Epouv1" unique_id=1736216379]
+scale = Vector2(3.9999993, 3.9999993)
+texture = ExtResource("5_ju0f3")
+
+[node name="Ep1A" type="Sprite2D" parent="Epouv1/Epouv1/Sprite2D" unique_id=1179944120]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(-40.000004, 2.6226044e-06)
+scale = Vector2(1.05, 1.093)
+texture = ExtResource("12_k1wg7")
+
+[node name="Ep1C" type="Sprite2D" parent="Epouv1/Epouv1/Sprite2D" unique_id=785993732]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(40, -8.743063e-07)
+scale = Vector2(1.05, 1.093)
+texture = ExtResource("12_k1wg7")
+
+[node name="Ep1D" type="Sprite2D" parent="Epouv1/Epouv1/Sprite2D" unique_id=2092324665]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(40, -40.000004)
+scale = Vector2(1.05, 1.093)
+texture = ExtResource("12_k1wg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Epouv1/Epouv1" unique_id=1293272795]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="Epouv2" type="Node2D" parent="." unique_id=1615009566 groups=["job"]]
+z_index = 2
+position = Vector2(104, 1088)
+scale = Vector2(0.8, 0.8)
+
+[node name="Epouv2" type="Area2D" parent="Epouv2" unique_id=1445900781]
+script = ExtResource("13_k1wg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Epouv2/Epouv2" unique_id=1631313715]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="PlaceHolderMoney" type="Sprite2D" parent="Epouv2/Epouv2" unique_id=2045570607]
+scale = Vector2(4, 4)
+texture = ExtResource("6_byyji")
+
+[node name="Ep2A" type="Sprite2D" parent="Epouv2/Epouv2/PlaceHolderMoney" unique_id=902679861]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(-39.77649, 0.22497559)
+rotation = 1.5707964
+scale = Vector2(1.0499997, 1.0929998)
+texture = ExtResource("15_f7be4")
+
+[node name="Ep2C" type="Sprite2D" parent="Epouv2/Epouv2/PlaceHolderMoney" unique_id=384596990]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(40.22351, 0.2250061)
+rotation = 1.5707964
+scale = Vector2(1.0499997, 1.0929998)
+texture = ExtResource("15_f7be4")
+
+[node name="Ep2D" type="Sprite2D" parent="Epouv2/Epouv2/PlaceHolderMoney" unique_id=1793373763]
+visible = false
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(80.22351, 0.2250061)
+rotation = 1.5707964
+scale = Vector2(1.0499997, 1.0929998)
+texture = ExtResource("15_f7be4")
+
+[node name="Epouv3" type="Node2D" parent="." unique_id=2042054624 groups=["job"]]
+z_index = 2
+position = Vector2(104, 1264)
+scale = Vector2(0.8, 0.8)
+
+[node name="Epouv3" type="Area2D" parent="Epouv3" unique_id=1167932455]
+script = ExtResource("15_jpgf1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Epouv3/Epouv3" unique_id=1309479811]
+shape = SubResource("RectangleShape2D_boa88")
+
+[node name="PlaceHolderNobility" type="Sprite2D" parent="Epouv3/Epouv3" unique_id=2076171473]
+scale = Vector2(4, 4)
+texture = ExtResource("7_06ru2")
+
+[connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
+[connection signal="mouse_entered" from="Button_Validate" to="." method="_on_button_validate_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Validate" to="." method="_on_button_validate_mouse_exited"]
+[connection signal="pressed" from="Button_Validate" to="." method="_on_button_validate_pressed"]
+[connection signal="body_entered" from="Epouv1/Epouv1" to="Epouv1/Epouv1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Epouv1/Epouv1" to="Epouv1/Epouv1" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Epouv1/Epouv1" to="Epouv1/Epouv1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Epouv1/Epouv1" to="Epouv1/Epouv1" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Epouv2/Epouv2" to="Epouv2/Epouv2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Epouv2/Epouv2" to="Epouv2/Epouv2" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Epouv2/Epouv2" to="Epouv2/Epouv2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Epouv2/Epouv2" to="Epouv2/Epouv2" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="Epouv3/Epouv3" to="Epouv3/Epouv3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Epouv3/Epouv3" to="Epouv3/Epouv3" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Epouv3/Epouv3" to="Epouv3/Epouv3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Epouv3/Epouv3" to="Epouv3/Epouv3" method="_on_area_2d_mouse_exited"]

@@ -26,8 +26,6 @@ func _process(_delta: float) -> void:
 				tween.tween_property(self,"global_position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 				body_ref.is_inside_empty = false
 				body_ref.name_inside = self.name
-				print("Job remplie:")
-				print (body_ref.name_inside)
 				global.type = "empty"
 				current_body = body_ref
 			#Return to original pos when released outside droppable area
@@ -55,8 +53,6 @@ func _on_area_2d_body_entered(body:StaticBody2D):
 		if current_body and current_body != body_ref:
 			current_body.is_inside_empty = true
 			current_body.name_inside = "empty"
-			print("Job vidé:")
-			print (current_body.name_inside)
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group('dropable_job'):
