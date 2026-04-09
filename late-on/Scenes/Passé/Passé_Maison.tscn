@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://cawyglynwcgo2" path="res://Scripts/chapitre1_passé/button_Boite_enigme1.gd" id="2_y67j2"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="3_ksnaa"]
 [ext_resource type="Script" uid="uid://2mqyguwox642" path="res://Scripts/chapitre1_passé/button_Cartes_enigme2.gd" id="4_r4v18"]
+[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Textures/Buttons_Proto/PlacerHolderWindmill.png" id="5_wy4yc"]
+[ext_resource type="Script" uid="uid://ciytqxxubom1" path="res://Scripts/chapitre1_passé/button_Champs_enigme3.gd" id="6_wge7r"]
 [ext_resource type="Texture2D" uid="uid://nm3fwd05s7rv" path="res://Assets/Textures/atelier.jpg" id="7_6j3mt"]
 
 [node name="Control" type="Control" unique_id=1327342452]
@@ -68,6 +70,23 @@ texture_normal = ExtResource("3_ksnaa")
 stretch_mode = 5
 script = ExtResource("4_r4v18")
 
+[node name="Button_Champs" type="TextureButton" parent="." unique_id=2074305662]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -1129.0
+offset_right = 166.0
+offset_bottom = -879.0322
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("5_wy4yc")
+stretch_mode = 5
+script = ExtResource("6_wge7r")
+
 [node name="Atelier" type="Sprite2D" parent="." unique_id=1901310815]
 z_index = -1
 position = Vector2(552.00006, 1273)
@@ -80,3 +99,6 @@ texture = ExtResource("7_6j3mt")
 [connection signal="mouse_entered" from="Button_Cartes" to="Button_Cartes" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Cartes" to="Button_Cartes" method="_on_mouse_exited"]
 [connection signal="pressed" from="Button_Cartes" to="Button_Cartes" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Champs" to="Button_Champs" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Champs" to="Button_Champs" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button_Champs" to="Button_Champs" method="_on_pressed"]
