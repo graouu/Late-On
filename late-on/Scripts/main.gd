@@ -3,6 +3,8 @@ extends Control
 #Parent de l'endroit actuel
 @export var place_control : Control
 
+@export var is_past : bool
+
 @export var label_place : Label
 
 @export var puzzle_control : Control
@@ -38,9 +40,13 @@ func _ready() -> void:
 #Charge toutes les scènes d'endroits dans le dossier Place
 #dans un dictionnaire (clé : nom de l'endroit)
 func load_places():
-	for file_name in DirAccess.get_files_at("res://Place/"):
-		place_dic[file_name.replace(".tscn","")] = (load("res://Place/" + file_name))
-		#On retire '.tscn', l'extension du fichier
+	if is_past:
+		for file_name in DirAccess.get_files_at("res://Place/Passé/"):
+			place_dic[file_name.replace(".tscn","")] = (load("res://Place/Passé/" + file_name))
+			#On retire '.tscn', l'extension du fichier
+	else:
+		for file_name in DirAccess.get_files_at("res://Place/Futur/"):
+			place_dic[file_name.replace(".tscn","")] = (load("res://Place/Futur/" + file_name))
 
 #Retire l'endroit actuel et le remplace par l'endroit 'place'
 func move(place : String):

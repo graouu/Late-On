@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://crisvh3p1phnn"]
+
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_l6k0t"]
+[ext_resource type="Texture2D" uid="uid://hr4scwxrko2p" path="res://Assets/Textures/Place/field_right_placeholder.jpg" id="2_l6k0t"]
+
+[node name="field_right" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left")]
+custom_minimum_size = Vector2(1080, 1280)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.66700006
+offset_bottom = -0.6401367
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_l6k0t")
+place_name = "field_right"
+button_left = NodePath("Buttons/Left")
+place_left = "fields"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l6k0t")
+expand_mode = 1
+
+[node name="Buttons" type="Control" parent="." unique_id=1933331614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -31.5
+offset_right = 73.0
+offset_bottom = 31.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "left"
+
+[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -31.5
+offset_bottom = 31.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "right"
+
+[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "up"
+
+[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -63.0
+offset_right = 57.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "down"

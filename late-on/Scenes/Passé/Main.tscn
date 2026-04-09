@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cp1yqfwtdinj1"]
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_idj7w"]
-[ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/bedroom_intro.tscn" id="2_m87et"]
+[ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom_intro.tscn" id="2_m87et"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
 
@@ -125,6 +125,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_idj7w")
 place_control = NodePath("VBoxContainer/PlaceContainer")
+is_past = true
 label_place = NodePath("VBoxContainer/Panel/Label")
 puzzle_control = NodePath("PuzzleContainer")
 black_anim = NodePath("ColorRect/AnimationPlayer")
