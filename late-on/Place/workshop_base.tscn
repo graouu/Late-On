@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://c3x6otb23m22f"]
+
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_fe0sr"]
+[ext_resource type="Texture2D" uid="uid://nxmpb2la7ji1" path="res://Assets/Textures/Place/workshop.jpg" id="2_r6vlm"]
+[ext_resource type="Texture2D" uid="uid://xcksiuvie7d3" path="res://Assets/Textures/Items_Placeholder/chest.png" id="3_aqrdm"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_mwksj"]
+[ext_resource type="Texture2D" uid="uid://2x77r2qplnph" path="res://Assets/Textures/Items_Placeholder/chair.png" id="5_fk3yo"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_w5wpv"]
+[ext_resource type="Texture2D" uid="uid://b54ehrcerrv72" path="res://Assets/Textures/Items_Placeholder/table.png" id="7_j4b46"]
+
+[sub_resource type="Resource" id="Resource_fe0sr"]
+script = ExtResource("6_w5wpv")
+text = "Un gros coffre en bois ouvert."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_65hun"]
+script = ExtResource("6_w5wpv")
+text = "Je me souviens avoir acheté cette chaise."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_qv4v1"]
+script = ExtResource("6_w5wpv")
+text = "Elle m'a coûté une fortune!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_vwnbv"]
+script = ExtResource("6_w5wpv")
+text = "En même temps. Je l'ai depuis des décennies."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_d1x3y"]
+script = ExtResource("6_w5wpv")
+text = "Sacrée chaise."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_vvpbf"]
+script = ExtResource("6_w5wpv")
+text = "Quelle table... Elle a connu tellement de beuveries"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="workshop_base" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "interactable_list")]
+custom_minimum_size = Vector2(1080, 1280)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.66700006
+offset_bottom = -0.6401367
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_fe0sr")
+place_name = "workshop_intro"
+button_left = NodePath("Buttons/Left")
+place_left = "bedroom_intro"
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2"), NodePath("Interactable3")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_r6vlm")
+expand_mode = 1
+
+[node name="Buttons" type="Control" parent="." unique_id=1933331614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -31.5
+offset_right = 73.0
+offset_bottom = 31.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "left"
+
+[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -31.5
+offset_bottom = 31.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "right"
+
+[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "up"
+
+[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -63.0
+offset_right = 57.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=2121570722]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 703.0
+offset_right = 910.0
+offset_bottom = 901.0
+texture_normal = ExtResource("3_aqrdm")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_mwksj")
+dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_fe0sr")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=1325919239]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 636.0
+offset_right = 730.0
+offset_bottom = 1062.0
+texture_normal = ExtResource("5_fk3yo")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+script = ExtResource("4_mwksj")
+dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_65hun"), SubResource("Resource_qv4v1"), SubResource("Resource_vwnbv"), SubResource("Resource_d1x3y")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable3" type="TextureButton" parent="." unique_id=1567506620]
+layout_mode = 0
+offset_left = 796.0
+offset_top = 832.0
+offset_right = 1236.0
+offset_bottom = 1418.0
+texture_normal = ExtResource("7_j4b46")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_mwksj")
+dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_vvpbf")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]
+[connection signal="pressed" from="Interactable2" to="Interactable2" method="_on_pressed"]
+[connection signal="pressed" from="Interactable3" to="Interactable3" method="_on_pressed"]

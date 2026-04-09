@@ -2,6 +2,11 @@ extends Control
 
 #Parent de l'endroit actuel
 @export var place_control : Control
+
+@export var label_place : Label
+
+@export var puzzle_control : Control
+var loaded_puzzle : Puzzle
 #Endroit actuel
 @export var current_place : Place
 #Dictionnaire des endroits
@@ -19,15 +24,15 @@ func _ready() -> void:
 	#On définit la place actuelle (celle présente actuellement)
 	current_place = place_control.get_child(0)
 	
-	#On connecte le signal de mouvement de la place actuelle à la fonction qui déplace
-	current_place.go_to.connect(move)
-	
-	#On connecte le signal de dialogue de la place actuelle à la fonction qui lance un dialogue
 	current_place.open_dialogue.connect(dialogue_manager.play_dialogue_array)
 	
+	#On connecte le signal de mouvement de la place actuelle à la fonction qui déplace
+	current_place.go_to.connect(move)
+	current_place.open_puzzle.connect(load_puzzle)
 	
-	## TEST DE LA FONCTION DE DIALOGUE
-	dialogue_manager.play_dialogue_array([load("res://Assets/Dialogue/test1.tres")])
+	label_place.text = current_place.place_name
+	
+	#On connecte le signal de dialogue de la place actuelle à la fonction qui lance un dialogue
 	
 
 #Charge toutes les scènes d'endroits dans le dossier Place
@@ -59,7 +64,20 @@ func move(place : String):
 	
 	#On connecte ses signaux
 	current_place.go_to.connect(move)
+	current_place.open_puzzle.connect(load_puzzle)
 	current_place.open_dialogue.connect(dialogue_manager.play_dialogue_array)
+	label_place.text = current_place.place_name
 	
 	#On joue le 'fadeaway' inverse
 	black_anim.play('detransition')
+
+func load_puzzle(puzzle : String):
+	puzzle_control.show()
+	loaded_puzzle = load(puzzle).instantiate()
+	puzzle_control.add_child(loaded_puzzle)
+	loaded_puzzle.end_puzzle.connect(end_puzzle)
+
+func end_puzzle(place : String):
+	move(place)
+	puzzle_control.hide()
+	puzzle_control.get_child(0).queue_free()

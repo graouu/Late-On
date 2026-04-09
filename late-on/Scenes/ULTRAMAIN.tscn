@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cln4wp5h7uqev"]
+
+[ext_resource type="Script" uid="uid://ce3mno280o3jc" path="res://Scripts/ultramain.gd" id="1_uvqve"]
+
+[node name="Control" type="Control" unique_id=915726659]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uvqve")
+
+[node name="Button" type="Button" parent="." unique_id=1049067410]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 615.0
+offset_right = 429.0
+offset_bottom = 805.0
+theme_override_font_sizes/font_size = 50
+text = "Passé"
+
+[node name="Button2" type="Button" parent="." unique_id=491520656]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 609.0
+offset_right = 903.0
+offset_bottom = 799.0
+theme_override_font_sizes/font_size = 50
+text = "Futur"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
