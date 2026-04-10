@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://28rtqkwgfnij"]
+
+[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_jkt1y"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_2mj3i"]
+[ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="3_jkt1y"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_2mj3i"]
+[ext_resource type="Texture2D" uid="uid://b0fadlw8n7kxo" path="res://Assets/Textures/Items_Placeholder/Futur/login.png" id="4_8caeh"]
+
+[sub_resource type="Resource" id="Resource_8caeh"]
+script = ExtResource("2_2mj3i")
+text = "C'est parti pour une nouvelle journée de boulot."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_vq4rp"]
+script = ExtResource("2_2mj3i")
+text = "Je me demande quel correspondant je vais aider aujourd'hui.. Qu'un seul moyen de le savoir apparemment."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="login" type="Control" unique_id=975123972 node_paths=PackedStringArray("interactable_list")]
+custom_minimum_size = Vector2(1080, 1280)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.66700006
+offset_bottom = -0.6401367
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_jkt1y")
+place_name = "login"
+interactable_list = [NodePath("Interactable")]
+dialogue_list = Array[ExtResource("2_2mj3i")]([SubResource("Resource_8caeh"), SubResource("Resource_vq4rp")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jkt1y")
+expand_mode = 1
+
+[node name="Buttons" type="Control" parent="." unique_id=1933331614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -31.5
+offset_right = 73.0
+offset_bottom = 31.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "left"
+
+[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -31.5
+offset_bottom = 31.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "right"
+
+[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "up"
+
+[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -63.0
+offset_right = 57.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=730434647]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 463.0
+offset_right = 807.0
+offset_bottom = 763.0
+texture_normal = ExtResource("4_8caeh")
+script = ExtResource("4_2mj3i")
+interaction_type = 1
+puzzle = "res://Scenes/placeholder_puzzles/Puzzle_Placeholder2.tscn"
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]

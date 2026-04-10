@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cln4wp5h7uqev"]
+
+[ext_resource type="Script" uid="uid://ce3mno280o3jc" path="res://Scripts/ultramain.gd" id="1_uvqve"]
+
+[sub_resource type="Theme" id="Theme_uvqve"]
+PopupMenu/font_sizes/font_size = 30
+
+[node name="Control" type="Control" unique_id=915726659 node_paths=PackedStringArray("optionbutton", "optionbutton2", "optionbutton3")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uvqve")
+optionbutton = NodePath("OptionButton")
+optionbutton2 = NodePath("OptionButton2")
+optionbutton3 = NodePath("OptionButton3")
+
+[node name="Button" type="Button" parent="." unique_id=1049067410]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 390.0
+offset_right = 466.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 50
+text = "Passé"
+
+[node name="Button2" type="Button" parent="." unique_id=491520656]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 384.0
+offset_right = 940.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 50
+text = "Futur"
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1342377045]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 667.0
+offset_right = 425.0
+offset_bottom = 770.0
+theme = SubResource("Theme_uvqve")
+theme_override_font_sizes/font_size = 30
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Liste Places Passé"
+popup/item_0/id = 0
+
+[node name="OptionButton2" type="OptionButton" parent="." unique_id=1090664690]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 678.0
+offset_right = 907.0
+offset_bottom = 781.0
+theme = SubResource("Theme_uvqve")
+theme_override_font_sizes/font_size = 30
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Liste Places Futur"
+popup/item_0/id = 0
+
+[node name="OptionButton3" type="OptionButton" parent="." unique_id=1433117831]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 858.0
+offset_right = 567.0
+offset_bottom = 961.0
+theme = SubResource("Theme_uvqve")
+theme_override_font_sizes/font_size = 30
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Puzzles"
+popup/item_0/id = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="OptionButton2" to="." method="_on_option_button2_item_selected"]
+[connection signal="item_selected" from="OptionButton3" to="." method="_on_option_button_3_item_selected"]

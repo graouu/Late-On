@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cp1yqfwtdinj1"]
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_idj7w"]
-[ext_resource type="PackedScene" uid="uid://b0l3jwc40s1xq" path="res://Place/garden.tscn" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom_intro.tscn" id="2_m87et"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
+[ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="5_nruiq"]
 
 [sub_resource type="FontVariation" id="FontVariation_pbw6q"]
 variation_embolden = 1.03
@@ -114,7 +115,7 @@ _data = {
 &"transition": SubResource("Animation_kln2b")
 }
 
-[node name="Main" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "black_anim", "dialogue_manager")]
+[node name="Main" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -125,6 +126,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_idj7w")
 place_control = NodePath("VBoxContainer/PlaceContainer")
+is_past = true
+label_place = NodePath("VBoxContainer/Panel/Label")
+puzzle_control = NodePath("PuzzleContainer")
 black_anim = NodePath("ColorRect/AnimationPlayer")
 dialogue_manager = NodePath("Dialogue")
 
@@ -141,11 +145,32 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(1080, 640)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=624180130]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 578.0
+offset_right = 655.0
+offset_bottom = 633.0
+theme_override_font_sizes/font_size = 40
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" type="Button" parent="VBoxContainer/Panel" unique_id=1621430179]
+top_level = true
+layout_mode = 0
+offset_left = 352.0
+offset_top = 444.0
+offset_right = 739.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 50
+text = "Reload to Menu"
+
 [node name="PlaceContainer" type="Control" parent="VBoxContainer" unique_id=722058883]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Garden" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("1_r150o")]
+[node name="bedroom_intro" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_m87et")]
 layout_mode = 1
 offset_bottom = 426.23993
 
@@ -232,3 +257,19 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
 libraries/ = SubResource("AnimationLibrary_rgh2o")
+
+[node name="PuzzleContainer" type="Control" parent="." unique_id=1421887023]
+visible = false
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1506517466]
+stream = ExtResource("5_nruiq")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
