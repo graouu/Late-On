@@ -42,7 +42,6 @@ scale = Vector2(6.8, 9.916665)
 texture = ExtResource("11_tsbiw")
 
 [node name="PageOrdi" type="Sprite2D" parent="." unique_id=785219829]
-visible = false
 z_index = -1
 position = Vector2(317.5495, 807.125)
 scale = Vector2(1.9720782, 1.9720778)
