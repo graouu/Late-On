@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ck5ip4b2qe3hf" path="res://Scripts/chapitre1_futur/futur_ordi.gd" id="1_fvqum"]
 [ext_resource type="Texture2D" uid="uid://codwjb6e0glwb" path="res://Assets/Textures/Buttons_Proto/BoxCorrectSize.png" id="1_k056j"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="3_e6xxk"]
+[ext_resource type="Texture2D" uid="uid://c5ankswk08u7i" path="res://Assets/Textures/Buttons_Proto/enigme3/PlaceHolderWifi.png" id="3_w7i4o"]
 [ext_resource type="Texture2D" uid="uid://d1rmoh1w8iwcx" path="res://Assets/Textures/Ordi.png" id="5_w7i4o"]
 
 [node name="Control" type="Control" unique_id=1327342452]
@@ -41,13 +42,29 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 264.0
-offset_top = -1069.0
-offset_right = 419.0
-offset_bottom = -864.0
+offset_left = -385.0
+offset_top = -1073.0
+offset_right = -230.0
+offset_bottom = -868.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("3_e6xxk")
+stretch_mode = 5
+
+[node name="Button_Wifi" type="TextureButton" parent="." unique_id=1442504977]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 306.0
+offset_top = -723.0
+offset_right = 461.0
+offset_bottom = -518.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_w7i4o")
 stretch_mode = 5
 
 [node name="Ordi" type="Sprite2D" parent="." unique_id=622137527]
@@ -57,6 +74,7 @@ scale = Vector2(8.84625, 8.846251)
 texture = ExtResource("5_w7i4o")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=542510595]
+visible = false
 layout_mode = 0
 offset_left = 52.0
 offset_top = 796.0
@@ -65,6 +83,7 @@ offset_bottom = 1442.0
 color = Color(0, 0, 0, 0.8980392)
 
 [node name="Button_Boite" type="TextureButton" parent="." unique_id=1616391142]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -99,6 +118,9 @@ stretch_mode = 5
 [connection signal="mouse_entered" from="Button_Cartes" to="." method="_on_button_cartes_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Cartes" to="." method="_on_button_cartes_mouse_exited"]
 [connection signal="pressed" from="Button_Cartes" to="." method="_on_button_cartes_pressed"]
+[connection signal="mouse_entered" from="Button_Wifi" to="." method="_on_button_wifi_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Wifi" to="." method="_on_button_wifi_mouse_exited"]
+[connection signal="pressed" from="Button_Wifi" to="." method="_on_button_wifi_pressed"]
 [connection signal="mouse_entered" from="Button_Boite" to="." method="_on_button_boite_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Boite" to="." method="_on_button_boite_mouse_exited"]
 [connection signal="pressed" from="Button_Boite" to="." method="_on_button_boite_pressed"]
