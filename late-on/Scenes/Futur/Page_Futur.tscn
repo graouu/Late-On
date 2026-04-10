@@ -48,7 +48,7 @@ theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 bbcode_enabled = true
-text = "	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avecnir plus grand et plus radieux.
+text = "	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avenir plus grand et plus radieux.
 "
 
 [node name="Texte_Fabliau3" type="RichTextLabel" parent="." unique_id=2019970555]

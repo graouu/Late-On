@@ -40,9 +40,11 @@ var enigme3_F4 = 0
 
 #Chapitre1 futur
 var enigme1f_fini = false
+var enigme1f_Nbtry = 0
 var enigme2f_fini = false
 var enigme2f_Nbtry = 0
 var enigme3f_fini = false
+var enigme3f_Nbtry = 0
 var enigme4f_fini = false
 
 #Pharses de l'énigme 3 en Duo

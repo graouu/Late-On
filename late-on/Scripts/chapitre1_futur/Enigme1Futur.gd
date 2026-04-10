@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 			tweenWall.tween_property(WallOff1,"modulate:a", 0,0.6)
 			WallOff1.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
-			PopUpText.text = "Bravo! tu te souviens de la première étape :) 2ème paragraphe: <<	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avecnir plus grand et plus radieux.>>"
+			PopUpText.text = "Bravo! tu te souviens de la première étape :) 2ème paragraphe: <<	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avenir plus grand et plus radieux.>>"
 
 		elif CollisionWall == Wall2 :
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
@@ -92,6 +92,17 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
 
 		else:
+			global.enigme1f_Nbtry += 1
+			if global.enigme1f_Nbtry == 1:
+				Wall1.modulate = Color(0, 1, 1)
+			if global.enigme1f_Nbtry == 2:
+				Wall2.modulate = Color(0, 1, 1)
+			if global.enigme1f_Nbtry == 3:
+				Wall3.modulate = Color(0, 1, 1)
+			if global.enigme1f_Nbtry == 4:
+				Wall4.modulate = Color(0, 1, 1)
+			if global.enigme1f_Nbtry == 5:
+				Wall5.modulate = Color(0, 1, 1)
 			tweenMove.kill()
 			tweenBounce.kill()
 			var tweenBall = get_tree().create_tween() 

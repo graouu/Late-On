@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://76jsleaoj4pt" path="res://Scripts/chapitre1_futur/Enigme2Futur.gd" id="1_tnt6o"]
 [ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="3_qky71"]
 [ext_resource type="Script" uid="uid://cn4uwo2katieh" path="res://Scripts/Script_Duo3/Dropable_Job.gd" id="4_4ffsq"]
-[ext_resource type="Texture2D" uid="uid://bmqpmmbsvmv65" path="res://Assets/Buttons_Proto/SmallMap.png" id="5_ai7ch"]
-[ext_resource type="Texture2D" uid="uid://o3c7uymxvoe8" path="res://Assets/Buttons_Proto/plume.png" id="6_4uat0"]
-[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Buttons_Proto/PlacerHolderWindmill.png" id="7_5j6ss"]
-[ext_resource type="Texture2D" uid="uid://qitpwqa1y3f" path="res://Assets/Buttons_Proto/PlacerHolderShirt.png" id="8_fyowo"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Buttons_Proto/keyReturn.png" id="9_aoh7o"]
-[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Buttons_Proto/LittleTxt.png" id="10_k0f77"]
+[ext_resource type="Texture2D" uid="uid://bmqpmmbsvmv65" path="res://Assets/Textures/Buttons_Proto/SmallMap.png" id="5_ai7ch"]
+[ext_resource type="Texture2D" uid="uid://o3c7uymxvoe8" path="res://Assets/Textures/Buttons_Proto/plume.png" id="6_4uat0"]
+[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Textures/Buttons_Proto/PlacerHolderWindmill.png" id="7_5j6ss"]
+[ext_resource type="Texture2D" uid="uid://qitpwqa1y3f" path="res://Assets/Textures/Buttons_Proto/PlacerHolderShirt.png" id="8_fyowo"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_aoh7o"]
+[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_k0f77"]
 [ext_resource type="Texture2D" uid="uid://dlgtu4emt2mcl" path="res://Assets/Textures/pageOrdi.jpg" id="11_tnt6o"]
-[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Buttons_Proto/placeHolderScribe.png" id="11_tsbiw"]
+[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_tsbiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
 size = Vector2(5.2400002, 5.6399994)
@@ -20,6 +20,33 @@ size = Vector2(128, 127.5)
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_tnt6o")
+
+[node name="PlaceHolderScribe" type="Sprite2D" parent="." unique_id=873155954]
+position = Vector2(158, 1371.7499)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_tsbiw")
+
+[node name="PlaceHolderScribe2" type="Sprite2D" parent="." unique_id=798181834]
+position = Vector2(403, 1371.7499)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_tsbiw")
+
+[node name="PlaceHolderScribe3" type="Sprite2D" parent="." unique_id=1659869211]
+position = Vector2(651, 1371.7499)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_tsbiw")
+
+[node name="PlaceHolderScribe4" type="Sprite2D" parent="." unique_id=1986924168]
+position = Vector2(890.99994, 1374.7499)
+scale = Vector2(6.8, 9.916665)
+texture = ExtResource("11_tsbiw")
+
+[node name="PageOrdi" type="Sprite2D" parent="." unique_id=785219829]
+visible = false
+z_index = -1
+position = Vector2(317.5495, 807.125)
+scale = Vector2(1.9720782, 1.9720778)
+texture = ExtResource("11_tnt6o")
 
 [node name="SpaceTypeMap1" type="StaticBody2D" parent="." unique_id=550985851 groups=["dropable_job"]]
 z_index = 1
@@ -326,32 +353,36 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
 theme_override_font_sizes/normal_font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="PlaceHolderScribe" type="Sprite2D" parent="." unique_id=873155954]
-position = Vector2(158, 1371.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=495495563]
+offset_left = 189.0
+offset_top = 1467.0
+offset_right = 294.0
+offset_bottom = 1571.0
+color = Color(0, 0, 0, 1)
 
-[node name="PlaceHolderScribe2" type="Sprite2D" parent="." unique_id=798181834]
-position = Vector2(403, 1371.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1796075527]
+offset_left = 407.0
+offset_top = 1468.0
+offset_right = 512.0
+offset_bottom = 1572.0
+color = Color(0, 0, 0, 1)
 
-[node name="PlaceHolderScribe3" type="Sprite2D" parent="." unique_id=1659869211]
-position = Vector2(651, 1371.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=287256259]
+offset_left = 649.0
+offset_top = 1471.0
+offset_right = 754.0
+offset_bottom = 1575.0
+color = Color(0, 0, 0, 1)
 
-[node name="PlaceHolderScribe4" type="Sprite2D" parent="." unique_id=1986924168]
-position = Vector2(890.99994, 1374.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
-
-[node name="PageOrdi" type="Sprite2D" parent="." unique_id=785219829]
-z_index = -1
-position = Vector2(317.5495, 807.125)
-scale = Vector2(1.9720782, 1.9720778)
-texture = ExtResource("11_tnt6o")
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1346420771]
+offset_left = 897.0
+offset_top = 1464.0
+offset_right = 1002.0
+offset_bottom = 1568.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_exited"]
