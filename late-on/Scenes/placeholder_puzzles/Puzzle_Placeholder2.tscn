@@ -4,7 +4,7 @@
 
 [node name="PuzzlePlaceholder" type="Node2D" unique_id=2014099653]
 script = ExtResource("1_whw6j")
-place_to_load = "arrival_intro"
+place_to_load = "desktop_intro"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1334902894]
 custom_minimum_size = Vector2(1080, 1920)

@@ -42,14 +42,16 @@ func _ready() -> void:
 func load_places():
 	if is_past:
 		for file_name in DirAccess.get_files_at("res://Place/Passé/"):
-			place_dic[file_name.replace(".tscn","")] = (load("res://Place/Passé/" + file_name))
+			place_dic[file_name.replace(".tscn","").replace(".remap","")] = (load("res://Place/Passé/" + file_name.replace(".remap","")))
 			#On retire '.tscn', l'extension du fichier
 	else:
 		for file_name in DirAccess.get_files_at("res://Place/Futur/"):
-			place_dic[file_name.replace(".tscn","")] = (load("res://Place/Futur/" + file_name))
+			place_dic[file_name.replace(".tscn","").replace(".remap","")] = (load("res://Place/Futur/" + file_name.replace(".remap","")))
 
 #Retire l'endroit actuel et le remplace par l'endroit 'place'
 func move(place : String):
+	
+	print(place_dic)
 	
 	#Animation 'fadeaway'
 	black_anim.play('transition')
@@ -87,3 +89,8 @@ func end_puzzle(place : String):
 	move(place)
 	puzzle_control.hide()
 	puzzle_control.get_child(0).queue_free()
+
+
+func _on_go_to_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/ULTRAMAIN.tscn")
+	queue_free()

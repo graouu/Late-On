@@ -146,13 +146,25 @@ custom_minimum_size = Vector2(1080, 640)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=1937576611]
+top_level = true
 layout_mode = 0
-offset_top = -55.0
+offset_top = 535.0
 offset_right = 1080.0
+offset_bottom = 590.0
 theme_override_font_sizes/font_size = 40
 text = "Placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Main Menu" type="Button" parent="VBoxContainer/Panel" unique_id=1006003216]
+top_level = true
+layout_mode = 0
+offset_left = 352.0
+offset_top = 444.0
+offset_right = 739.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 50
+text = "Reload to Menu"
 
 [node name="PlaceContainer" type="Control" parent="VBoxContainer" unique_id=722058883]
 layout_mode = 2
@@ -273,3 +285,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
