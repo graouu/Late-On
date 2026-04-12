@@ -24,6 +24,10 @@ extends Node2D
 @onready var WallOff3 = $Maze/WallOff_Key3
 @onready var WallOff4 = $Maze/WallOff_Key4
 
+signal end_puzzle(dialogue : String)
+
+@export var dialogue_to_play : Array[DialogueLine]
+
 var Move = false
 var KeyOk = true
 var CollisionWall
@@ -98,13 +102,13 @@ func _process(delta: float) -> void:
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
 			PopUpText.text = "C'est la bonne combianaison, la boite vient de se déverouiller!"
 			await get_tree().create_timer(3).timeout
-			get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Maison.tscn")
+			end_puzzle.emit(dialogue_to_play)
 
 		else:
 			tweenMove.kill()
 			tweenBounce.kill()
 			var tweenBall = get_tree().create_tween() 
-			PopUpText.text = "Le mécanisme ne fait pas le bruit correcte, j'ai dût faire une erreur dans la combinaison. Aurais-je oublié l'histoire du Fabliau?"
+			PopUpText.text = "Le mécanisme ne fait pas le bruit correct, j'ai dût faire une erreur dans la combinaison. Aurais-je oublié l'histoire du Fabliau?"
 			tweenBall.tween_property(Ball,"modulate:a", 0,0.3)
 			Ball.global_position = initialPos
 			Wall1.process_mode = Node.PROCESS_MODE_ALWAYS

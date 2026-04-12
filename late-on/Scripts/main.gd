@@ -8,7 +8,7 @@ extends Control
 @export var label_place : Label
 
 @export var puzzle_control : Control
-var loaded_puzzle : Puzzle
+var loaded_puzzle
 #Endroit actuel
 @export var current_place : Place
 #Dictionnaire des endroits
@@ -51,8 +51,6 @@ func load_places():
 #Retire l'endroit actuel et le remplace par l'endroit 'place'
 func move(place : String):
 	
-	print(place_dic)
-	
 	#Animation 'fadeaway'
 	black_anim.play('transition')
 	#On attend qu'elle finisse
@@ -85,10 +83,13 @@ func load_puzzle(puzzle : String):
 	puzzle_control.add_child(loaded_puzzle)
 	loaded_puzzle.end_puzzle.connect(end_puzzle)
 
-func end_puzzle(place : String):
-	move(place)
+func end_puzzle(dialogue : Array[DialogueLine]):
 	puzzle_control.hide()
 	puzzle_control.get_child(0).queue_free()
+	move(current_place.name)
+	if !dialogue.is_empty():
+		dialogue_manager.play_dialogue_array(dialogue)
+	
 
 
 func _on_go_to_menu_pressed() -> void:

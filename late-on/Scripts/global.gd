@@ -55,3 +55,9 @@ var Duo3_sentence4 = false
 var Duo3_sentence5 = false
 var Duo3_sentence6 = false
 var Duo3_NbTry = 0
+
+
+#Place variables diverses
+
+var desktop_intro = false
+var bed_intro = false

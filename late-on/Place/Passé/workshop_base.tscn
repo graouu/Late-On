@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3x6otb23m22f"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_fe0sr"]
+[ext_resource type="Script" uid="uid://d1s58y4mh2ieb" path="res://Scripts/Place/Passé/workshop_base.gd" id="1_u41tk"]
 [ext_resource type="Texture2D" uid="uid://nxmpb2la7ji1" path="res://Assets/Textures/Place/workshop.jpg" id="2_r6vlm"]
 [ext_resource type="Texture2D" uid="uid://xcksiuvie7d3" path="res://Assets/Textures/Items_Placeholder/chest.png" id="3_aqrdm"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_mwksj"]
@@ -48,13 +48,13 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_fe0sr")
-place_name = "workshop_intro"
+script = ExtResource("1_u41tk")
+place_name = "workshop_base"
 button_left = NodePath("Buttons/Left")
 place_left = "bedroom_base"
 button_right = NodePath("Buttons/Right")
 place_right = "house_front"
-interactable_list = [NodePath("Interactable"), NodePath("Interactable2"), NodePath("Interactable3")]
+interactable_list = [NodePath("Coffre"), NodePath("Chaise"), NodePath("Table")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -87,6 +87,7 @@ theme_override_font_sizes/font_size = 40
 text = "left"
 
 [node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -130,7 +131,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
 
-[node name="Interactable" type="TextureButton" parent="." unique_id=2121570722]
+[node name="Coffre" type="TextureButton" parent="." unique_id=2121570722]
 layout_mode = 0
 offset_left = 686.0
 offset_top = 703.0
@@ -140,10 +141,12 @@ texture_normal = ExtResource("3_aqrdm")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_mwksj")
+interaction_type = 1
 dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_fe0sr")])
+puzzle = "res://Scenes/Passé/Passé_Enigme1.tscn"
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
-[node name="Interactable2" type="TextureButton" parent="." unique_id=1325919239]
+[node name="Chaise" type="TextureButton" parent="." unique_id=1325919239]
 layout_mode = 0
 offset_left = 340.0
 offset_top = 636.0
@@ -157,7 +160,7 @@ script = ExtResource("4_mwksj")
 dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_65hun"), SubResource("Resource_qv4v1"), SubResource("Resource_vwnbv"), SubResource("Resource_d1x3y")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
-[node name="Interactable3" type="TextureButton" parent="." unique_id=1567506620]
+[node name="Table" type="TextureButton" parent="." unique_id=1567506620]
 layout_mode = 0
 offset_left = 796.0
 offset_top = 832.0
@@ -170,6 +173,6 @@ script = ExtResource("4_mwksj")
 dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_vvpbf")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
-[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]
-[connection signal="pressed" from="Interactable2" to="Interactable2" method="_on_pressed"]
-[connection signal="pressed" from="Interactable3" to="Interactable3" method="_on_pressed"]
+[connection signal="pressed" from="Coffre" to="Coffre" method="_on_pressed"]
+[connection signal="pressed" from="Chaise" to="Chaise" method="_on_pressed"]
+[connection signal="pressed" from="Table" to="Table" method="_on_pressed"]

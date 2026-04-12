@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj6jnsrsecjir"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_ef0bq"]
+[ext_resource type="Script" uid="uid://cnfbmn7wijd3w" path="res://Scripts/Place/Futur/desk.gd" id="1_iddrj"]
 [ext_resource type="Texture2D" uid="uid://c2yq0htapo877" path="res://Assets/Textures/Place/room_desk.png" id="2_iddrj"]
 
 [node name="desktop" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "button_up")]
@@ -13,14 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_ef0bq")
+script = ExtResource("1_iddrj")
 place_name = "desktop"
 button_left = NodePath("Buttons/Left")
 place_left = "bed"
 button_right = NodePath("Buttons/Right")
 place_right = "carton"
 button_up = NodePath("Buttons/Up")
-place_up = "desktop"
+place_up = "login"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1

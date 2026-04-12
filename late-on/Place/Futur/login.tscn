@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://28rtqkwgfnij"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_jkt1y"]
+[ext_resource type="Script" uid="uid://b2sxn2yq4bpoy" path="res://Scripts/Place/Futur/login.gd" id="1_esykh"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_2mj3i"]
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="3_jkt1y"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_2mj3i"]
 [ext_resource type="Texture2D" uid="uid://b0fadlw8n7kxo" path="res://Assets/Textures/Items_Placeholder/Futur/login.png" id="4_8caeh"]
 
-[sub_resource type="Resource" id="Resource_8caeh"]
+[sub_resource type="Resource" id="Resource_esykh"]
 script = ExtResource("2_2mj3i")
-text = "C'est parti pour une nouvelle journée de boulot."
+text = "Rentrons le mot de passe..."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
-[sub_resource type="Resource" id="Resource_vq4rp"]
+[sub_resource type="Resource" id="Resource_erb1c"]
 script = ExtResource("2_2mj3i")
-text = "Je me demande quel correspondant je vais aider aujourd'hui.. Qu'un seul moyen de le savoir apparemment."
+text = "Ah oui, il faut aussi que je complète le GlobalCaptcha©."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [node name="login" type="Control" unique_id=975123972 node_paths=PackedStringArray("interactable_list")]
@@ -26,10 +26,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_jkt1y")
+script = ExtResource("1_esykh")
 place_name = "login"
 interactable_list = [NodePath("Interactable")]
-dialogue_list = Array[ExtResource("2_2mj3i")]([SubResource("Resource_8caeh"), SubResource("Resource_vq4rp")])
+dialogue_list = Array[ExtResource("2_2mj3i")]([SubResource("Resource_esykh"), SubResource("Resource_erb1c")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -116,7 +116,7 @@ offset_bottom = 763.0
 texture_normal = ExtResource("4_8caeh")
 script = ExtResource("4_2mj3i")
 interaction_type = 1
-puzzle = "res://Scenes/placeholder_puzzles/Puzzle_Placeholder2.tscn"
+puzzle = "res://Scenes/Futur/Futur_Enigme1.tscn"
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]
