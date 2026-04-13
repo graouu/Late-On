@@ -16,7 +16,7 @@ size_flags_vertical = 3
 script = ExtResource("1_53h1q")
 place_name = "bed"
 button_left = NodePath("Buttons/Left")
-place_left = "door"
+place_left = "exit"
 button_right = NodePath("Buttons/Right")
 place_right = "bed"
 

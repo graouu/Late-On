@@ -25,6 +25,7 @@ extends Node2D
 @onready var WallOff4 = $Maze/WallOff_Key4
 
 signal end_puzzle(dialogue : String)
+signal quit_puzzle
 
 @export var dialogue_to_play : Array[DialogueLine]
 
@@ -125,7 +126,7 @@ func _process(delta: float) -> void:
 
 #Gestion des boutons
 func _on_button_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Maison.tscn")
+	quit_puzzle.emit()
 
 func _on_button_fabliau_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Passé/Fabliau_passé.tscn")

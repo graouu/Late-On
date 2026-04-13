@@ -82,6 +82,7 @@ func load_puzzle(puzzle : String):
 	loaded_puzzle = load(puzzle).instantiate()
 	puzzle_control.add_child(loaded_puzzle)
 	loaded_puzzle.end_puzzle.connect(end_puzzle)
+	loaded_puzzle.quit_puzzle.connect(quit_puzzle)
 
 func end_puzzle(dialogue : Array[DialogueLine]):
 	puzzle_control.hide()
@@ -89,6 +90,10 @@ func end_puzzle(dialogue : Array[DialogueLine]):
 	move(current_place.name)
 	if !dialogue.is_empty():
 		dialogue_manager.play_dialogue_array(dialogue)
+
+func quit_puzzle():
+	puzzle_control.hide()
+	puzzle_control.get_child(0).queue_free()
 	
 
 

@@ -1,73 +1,53 @@
 shader_type canvas_item;
 
-uniform bool allow_out_of_bounds = true;
-uniform float outline_thickness: hint_range(0.0, 16.0, 1.0) = 1.0;
-uniform vec4 outline_color: source_color = vec4(1.0);
-
-bool is_inside_usquare(vec2 x) {
-	return x == clamp(x, vec2(0.0), vec2(1.0));
-}
-
-vec4 blend(vec4 bottom, vec4 top) {
-    float alpha = top.a + bottom.a * (1.0 - top.a);
-    if (alpha < 0.0001) return vec4(0.0);
-
-    vec3 color = mix(bottom.rgb * bottom.a, top.rgb, top.a) / alpha;
-    return vec4(color, alpha);
-}
-
-void vertex() {
-	if (allow_out_of_bounds) VERTEX += (UV * 2.0 - 1.0) * outline_thickness;
-}
+uniform sampler2D vertical_gradient; // used to set alpha values. So you can use this to make the effect dis-/re-appear at points
+uniform sampler2D color_gradient; // sets the effect color, supports 2d gradients
+uniform float size_effect: hint_range(-5.0, 5.0, 0.05) = 0.1; // size of the effect
+uniform float speed = 1; // effect speed; Will reverse effect if set to negative
+uniform float highlight_strength: hint_range(-4.0, 4.0, 0.05) = 0.5; // how strong the color overides the base color
+uniform bool color_mode_toggle = false; // changes how the color gradient is applied. Default is on the entire texture, if set to true it is only applied to the effect
+uniform bool is_horizontal = false; // changes direction from vertical to horizontal
+uniform float pause_duration = 0.5; // duration of the pause between highlight cycles
 
 void fragment() {
-	if (outline_thickness > 0.0 && outline_color.a > 0.0) {
-		vec2 uv = UV;
-		vec4 texture_color = texture(TEXTURE, UV);
+	// set up base parameters
+	vec4 old_color = COLOR;
+	float time = TIME * abs(speed); // Absolute time to handle both positive and negative speeds
+	float effect_cycle_duration = 1.0 + pause_duration; // total time for one cycle and pause
+	float mod_time = mod(time, effect_cycle_duration); // current time within the cycle
 
-		if (allow_out_of_bounds) {
-			vec2 texture_pixel_size = vec2(1.0) / (vec2(1.0) / TEXTURE_PIXEL_SIZE + vec2(outline_thickness * 2.0));
-			uv = (uv - texture_pixel_size * outline_thickness) * TEXTURE_PIXEL_SIZE / texture_pixel_size;
+	// Handle the pause
+	float progress = mod_time / (1.0); // Normalize mod_time to the active highlight duration only (excluding pause)
 
-			if (is_inside_usquare(uv)) {
-				texture_color = texture(TEXTURE, uv);
-			} else {
-				texture_color = vec4(0.0);
-			}
-		}
-
-		float alpha = 0.0;
-		
-		for (float y = 1.0; y <= outline_thickness; y++) {
-			for (float x = 0.0; x <= y; x++) {
-				if (length(vec2(x, y - 0.5)) > outline_thickness) break;
-
-				float look_at_alpha;
-				vec2 look_at_uv[8] = {
-					uv + vec2(x, y) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(-x, y) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(x, -y) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(-x, -y) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(y, x) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(-y, x) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(y, -x) * TEXTURE_PIXEL_SIZE,
-					uv + vec2(-y, -x) * TEXTURE_PIXEL_SIZE
-				};
-
-				for (int i = 0; i < 8; i++) {
-					if (is_inside_usquare(look_at_uv[i])) {
-						look_at_alpha = texture(TEXTURE, look_at_uv[i]).a;
-						if (look_at_alpha > alpha) alpha = look_at_alpha;
-						if (1.0 - alpha < 0.0001) break;
-					}
-				}
-				
-				if (1.0 - alpha < 0.0001) break;
-			}
-				
-			if (1.0 - alpha < 0.0001) break;
-		}
-
-		COLOR = blend(vec4(outline_color.rgb, alpha * outline_color.a), texture_color);
+	// Ensure the effect is clamped during the pause period
+	if (mod_time > 1.0) {
+		progress = 1.0; // Hold the highlight at the final position during the pause
 	}
+
+	// Reverse the direction if speed is negative
+	if (speed < 0.0) {
+		progress = 1.0 - progress; // Reverse progress when speed is negative
+	}
+
+	// Set the current time and bounds for the highlight effect
+	float current_time = mix(0.0 - size_effect, 1.0 + size_effect, progress);
+	float effect_lower_bound = current_time - size_effect;
+	float effect_upper_bound = current_time + size_effect;
+	float position_value = (is_horizontal) ? UV.x : UV.y;
+
+	// Smooth out the lower/upper bounds with the UV values to calculate how far from the middle point (the effect) the pixel is
+	float effect_distance = smoothstep(effect_lower_bound, current_time, position_value) - smoothstep(current_time, effect_upper_bound, position_value);
+
+	// Get the position of the pixel within the effect for the inner_gradient color mode
+	float inner_effect_position = smoothstep(effect_lower_bound, effect_upper_bound, position_value);
+	vec2 color_position = (color_mode_toggle) ? vec2(UV.x, inner_effect_position) : vec2(progress);
+
+	// Get the new color from the gradient
+	vec4 new_color = vec4(texture(color_gradient, color_position));
+
+	// Calculate the vertical gradient and alpha_values
+	new_color = mix(old_color, new_color, vec4(texture(vertical_gradient, vec2(progress))));
+
+	// Apply the color to the texture
+	COLOR.rgb = mix(old_color.rgb, new_color.rgb, vec3(effect_distance * highlight_strength));
 }

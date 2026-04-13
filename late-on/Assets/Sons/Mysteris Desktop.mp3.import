@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://66v4j7rfa5x8"
+path="res://.godot/imported/Mysteris Desktop.mp3-3d0a0279507e5301d93efd1e35afc65a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/Mysteris Desktop.mp3"
+dest_files=["res://.godot/imported/Mysteris Desktop.mp3-3d0a0279507e5301d93efd1e35afc65a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

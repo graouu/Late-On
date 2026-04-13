@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://yp4c7m60iw67"]
+
+[ext_resource type="Script" uid="uid://d22tu0xt4xc8o" path="res://Scripts/Place/Passé/bedroom.gd" id="1_rjbxd"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_qmnix"]
+[ext_resource type="Texture2D" uid="uid://bsl50ngj0l6g5" path="res://Assets/Textures/Interactables/coffre_passe.png" id="3_42lhy"]
+[ext_resource type="Texture2D" uid="uid://bopqyvglb1hvq" path="res://Assets/Textures/Place/bedroom_marchand.png" id="4_ds5ss"]
+[ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="4_qmnix"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="5_7bi7l"]
+[ext_resource type="Texture2D" uid="uid://kr17h2wx23og" path="res://Assets/Textures/Interactables/Tabledenuit_ChambreMarchand_Passe.png" id="6_uxbg2"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="7_lbm3r"]
+[ext_resource type="Texture2D" uid="uid://ci623rshlji7p" path="res://Assets/Textures/Interactables/Lit_ChambreMarchand_Passe.png" id="8_bu5dx"]
+
+[sub_resource type="Resource" id="Resource_d5wbj"]
+script = ExtResource("2_qmnix")
+text = "Encore une belle journée en perspective."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_vc82h"]
+script = ExtResource("2_qmnix")
+text = "Je me demande ce que je vais devoir faire aujourd'hui."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_l2xvd"]
+script = ExtResource("2_qmnix")
+text = "Un seul moyen de le savoir. Ils doivent avoir laissé un coffre quelque part."
+texture = ExtResource("3_42lhy")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qmnix"]
+shader = ExtResource("4_qmnix")
+shader_parameter/color = Color(0, 0.5, 1, 1)
+shader_parameter/frequency = 3.0
+shader_parameter/compress = 1.0
+shader_parameter/add_light = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/speed = 1.0
+shader_parameter/x_angle = 1.57
+shader_parameter/y_angle = 1.57
+shader_parameter/base_alpha = 0.8
+shader_parameter/refraction_ratio = 10.0
+shader_parameter/clear = 0.0
+shader_parameter/surf_sinpowder = 8.0
+shader_parameter/surf_speed = 1.0
+shader_parameter/surf_angle = 1.57
+shader_parameter/surf_magnitude = 0.0
+shader_parameter/s11 = 2.221
+shader_parameter/sinpowder = 8.0
+
+[sub_resource type="Resource" id="Resource_hu2ex"]
+script = ExtResource("2_qmnix")
+text = "C'est une table de nuit simple, en bois."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_x6ssx"]
+script = ExtResource("2_qmnix")
+text = "Un lit sommaire, de taille moyenne."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_rjbxd"]
+script = ExtResource("2_qmnix")
+text = "Point de jouvencelles en vue."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="bedroom" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right", "interactable_list")]
+custom_minimum_size = Vector2(1080, 1280)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.66700006
+offset_bottom = -0.6401367
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_rjbxd")
+place_name = "bedroom"
+button_right = NodePath("Buttons/Right")
+place_right = "workshop_base"
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2")]
+dialogue_list = Array[ExtResource("2_qmnix")]([SubResource("Resource_d5wbj"), SubResource("Resource_vc82h"), SubResource("Resource_l2xvd")])
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1619760968]
+material = SubResource("ShaderMaterial_qmnix")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+modulate = Color(1, 1, 1, 0.9764706)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ds5ss")
+expand_mode = 1
+
+[node name="Buttons" type="Control" parent="." unique_id=1933331614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -31.5
+offset_right = 73.0
+offset_bottom = 31.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "left"
+
+[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -62.5
+offset_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "right"
+
+[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "up"
+
+[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -63.0
+offset_right = 57.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=1913240385]
+material = ExtResource("5_7bi7l")
+layout_mode = 0
+offset_left = 86.0
+offset_top = 862.0
+offset_right = 272.0
+offset_bottom = 1011.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_uxbg2")
+script = ExtResource("7_lbm3r")
+dialogue_array = Array[ExtResource("2_qmnix")]([SubResource("Resource_hu2ex")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=534821244]
+material = ExtResource("5_7bi7l")
+layout_mode = 0
+offset_left = 299.0
+offset_top = 644.0
+offset_right = 1019.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("8_bu5dx")
+script = ExtResource("7_lbm3r")
+dialogue_array = Array[ExtResource("2_qmnix")]([SubResource("Resource_x6ssx"), SubResource("Resource_rjbxd")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]
+[connection signal="pressed" from="Interactable2" to="Interactable2" method="_on_pressed"]

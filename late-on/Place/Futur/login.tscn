@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2sxn2yq4bpoy" path="res://Scripts/Place/Futur/login.gd" id="1_esykh"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_2mj3i"]
-[ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="3_jkt1y"]
+[ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="3_esykh"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_2mj3i"]
 [ext_resource type="Texture2D" uid="uid://b0fadlw8n7kxo" path="res://Assets/Textures/Items_Placeholder/Futur/login.png" id="4_8caeh"]
 
@@ -38,7 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_jkt1y")
+texture = ExtResource("3_esykh")
 expand_mode = 1
 
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
