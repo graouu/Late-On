@@ -38,6 +38,11 @@ var enigme3_F2 = 0
 var enigme3_F3 = 0
 var enigme3_F4 = 0
 
+var enigme4_sentence1 = false
+var enigme4_sentence2 = false
+var enigme4_sentence3 = false
+var enigme4_sentence4 = false
+
 #Chapitre1 futur
 var enigme1f_fini = false
 var enigme1f_Nbtry = 0
