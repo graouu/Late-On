@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cln4wp5h7uqev"]
 
-[ext_resource type="Script" uid="uid://ce3mno280o3jc" path="res://Scripts/ultramain.gd" id="1_uvqve"]
+[ext_resource type="Script" path="res://Scripts/ultramain.gd" id="1_uvqve"]
 
 [sub_resource type="Theme" id="Theme_uvqve"]
 PopupMenu/font_sizes/font_size = 30

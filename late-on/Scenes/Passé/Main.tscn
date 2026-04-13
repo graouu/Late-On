@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cp1yqfwtdinj1"]
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_idj7w"]
+[ext_resource type="PackedScene" uid="uid://cduf4kgl02j7y" path="res://Scenes/PauseMenu.tscn" id="2_6b3vs"]
 [ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom_intro.tscn" id="2_m87et"]
-[ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
+[ext_resource type="Script" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="5_nruiq"]
 
@@ -271,5 +272,9 @@ grow_vertical = 2
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1506517466]
 stream = ExtResource("5_nruiq")
 autoplay = true
+
+[node name="PauseMenu" parent="." unique_id=638804592 instance=ExtResource("2_6b3vs")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
