@@ -37,7 +37,7 @@ size_flags_vertical = 3
 script = ExtResource("1_s7ius")
 place_name = "bedroom_intro"
 button_right = NodePath("Buttons/Right")
-place_right = "workshop_intro"
+place_right = "workshop_base"
 dialogue_list = Array[ExtResource("2_tald6")]([SubResource("Resource_56scw"), SubResource("Resource_33bjs"), SubResource("Resource_s1dap"), SubResource("Resource_45nd6")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]

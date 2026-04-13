@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d4l6mmjl8c4yj"]
+[gd_scene format=3 uid="uid://btyqjjk3xtk35"]
 
 [ext_resource type="Script" uid="uid://dmmyp14oe8062" path="res://Scripts/chapitre1_futur/Enigme1Futur.gd" id="1_jyxcw"]
 [ext_resource type="Texture2D" uid="uid://d1rmoh1w8iwcx" path="res://Assets/Textures/Ordi.png" id="2_jyxcw"]

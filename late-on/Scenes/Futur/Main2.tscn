@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjqlkkd5sknxd"]
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_yaovl"]
-[ext_resource type="PackedScene" uid="uid://28rtqkwgfnij" path="res://Place/Futur/login.tscn" id="2_gbstf"]
+[ext_resource type="PackedScene" uid="uid://b3cc4wrt08aad" path="res://Place/Futur/bed.tscn" id="2_gbstf"]
 [ext_resource type="Texture2D" uid="uid://g5exml6x7lk5" path="res://Assets/Textures/Items_Placeholder/screen_render.png" id="2_hvuyj"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_23hvo"]
@@ -170,7 +170,7 @@ text = "Reload to Menu"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="login" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_gbstf")]
+[node name="bed" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_gbstf")]
 layout_mode = 1
 offset_bottom = 426.23993
 

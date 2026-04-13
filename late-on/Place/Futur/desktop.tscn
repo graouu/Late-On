@@ -1,10 +1,89 @@
-[gd_scene format=3 uid="uid://dvxcc30uy17xv"]
+[gd_scene format=3 uid="uid://b46mub7hes54k"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_gog4p"]
+[ext_resource type="Script" uid="uid://cxvsaaa175uqy" path="res://Scripts/Place/Futur/desktop.gd" id="1_gog4p"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_j8xeh"]
 [ext_resource type="Texture2D" uid="uid://boa0tu1d7frk0" path="res://Assets/Textures/Items_Placeholder/Futur/neutral.png" id="3_sugd2"]
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="4_she2j"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="5_85y76"]
+
+[sub_resource type="Resource" id="Resource_auvlp"]
+script = ExtResource("2_j8xeh")
+text = "Hello! Je suis ton Chronopote personnalisé!"
+name = "???"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_7nxwm"]
+script = ExtResource("2_j8xeh")
+text = "Roh."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_uknis"]
+script = ExtResource("2_j8xeh")
+text = "Je suis là pour t'aider dans tes tâches! J'espère que tu es bien motivé aujourd'hui!"
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_x0liy"]
+script = ExtResource("2_j8xeh")
+text = "Euh, oui oui, comme d'habitude."
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_8hxjr"]
+script = ExtResource("2_j8xeh")
+text = "(J'ai complètement oublié ce qui était prévu aujourd'hui)"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_sh7tu"]
+script = ExtResource("2_j8xeh")
+text = "C'est parti! C'est l'heure de découvrir ton correspondant! Il vit au Moyen-Âge cette fois."
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_cml1u"]
+script = ExtResource("2_j8xeh")
+text = "Il s'agit d'un marchant au XIIIe siècle! Quelle chance de pouvoir l'aider à remplir sa mission!"
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_4iv2k"]
+script = ExtResource("2_j8xeh")
+text = "Aide le suffisamment pour que sa tâche soit accomplie et tu gagnera 200 crédits!"
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_yf3hy"]
+script = ExtResource("2_j8xeh")
+text = "Tu peux consulter les informations de cette mission en cliquant sur l'icône de maison."
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_qrk2t"]
+script = ExtResource("2_j8xeh")
+text = "Ou tu peux également me demander conseil à n'importe quel moment en me cliquant dessus!"
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_6kcf5"]
+script = ExtResource("2_j8xeh")
+text = "Bonne chance, et n'hésite pas à communiquer avec ton correspondant autant que possible!"
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_u2bti"]
+script = ExtResource("2_j8xeh")
+text = "N'hésite pas non plus à commander les dernières sorties de Global Corp! Notamment le tout nouveau Com'Bot© Xperia capable désormais de converser dans 300 langues, et sur plus de 2 000 000 de sujets! Pour uniquement 17 000 000 de crédits!"
+name = "Chronopote"
+texture = ExtResource("3_sugd2")
+metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_8broe"]
 script = ExtResource("2_j8xeh")
@@ -13,7 +92,37 @@ name = "Chronopote"
 texture = ExtResource("3_sugd2")
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
-[node name="desktop" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_down")]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uknis"]
+load_path = "res://.godot/imported/neutral.png-40d01986a514060cfd2d93b269cd269a.ctex"
+
+[sub_resource type="Resource" id="Resource_otkwg"]
+script = ExtResource("2_j8xeh")
+text = "Hmm, regarde bien. Vois-tu une icône quelque part pouvant indiquer une possible progression? Sur laquelle tu pourrais cliquer?"
+name = "Chronopote"
+texture = SubResource("CompressedTexture2D_uknis")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0liy"]
+load_path = "res://.godot/imported/neutral.png-40d01986a514060cfd2d93b269cd269a.ctex"
+
+[sub_resource type="Resource" id="Resource_j1jln"]
+script = ExtResource("2_j8xeh")
+text = "Elle est spécialement conçue pour toi, tu devrais pouvoir la repérer avec un peu d'effort! Une fois cela fait, clique dessus!"
+name = "Chronopote"
+texture = SubResource("CompressedTexture2D_x0liy")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8hxjr"]
+load_path = "res://.godot/imported/neutral.png-40d01986a514060cfd2d93b269cd269a.ctex"
+
+[sub_resource type="Resource" id="Resource_y0b10"]
+script = ExtResource("2_j8xeh")
+text = "Tu peux le faire! Je crois en toi."
+name = "Chronopote"
+texture = SubResource("CompressedTexture2D_8hxjr")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="desktop" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "button_up", "button_down", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -25,7 +134,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_gog4p")
 place_name = "desktop"
+button_left = NodePath("Buttons/Left")
+button_right = NodePath("Buttons/Right")
+button_up = NodePath("Buttons/Up")
 button_down = NodePath("Buttons/Down")
+place_down = "desk"
+interactable_list = [NodePath("Interactable")]
+dialogue_list = Array[ExtResource("2_j8xeh")]([SubResource("Resource_auvlp"), SubResource("Resource_7nxwm"), SubResource("Resource_uknis"), SubResource("Resource_x0liy"), SubResource("Resource_8hxjr"), SubResource("Resource_sh7tu"), SubResource("Resource_cml1u"), SubResource("Resource_4iv2k"), SubResource("Resource_yf3hy"), SubResource("Resource_qrk2t"), SubResource("Resource_6kcf5"), SubResource("Resource_u2bti")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -51,9 +166,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -31.5
-offset_right = 73.0
-offset_bottom = 31.5
+offset_left = 837.0
+offset_top = -442.0
+offset_right = 910.0
+offset_bottom = -379.0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "left"
@@ -66,9 +182,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -31.5
-offset_bottom = 31.5
+offset_left = -248.0
+offset_top = -537.0
+offset_right = -148.0
+offset_bottom = -474.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
@@ -80,9 +197,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -50.0
-offset_right = 50.0
-offset_bottom = 63.0
+offset_left = 285.0
+offset_top = 288.0
+offset_right = 385.0
+offset_bottom = 351.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "up"
@@ -112,7 +230,7 @@ texture_normal = ExtResource("3_sugd2")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("5_85y76")
-dialogue_array = Array[ExtResource("2_j8xeh")]([SubResource("Resource_8broe")])
+dialogue_array = Array[ExtResource("2_j8xeh")]([SubResource("Resource_8broe"), SubResource("Resource_otkwg"), SubResource("Resource_j1jln"), SubResource("Resource_y0b10")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]
