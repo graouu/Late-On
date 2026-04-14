@@ -1,5 +1,6 @@
 extends Control
 
+@export var scene_music: AudioStream
 #Parent de l'endroit actuel
 @export var place_control : Control
 
@@ -19,6 +20,9 @@ var loaded_puzzle
 @export var dialogue_manager : DialogueManager
 
 func _ready() -> void:
+	
+	#Gestion de la musique
+	AudioManager.play_music(scene_music)
 	
 	#On utilise la fonction qui charge tous les endroits
 	load_places()
