@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_qrmjc"]
 [ext_resource type="Texture2D" uid="uid://qro1p3n2fdfj" path="res://Assets/Textures/Place/front_house_placeholder.jpg" id="2_a38pb"]
+[ext_resource type="Texture2D" uid="uid://ch06o30y863le" path="res://Assets/Textures/Carte/p_house_front.png" id="2_eht62"]
 
 [node name="house_front" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right", "button_up")]
 custom_minimum_size = Vector2(1080, 1280)
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_qrmjc")
 place_name = "house_front"
+map_texture = ExtResource("2_eht62")
 button_right = NodePath("Buttons/Right")
 place_right = "city_center"
 button_up = NodePath("Buttons/Up")

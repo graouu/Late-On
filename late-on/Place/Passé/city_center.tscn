@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_4yuwk"]
 [ext_resource type="Texture2D" uid="uid://cliq00ju2xg6" path="res://Assets/Textures/Place/centre-ville_placeholder.jpg" id="2_dyeko"]
+[ext_resource type="Texture2D" uid="uid://chk631vq2co2e" path="res://Assets/Textures/Carte/p_centre_ville.png" id="2_rac6r"]
 
 [node name="city_center" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_up", "button_down")]
 custom_minimum_size = Vector2(1080, 1280)
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_4yuwk")
 place_name = "city_center"
+map_texture = ExtResource("2_rac6r")
 button_left = NodePath("Buttons/Left")
 place_left = "market_entrance"
 button_up = NodePath("Buttons/Up")

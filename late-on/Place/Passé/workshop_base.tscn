@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3x6otb23m22f"]
 
 [ext_resource type="Script" uid="uid://d1s58y4mh2ieb" path="res://Scripts/Place/Passé/workshop_base.gd" id="1_u41tk"]
+[ext_resource type="Texture2D" uid="uid://cijt3jgkbhgkn" path="res://Assets/Textures/Carte/p_workshop.png" id="2_2vfkn"]
 [ext_resource type="Texture2D" uid="uid://bhlplmqq8vc5p" path="res://Assets/Textures/Place/room_marchand.png" id="2_u41tk"]
 [ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="2_uxevq"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_lyjsa"]
@@ -83,6 +84,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_u41tk")
 place_name = "workshop_base"
+map_texture = ExtResource("2_2vfkn")
 button_left = NodePath("Buttons/Left")
 place_left = "bedroom"
 button_right = NodePath("Buttons/Right")

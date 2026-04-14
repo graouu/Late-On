@@ -3,8 +3,9 @@ class_name Place extends Control
 signal go_to
 signal open_dialogue(array_dialogue : Array[DialogueLine])
 signal open_puzzle(puzzle : String)
-
+@export_category("Miscellaneous")
 @export var place_name : String
+@export var map_texture : Texture2D
 
 @export_category("MOVEMENT PROPERTIES")
 #Leave the Place

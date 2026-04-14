@@ -18,6 +18,8 @@ var loaded_puzzle
 #Node qui gère les dialogue_manager
 @export var dialogue_manager : DialogueManager
 
+@export var map_texture_holder : TextureRect
+
 func _ready() -> void:
 	
 	#On utilise la fonction qui charge tous les endroits
@@ -74,26 +76,39 @@ func move(place : String):
 	current_place.open_dialogue.connect(dialogue_manager.play_dialogue_array)
 	label_place.text = current_place.place_name
 	
+	#On change la carte si une existe
+	if current_place.map_texture:
+		map_texture_holder.texture = current_place.map_texture
+	
 	#On joue le 'fadeaway' inverse
 	black_anim.play('detransition')
 
 func load_puzzle(puzzle : String):
+	black_anim.play('transition')
+	await black_anim.animation_finished
 	puzzle_control.show()
 	loaded_puzzle = load(puzzle).instantiate()
 	puzzle_control.add_child(loaded_puzzle)
 	loaded_puzzle.end_puzzle.connect(end_puzzle)
 	loaded_puzzle.quit_puzzle.connect(quit_puzzle)
+	black_anim.play('detransition')
 
 func end_puzzle(dialogue : Array[DialogueLine]):
+	black_anim.play('transition')
+	await black_anim.animation_finished
 	puzzle_control.hide()
 	puzzle_control.get_child(0).queue_free()
 	move(current_place.name)
 	if !dialogue.is_empty():
 		dialogue_manager.play_dialogue_array(dialogue)
+	black_anim.play('detransition')
 
 func quit_puzzle():
+	black_anim.play('transition')
+	await black_anim.animation_finished
 	puzzle_control.hide()
 	puzzle_control.get_child(0).queue_free()
+	black_anim.play('detransition')
 	
 
 

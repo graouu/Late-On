@@ -39,7 +39,7 @@ var initialPos: Vector2
 func _ready() -> void:
 	#PopUpText.text = "Cette boite s'ouvre en faisant en sorte que la bille du labyrinthe active les bons mots. En cas d'oubli, j'ai toujours le fabliaux me permettant de me souvenir des mots et de leur ordre."
 	if global.enigme1_Wall1 == false:
-		PopUpText.text = "Il faut connaitre mon fabliaux préférer pour ouvrir cette boite. 	 Il commence par: Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent."
+		PopUpText.text = "Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent."
 	else :
 		PopUpText.text = "Repartons du premier paragraphe du fabliau. Gérard attend la joie mais j'aimerais bien qu'il l'atteigne"
 
@@ -101,7 +101,7 @@ func _process(delta: float) -> void:
 		elif CollisionWall == Wall6 :
 			global.enigme1_fini = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
-			PopUpText.text = "C'est la bonne combianaison, la boite vient de se déverouiller!"
+			PopUpText.text = "C'est bon!"
 			await get_tree().create_timer(3).timeout
 			end_puzzle.emit(dialogue_to_play)
 
@@ -109,7 +109,7 @@ func _process(delta: float) -> void:
 			tweenMove.kill()
 			tweenBounce.kill()
 			var tweenBall = get_tree().create_tween() 
-			PopUpText.text = "Le mécanisme ne fait pas le bruit correct, j'ai dût faire une erreur dans la combinaison. Aurais-je oublié l'histoire du Fabliau?"
+			PopUpText.text = "Le mécanisme est bloqué. J'ai dû faire une erreur dans la combinaison. Aurais-je oublié l'histoire du Fabliau?"
 			tweenBall.tween_property(Ball,"modulate:a", 0,0.3)
 			Ball.global_position = initialPos
 			Wall1.process_mode = Node.PROCESS_MODE_ALWAYS

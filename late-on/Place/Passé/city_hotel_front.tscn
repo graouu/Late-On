@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1y6ah0dogd2q"]
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_kavem"]
+[ext_resource type="Texture2D" uid="uid://dfiumlexwj7ws" path="res://Assets/Textures/Carte/p_hotel_front.png" id="2_8utat"]
 [ext_resource type="Texture2D" uid="uid://cnoo3mtebfwdm" path="res://Assets/Textures/Place/city_hotel_placeholder.jpg" id="2_kavem"]
 
 [node name="city_hotel_front" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_up", "button_down")]
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_kavem")
 place_name = "city_hotel_front"
+map_texture = ExtResource("2_8utat")
 button_up = NodePath("Buttons/Up")
 place_up = "city_hotel_inside"
 button_down = NodePath("Buttons/Down")

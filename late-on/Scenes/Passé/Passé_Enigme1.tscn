@@ -7,7 +7,6 @@
 [ext_resource type="FontFile" uid="uid://7jcrqaryuf0n" path="res://Assets/Polices/Medievilid-Regular.ttf" id="5_g7yw5"]
 [ext_resource type="Texture2D" uid="uid://nb1ja2u1gfbf" path="res://Assets/Textures/Interactables/arrow.png" id="8_vjhe2"]
 [ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_d1hrw"]
-[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_7og1i"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_6e0vd"]
 
 [sub_resource type="Resource" id="Resource_tfl7k"]
@@ -55,6 +54,10 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7yw5"]
 bg_color = Color(0.35272625, 0.4374271, 0.45746332, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -76,10 +79,29 @@ radius = 30.149628
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjhe2"]
 bg_color = Color(0.3529412, 0.4392157, 0.45882353, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfaug"]
+bg_color = Color(0.36862746, 0.4509804, 0.4745098, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_ttexe"]
+Panel/styles/panel = SubResource("StyleBoxFlat_rfaug")
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_rfaug")
@@ -95,6 +117,7 @@ offset_right = 1106.0
 offset_bottom = 1929.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0.67058825)
 
 [node name="Maze" type="Node2D" parent="." unique_id=596364562]
 position = Vector2(15, -133)
@@ -104,6 +127,8 @@ offset_left = 105.0
 offset_top = 645.0
 offset_right = 955.0
 offset_bottom = 1495.0
+scale = Vector2(1.02, 1.02)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = SubResource("Theme_g7yw5")
 
 [node name="RandomWall" type="StaticBody2D" parent="Maze" unique_id=552169867]
@@ -964,6 +989,7 @@ offset_bottom = 1852.0
 icon = ExtResource("9_d1hrw")
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
+visible = false
 offset_left = 612.0
 offset_top = 1392.0
 offset_right = 920.0
@@ -1017,34 +1043,30 @@ expand_icon = true
 [node name="PopUp" type="Node2D" parent="." unique_id=813955419]
 position = Vector2(-737, -1108)
 
-[node name="ShapePopUp" type="Sprite2D" parent="PopUp" unique_id=201039772]
-z_index = 1
-position = Vector2(1283, 1366.5)
-scale = Vector2(11.825, 10.075)
-texture = ExtResource("10_7og1i")
-
-[node name="ColorRect" type="ColorRect" parent="PopUp/ShapePopUp" unique_id=1686098950]
-offset_left = -40.0
-offset_top = -20.0
-offset_right = 40.338257
-offset_bottom = 20.0
-color = Color(0.3529412, 0.4392157, 0.45882353, 1)
+[node name="ColorRect" type="Panel" parent="PopUp" unique_id=198029449]
+offset_left = 880.0
+offset_top = 1147.0
+offset_right = 1680.0
+offset_bottom = 1547.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = SubResource("Theme_ttexe")
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
-z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 825.0
-offset_top = 1176.0
-offset_right = 1744.0
-offset_bottom = 1558.0
+offset_left = 900.0
+offset_top = 1167.0
+offset_right = 1665.0
+offset_bottom = 1530.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 60
+fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 

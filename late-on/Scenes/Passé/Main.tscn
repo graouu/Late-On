@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://cduf4kgl02j7y" path="res://Scenes/PauseMenu.tscn" id="2_6b3vs"]
-[ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom_intro.tscn" id="2_m87et"]
-[ext_resource type="Script" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom.tscn" id="2_m87et"]
 [ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="2_y01wl"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
-[ext_resource type="Texture2D" uid="uid://ccecim5gesitr" path="res://Assets/Textures/Carte/carte1.png" id="3_ny66p"]
+[ext_resource type="Texture2D" uid="uid://rhit8c3574kt" path="res://Assets/Textures/Carte/p_bedroom.png" id="3_s51ea"]
 [ext_resource type="FontFile" uid="uid://7jcrqaryuf0n" path="res://Assets/Polices/Medievilid-Regular.ttf" id="4_6b3vs"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="5_nruiq"]
@@ -125,7 +123,7 @@ _data = {
 &"transition": SubResource("Animation_kln2b")
 }
 
-[node name="Main" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager")]
+[node name="Main" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager", "map_texture_holder")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,6 +139,7 @@ label_place = NodePath("VBoxContainer/Panel/Label")
 puzzle_control = NodePath("PuzzleContainer")
 black_anim = NodePath("ColorRect/AnimationPlayer")
 dialogue_manager = NodePath("Dialogue")
+map_texture_holder = NodePath("VBoxContainer/Panel/TextureRect")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
 layout_mode = 1
@@ -164,15 +163,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_ny66p")
+texture = ExtResource("3_s51ea")
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=624180130]
 layout_mode = 0
-offset_left = 327.0
-offset_top = 557.0
-offset_right = 794.0
-offset_bottom = 632.0
+offset_left = 328.0
+offset_top = 509.0
+offset_right = 795.0
+offset_bottom = 584.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("4_6b3vs")
 theme_override_font_sizes/font_size = 80
@@ -276,21 +275,6 @@ stream = SubResource("AudioStreamRandomizer_pbw6q")
 
 [node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
-libraries/ = SubResource("AnimationLibrary_rgh2o")
-
 [node name="PuzzleContainer" type="Control" parent="." unique_id=1421887023]
 visible = false
 custom_minimum_size = Vector2(1080, 1920)
@@ -304,6 +288,22 @@ grow_vertical = 2
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1506517466]
 stream = ExtResource("5_nruiq")
 autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
+libraries/ = SubResource("AnimationLibrary_rgh2o")
 
 [node name="PauseMenu" parent="." unique_id=638804592 instance=ExtResource("2_6b3vs")]
 visible = false
