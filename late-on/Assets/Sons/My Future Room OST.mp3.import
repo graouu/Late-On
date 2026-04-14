@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhlimpn8q8b5g"
+path="res://.godot/imported/My Future Room OST.mp3-7f3329a378215b74d12f2eccf6dd1bd9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/My Future Room OST.mp3"
+dest_files=["res://.godot/imported/My Future Room OST.mp3-7f3329a378215b74d12f2eccf6dd1bd9.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

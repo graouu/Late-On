@@ -6,11 +6,16 @@ signal open_dialogue(dialogue_ar : Array[DialogueLine])
 signal open_puzzle(puzzle : String)
 enum Type {DIALOGUE, PUZZLE}
 
+var timer = 0
+
 @export var interaction_type : Type = 0
 
 #La ligne de dialogue de l'interactable
 @export var dialogue_array : Array[DialogueLine]
 @export var puzzle : String
+
+func _ready() -> void:
+	pivot_offset_ratio = Vector2(0.5,0.5)
 
 func _on_pressed() -> void:
 	print(name, " has been pressed")
@@ -19,3 +24,14 @@ func _on_pressed() -> void:
 		open_dialogue.emit(dialogue_array)
 	else:
 		open_puzzle.emit(puzzle)
+
+#func _process(delta: float) -> void:
+	#timer += delta
+	#if timer >= 0.7:
+		#print("yes")
+		#if rotation >= 0.05:
+			#rotation = -0.05
+		#else:
+			#rotation =+ 0.05
+		#timer = 0
+	#

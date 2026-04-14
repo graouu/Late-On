@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://do10okj2o7pvo"]
 
 [ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
-[ext_resource type="Texture2D" uid="uid://vymb4kvstjvb" path="res://Assets/Textures/Buttons_Proto/backgroundTable.PNG" id="2_k4k01"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
-[ext_resource type="Texture2D" uid="uid://uph8tdrg2w12" path="res://Assets/Textures/Buttons_Proto/Up.PNG" id="5_vjhe2"]
-[ext_resource type="Texture2D" uid="uid://tlw4it1ylrq2" path="res://Assets/Textures/Buttons_Proto/Right.PNG" id="6_g7yw5"]
-[ext_resource type="Texture2D" uid="uid://bmtdp3gmuerk" path="res://Assets/Textures/Buttons_Proto/Left.PNG" id="7_rfaug"]
-[ext_resource type="Texture2D" uid="uid://t5cyqpsfx3wu" path="res://Assets/Textures/Buttons_Proto/Down.PNG" id="8_ttexe"]
+[ext_resource type="Texture2D" uid="uid://80yxrantcqxe" path="res://Assets/Textures/Interactables/Paper_ChambreMarchand_Passe.png" id="3_ttexe"]
+[ext_resource type="FontFile" uid="uid://7jcrqaryuf0n" path="res://Assets/Polices/Medievilid-Regular.ttf" id="5_g7yw5"]
+[ext_resource type="Texture2D" uid="uid://nb1ja2u1gfbf" path="res://Assets/Textures/Interactables/arrow.png" id="8_vjhe2"]
 [ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_d1hrw"]
 [ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_7og1i"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_6e0vd"]
@@ -21,37 +19,28 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 script = ExtResource("2_rfaug")
 text = "Mission - Récupérer le livre"
 name = "Vieux papier"
-texture = ExtResource("11_6e0vd")
+texture = ExtResource("3_ttexe")
 metadata/_custom_type_script = "uid://c3h3244feas37"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c5ltl"]
-load_path = "res://.godot/imported/placeHolderScribe.png-df97ac7b4ad3a2723c45e1ba51e7d8d6.ctex"
 
 [sub_resource type="Resource" id="Resource_br2vo"]
 script = ExtResource("2_rfaug")
 text = "Nous cherchons à mettre la main sur un certain livre. Trouve le, place le dans la machine, et tu sera récompensé."
 name = "Vieux papier"
-texture = SubResource("CompressedTexture2D_c5ltl")
+texture = ExtResource("3_ttexe")
 metadata/_custom_type_script = "uid://c3h3244feas37"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_67pjb"]
-load_path = "res://.godot/imported/placeHolderScribe.png-df97ac7b4ad3a2723c45e1ba51e7d8d6.ctex"
 
 [sub_resource type="Resource" id="Resource_byjhp"]
 script = ExtResource("2_rfaug")
 text = "Pour t'aider, nous avons un agent qui pourra te donner de plus amples informations."
 name = "Vieux papier"
-texture = SubResource("CompressedTexture2D_67pjb")
+texture = ExtResource("3_ttexe")
 metadata/_custom_type_script = "uid://c3h3244feas37"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_br2vo"]
-load_path = "res://.godot/imported/placeHolderScribe.png-df97ac7b4ad3a2723c45e1ba51e7d8d6.ctex"
 
 [sub_resource type="Resource" id="Resource_30k2d"]
 script = ExtResource("2_rfaug")
 text = "Place le livre dans la machine une fois récupéré, et synchronise toi avec l'agent pour le transfert."
 name = "Vieux papier"
-texture = SubResource("CompressedTexture2D_br2vo")
+texture = ExtResource("3_ttexe")
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_ibuix"]
@@ -64,6 +53,16 @@ script = ExtResource("2_rfaug")
 text = "Mais s'il y a une récompense à la clef... Je ferai mieux de me mettre en route."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7yw5"]
+bg_color = Color(0.35272625, 0.4374271, 0.45746332, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_g7yw5"]
+Panel/styles/panel = SubResource("StyleBoxFlat_g7yw5")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7yw5"]
 size = Vector2(49.5, 125)
 
@@ -73,24 +72,39 @@ size = Vector2(46.75, 116)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfaug"]
 radius = 30.149628
 
+[sub_resource type="Theme" id="Theme_vjhe2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjhe2"]
+bg_color = Color(0.3529412, 0.4392157, 0.45882353, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_rfaug")
 dialogue_to_play = Array[ExtResource("2_rfaug")]([SubResource("Resource_tfl7k"), SubResource("Resource_67pjb"), SubResource("Resource_br2vo"), SubResource("Resource_byjhp"), SubResource("Resource_30k2d"), SubResource("Resource_ibuix"), SubResource("Resource_8y4hj")])
 
-[node name="BackgroundTable" type="Sprite2D" parent="." unique_id=723698975]
-position = Vector2(699, 1020.00006)
-scale = Vector2(4.3529983, 7.044554)
-texture = ExtResource("2_k4k01")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1567124204]
+custom_minimum_size = Vector2(100, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_right = 1106.0
+offset_bottom = 1929.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Maze" type="Node2D" parent="." unique_id=596364562]
 position = Vector2(15, -133)
 
-[node name="BackgroundMaze" type="ColorRect" parent="Maze" unique_id=1384118698]
+[node name="BackgroundMaze" type="Panel" parent="Maze" unique_id=830725654]
 offset_left = 105.0
 offset_top = 645.0
 offset_right = 955.0
 offset_bottom = 1495.0
-color = Color(0.1843993, 0.060916826, 0.0304168, 1)
+theme = SubResource("Theme_g7yw5")
 
 [node name="RandomWall" type="StaticBody2D" parent="Maze" unique_id=552169867]
 position = Vector2(105, 702)
@@ -111,10 +125,11 @@ offset_right = 150.0
 offset_bottom = 193.0
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Histoire"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall2" type="StaticBody2D" parent="Maze" unique_id=2001792031]
 position = Vector2(114, 845)
@@ -136,11 +151,12 @@ offset_right = 142.0
 offset_bottom = 201.0
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 theme_override_font_sizes/bold_font_size = 24
 text = "Voyage"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall3" type="StaticBody2D" parent="Maze" unique_id=904974327]
 position = Vector2(116, 994)
@@ -163,10 +179,11 @@ offset_right = 139.0
 offset_bottom = 201.00002
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Prière"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall8" type="StaticBody2D" parent="Maze" unique_id=109463121]
 position = Vector2(105, 1145)
@@ -186,10 +203,11 @@ offset_right = 150.0
 offset_bottom = 198.00003
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Fabliau"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall4" type="StaticBody2D" parent="Maze" unique_id=184594966]
 position = Vector2(105, 1295)
@@ -209,8 +227,10 @@ offset_right = 150.0
 offset_bottom = 200.00003
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Eternel"
+autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="RandomWall5" type="StaticBody2D" parent="Maze" unique_id=2066027026]
@@ -232,10 +252,11 @@ offset_right = 151.0
 offset_bottom = 197.99997
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Poème"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall7" type="StaticBody2D" parent="Maze" unique_id=1032456880]
 position = Vector2(433, 844)
@@ -255,10 +276,11 @@ offset_right = 150.0
 offset_bottom = 198.64474
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Discours"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall19" type="StaticBody2D" parent="Maze" unique_id=569105637]
 position = Vector2(905, 695)
@@ -278,10 +300,11 @@ offset_right = 150.0
 offset_bottom = 197.92572
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Verger"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall20" type="StaticBody2D" parent="Maze" unique_id=1362307099]
 position = Vector2(905, 845)
@@ -301,10 +324,11 @@ offset_right = 150.0
 offset_bottom = 198.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Union"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall22" type="StaticBody2D" parent="Maze" unique_id=965309060]
 position = Vector2(905, 1145)
@@ -324,10 +348,11 @@ offset_right = 150.0
 offset_bottom = 198.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Toujours"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall9" type="StaticBody2D" parent="Maze" unique_id=978313032]
 position = Vector2(305, 653)
@@ -350,10 +375,11 @@ offset_left = -150.0
 offset_top = -8.0
 offset_bottom = 41.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Chanson"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall10" type="StaticBody2D" parent="Maze" unique_id=1030913910]
 position = Vector2(605, 645)
@@ -375,10 +401,11 @@ offset_left = -149.0
 offset_right = 1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Bonheur"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall11" type="StaticBody2D" parent="Maze" unique_id=1235759474]
 position = Vector2(756, 645)
@@ -400,10 +427,11 @@ offset_left = -151.0
 offset_right = -1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Dame"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall14" type="StaticBody2D" parent="Maze" unique_id=553687162]
 position = Vector2(305, 1445)
@@ -423,10 +451,11 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Langdoc"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall21" type="StaticBody2D" parent="Maze" unique_id=856982391]
 position = Vector2(456, 1277)
@@ -447,10 +476,11 @@ offset_left = -151.0
 offset_right = -1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Parents"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall15" type="StaticBody2D" parent="Maze" unique_id=2105674907]
 position = Vector2(455, 1445)
@@ -470,10 +500,11 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Beau"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall16" type="StaticBody2D" parent="Maze" unique_id=396502548]
 position = Vector2(605, 1445)
@@ -493,10 +524,11 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Troublé"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall17" type="StaticBody2D" parent="Maze" unique_id=627039758]
 position = Vector2(755, 1445)
@@ -516,8 +548,10 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Embrasse"
+autowrap_mode = 0
 
 [node name="RandomWall13" type="StaticBody2D" parent="Maze" unique_id=2041278927]
 position = Vector2(633, 821)
@@ -539,10 +573,11 @@ offset_left = -150.0
 offset_right = -28.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Larmes"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall24" type="StaticBody2D" parent="Maze" unique_id=452467384]
 position = Vector2(305, 1277)
@@ -562,10 +597,11 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Amour"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall29" type="StaticBody2D" parent="Maze" unique_id=1770014216]
 position = Vector2(457, 645)
@@ -588,10 +624,11 @@ offset_left = -152.0
 offset_right = -2.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Fenêtre"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall25" type="StaticBody2D" parent="Maze" unique_id=681197048]
 position = Vector2(607, 1277)
@@ -612,10 +649,11 @@ offset_left = -149.0
 offset_right = 1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Douleur"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RandomWall28" type="StaticBody2D" parent="Maze" unique_id=1351279488]
 position = Vector2(755, 965)
@@ -636,10 +674,11 @@ offset_left = -149.0
 offset_right = 1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Pucelle"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Wall_Key1" type="StaticBody2D" parent="Maze" unique_id=1977080557]
 position = Vector2(305, 1133)
@@ -659,8 +698,10 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Pur"
+autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="WallOff_Key1" type="StaticBody2D" parent="Maze" unique_id=1423623767]
@@ -681,10 +722,11 @@ offset_right = 150.0
 offset_bottom = 199.64474
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Décent"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Wall_Key2" type="StaticBody2D" parent="Maze" unique_id=527129103]
 position = Vector2(905, 994)
@@ -704,10 +746,11 @@ offset_right = 150.0
 offset_bottom = 199.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 28
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Vavasseur"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="WallOff_Key2" type="StaticBody2D" parent="Maze" unique_id=353791740]
 modulate = Color(1, 1, 1, 0)
@@ -728,8 +771,10 @@ offset_right = 150.0
 offset_bottom = 200.46002
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Mariage"
+autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="Wall_Key3" type="StaticBody2D" parent="Maze" unique_id=255203589]
@@ -750,10 +795,11 @@ color = Color(0.4862745, 0.15294118, 0.06666667, 1)
 offset_left = -150.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 28
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Tendresse"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="WallOff_Key3" type="StaticBody2D" parent="Maze" unique_id=21711254]
 modulate = Color(1, 1, 1, 0)
@@ -776,10 +822,11 @@ offset_right = 125.0
 offset_bottom = 217.96008
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Crime"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Wall_Key4" type="StaticBody2D" parent="Maze" unique_id=384677296]
 position = Vector2(905, 1295)
@@ -799,10 +846,11 @@ offset_right = 150.0
 offset_bottom = 198.92578
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 28
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Désespoir"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="WallOff_Key4" type="StaticBody2D" parent="Maze" unique_id=9675499]
 position = Vector2(905, 965)
@@ -823,10 +871,11 @@ offset_left = -149.0
 offset_right = 1.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Maison"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Wall_Key5" type="StaticBody2D" parent="Maze" unique_id=818182566]
 position = Vector2(905, 645)
@@ -847,10 +896,11 @@ metadata/_edit_use_anchors_ = true
 offset_left = -150.0
 offset_bottom = 49.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Adieux"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Wall_Key6" type="StaticBody2D" parent="Maze" unique_id=1518199892]
 position = Vector2(433, 694)
@@ -870,10 +920,11 @@ offset_right = 150.0
 offset_bottom = 199.64474
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
-theme_override_font_sizes/normal_font_size = 34
+theme_override_fonts/normal_font = ExtResource("5_g7yw5")
+theme_override_font_sizes/normal_font_size = 50
 text = "Joie"
+autowrap_mode = 0
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Ball" type="CharacterBody2D" parent="Maze" unique_id=1086981326]
 position = Vector2(217, 773)
@@ -902,6 +953,7 @@ offset_left = 120.0
 offset_top = 512.0
 offset_right = 970.0
 offset_bottom = 1362.0
+theme = SubResource("Theme_vjhe2")
 color = Color(0.4764691, 0.563753, 0.5996934, 0.1254902)
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
@@ -925,8 +977,10 @@ offset_left = 248.0
 offset_top = 1440.0
 offset_right = 391.0
 offset_bottom = 1575.0
-icon = ExtResource("5_vjhe2")
-flat = true
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
+icon = ExtResource("8_vjhe2")
 expand_icon = true
 
 [node name="Button_Right" type="Button" parent="." unique_id=1602582602]
@@ -934,8 +988,8 @@ offset_left = 376.0
 offset_top = 1568.0
 offset_right = 519.0
 offset_bottom = 1703.0
-icon = ExtResource("6_g7yw5")
-flat = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
+icon = ExtResource("8_vjhe2")
 expand_icon = true
 
 [node name="Button_Left" type="Button" parent="." unique_id=503525865]
@@ -943,8 +997,10 @@ offset_left = 120.0
 offset_top = 1568.0
 offset_right = 263.0
 offset_bottom = 1703.0
-icon = ExtResource("7_rfaug")
-flat = true
+rotation = -3.1415927
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
+icon = ExtResource("8_vjhe2")
 expand_icon = true
 
 [node name="Button_Down" type="Button" parent="." unique_id=1852277812]
@@ -952,8 +1008,10 @@ offset_left = 248.0
 offset_top = 1696.0
 offset_right = 391.0
 offset_bottom = 1831.0
-icon = ExtResource("8_ttexe")
-flat = true
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
+icon = ExtResource("8_vjhe2")
 expand_icon = true
 
 [node name="PopUp" type="Node2D" parent="." unique_id=813955419]
@@ -964,6 +1022,13 @@ z_index = 1
 position = Vector2(1283, 1366.5)
 scale = Vector2(11.825, 10.075)
 texture = ExtResource("10_7og1i")
+
+[node name="ColorRect" type="ColorRect" parent="PopUp/ShapePopUp" unique_id=1686098950]
+offset_left = -40.0
+offset_top = -20.0
+offset_right = 40.338257
+offset_bottom = 20.0
+color = Color(0.3529412, 0.4392157, 0.45882353, 1)
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
 z_index = 1

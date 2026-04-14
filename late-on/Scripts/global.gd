@@ -64,5 +64,6 @@ var Duo3_NbTry = 0
 
 #Place variables diverses
 
+var bedroom_intro = false
 var desktop_intro = false
 var bed_intro = false

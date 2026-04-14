@@ -1,41 +1,74 @@
 [gd_scene format=3 uid="uid://c3x6otb23m22f"]
 
 [ext_resource type="Script" uid="uid://d1s58y4mh2ieb" path="res://Scripts/Place/Passé/workshop_base.gd" id="1_u41tk"]
-[ext_resource type="Texture2D" uid="uid://nxmpb2la7ji1" path="res://Assets/Textures/Place/workshop.jpg" id="2_r6vlm"]
-[ext_resource type="Texture2D" uid="uid://xcksiuvie7d3" path="res://Assets/Textures/Items_Placeholder/chest.png" id="3_aqrdm"]
+[ext_resource type="Texture2D" uid="uid://bhlplmqq8vc5p" path="res://Assets/Textures/Place/room_marchand.png" id="2_u41tk"]
+[ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="2_uxevq"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_lyjsa"]
+[ext_resource type="Texture2D" uid="uid://bsl50ngj0l6g5" path="res://Assets/Textures/Interactables/coffre_passe.png" id="3_u41tk"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_mwksj"]
-[ext_resource type="Texture2D" uid="uid://2x77r2qplnph" path="res://Assets/Textures/Items_Placeholder/chair.png" id="5_fk3yo"]
+[ext_resource type="Texture2D" uid="uid://dlvko64032fnn" path="res://Assets/Textures/Interactables/Chaise_ChambreMarchand_Passe.png" id="6_u41tk"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_w5wpv"]
-[ext_resource type="Texture2D" uid="uid://b54ehrcerrv72" path="res://Assets/Textures/Items_Placeholder/table.png" id="7_j4b46"]
+[ext_resource type="Texture2D" uid="uid://ban06uvxca2lw" path="res://Assets/Textures/Interactables/Table_ChambreMarchand_Passe.png" id="7_lyjsa"]
+[ext_resource type="Texture2D" uid="uid://jh8y11tynbue" path="res://Assets/Textures/Interactables/Fenetre_ChambreMarchand_Passe.png" id="9_gpgwj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2vfkn"]
+shader = ExtResource("2_uxevq")
+shader_parameter/color = Color(0, 0.5, 1, 1)
+shader_parameter/frequency = 3.0
+shader_parameter/compress = 1.0
+shader_parameter/add_light = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/speed = 1.0
+shader_parameter/x_angle = 1.57
+shader_parameter/y_angle = 1.57
+shader_parameter/base_alpha = 0.8
+shader_parameter/refraction_ratio = 10.0
+shader_parameter/clear = 0.0
+shader_parameter/surf_sinpowder = 8.0
+shader_parameter/surf_speed = 1.0
+shader_parameter/surf_angle = 1.57
+shader_parameter/surf_magnitude = 0.0
+shader_parameter/s11 = 2.221
+shader_parameter/sinpowder = 8.0
 
 [sub_resource type="Resource" id="Resource_fe0sr"]
 script = ExtResource("6_w5wpv")
 text = "Un gros coffre en bois ouvert."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
-[sub_resource type="Resource" id="Resource_65hun"]
-script = ExtResource("6_w5wpv")
-text = "Je me souviens avoir acheté cette chaise."
-metadata/_custom_type_script = "uid://c3h3244feas37"
-
-[sub_resource type="Resource" id="Resource_qv4v1"]
-script = ExtResource("6_w5wpv")
-text = "Elle m'a coûté une fortune!"
-metadata/_custom_type_script = "uid://c3h3244feas37"
-
-[sub_resource type="Resource" id="Resource_vwnbv"]
-script = ExtResource("6_w5wpv")
-text = "En même temps. Je l'ai depuis des décennies."
-metadata/_custom_type_script = "uid://c3h3244feas37"
-
-[sub_resource type="Resource" id="Resource_d1x3y"]
-script = ExtResource("6_w5wpv")
-text = "Sacrée chaise."
-metadata/_custom_type_script = "uid://c3h3244feas37"
-
 [sub_resource type="Resource" id="Resource_vvpbf"]
 script = ExtResource("6_w5wpv")
-text = "Quelle table... Elle a connu tellement de beuveries"
+text = "C'est une bien belle table."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_lgato"]
+script = ExtResource("6_w5wpv")
+text = "Beaucoup de bazar dessus."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_e62uj"]
+script = ExtResource("6_w5wpv")
+text = "Mais une belle table à n'en point douter."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_65hun"]
+script = ExtResource("6_w5wpv")
+text = "C'est une bien belle chaise !"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_2vfkn"]
+script = ExtResource("6_w5wpv")
+text = "Mais j'aimerai bien quelque chose de plus confortable..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_gpgwj"]
+script = ExtResource("6_w5wpv")
+text = "La fenêtre qui mène à une rue passante."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_uxevq"]
+script = ExtResource("6_w5wpv")
+text = "Beaucoup de monde aujourd'hui!"
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [node name="workshop_base" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
@@ -51,19 +84,29 @@ size_flags_vertical = 3
 script = ExtResource("1_u41tk")
 place_name = "workshop_base"
 button_left = NodePath("Buttons/Left")
-place_left = "bedroom_base"
+place_left = "bedroom"
 button_right = NodePath("Buttons/Right")
 place_right = "house_front"
-interactable_list = [NodePath("Coffre"), NodePath("Chaise"), NodePath("Table")]
+interactable_list = [NodePath("Coffre"), NodePath("Chaise"), NodePath("Table"), NodePath("Fenetre")]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=122417949]
+material = SubResource("ShaderMaterial_2vfkn")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_r6vlm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+modulate = Color(1, 1, 1, 0.9607843)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u41tk")
 expand_mode = 1
 
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
@@ -132,12 +175,13 @@ theme_override_font_sizes/font_size = 40
 text = "down"
 
 [node name="Coffre" type="TextureButton" parent="." unique_id=2121570722]
+material = ExtResource("3_lyjsa")
 layout_mode = 0
-offset_left = 686.0
-offset_top = 703.0
-offset_right = 910.0
-offset_bottom = 901.0
-texture_normal = ExtResource("3_aqrdm")
+offset_left = 131.0
+offset_top = 916.0
+offset_right = 458.0
+offset_bottom = 1285.0
+texture_normal = ExtResource("3_u41tk")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_mwksj")
@@ -146,33 +190,47 @@ dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_fe0sr")])
 puzzle = "res://Scenes/Passé/Passé_Enigme1.tscn"
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
-[node name="Chaise" type="TextureButton" parent="." unique_id=1325919239]
+[node name="Table" type="TextureButton" parent="." unique_id=1567506620]
+material = ExtResource("3_lyjsa")
 layout_mode = 0
-offset_left = 340.0
-offset_top = 636.0
-offset_right = 730.0
-offset_bottom = 1062.0
-texture_normal = ExtResource("5_fk3yo")
+offset_left = 24.0
+offset_top = 742.0
+offset_right = 828.0
+offset_bottom = 1021.0
+texture_normal = ExtResource("7_lyjsa")
 ignore_texture_size = true
 stretch_mode = 0
-flip_h = true
 script = ExtResource("4_mwksj")
-dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_65hun"), SubResource("Resource_qv4v1"), SubResource("Resource_vwnbv"), SubResource("Resource_d1x3y")])
+dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_vvpbf"), SubResource("Resource_lgato"), SubResource("Resource_e62uj")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
-[node name="Table" type="TextureButton" parent="." unique_id=1567506620]
+[node name="Chaise" type="TextureButton" parent="." unique_id=1438912937]
+material = ExtResource("3_lyjsa")
 layout_mode = 0
-offset_left = 796.0
-offset_top = 832.0
-offset_right = 1236.0
-offset_bottom = 1418.0
-texture_normal = ExtResource("7_j4b46")
+offset_left = 879.0
+offset_top = 787.0
+offset_right = 1033.0
+offset_bottom = 1050.0
+texture_normal = ExtResource("6_u41tk")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_mwksj")
-dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_vvpbf")])
+dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_65hun"), SubResource("Resource_2vfkn")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Fenetre" type="TextureButton" parent="." unique_id=1438654552]
+material = ExtResource("3_lyjsa")
+layout_mode = 0
+offset_left = 517.0
+offset_top = 219.0
+offset_right = 959.0
+offset_bottom = 653.0
+texture_normal = ExtResource("9_gpgwj")
+script = ExtResource("4_mwksj")
+dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_gpgwj"), SubResource("Resource_uxevq")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [connection signal="pressed" from="Coffre" to="Coffre" method="_on_pressed"]
-[connection signal="pressed" from="Chaise" to="Chaise" method="_on_pressed"]
 [connection signal="pressed" from="Table" to="Table" method="_on_pressed"]
+[connection signal="pressed" from="Chaise" to="Chaise" method="_on_pressed"]
+[connection signal="pressed" from="Fenetre" to="Fenetre" method="_on_pressed"]

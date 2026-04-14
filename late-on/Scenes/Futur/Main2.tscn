@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://g5exml6x7lk5" path="res://Assets/Textures/Items_Placeholder/screen_render.png" id="2_hvuyj"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_23hvo"]
+[ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="4_kregx"]
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
+[ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="8_kregx"]
 
 [sub_resource type="FontVariation" id="FontVariation_pbw6q"]
 variation_embolden = 1.03
@@ -226,6 +228,8 @@ grow_vertical = 0
 
 [node name="Name" type="Label" parent="Dialogue/ColorRect/ColorRect" unique_id=1109448770]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_kregx")
+theme_override_font_sizes/font_size = 25
 text = "Lorem Ipsum"
 label_settings = SubResource("LabelSettings_pbw6q")
 vertical_alignment = 1
@@ -233,7 +237,8 @@ vertical_alignment = 1
 [node name="DialogueText" type="RichTextLabel" parent="Dialogue/ColorRect/ColorRect" unique_id=1892270292]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 50
+theme_override_fonts/normal_font = ExtResource("4_kregx")
+theme_override_font_sizes/normal_font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_idj7w")
 text = "Ceci est un test de dialogue."
 scroll_following = true
@@ -285,5 +290,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1062742578]
+stream = ExtResource("8_kregx")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
