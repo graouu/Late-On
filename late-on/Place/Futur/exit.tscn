@@ -2,8 +2,47 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_6sq7t"]
 [ext_resource type="Texture2D" uid="uid://cuy0xtglaqax1" path="res://Assets/Textures/Place/room_exit.png" id="2_6sq7t"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_lkint"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="3_m0jwm"]
+[ext_resource type="Texture2D" uid="uid://mtpqpuo8t1nj" path="res://Assets/Textures/Interactables/Porte_Chambre_Futur.png" id="4_q2mgx"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_am37v"]
+[ext_resource type="Texture2D" uid="uid://boa0tu1d7frk0" path="res://Assets/Textures/Items_Placeholder/Futur/neutral.png" id="7_q2mgx"]
 
-[node name="exit" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[sub_resource type="Resource" id="Resource_qg650"]
+script = ExtResource("6_am37v")
+text = "Hey! Que fais-tu?"
+name = "???"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_lkint"]
+script = ExtResource("6_am37v")
+text = "Il n'est pas encore l'heure de sortir!"
+name = "Chronopote"
+texture = ExtResource("7_q2mgx")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_q2mgx"]
+script = ExtResource("6_am37v")
+text = "Tu as encore du travail à faire. Au boulot!"
+name = "Chronopote"
+texture = ExtResource("7_q2mgx")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_am37v"]
+script = ExtResource("6_am37v")
+text = "Dirige toi vers l'ordinateur pour reprendre les opérations."
+name = "Chronopote"
+texture = ExtResource("7_q2mgx")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_5wivm"]
+script = ExtResource("6_am37v")
+text = "Courage! Tu peux le faire!"
+name = "Chronopote"
+texture = ExtResource("7_q2mgx")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="exit" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -19,6 +58,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "mirror"
 button_right = NodePath("Buttons/Right")
 place_right = "bed_carton"
+interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -93,3 +133,16 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=14862778]
+material = ExtResource("3_lkint")
+layout_mode = 0
+offset_left = 494.0
+offset_top = 330.0
+offset_right = 709.0
+offset_bottom = 948.0
+texture_normal = ExtResource("4_q2mgx")
+stretch_mode = 4
+script = ExtResource("3_m0jwm")
+dialogue_array = Array[ExtResource("6_am37v")]([SubResource("Resource_qg650"), SubResource("Resource_lkint"), SubResource("Resource_q2mgx"), SubResource("Resource_am37v"), SubResource("Resource_5wivm")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"

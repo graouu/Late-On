@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcnsp7ny05qjt"]
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_egqyk"]
+[ext_resource type="Texture2D" uid="uid://bq8u5eovx3wl" path="res://Assets/Textures/Carte/p_tisserand.png" id="2_rte0r"]
 [ext_resource type="Texture2D" uid="uid://uyqf6mogprt6" path="res://Assets/Textures/Place/drapes.jpg" id="2_tr2l3"]
 
 [node name="drapes" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_down")]
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_egqyk")
 place_name = "drapes"
+map_texture = ExtResource("2_rte0r")
 button_down = NodePath("Buttons/Down")
 place_down = "market_right"
 

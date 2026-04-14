@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crisvh3p1phnn"]
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_l6k0t"]
+[ext_resource type="Texture2D" uid="uid://h1i0iqrvmx1j" path="res://Assets/Textures/Carte/p_champ_right.png" id="2_e6g6f"]
 [ext_resource type="Texture2D" uid="uid://hr4scwxrko2p" path="res://Assets/Textures/Place/field_right_placeholder.jpg" id="2_l6k0t"]
 
 [node name="field_right" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left")]
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_l6k0t")
 place_name = "field_right"
+map_texture = ExtResource("2_e6g6f")
 button_left = NodePath("Buttons/Left")
 place_left = "fields"
 

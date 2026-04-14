@@ -6,15 +6,17 @@
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_23hvo"]
 [ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="4_kregx"]
+[ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="5_u1u4p"]
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
 [ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="8_kregx"]
 
 [sub_resource type="FontVariation" id="FontVariation_pbw6q"]
+base_font = ExtResource("5_u1u4p")
 variation_embolden = 1.03
 
 [sub_resource type="LabelSettings" id="LabelSettings_pbw6q"]
 font = SubResource("FontVariation_pbw6q")
-font_size = 50
+font_size = 60
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idj7w"]
 content_margin_left = 40.0

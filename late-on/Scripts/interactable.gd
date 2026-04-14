@@ -15,6 +15,7 @@ var timer = 0
 @export var puzzle : String
 
 func _ready() -> void:
+	pressed.connect(_on_pressed)
 	pivot_offset_ratio = Vector2(0.5,0.5)
 
 func _on_pressed() -> void:

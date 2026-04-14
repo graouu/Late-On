@@ -2,8 +2,27 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_5snjp"]
 [ext_resource type="Texture2D" uid="uid://dwmyynsswmi0s" path="res://Assets/Textures/Place/room_mirror2.png" id="2_5snjp"]
+[ext_resource type="Texture2D" uid="uid://bjtdk5gwabwhf" path="res://Assets/Textures/Interactables/Tableau_Chambre_Futur.png" id="3_4yyu5"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_e12sq"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_e12sq"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="5_5mcjt"]
 
-[node name="mirror_left" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[sub_resource type="Resource" id="Resource_e12sq"]
+script = ExtResource("5_5mcjt")
+text = "Aucune idée de l'endroit que ce tableau représente."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_5mcjt"]
+script = ExtResource("5_5mcjt")
+text = "Je ne sais même pas s'il existe."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_6v2xk"]
+script = ExtResource("5_5mcjt")
+text = "Mais c'est un peu apaisant."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="mirror_left" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -19,6 +38,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "window"
 button_right = NodePath("Buttons/Right")
 place_right = "mirror"
+interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -93,3 +113,16 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=830482119]
+material = ExtResource("3_e12sq")
+layout_mode = 0
+offset_left = 537.0
+offset_top = 347.0
+offset_right = 706.0
+offset_bottom = 542.0
+texture_normal = ExtResource("3_4yyu5")
+stretch_mode = 4
+script = ExtResource("4_e12sq")
+dialogue_array = Array[ExtResource("5_5mcjt")]([SubResource("Resource_e12sq"), SubResource("Resource_5mcjt"), SubResource("Resource_6v2xk")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"

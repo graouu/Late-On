@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_8atna"]
 [ext_resource type="Texture2D" uid="uid://bc4husvtfyve4" path="res://Assets/Textures/Place/market_right_placeholder.jpg" id="2_8atna"]
+[ext_resource type="Texture2D" uid="uid://b2xbyh1ybetej" path="res://Assets/Textures/Carte/p_marché_right.png" id="2_x54qp"]
 
 [node name="market_right" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_up", "button_down")]
 custom_minimum_size = Vector2(1080, 1280)
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_8atna")
 place_name = "market_right"
+map_texture = ExtResource("2_x54qp")
 button_up = NodePath("Buttons/Up")
 place_up = "city_outside"
 button_down = NodePath("Buttons/Down")

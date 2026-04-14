@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djkv1bgn6wrvr"]
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_aj6ai"]
+[ext_resource type="Texture2D" uid="uid://ee82n3h7tom" path="res://Assets/Textures/Carte/p_champs_left.png" id="2_4hmkv"]
 [ext_resource type="Texture2D" uid="uid://bx4tno0tk10lv" path="res://Assets/Textures/Place/field_left.png" id="2_aj6ai"]
 [ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="2_tdap2"]
 
@@ -36,6 +37,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_aj6ai")
 place_name = "field_left"
+map_texture = ExtResource("2_4hmkv")
 button_right = NodePath("Buttons/Right")
 place_right = "fields"
 

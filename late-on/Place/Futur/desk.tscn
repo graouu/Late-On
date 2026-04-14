@@ -2,8 +2,18 @@
 
 [ext_resource type="Script" uid="uid://cnfbmn7wijd3w" path="res://Scripts/Place/Futur/desk.gd" id="1_iddrj"]
 [ext_resource type="Texture2D" uid="uid://c2yq0htapo877" path="res://Assets/Textures/Place/room_desk.png" id="2_iddrj"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_ef0bq"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="3_t5ucm"]
+[ext_resource type="Texture2D" uid="uid://qynlqqqg64mq" path="res://Assets/Textures/Interactables/PC_Chambre_Futur.png" id="4_66asb"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_66asb"]
+[ext_resource type="Texture2D" uid="uid://cc2cw35t4a1uk" path="res://Assets/Textures/Interactables/ChaisePC_Chambre_Futur.png" id="7_6bpvc"]
 
-[node name="desktop" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "button_up")]
+[sub_resource type="Resource" id="Resource_6bpvc"]
+script = ExtResource("6_66asb")
+text = "Un des derniers modèles de PC tout-en-un de GlobalCorp©."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="desktop" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "button_up", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -21,6 +31,7 @@ button_right = NodePath("Buttons/Right")
 place_right = "carton"
 button_up = NodePath("Buttons/Up")
 place_up = "login"
+interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -68,16 +79,20 @@ theme_override_font_sizes/font_size = 40
 text = "right"
 
 [node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+material = ExtResource("3_ef0bq")
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -50.0
-offset_right = 50.0
-offset_bottom = 63.0
+offset_left = -226.0
+offset_top = 249.0
+offset_right = 225.0
+offset_bottom = 1282.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "up"
+icon = ExtResource("7_6bpvc")
+flat = true
+expand_icon = true
 
 [node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
 visible = false
@@ -94,3 +109,16 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=858605092]
+material = ExtResource("3_ef0bq")
+layout_mode = 0
+offset_left = 142.0
+offset_top = 693.0
+offset_right = 354.0
+offset_bottom = 1023.0
+texture_normal = ExtResource("4_66asb")
+stretch_mode = 4
+script = ExtResource("3_t5ucm")
+dialogue_array = Array[ExtResource("6_66asb")]([SubResource("Resource_6bpvc")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"

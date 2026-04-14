@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_b5ymq"]
 [ext_resource type="Texture2D" uid="uid://cpptkqdw7frt7" path="res://Assets/Textures/Place/fields_placeholder.jpg" id="2_b5ymq"]
+[ext_resource type="Texture2D" uid="uid://dkq0ssppp0ajt" path="res://Assets/Textures/Carte/p_champs.png" id="2_qfj7i"]
 
 [node name="fields" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "button_down")]
 custom_minimum_size = Vector2(1080, 1280)
@@ -15,6 +16,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_b5ymq")
 place_name = "fields"
+map_texture = ExtResource("2_qfj7i")
 button_left = NodePath("Buttons/Left")
 place_left = "field_left"
 button_right = NodePath("Buttons/Right")

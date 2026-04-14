@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_81t5s"]
 [ext_resource type="Texture2D" uid="uid://5i337pi5gtet" path="res://Assets/Textures/Place/market_entrance_placeholder.jpg" id="2_81t5s"]
+[ext_resource type="Texture2D" uid="uid://csvgkfhpxkcrl" path="res://Assets/Textures/Carte/p_marché_entrée.png" id="2_nh28a"]
 
 [node name="market_entrance" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_up", "button_down")]
 custom_minimum_size = Vector2(1080, 1280)
@@ -15,8 +16,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_81t5s")
 place_name = "market_entrance"
+map_texture = ExtResource("2_nh28a")
 button_up = NodePath("Buttons/Up")
-place_up = "market_right"
+place_up = "market_left"
 button_down = NodePath("Buttons/Down")
 place_down = "city_center"
 
