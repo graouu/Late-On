@@ -128,9 +128,9 @@ script = ExtResource("1_4yuwk")
 place_name = "city_center"
 map_texture = ExtResource("2_rac6r")
 button_right = NodePath("Buttons/Right")
-place_right = "market_entrance"
+place_right = "city_hotel_front"
 button_up = NodePath("Buttons/Up")
-place_up = "city_hotel_front"
+place_up = "market_entrance"
 button_down = NodePath("Buttons/Down")
 place_down = "house_front"
 

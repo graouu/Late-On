@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_qrmjc"]
 [ext_resource type="Texture2D" uid="uid://qro1p3n2fdfj" path="res://Assets/Textures/Place/front_house_placeholder.jpg" id="2_a38pb"]
 [ext_resource type="Texture2D" uid="uid://ch06o30y863le" path="res://Assets/Textures/Carte/p_house_front.png" id="2_eht62"]
+[ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_wl42s"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_marq1"]
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
@@ -127,10 +128,11 @@ size_flags_vertical = 3
 script = ExtResource("1_qrmjc")
 place_name = "house_front"
 map_texture = ExtResource("2_eht62")
-button_right = NodePath("Buttons/Up")
+button_right = NodePath("Buttons/Right")
 place_right = "city_center"
-button_up = NodePath("Buttons/Right")
+button_up = NodePath("Buttons/Up")
 place_up = "workshop_base"
+specific_sound_up = ExtResource("3_wl42s")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1

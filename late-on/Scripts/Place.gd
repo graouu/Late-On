@@ -11,15 +11,19 @@ signal open_puzzle(puzzle : String)
 #Leave the Place
 @export var button_left : Button
 @export var place_left : String
+@export var specific_sound_left : AudioStreamMP3
 
 @export var button_right : Button
 @export var place_right : String
+@export var specific_sound_right : AudioStreamMP3
 
 @export var button_up : Button
 @export var place_up : String
+@export var specific_sound_up : AudioStreamMP3
 
 @export var button_down : Button
 @export var place_down : String
+@export var specific_sound_down : AudioStreamMP3
 
 @export_category("INTERACTABLES")
 
@@ -44,16 +48,28 @@ func _ready() -> void:
 		open_dialogue.emit(dialogue_list)
 
 func pressed_button_left():
-	go_to.emit(place_left)
+	if specific_sound_left:
+		go_to.emit(place_left, specific_sound_left)
+	else:
+		go_to.emit(place_left)
 
 func pressed_button_right():
-	go_to.emit(place_right)
+	if specific_sound_right:
+		go_to.emit(place_right, specific_sound_right)
+	else:
+		go_to.emit(place_right)
 	
 func pressed_button_up():
-	go_to.emit(place_up)
+	if specific_sound_up:
+		go_to.emit(place_up,specific_sound_up)
+	else:
+		go_to.emit(place_up)
 	
 func pressed_button_down():
-	go_to.emit(place_down)
+	if specific_sound_down:
+		go_to.emit(place_down, specific_sound_down)
+	else:
+		go_to.emit(place_down)
 
 func send_dialogue_request(dialogue_array : Array[DialogueLine]):
 	open_dialogue.emit(dialogue_array)

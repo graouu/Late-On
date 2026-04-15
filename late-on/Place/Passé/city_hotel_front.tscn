@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_kavem"]
 [ext_resource type="Texture2D" uid="uid://dfiumlexwj7ws" path="res://Assets/Textures/Carte/p_hotel_front.png" id="2_8utat"]
 [ext_resource type="Texture2D" uid="uid://cnoo3mtebfwdm" path="res://Assets/Textures/Place/city_hotel_placeholder.jpg" id="2_kavem"]
+[ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_yuvcp"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_r006i"]
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
@@ -129,6 +130,7 @@ place_name = "city_hotel_front"
 map_texture = ExtResource("2_8utat")
 button_up = NodePath("Buttons/Up")
 place_up = "city_hotel_inside"
+specific_sound_up = ExtResource("3_yuvcp")
 button_down = NodePath("Buttons/Down")
 place_down = "city_center"
 

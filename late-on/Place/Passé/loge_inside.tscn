@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dh7ed7sh63gwh" path="res://Assets/Textures/Place/loge_inside.png" id="2_ehb4y"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_7dt3x"]
 
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_7dt3x"]
+
 [sub_resource type="Animation" id="Animation_ds5ss"]
 resource_name = "Arrow"
 loop_mode = 1
@@ -129,6 +131,7 @@ place_name = "loge_inside"
 map_texture = ExtResource("2_5ex5q")
 button_down = NodePath("Buttons/Down")
 place_down = "loge_outside"
+specific_sound_down = SubResource("AudioStreamMP3_7dt3x")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1

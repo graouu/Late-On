@@ -1,0 +1,356 @@
+[gd_scene format=3 uid="uid://d4ijpjvh55kds"]
+
+[ext_resource type="Script" uid="uid://d20irr0kruply" path="res://Scripts/Place/Futur/correspondant.gd" id="1_t2omm"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_p3cbo"]
+[ext_resource type="AudioStream" uid="uid://bncfsvdqqf444" path="res://Assets/Sons/SFX/Pop-up.mp3" id="3_1hob5"]
+[ext_resource type="Texture2D" uid="uid://boa0tu1d7frk0" path="res://Assets/Textures/Items_Placeholder/Futur/neutral.png" id="3_1pmdn"]
+[ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="4_t2omm"]
+[ext_resource type="Texture2D" uid="uid://1tyr5qcy6bga" path="res://Assets/Textures/Interactables/Tasktbarcluedo.png" id="5_pky5h"]
+[ext_resource type="Texture2D" uid="uid://di843c8f0o38" path="res://Assets/Textures/Interactables/sdsdsd.png" id="6_1pmdn"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="6_xacaf"]
+[ext_resource type="Texture2D" uid="uid://devswktsf6aih" path="res://Assets/Textures/Interactables/done.png" id="7_1hob5"]
+[ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="7_t2omm"]
+[ext_resource type="Texture2D" uid="uid://fjbvmqcychkr" path="res://Assets/Textures/Interactables/ok.png" id="10_t2omm"]
+
+[sub_resource type="Resource" id="Resource_ppe1o"]
+script = ExtResource("2_p3cbo")
+text = "Bien joué! Rien ne t'échappe!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_jffj3"]
+script = ExtResource("2_p3cbo")
+text = "Tu as complété ta première tâche aujourd'hui. Félicitations!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_ekvwi"]
+script = ExtResource("2_p3cbo")
+text = "Appuie sur le bouton pour accéder à ta prochaine tâche."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_gd4o5"]
+script = ExtResource("2_p3cbo")
+text = "Bonne chance! Continue comme ça et tu croulera sous les crédits!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_xxvsk"]
+script = ExtResource("2_p3cbo")
+text = "Encore bravo! Pour la prochaine étape, appuie sur le bouton."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_5rkb6"]
+script = ExtResource("2_p3cbo")
+text = "Tu pourra ensuite découvrir ta prochaine tâche."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_ftkx6"]
+script = ExtResource("2_p3cbo")
+text = "Continue comme ça!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_gcy8g"]
+script = ExtResource("2_p3cbo")
+text = "Je reste à ta disposition si tu as besoin de conseils."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hob5"]
+font = ExtResource("7_t2omm")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sugd2"]
+
+[sub_resource type="Resource" id="Resource_t2omm"]
+script = ExtResource("2_p3cbo")
+text = "Il ne te reste plus qu'à cliquer sur \"OK\"."
+texture = ExtResource("3_1pmdn")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_1hob5"]
+script = ExtResource("2_p3cbo")
+text = "Tu vois le bouton \"OK\"? Clique dessus!"
+texture = ExtResource("3_1pmdn")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_xacaf"]
+script = ExtResource("2_p3cbo")
+text = "Pour continuer, il faut que tu effectue cette action."
+texture = ExtResource("3_1pmdn")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_jui3r"]
+script = ExtResource("2_p3cbo")
+text = "Bonne chance! Tu peux le faire!"
+texture = ExtResource("3_1pmdn")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_70hqd"]
+script = ExtResource("2_p3cbo")
+text = "Je reste disponible si tu as d'autres questions."
+texture = ExtResource("3_1pmdn")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Animation" id="Animation_1pmdn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Tâche 37
+Global ID : 45ds8d7df7
+Crédits : 10
+
+Intitulé : Organiser les dossiers en vue de la
+procédure de transfert intertemporelle."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Interactable2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t2omm"]
+resource_name = "intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.53, 0.9, 1.2333333, 1.5666667, 1.8333334, 2.2333333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["", "Tâche 37", "Tâche 37", "Tâche 37
+Global ID : 45ds8d7df7", "Tâche 37
+Global ID : 45ds8d7df7", "Tâche 37
+Global ID : 45ds8d7df7
+Crédits : 10", "Tâche 37
+Global ID : 45ds8d7df7
+Crédits : 10", "Tâche 37
+Global ID : 45ds8d7df7
+Crédits : 10
+
+Intitulé : Organiser les dossiers en vue de la
+procédure de transfert intertemporel.", "Tâche 37
+Global ID : 45ds8d7df7
+Crédits : 10
+
+Intitulé : Organiser les dossiers en vue de la
+procédure de transfert intertemporel."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Interactable2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1hob5"]
+_data = {
+&"RESET": SubResource("Animation_1pmdn"),
+&"intro": SubResource("Animation_t2omm")
+}
+
+[node name="correspondant" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "interactable_list")]
+custom_minimum_size = Vector2(1080, 1280)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.66700006
+offset_bottom = -0.6401367
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_t2omm")
+next_dialogue = Array[ExtResource("2_p3cbo")]([SubResource("Resource_ppe1o"), SubResource("Resource_jffj3"), SubResource("Resource_ekvwi"), SubResource("Resource_gd4o5")])
+next_interactible_dialogue = Array[ExtResource("2_p3cbo")]([SubResource("Resource_xxvsk"), SubResource("Resource_5rkb6"), SubResource("Resource_ftkx6"), SubResource("Resource_gcy8g")])
+place_name = "correspondant"
+button_left = NodePath("Buttons/Left")
+place_left = "desktop"
+specific_sound_left = ExtResource("3_1hob5")
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_t2omm")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1849538158]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = -81.0
+offset_right = 540.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("5_pky5h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1136324612]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 205.0
+offset_right = 995.0
+offset_bottom = 883.0
+mouse_filter = 2
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=91773620]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 102.0
+offset_right = 1062.0
+offset_bottom = 958.0
+mouse_filter = 2
+texture = ExtResource("6_1pmdn")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1358048212]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 220.0
+offset_right = 370.0
+offset_bottom = 349.0
+text = "Tâche 37
+Global ID : 45ds8d7df7
+Crédits : 10
+
+Intitulé : Organiser les dossiers en vue de la
+procédure de transfert intertemporelle."
+label_settings = SubResource("LabelSettings_1hob5")
+
+[node name="Buttons" type="Control" parent="." unique_id=1933331614]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 426.0
+offset_top = 11.0
+offset_right = 693.0
+offset_bottom = 286.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sugd2")
+icon = ExtResource("7_1hob5")
+flat = true
+expand_icon = true
+
+[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -537.0
+offset_right = -148.0
+offset_bottom = -474.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "right"
+
+[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 285.0
+offset_top = 288.0
+offset_right = 385.0
+offset_bottom = 351.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "up"
+
+[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -63.0
+offset_right = 57.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=1303943635]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 895.0
+offset_right = 1122.0
+offset_bottom = 1228.0
+texture_normal = ExtResource("3_1pmdn")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_xacaf")
+dialogue_array = Array[ExtResource("2_p3cbo")]([SubResource("Resource_t2omm"), SubResource("Resource_1hob5"), SubResource("Resource_xacaf"), SubResource("Resource_jui3r"), SubResource("Resource_70hqd")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=546654561]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 722.0
+offset_right = 666.0
+offset_bottom = 848.0
+texture_normal = ExtResource("10_t2omm")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("6_xacaf")
+interaction_type = 1
+puzzle = "res://Scenes/Futur/Futur_Enigme2.tscn"
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1579755792]
+libraries/ = SubResource("AnimationLibrary_1hob5")
+autoplay = &"intro"
+
+[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]

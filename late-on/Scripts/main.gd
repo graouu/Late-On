@@ -1,19 +1,26 @@
 extends Control
 
+@export_category("Sound")
 @export var scene_music: AudioStream
+@export var scene_sound : AudioStreamPlayer
+@export var movement_sound : AudioStream
+
+@export_category("Places")
 #Parent de l'endroit actuel
 @export var place_control : Control
-
 @export var is_past : bool
-
 @export var label_place : Label
-
-@export var puzzle_control : Control
-var loaded_puzzle
 #Endroit actuel
 @export var current_place : Place
 #Dictionnaire des endroits
 @export var place_dic : Dictionary[String, PackedScene]
+
+@export_category("Puzzles")
+@export var puzzle_control : Control
+var loaded_puzzle
+
+
+@export_category("Miscell.")
 #Animateur de la texture noire pour la transition
 @export var black_anim : AnimationPlayer
 #Node qui gère les dialogue_manager
@@ -55,7 +62,10 @@ func load_places():
 			place_dic[file_name.replace(".tscn","").replace(".remap","")] = (load("res://Place/Futur/" + file_name.replace(".remap","")))
 
 #Retire l'endroit actuel et le remplace par l'endroit 'place'
-func move(place : String):
+func move(place : String, audio : AudioStreamMP3 = movement_sound):
+	
+	scene_sound.stream = audio
+	scene_sound.play()
 	
 	#Animation 'fadeaway'
 	black_anim.play('transition')
@@ -104,7 +114,7 @@ func end_puzzle(dialogue : Array[DialogueLine]):
 	await black_anim.animation_finished
 	puzzle_control.hide()
 	puzzle_control.get_child(0).queue_free()
-	move(current_place.name)
+	move(current_place.name, null)
 	if !dialogue.is_empty():
 		dialogue_manager.play_dialogue_array(dialogue)
 	black_anim.play('detransition')

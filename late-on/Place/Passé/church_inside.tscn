@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_iecml"]
 [ext_resource type="Texture2D" uid="uid://b7b0d5pruo3jt" path="res://Assets/Textures/Carte/p_church_inside.png" id="2_64do1"]
 [ext_resource type="Texture2D" uid="uid://2lflmhbemtu" path="res://Assets/Textures/Place/church_inside_placeholder.jpg" id="2_iecml"]
+[ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_4yegc"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_d6ax1"]
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
@@ -129,6 +130,7 @@ place_name = "church_inside"
 map_texture = ExtResource("2_64do1")
 button_down = NodePath("Buttons/Down")
 place_down = "church_front"
+specific_sound_down = ExtResource("3_4yegc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1

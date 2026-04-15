@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_yaovl"]
 [ext_resource type="PackedScene" uid="uid://b3cc4wrt08aad" path="res://Place/Futur/bed.tscn" id="2_gbstf"]
 [ext_resource type="Texture2D" uid="uid://g5exml6x7lk5" path="res://Assets/Textures/Items_Placeholder/screen_render.png" id="2_hvuyj"]
+[ext_resource type="AudioStream" uid="uid://h8islakkx71c" path="res://Assets/Sons/SFX/Footstep123.mp3" id="2_wlwuj"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
-[ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_23hvo"]
+[ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/SFX/typewriter.mp3" id="4_23hvo"]
 [ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="4_kregx"]
 [ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="5_u1u4p"]
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
@@ -120,7 +121,7 @@ _data = {
 &"transition": SubResource("Animation_kln2b")
 }
 
-[node name="Main2" type="Control" unique_id=1327342452 node_paths=PackedStringArray("place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager")]
+[node name="Main2" type="Control" unique_id=1327342452 node_paths=PackedStringArray("scene_sound", "place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,7 +130,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("1_yaovl")
+scene_sound = NodePath("Sound Effect")
+movement_sound = ExtResource("2_wlwuj")
 place_control = NodePath("VBoxContainer/PlaceContainer")
 label_place = NodePath("VBoxContainer/Panel/Label")
 puzzle_control = NodePath("PuzzleContainer")
@@ -143,11 +147,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/separation = 0
 
 [node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1604058810]
 custom_minimum_size = Vector2(1080, 640)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=1937576611]
 top_level = true
@@ -167,16 +173,19 @@ offset_left = 352.0
 offset_top = 444.0
 offset_right = 739.0
 offset_bottom = 521.0
+mouse_filter = 2
 theme_override_font_sizes/font_size = 50
 text = "Reload to Menu"
 
 [node name="PlaceContainer" type="Control" parent="VBoxContainer" unique_id=722058883]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="bed" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_gbstf")]
 layout_mode = 1
 offset_bottom = 426.23993
+mouse_filter = 2
 
 [node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "dialogue_texture", "sound_player", "dialogue_timer")]
 visible = false
@@ -186,6 +195,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("3_xbf76")
 dialogue_label = NodePath("ColorRect/ColorRect/DialogueText")
 name_label = NodePath("ColorRect/ColorRect/Name")
@@ -256,6 +266,7 @@ offset_left = 3.0
 offset_top = -22.0
 offset_right = 1080.0
 offset_bottom = 640.0
+mouse_filter = 2
 texture = ExtResource("2_hvuyj")
 expand_mode = 1
 
@@ -265,6 +276,7 @@ offset_left = 116.0
 offset_top = 51.0
 offset_right = 949.0
 offset_bottom = 504.0
+mouse_filter = 2
 texture = ExtResource("6_gbstf")
 expand_mode = 1
 
@@ -277,6 +289,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
 visible = false
@@ -293,8 +306,10 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
 libraries/ = SubResource("AnimationLibrary_rgh2o")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1062742578]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1062742578]
 stream = ExtResource("8_kregx")
 autoplay = true
+
+[node name="Sound Effect" type="AudioStreamPlayer" parent="." unique_id=54745000]
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]

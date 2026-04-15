@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cnfbmn7wijd3w" path="res://Scripts/Place/Futur/desk.gd" id="1_iddrj"]
 [ext_resource type="Texture2D" uid="uid://c2yq0htapo877" path="res://Assets/Textures/Place/room_desk.png" id="2_iddrj"]
+[ext_resource type="AudioStream" uid="uid://dg6vnsy7403td" path="res://Assets/Sons/SFX/ChairTransition.mp3" id="2_ie16l"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_ef0bq"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="3_t5ucm"]
 [ext_resource type="Texture2D" uid="uid://qynlqqqg64mq" path="res://Assets/Textures/Interactables/PC_Chambre_Futur.png" id="4_66asb"]
@@ -31,6 +32,7 @@ button_right = NodePath("Buttons/Right")
 place_right = "carton"
 button_up = NodePath("Buttons/Up")
 place_up = "login"
+specific_sound_up = ExtResource("2_ie16l")
 interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_4jf3l"]
 [ext_resource type="Texture2D" uid="uid://ckug734cwu2ga" path="res://Assets/Textures/Place/loge_outside.jpg" id="2_4jf3l"]
 [ext_resource type="Texture2D" uid="uid://c1vw2qtk1m6ym" path="res://Assets/Textures/Carte/p_loge_outside.png" id="2_a3vs4"]
+[ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_gj5pf"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_or6xy"]
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
@@ -131,6 +132,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "church_front"
 button_right = NodePath("Buttons/Right")
 place_right = "loge_inside"
+specific_sound_right = ExtResource("3_gj5pf")
 button_down = NodePath("Buttons/Down")
 place_down = "market_left"
 

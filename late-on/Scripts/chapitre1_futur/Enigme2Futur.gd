@@ -8,6 +8,11 @@ extends Node2D
 @onready var ButtonReturn = $Button_Return
 @onready var PopUpText = $PopUp/TextPopUp
 
+signal end_puzzle(dialogue : String)
+signal quit_puzzle
+
+@export var dialogue_to_play : Array[DialogueLine]
+
 func _ready() -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,7 +29,7 @@ func _process(delta: float) -> void:
 		ButtonValidate.visible = false
 
 func _on_button_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
+	quit_puzzle.emit()
 
 func _on_button_return_mouse_entered() -> void:
 	ButtonReturn.scale = Vector2(1.05,1.05)
@@ -37,7 +42,7 @@ func _on_button_validate_pressed() -> void:
 		PopUpText.text = "Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 500 points! Je suis heureux de t'avoir comme employé"
 		global.enigme2f_fini = true
 		await get_tree().create_timer(3).timeout
-		get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
+		end_puzzle.emit(dialogue_to_play)
 
 	else:
 		global.enigme2f_Nbtry = global.enigme2f_Nbtry +1
