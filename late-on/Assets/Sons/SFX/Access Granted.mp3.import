@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqybdjcn6xp3x"
+path="res://.godot/imported/Access Granted.mp3-82b4d9d83284f7d8091841150fbb5841.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/SFX/Access Granted.mp3"
+dest_files=["res://.godot/imported/Access Granted.mp3-82b4d9d83284f7d8091841150fbb5841.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

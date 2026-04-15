@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://bh6ctwx22w71a"]
+
+[ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="1_240ms"]
+
+[resource]
+default_font_size = 100
+Button/constants/outline_size = 20
+Button/font_sizes/font_size = 200
+Button/fonts/font = ExtResource("1_240ms")

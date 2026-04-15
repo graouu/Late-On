@@ -21,6 +21,11 @@ size = Vector2(128, 127.5)
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_tnt6o")
 
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1198494927]
+offset_right = 1191.0
+offset_bottom = 1924.0
+mouse_filter = 2
+
 [node name="PlaceHolderScribe" type="Sprite2D" parent="." unique_id=873155954]
 position = Vector2(158, 1371.7499)
 scale = Vector2(6.8, 9.916665)
@@ -237,6 +242,7 @@ position = Vector2(389, 1068)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751]
+z_index = 10
 script = ExtResource("4_4ffsq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap1/TypeMap1" unique_id=1293272795]
@@ -251,6 +257,7 @@ position = Vector2(140.00006, 1071)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781]
+z_index = 10
 script = ExtResource("4_4ffsq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap2/TypeMap2" unique_id=1631313715]
@@ -266,6 +273,7 @@ position = Vector2(653, 1057)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455]
+z_index = 10
 script = ExtResource("4_4ffsq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap3/TypeMap3" unique_id=1309479811]
@@ -281,6 +289,7 @@ position = Vector2(893, 1053)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723]
+z_index = 10
 script = ExtResource("4_4ffsq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap4/TypeMap4" unique_id=744732967]
@@ -360,6 +369,7 @@ offset_left = 189.0
 offset_top = 1467.0
 offset_right = 294.0
 offset_bottom = 1571.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1796075527]
@@ -367,6 +377,7 @@ offset_left = 407.0
 offset_top = 1468.0
 offset_right = 512.0
 offset_bottom = 1572.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=287256259]
@@ -374,6 +385,7 @@ offset_left = 649.0
 offset_top = 1471.0
 offset_right = 754.0
 offset_bottom = 1575.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="." unique_id=1346420771]
@@ -381,6 +393,7 @@ offset_left = 897.0
 offset_top = 1464.0
 offset_right = 1002.0
 offset_bottom = 1568.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_entered"]

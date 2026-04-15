@@ -94,8 +94,8 @@ func _process(delta: float) -> void:
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
 			PopUpText.text = "C'est la bonne combinaison! Ton compte est ouvert! Félicitations petit employé :)"
 			await get_tree().create_timer(3).timeout
+			get_parent().get_parent().current_place.name = "desktop"
 			end_puzzle.emit(dialogue_to_play)
-			get_parent().get_parent().move("desktop")
 
 		else:
 			global.enigme1f_Nbtry += 1

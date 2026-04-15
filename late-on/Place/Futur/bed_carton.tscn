@@ -2,8 +2,22 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_53h1q"]
 [ext_resource type="Texture2D" uid="uid://cj60t4wn5s5sa" path="res://Assets/Textures/Place/room_bed_carton.png" id="2_53h1q"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_l7ioc"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="3_mt77a"]
+[ext_resource type="Texture2D" uid="uid://kixbs3ebgeud" path="res://Assets/Textures/Interactables/Carton2_Chambre_Futur.png" id="4_drayp"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="4_xfpu5"]
 
-[node name="bed" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[sub_resource type="Resource" id="Resource_l7ioc"]
+script = ExtResource("4_xfpu5")
+text = "Des emballages d'anciennes livraisons."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_mt77a"]
+script = ExtResource("4_xfpu5")
+text = "Il faut que je m'en débarasse."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="bed" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -19,6 +33,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "exit"
 button_right = NodePath("Buttons/Right")
 place_right = "bed"
+interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -93,3 +108,16 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=1198705575]
+material = ExtResource("3_l7ioc")
+layout_mode = 0
+offset_left = 470.0
+offset_top = 797.0
+offset_right = 798.0
+offset_bottom = 1012.0
+texture_normal = ExtResource("4_drayp")
+stretch_mode = 4
+script = ExtResource("3_mt77a")
+dialogue_array = Array[ExtResource("4_xfpu5")]([SubResource("Resource_l7ioc"), SubResource("Resource_mt77a")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"

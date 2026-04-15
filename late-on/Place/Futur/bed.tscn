@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cpqo47anqch8q" path="res://Scripts/Place/Futur/bed.gd" id="1_i8jiy"]
 [ext_resource type="Texture2D" uid="uid://cxktfqdy0up8o" path="res://Assets/Textures/Place/room_bed.png" id="2_i8jiy"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_wfeh7"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="4_h16md"]
+[ext_resource type="Texture2D" uid="uid://cg3mtjsvc867w" path="res://Assets/Textures/Interactables/Lit_Chambre_Futur.png" id="5_krw1b"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="6_mobre"]
 
 [sub_resource type="Resource" id="Resource_8caeh"]
 script = ExtResource("2_wfeh7")
@@ -19,7 +22,22 @@ script = ExtResource("2_wfeh7")
 text = "Direction le pc."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
-[node name="bed" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[sub_resource type="Resource" id="Resource_h16md"]
+script = ExtResource("2_wfeh7")
+text = "Mon lit, pas forcément le plus confort mais le plus rentable pour son prix."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_krw1b"]
+script = ExtResource("2_wfeh7")
+text = "Il a même des espaces de rangement!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_mobre"]
+script = ExtResource("2_wfeh7")
+text = "Non pas que j'ai grand chose à y ranger."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="bed" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -35,6 +53,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "bed_carton"
 button_right = NodePath("Buttons/Right")
 place_right = "desk"
+interactable_list = [NodePath("Interactable")]
 dialogue_list = Array[ExtResource("2_wfeh7")]([SubResource("Resource_8caeh"), SubResource("Resource_vq4rp"), SubResource("Resource_wfeh7")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
@@ -47,6 +66,19 @@ grow_vertical = 2
 texture = ExtResource("2_i8jiy")
 expand_mode = 1
 
+[node name="Interactable" type="TextureButton" parent="." unique_id=1493344360]
+material = ExtResource("4_h16md")
+layout_mode = 0
+offset_left = -3.0
+offset_top = 599.0
+offset_right = 772.0
+offset_bottom = 1117.0
+texture_normal = ExtResource("5_krw1b")
+stretch_mode = 4
+script = ExtResource("6_mobre")
+dialogue_array = Array[ExtResource("2_wfeh7")]([SubResource("Resource_h16md"), SubResource("Resource_krw1b"), SubResource("Resource_mobre")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
 layout_mode = 1
 anchors_preset = 15
@@ -54,6 +86,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
 layout_mode = 1
@@ -110,3 +143,5 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]

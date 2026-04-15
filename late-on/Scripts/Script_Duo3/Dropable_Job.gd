@@ -12,6 +12,7 @@ func _process(_delta: float) -> void:
 	if draggable:
 		# Makes the object follow the mouse cursor
 		if Input.is_action_just_pressed("click"):
+			print("dragging")
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			global.is_dragging = true
@@ -34,11 +35,13 @@ func _process(_delta: float) -> void:
 
 #Change le scale de l'icon et le rend drag
 func _on_area_2d_mouse_entered():
+	print("area_entered")
 	if not global.is_dragging:
 		draggable = true
 		scale = Vector2(1.05,1.05)
 
 func _on_area_2d_mouse_exited():
+	print("area_exited")
 	if not global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)

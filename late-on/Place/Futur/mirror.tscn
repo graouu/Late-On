@@ -2,8 +2,50 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_w3gpi"]
 [ext_resource type="Texture2D" uid="uid://daeojtftssfcd" path="res://Assets/Textures/Place/room_mirror.png" id="2_w3gpi"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_sivfl"]
+[ext_resource type="Texture2D" uid="uid://d1ea1du18vx1c" path="res://Assets/Textures/Interactables/Mirroir_Chambre_Futur.png" id="4_e4fn7"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="5_1kd4p"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_e4fn7"]
+[ext_resource type="Texture2D" uid="uid://cjwl8apqq8rre" path="res://Assets/Textures/Interactables/Plantepot_Chambre_Futur.png" id="7_1kd4p"]
+[ext_resource type="Texture2D" uid="uid://dod3ignagyha2" path="res://Assets/Textures/Interactables/Etagere_Chambre_Futur.png" id="7_q7y48"]
+[ext_resource type="Texture2D" uid="uid://daa4vgk2o2vf" path="res://Assets/Textures/Interactables/Commode_Chambre_futur.png" id="9_8a456"]
 
-[node name="mirror" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[sub_resource type="Resource" id="Resource_1kd4p"]
+script = ExtResource("6_e4fn7")
+text = "Ce mirroir allongé à l'horizontal n'est pas ce qu'il y a de plus pratique pour se regarder le matin."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_q7y48"]
+script = ExtResource("6_e4fn7")
+text = "Une étagère design, je ne me souviens plus quand je l'ai achetée..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_8a456"]
+script = ExtResource("6_e4fn7")
+text = "Une jolie plante en pot n'est-ce pas ?"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_6ykny"]
+script = ExtResource("6_e4fn7")
+text = "Vu qu'elle est en plastique sa beauté ne ternira jamais !"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_xhmbk"]
+script = ExtResource("6_e4fn7")
+text = "*Soupir*"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_n2d4j"]
+script = ExtResource("6_e4fn7")
+text = "Une commode bien pratique pour mes vêtements."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_hfhd5"]
+script = ExtResource("6_e4fn7")
+text = "Aucun espace gâché, le summum de l'optimisation."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="mirror" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -19,6 +61,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "mirror_left"
 button_right = NodePath("Buttons/Right")
 place_right = "exit"
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2"), NodePath("Interactable3"), NodePath("Interactable4")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -30,6 +73,58 @@ grow_vertical = 2
 texture = ExtResource("2_w3gpi")
 expand_mode = 1
 
+[node name="Interactable" type="TextureButton" parent="." unique_id=6385213]
+material = ExtResource("3_sivfl")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 318.0
+offset_right = 631.0
+offset_bottom = 551.0
+texture_normal = ExtResource("4_e4fn7")
+stretch_mode = 4
+script = ExtResource("5_1kd4p")
+dialogue_array = Array[ExtResource("6_e4fn7")]([SubResource("Resource_1kd4p")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable3" type="TextureButton" parent="." unique_id=1127734225]
+material = ExtResource("3_sivfl")
+layout_mode = 0
+offset_left = 747.0
+offset_top = 239.0
+offset_right = 1080.0
+offset_bottom = 1131.0
+texture_normal = ExtResource("7_q7y48")
+stretch_mode = 4
+script = ExtResource("5_1kd4p")
+dialogue_array = Array[ExtResource("6_e4fn7")]([SubResource("Resource_q7y48")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=1069790414]
+material = ExtResource("3_sivfl")
+layout_mode = 0
+offset_left = 804.0
+offset_top = 855.0
+offset_right = 952.0
+offset_bottom = 1070.0
+texture_normal = ExtResource("7_1kd4p")
+stretch_mode = 4
+script = ExtResource("5_1kd4p")
+dialogue_array = Array[ExtResource("6_e4fn7")]([SubResource("Resource_8a456"), SubResource("Resource_6ykny"), SubResource("Resource_xhmbk")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable4" type="TextureButton" parent="." unique_id=1915634243]
+material = ExtResource("3_sivfl")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 602.0
+offset_right = 641.0
+offset_bottom = 1172.0
+texture_normal = ExtResource("9_8a456")
+stretch_mode = 4
+script = ExtResource("5_1kd4p")
+dialogue_array = Array[ExtResource("6_e4fn7")]([SubResource("Resource_n2d4j"), SubResource("Resource_hfhd5")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
 layout_mode = 1
 anchors_preset = 15
@@ -37,6 +132,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
 layout_mode = 1
@@ -59,6 +155,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -100.0
 offset_top = -31.5
+offset_right = 0.00048828125
 offset_bottom = 31.5
 grow_horizontal = 0
 grow_vertical = 2

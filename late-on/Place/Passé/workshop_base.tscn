@@ -5,12 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://bhlplmqq8vc5p" path="res://Assets/Textures/Place/room_marchand.png" id="2_u41tk"]
 [ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="2_uxevq"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_lyjsa"]
+[ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_p1wvo"]
 [ext_resource type="Texture2D" uid="uid://bsl50ngj0l6g5" path="res://Assets/Textures/Interactables/coffre_passe.png" id="3_u41tk"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_mwksj"]
 [ext_resource type="Texture2D" uid="uid://dlvko64032fnn" path="res://Assets/Textures/Interactables/Chaise_ChambreMarchand_Passe.png" id="6_u41tk"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_w5wpv"]
 [ext_resource type="Texture2D" uid="uid://ban06uvxca2lw" path="res://Assets/Textures/Interactables/Table_ChambreMarchand_Passe.png" id="7_lyjsa"]
 [ext_resource type="Texture2D" uid="uid://jh8y11tynbue" path="res://Assets/Textures/Interactables/Fenetre_ChambreMarchand_Passe.png" id="9_gpgwj"]
+[ext_resource type="Shader" uid="uid://c8c75432n7uf4" path="res://Assets/Outline.gdshader" id="12_e62uj"]
+[ext_resource type="Texture2D" uid="uid://80yxrantcqxe" path="res://Assets/Textures/Interactables/Paper_ChambreMarchand_Passe.png" id="12_lgato"]
+[ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="14_tflmn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2vfkn"]
 shader = ExtResource("2_uxevq")
@@ -72,6 +76,132 @@ script = ExtResource("6_w5wpv")
 text = "Beaucoup de monde aujourd'hui!"
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
+[sub_resource type="Gradient" id="Gradient_fe1yi"]
+offsets = PackedFloat32Array(0.9811321)
+colors = PackedColorArray(10.704801, 10.704801, 10.704801, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kplcs"]
+gradient = SubResource("Gradient_fe1yi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tflmn"]
+shader = ExtResource("12_e62uj")
+shader_parameter/color_gradient = SubResource("GradientTexture1D_kplcs")
+shader_parameter/size_effect = 2.0000001043084
+shader_parameter/speed = 0.5
+shader_parameter/highlight_strength = 0.20000006258504044
+shader_parameter/color_mode_toggle = true
+shader_parameter/is_horizontal = false
+shader_parameter/pause_duration = 0.1
+
+[sub_resource type="Animation" id="Animation_ds5ss"]
+resource_name = "Arrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Down:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Up:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Left:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Right:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7bi7l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Down:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Up:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Left:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Right:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p1wvo"]
+_data = {
+&"Arrow": SubResource("Animation_ds5ss"),
+&"RESET": SubResource("Animation_7bi7l")
+}
+
 [node name="workshop_base" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
@@ -89,6 +219,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "bedroom"
 button_right = NodePath("Buttons/Right")
 place_right = "house_front"
+specific_sound_right = ExtResource("3_p1wvo")
 interactable_list = [NodePath("Coffre"), NodePath("Chaise"), NodePath("Table"), NodePath("Fenetre")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=122417949]
@@ -110,71 +241,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_u41tk")
 expand_mode = 1
-
-[node name="Buttons" type="Control" parent="." unique_id=1933331614]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -31.5
-offset_right = 73.0
-offset_bottom = 31.5
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "left"
-
-[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
-visible = false
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -31.5
-offset_bottom = 31.5
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "right"
-
-[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -50.0
-offset_right = 50.0
-offset_bottom = 63.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
-text = "up"
-
-[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -57.5
-offset_top = -63.0
-offset_right = 57.5
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 40
-text = "down"
 
 [node name="Coffre" type="TextureButton" parent="." unique_id=2121570722]
 material = ExtResource("3_lyjsa")
@@ -231,6 +297,100 @@ texture_normal = ExtResource("9_gpgwj")
 script = ExtResource("4_mwksj")
 dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_gpgwj"), SubResource("Resource_uxevq")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Papier" type="TextureButton" parent="." unique_id=2875562]
+visible = false
+material = SubResource("ShaderMaterial_tflmn")
+layout_mode = 0
+offset_left = 545.0
+offset_top = 800.0
+offset_right = 766.0
+offset_bottom = 949.0
+texture_normal = ExtResource("12_lgato")
+script = ExtResource("4_mwksj")
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Buttons" type="Control" parent="." unique_id=453306201]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Right" type="Button" parent="Buttons" unique_id=1087893728]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -74.5
+offset_bottom = 74.5
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("14_tflmn")
+text = ">"
+flat = true
+
+[node name="Left" type="Button" parent="Buttons" unique_id=634430769]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -74.5
+offset_right = 78.0
+offset_bottom = 74.5
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("14_tflmn")
+text = "<"
+flat = true
+
+[node name="Up" type="Button" parent="Buttons" unique_id=123004429]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41000003
+anchor_top = 0.037
+anchor_right = 0.59000003
+anchor_bottom = 0.116000004
+offset_left = 83.19998
+offset_top = -97.36
+offset_right = -10.200012
+offset_bottom = -3.480011
+grow_horizontal = 2
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("14_tflmn")
+text = "<"
+flat = true
+
+[node name="Down" type="Button" parent="Buttons" unique_id=1824863454]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41000003
+anchor_top = 0.037
+anchor_right = 0.59000003
+anchor_bottom = 0.116000004
+offset_left = 45.19998
+offset_top = 1072.64
+offset_right = -48.200012
+offset_bottom = 1166.52
+grow_horizontal = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("14_tflmn")
+text = "<"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons" unique_id=1486786324]
+libraries/ = SubResource("AnimationLibrary_p1wvo")
+autoplay = &"Arrow"
 
 [connection signal="pressed" from="Coffre" to="Coffre" method="_on_pressed"]
 [connection signal="pressed" from="Table" to="Table" method="_on_pressed"]

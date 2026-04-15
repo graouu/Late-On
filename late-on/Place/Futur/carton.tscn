@@ -2,8 +2,22 @@
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_0106l"]
 [ext_resource type="Texture2D" uid="uid://djfuqgf4mfle8" path="res://Assets/Textures/Place/room_carton.png" id="2_0106l"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_emlrv"]
+[ext_resource type="Texture2D" uid="uid://d1dg82d0w02l4" path="res://Assets/Textures/Interactables/Carton1_Chambre_Futur.png" id="3_mn6k0"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_emlrv"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="6_xdm2h"]
 
-[node name="carton" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right")]
+[sub_resource type="Resource" id="Resource_y51qq"]
+script = ExtResource("6_xdm2h")
+text = "Les derniers cartons d'emballage de mon clavier et ma souris."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_xdm2h"]
+script = ExtResource("6_xdm2h")
+text = "On ne sait jamais..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[node name="carton" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -19,6 +33,7 @@ button_left = NodePath("Buttons/Left")
 place_left = "desk"
 button_right = NodePath("Buttons/Right")
 place_right = "window"
+interactable_list = [NodePath("Interactable")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1
@@ -93,3 +108,16 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=676457643]
+material = ExtResource("3_emlrv")
+layout_mode = 0
+offset_left = 273.0
+offset_top = 798.0
+offset_right = 581.0
+offset_bottom = 994.0
+texture_normal = ExtResource("3_mn6k0")
+stretch_mode = 4
+script = ExtResource("4_emlrv")
+dialogue_array = Array[ExtResource("6_xdm2h")]([SubResource("Resource_y51qq"), SubResource("Resource_xdm2h")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
