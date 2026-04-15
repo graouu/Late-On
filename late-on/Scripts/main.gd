@@ -62,6 +62,8 @@ func move(place : String):
 	#On attend qu'elle finisse
 	await black_anim.animation_finished
 	
+	current_place = place_dic[place].instantiate()
+	
 	#On supprime la place actuelle
 	place_control.get_child(0).queue_free()
 	

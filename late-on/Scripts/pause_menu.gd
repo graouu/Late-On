@@ -9,7 +9,7 @@ func _ready() -> void:
 	#$VBoxContainer/FXHSlider = global.get_volume(global.sfx_bus_index)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#A changer pour le bouton pause
 	if Input.is_action_just_pressed(pause_key):
 		toggle_pause()

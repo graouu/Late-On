@@ -214,6 +214,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_sugd2")
 icon = ExtResource("5_j8xeh")
+flat = true
 expand_icon = true
 
 [node name="Right" type="Button" parent="Buttons" unique_id=2064841768]

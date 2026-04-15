@@ -40,7 +40,7 @@ func play_dialogue(dialogue : DialogueLine):
 	dialogue_timer.stop()
 	sound_player.stop()
 	
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		if dialogue_timer.is_stopped():
 			is_done.emit()
