@@ -134,6 +134,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_idj7w")
+scene_music = ExtResource("5_nruiq")
 scene_sound = NodePath("Sound Effect")
 movement_sound = ExtResource("2_xjvin")
 place_control = NodePath("VBoxContainer/PlaceContainer")
@@ -275,6 +276,7 @@ scroll_following = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialogue" unique_id=158385038]
 stream = SubResource("AudioStreamRandomizer_pbw6q")
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
 
@@ -287,10 +289,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Musique" type="AudioStreamPlayer" parent="." unique_id=1506517466]
-stream = ExtResource("5_nruiq")
-autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
 visible = false
@@ -309,9 +307,9 @@ color = Color(0, 0, 0, 1)
 libraries/ = SubResource("AnimationLibrary_rgh2o")
 
 [node name="PauseMenu" parent="." unique_id=638804592 instance=ExtResource("2_6b3vs")]
-visible = false
 layout_mode = 1
 
 [node name="Sound Effect" type="AudioStreamPlayer" parent="." unique_id=1701632604]
+bus = &"SFX"
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
