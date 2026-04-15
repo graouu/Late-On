@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://do10okj2o7pvo"]
 
 [ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
-[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
+[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
 [ext_resource type="Texture2D" uid="uid://80yxrantcqxe" path="res://Assets/Textures/Interactables/Paper_ChambreMarchand_Passe.png" id="3_ttexe"]
+[ext_resource type="Texture2D" uid="uid://o4qt4xfcjs76" path="res://Assets/BordureEtFond/FondRouge2.PNG" id="4_g7yw5"]
 [ext_resource type="FontFile" uid="uid://7jcrqaryuf0n" path="res://Assets/Polices/Medievilid-Regular.ttf" id="5_g7yw5"]
-[ext_resource type="Texture2D" uid="uid://nb1ja2u1gfbf" path="res://Assets/Textures/Interactables/arrow.png" id="8_vjhe2"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_d1hrw"]
+[ext_resource type="Texture2D" uid="uid://cfkigvg1iyqtb" path="res://Assets/BordureEtFond/BordureVerte.PNG" id="5_h4pyk"]
+[ext_resource type="Texture2D" uid="uid://dd05jgjk74ccu" path="res://Assets/BordureEtFond/CarreVert.PNG" id="8_rfaug"]
+[ext_resource type="Texture2D" uid="uid://olisvfjf16jj" path="res://Assets/Textures/Interactables/Boutonretour_Labyrinthelettre_Passe.png" id="9_h4pyk"]
+[ext_resource type="Texture2D" uid="uid://1jagxyossemh" path="res://Assets/Textures/Interactables/Croix directionnelle labyrinthe lettré.png" id="9_p3ev7"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="9_vykle"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_6e0vd"]
+[ext_resource type="Texture2D" uid="uid://dl02j3aduict0" path="res://Assets/Textures/Interactables/CroixdirectionnelleLLHaut.png" id="12_h4pyk"]
+[ext_resource type="Texture2D" uid="uid://ce3qfgixx8omh" path="res://Assets/Textures/Interactables/CroixdirectionnelleLLDroite.png" id="13_vykle"]
+[ext_resource type="Texture2D" uid="uid://buyicly50uki1" path="res://Assets/Textures/Interactables/CroixdirectionnelleLLGauche.png" id="14_d1hrw"]
+[ext_resource type="Texture2D" uid="uid://dxswdixj7hudc" path="res://Assets/Textures/Interactables/CroixdirectionnelleLLBas.png" id="15_7og1i"]
+[ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="16_6e0vd"]
 
 [sub_resource type="Resource" id="Resource_tfl7k"]
 script = ExtResource("2_rfaug")
@@ -52,20 +61,6 @@ script = ExtResource("2_rfaug")
 text = "Mais s'il y a une récompense à la clef... Je ferai mieux de me mettre en route."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7yw5"]
-bg_color = Color(0.35272625, 0.4374271, 0.45746332, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="Theme" id="Theme_g7yw5"]
-Panel/styles/panel = SubResource("StyleBoxFlat_g7yw5")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7yw5"]
 size = Vector2(49.5, 125)
 
@@ -76,32 +71,6 @@ size = Vector2(46.75, 116)
 radius = 30.149628
 
 [sub_resource type="Theme" id="Theme_vjhe2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjhe2"]
-bg_color = Color(0.3529412, 0.4392157, 0.45882353, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfaug"]
-bg_color = Color(0.36862746, 0.4509804, 0.4745098, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-corner_detail = 20
-
-[sub_resource type="Theme" id="Theme_ttexe"]
-Panel/styles/panel = SubResource("StyleBoxFlat_rfaug")
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_rfaug")
@@ -122,14 +91,10 @@ color = Color(0, 0, 0, 0.67058825)
 [node name="Maze" type="Node2D" parent="." unique_id=596364562]
 position = Vector2(15, -133)
 
-[node name="BackgroundMaze" type="Panel" parent="Maze" unique_id=830725654]
-offset_left = 105.0
-offset_top = 645.0
-offset_right = 955.0
-offset_bottom = 1495.0
-scale = Vector2(1.02, 1.02)
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme = SubResource("Theme_g7yw5")
+[node name="FondLabyrinth" type="Sprite2D" parent="Maze" unique_id=1740870359]
+position = Vector2(530.0956, 1068.9629)
+scale = Vector2(1.1852582, 1.3357241)
+texture = ExtResource("4_g7yw5")
 
 [node name="RandomWall" type="StaticBody2D" parent="Maze" unique_id=552169867]
 position = Vector2(105, 702)
@@ -138,23 +103,25 @@ position = Vector2(105, 702)
 position = Vector2(24, 67)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall" unique_id=1342895194]
-offset_top = -7.0
-offset_right = 50.0
-offset_bottom = 143.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Wallpaper" type="Sprite2D" parent="Maze/RandomWall" unique_id=447616471]
+modulate = Color(0.37475803, 0.46168965, 0.3917508, 1)
+position = Vector2(24.409973, 66.76001)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall" unique_id=2017171295]
-offset_top = 143.0
-offset_right = 150.0
-offset_bottom = 193.0
+offset_left = -25.28897
+offset_top = 140.33795
+offset_right = 124.71103
+offset_bottom = 214.29593
 rotation = -1.5707964
-theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Histoire"
+theme_override_font_sizes/normal_font_size = 74
+text = "histoire"
 autowrap_mode = 0
 horizontal_alignment = 1
+vertical_alignment = 3
 
 [node name="RandomWall2" type="StaticBody2D" parent="Maze" unique_id=2001792031]
 position = Vector2(114, 845)
@@ -163,23 +130,23 @@ position = Vector2(114, 845)
 position = Vector2(16, 76)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall2" unique_id=55382951]
-offset_left = -9.0
-offset_right = 41.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="Maze/RandomWall2" unique_id=572534439]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(16.409988, 75.163025)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall2" unique_id=532945697]
-offset_left = -8.0
+offset_left = -35.95102
 offset_top = 151.0
-offset_right = 142.0
-offset_bottom = 201.0
+offset_right = 114.04898
+offset_bottom = 228.95102
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 72
 theme_override_font_sizes/bold_font_size = 24
-text = "Voyage"
+text = "voyage"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -190,23 +157,22 @@ position = Vector2(116, 994)
 position = Vector2(14, 75)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall3" unique_id=245488904]
-offset_left = -11.0
-offset_top = 1.0
-offset_right = 39.0
-offset_bottom = 151.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D3" type="Sprite2D" parent="Maze/RandomWall3" unique_id=649596745]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(14.409988, 78.35785)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall3" unique_id=941427346]
-offset_left = -11.0
+offset_left = -34.140488
 offset_top = 151.0
-offset_right = 139.0
-offset_bottom = 201.00002
+offset_right = 115.85951
+offset_bottom = 224.1405
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Prière"
+theme_override_font_sizes/normal_font_size = 72
+text = "prière"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -217,20 +183,22 @@ position = Vector2(105, 1145)
 position = Vector2(25, 76)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall8" unique_id=507469176]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D4" type="Sprite2D" parent="Maze/RandomWall8" unique_id=2041355706]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.409988, 80.35791)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall8" unique_id=1141440006]
+offset_left = -23.0
 offset_top = 148.0
-offset_right = 150.0
-offset_bottom = 198.00003
+offset_right = 127.0
+offset_bottom = 221.00003
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Fabliau"
+theme_override_font_sizes/normal_font_size = 72
+text = "fabliau"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -241,20 +209,22 @@ position = Vector2(105, 1295)
 position = Vector2(24, 78)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall4" unique_id=1495435070]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D5" type="Sprite2D" parent="Maze/RandomWall4" unique_id=159403017]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.121582, 73.94287)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall4" unique_id=1816161834]
+offset_left = -22.0
 offset_top = 150.0
-offset_right = 150.0
-offset_bottom = 200.00003
+offset_right = 128.0
+offset_bottom = 222.00003
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Eternel"
+theme_override_font_sizes/normal_font_size = 72
+text = "eternel"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -265,21 +235,22 @@ position = Vector2(280, 695)
 position = Vector2(25, 74)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall5" unique_id=1934232768]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D6" type="Sprite2D" parent="Maze/RandomWall5" unique_id=18135856]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(24.173828, 74.07678)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall5" unique_id=933715896]
-offset_left = 1.0
+offset_left = -25.35382
 offset_top = 147.99997
-offset_right = 151.0
-offset_bottom = 197.99997
+offset_right = 124.64618
+offset_bottom = 224.35379
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Poème"
+theme_override_font_sizes/normal_font_size = 72
+text = "poème"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -290,20 +261,22 @@ position = Vector2(433, 844)
 position = Vector2(24, 73)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall7" unique_id=1477695384]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D7" type="Sprite2D" parent="Maze/RandomWall7" unique_id=304328331]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.782959, 70.85425)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall7" unique_id=521351015]
-offset_top = 149.0
-offset_right = 150.0
-offset_bottom = 198.64474
+offset_left = -22.54718
+offset_top = 147.38947
+offset_right = 125.842285
+offset_bottom = 219.58139
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Discours"
+theme_override_font_sizes/normal_font_size = 70
+text = "discours"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -314,20 +287,22 @@ position = Vector2(905, 695)
 position = Vector2(24, 74)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall19" unique_id=937808514]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D8" type="Sprite2D" parent="Maze/RandomWall19" unique_id=1141609662]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.523926, 73.80298)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall19" unique_id=1921788246]
-offset_top = 149.0
-offset_right = 150.0
-offset_bottom = 197.92572
+offset_left = -25.333252
+offset_top = 140.73553
+offset_right = 124.66675
+offset_bottom = 214.9945
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Verger"
+theme_override_font_sizes/normal_font_size = 72
+text = "verger"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -338,20 +313,22 @@ position = Vector2(905, 845)
 position = Vector2(24, 76)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall20" unique_id=1251277277]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D9" type="Sprite2D" parent="Maze/RandomWall20" unique_id=1554947193]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(24.77539, 77.305664)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall20" unique_id=2056081200]
-offset_top = 150.0
-offset_right = 150.0
-offset_bottom = 198.92578
+offset_left = -23.100037
+offset_top = 109.50415
+offset_right = 126.89996
+offset_bottom = 181.52997
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Union"
+theme_override_font_sizes/normal_font_size = 72
+text = "union"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -362,20 +339,22 @@ position = Vector2(905, 1145)
 position = Vector2(25, 74)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall22" unique_id=1404779483]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D10" type="Sprite2D" parent="Maze/RandomWall22" unique_id=1356978215]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(24.985352, 75.3855)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall22" unique_id=1349708649]
-offset_top = 150.0
-offset_right = 150.0
-offset_bottom = 198.92578
+offset_left = -20.41394
+offset_top = 134.18811
+offset_right = 129.58606
+offset_bottom = 204.89392
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Toujours"
+theme_override_font_sizes/normal_font_size = 68
+text = "toujour"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -387,22 +366,21 @@ position = Vector2(-77, 16)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall9" unique_id=615209938]
-offset_top = -8.0
-offset_right = 50.0
-offset_bottom = 142.0
+[node name="Sprite2D11" type="Sprite2D" parent="Maze/RandomWall9" unique_id=15435007]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-73.282715, 14.684082)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall9" unique_id=1532950307]
 offset_left = -150.0
-offset_top = -8.0
+offset_top = -31.636353
 offset_bottom = 41.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Chanson"
+theme_override_font_sizes/normal_font_size = 72
+text = "chanson"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -414,21 +392,22 @@ position = Vector2(-77, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall10" unique_id=779528852]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D12" type="Sprite2D" parent="Maze/RandomWall10" unique_id=1595535929]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-66.05298, 22.706665)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall10" unique_id=255963031]
 offset_left = -149.0
+offset_top = -26.363617
 offset_right = 1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Bonheur"
+theme_override_font_sizes/normal_font_size = 72
+text = "bonheur"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -440,21 +419,22 @@ position = Vector2(-76, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall11" unique_id=1691187147]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D13" type="Sprite2D" parent="Maze/RandomWall11" unique_id=309557320]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-71.555664, 22.458008)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall11" unique_id=1795885820]
 offset_left = -151.0
+offset_top = -23.636383
 offset_right = -1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Dame"
+theme_override_font_sizes/normal_font_size = 72
+text = "dame"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -466,19 +446,22 @@ position = Vector2(-76, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall14" unique_id=292638615]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D14" type="Sprite2D" parent="Maze/RandomWall14" unique_id=326188934]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-73.71289, 24.534668)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall14" unique_id=452105390]
-offset_left = -150.0
+offset_left = -160.7438
+offset_top = -23.290771
+offset_right = -10.743805
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Langdoc"
+theme_override_font_sizes/normal_font_size = 72
+text = "langdoc"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -490,20 +473,22 @@ position = Vector2(-79, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall21" unique_id=1906259423]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D15" type="Sprite2D" parent="Maze/RandomWall21" unique_id=1060492723]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-75.20126, 24.240097)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall21" unique_id=1097964799]
 offset_left = -151.0
+offset_top = -24.042114
 offset_right = -1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Parents"
+theme_override_font_sizes/normal_font_size = 72
+text = "parents"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -515,19 +500,22 @@ position = Vector2(-78, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall15" unique_id=1469581717]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D16" type="Sprite2D" parent="Maze/RandomWall15" unique_id=1044992433]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-74.44694, 24.783203)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall15" unique_id=901907843]
-offset_left = -150.0
+offset_left = -178.09918
+offset_top = -24.793335
+offset_right = -40.099182
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Beau"
+theme_override_font_sizes/normal_font_size = 72
+text = "beau"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -539,19 +527,22 @@ position = Vector2(-76, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall16" unique_id=455898892]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D17" type="Sprite2D" parent="Maze/RandomWall16" unique_id=2085629574]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-83.67871, 24.783203)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall16" unique_id=404153060]
-offset_left = -150.0
-offset_bottom = 50.0
+offset_left = -194.09918
+offset_top = -24.11731
+offset_right = -44.099182
+offset_bottom = 48.42212
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Troublé"
+theme_override_font_sizes/normal_font_size = 72
+text = "troublé"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -563,19 +554,22 @@ position = Vector2(-74, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall17" unique_id=464703448]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D18" type="Sprite2D" parent="Maze/RandomWall17" unique_id=1895026371]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-81.16211, 25.031738)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall17" unique_id=296014999]
-offset_left = -150.0
-offset_bottom = 50.0
+offset_left = -183.9256
+offset_top = -22.689697
+offset_right = -33.9256
+offset_bottom = 48.347168
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Embrasse"
+theme_override_font_sizes/normal_font_size = 68
+text = "embrasse"
 autowrap_mode = 0
 
 [node name="RandomWall13" type="StaticBody2D" parent="Maze" unique_id=2041278927]
@@ -586,21 +580,22 @@ position = Vector2(-90, 24.625)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_rfaug")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall13" unique_id=1391263736]
-offset_left = -27.0
-offset_right = 23.0
-offset_bottom = 123.0
+[node name="Sprite2D19" type="Sprite2D" parent="Maze/RandomWall13" unique_id=391475597]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-86.808, 23.67041)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.37010017)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall13" unique_id=30202465]
 offset_left = -150.0
+offset_top = -26.363586
 offset_right = -28.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Larmes"
+theme_override_font_sizes/normal_font_size = 72
+text = "larmes"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -612,19 +607,21 @@ position = Vector2(-76, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall24" unique_id=565430827]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D19" type="Sprite2D" parent="Maze/RandomWall24" unique_id=841624579]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-73.74609, 23.687988)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall24" unique_id=2052238673]
 offset_left = -150.0
+offset_top = -25.271484
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Amour"
+theme_override_font_sizes/normal_font_size = 72
+text = "amour"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -636,22 +633,22 @@ position = Vector2(-80, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall29" unique_id=251481036]
-offset_left = -2.0
-offset_right = 48.0
-offset_bottom = 150.0
+[node name="Sprite2D20" type="Sprite2D" parent="Maze/RandomWall29" unique_id=635226381]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-72.18359, 22.743408)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall29" unique_id=1387082234]
-offset_left = -152.0
-offset_right = -2.0
-offset_bottom = 50.0
+offset_left = -151.0
+offset_top = -25.042084
+offset_right = -1.0
+offset_bottom = 49.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Fenêtre"
+theme_override_font_sizes/normal_font_size = 72
+text = "fenêtre"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -663,20 +660,22 @@ position = Vector2(-73, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall25" unique_id=886596492]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D21" type="Sprite2D" parent="Maze/RandomWall25" unique_id=1212736449]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-72.793945, 23.45996)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall25" unique_id=1465752429]
 offset_left = -149.0
+offset_top = -24.793335
 offset_right = 1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Douleur"
+theme_override_font_sizes/normal_font_size = 72
+text = "douleur"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -688,20 +687,22 @@ position = Vector2(-76, 26)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/RandomWall28" unique_id=1442806475]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D22" type="Sprite2D" parent="Maze/RandomWall28" unique_id=293475346]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-71.721924, 25.336945)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/RandomWall28" unique_id=1707046168]
 offset_left = -149.0
+offset_top = -23.290771
 offset_right = 1.0
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Pucelle"
+theme_override_font_sizes/normal_font_size = 72
+text = "pucelle"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -709,23 +710,26 @@ horizontal_alignment = 1
 position = Vector2(305, 1133)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key1" unique_id=27505983]
-position = Vector2(-76, 24)
+position = Vector2(-87.269714, 13.481567)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key1" unique_id=2129277456]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D23" type="Sprite2D" parent="Maze/Wall_Key1" unique_id=1989003758]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-82.65354, 13.610367)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key1" unique_id=834379109]
 offset_left = -150.0
-offset_bottom = 48.0
+offset_top = -36.814453
+offset_right = -15.026276
+offset_bottom = 39.735596
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Pur"
+theme_override_font_sizes/normal_font_size = 72
+text = "pur"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -736,20 +740,22 @@ position = Vector2(433, 989)
 position = Vector2(24, 72)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key1" unique_id=1151095187]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D23" type="Sprite2D" parent="Maze/WallOff_Key1" unique_id=400333694]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(24.806671, 76.00604)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key1" unique_id=1273068437]
+offset_left = -24.88971
 offset_top = 150.0
-offset_right = 150.0
-offset_bottom = 199.64474
+offset_right = 125.11029
+offset_bottom = 224.53445
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Décent"
+theme_override_font_sizes/normal_font_size = 72
+text = "décent"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -760,45 +766,49 @@ position = Vector2(905, 994)
 position = Vector2(25, 75)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key2" unique_id=1754920034]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D24" type="Sprite2D" parent="Maze/Wall_Key2" unique_id=569596182]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.345215, 73.903564)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key2" unique_id=1451776965]
-offset_top = 151.0
-offset_right = 150.0
-offset_bottom = 199.92578
+offset_left = -16.52063
+offset_top = 128.68597
+offset_right = 143.47937
+offset_bottom = 196.61176
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Vavasseur"
+theme_override_font_sizes/normal_font_size = 63
+text = "vavasseur"
 autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="WallOff_Key2" type="StaticBody2D" parent="Maze" unique_id=353791740]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.003921569)
 position = Vector2(729, 695)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key2" unique_id=988753877]
 position = Vector2(24, 74)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key2" unique_id=404438014]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D25" type="Sprite2D" parent="Maze/WallOff_Key2" unique_id=86127294]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(26.14502, 75.903564)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key2" unique_id=1788903196]
+offset_left = -20.899963
 offset_top = 149.0
-offset_right = 150.0
-offset_bottom = 200.46002
+offset_right = 129.10004
+offset_bottom = 221.35999
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Mariage"
+theme_override_font_sizes/normal_font_size = 72
+text = "mariage"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -810,19 +820,22 @@ position = Vector2(-72, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key3" unique_id=2080381948]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D19" type="Sprite2D" parent="Maze/Wall_Key3" unique_id=1196137474]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-78.16211, 25.031738)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key3" unique_id=516176788]
-offset_left = -150.0
+offset_left = -166.87598
+offset_top = -20.0
+offset_right = -14.875977
 offset_bottom = 50.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Tendresse"
+theme_override_font_sizes/normal_font_size = 66
+text = "tendresse"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -834,22 +847,22 @@ position = Vector2(609, 1109)
 position = Vector2(24.5, 102.5)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key3" unique_id=557685368]
-offset_top = 40.0
-offset_right = 50.0
-offset_bottom = 168.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D25" type="Sprite2D" parent="Maze/WallOff_Key3" unique_id=1876905670]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(26.722656, 104.52966)
+scale = Vector2(0.58, 0.38067666)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key3" unique_id=2101749486]
-offset_left = -1.0
+offset_left = -22.48761
 offset_top = 168.0
-offset_right = 125.0
-offset_bottom = 217.96008
+offset_right = 103.51239
+offset_bottom = 239.4477
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Crime"
+theme_override_font_sizes/normal_font_size = 72
+text = "crime"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -860,20 +873,22 @@ position = Vector2(905, 1295)
 position = Vector2(24, 78)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key4" unique_id=238544818]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+[node name="Sprite2D25" type="Sprite2D" parent="Maze/Wall_Key4" unique_id=484269705]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.345215, 75.97229)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key4" unique_id=1936046005]
-offset_top = 150.0
-offset_right = 150.0
-offset_bottom = 198.92578
+offset_left = -21.890564
+offset_top = 146.5509
+offset_right = 134.25653
+offset_bottom = 218.01611
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Désespoir"
+theme_override_font_sizes/normal_font_size = 68
+text = "désespoir"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -885,20 +900,22 @@ position = Vector2(-75, 26)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/WallOff_Key4" unique_id=921982768]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D23" type="Sprite2D" parent="Maze/WallOff_Key4" unique_id=1686001838]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-75.421936, 25.336914)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/WallOff_Key4" unique_id=1046084042]
 offset_left = -149.0
+offset_top = -23.100037
 offset_right = 1.0
 offset_bottom = 48.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Maison"
+theme_override_font_sizes/normal_font_size = 72
+text = "maison"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -910,20 +927,21 @@ position = Vector2(-72, 24)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key5" unique_id=1063536201]
-offset_right = 50.0
-offset_bottom = 150.0
+[node name="Sprite2D24" type="Sprite2D" parent="Maze/Wall_Key5" unique_id=1644132794]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(-76.65039, 22.684082)
 rotation = 1.5707964
-color = Color(0.4862745, 0.15294118, 0.06666667, 1)
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key5" unique_id=1933012022]
 offset_left = -150.0
+offset_top = -24.793396
 offset_bottom = 49.0
 theme_override_colors/default_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Adieux"
+theme_override_font_sizes/normal_font_size = 72
+text = "adieux"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -934,20 +952,21 @@ position = Vector2(433, 694)
 position = Vector2(24, 75)
 shape = SubResource("RectangleShape2D_g7yw5")
 
-[node name="ColorRect" type="ColorRect" parent="Maze/Wall_Key6" unique_id=1121327789]
-offset_right = 50.0
-offset_bottom = 150.0
-color = Color(0.70886326, 0.6879254, 0.7917454, 1)
+[node name="Sprite2D8" type="Sprite2D" parent="Maze/Wall_Key6" unique_id=230502641]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(25.782837, 71.85424)
+scale = Vector2(0.58, 0.46)
+texture = ExtResource("5_h4pyk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Maze/Wall_Key6" unique_id=971169345]
-offset_top = 150.0
-offset_right = 150.0
-offset_bottom = 199.64474
+offset_left = -28.0
+offset_top = 144.0
+offset_right = 116.0
+offset_bottom = 221.64474
 rotation = -1.5707964
-theme_override_colors/default_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 50
-text = "Joie"
+theme_override_font_sizes/normal_font_size = 76
+text = "joie"
 autowrap_mode = 0
 horizontal_alignment = 1
 
@@ -973,7 +992,32 @@ target_position = Vector2(-1064, 0)
 [node name="RayCastUp" type="RayCast2D" parent="Maze/Ball" unique_id=1953768741]
 target_position = Vector2(8, -904)
 
+[node name="corner" type="Sprite2D" parent="." unique_id=2049356763]
+modulate = Color(0.25518164, 0.44620728, 0.4371556, 1)
+position = Vector2(145.39003, 534.1222)
+scale = Vector2(0.552567, 0.5525669)
+texture = ExtResource("8_rfaug")
+
+[node name="corner2" type="Sprite2D" parent="." unique_id=1001168584]
+modulate = Color(0.25490198, 0.44705883, 0.43529412, 1)
+position = Vector2(944.6096, 534.4585)
+scale = Vector2(0.54566807, 0.54566795)
+texture = ExtResource("8_rfaug")
+
+[node name="corner3" type="Sprite2D" parent="." unique_id=102026062]
+modulate = Color(0.25490198, 0.44705883, 0.43529412, 1)
+position = Vector2(944.7542, 1337.5615)
+scale = Vector2(0.54566807, 0.54566795)
+texture = ExtResource("8_rfaug")
+
+[node name="corner4" type="Sprite2D" parent="." unique_id=1705372749]
+modulate = Color(0.25490198, 0.44705883, 0.43529412, 1)
+position = Vector2(145.85722, 1337.2737)
+scale = Vector2(0.54566807, 0.54566795)
+texture = ExtResource("8_rfaug")
+
 [node name="GlasseMaze" type="ColorRect" parent="." unique_id=969430746]
+visible = false
 offset_left = 120.0
 offset_top = 512.0
 offset_right = 970.0
@@ -982,11 +1026,12 @@ theme = SubResource("Theme_vjhe2")
 color = Color(0.4764691, 0.563753, 0.5996934, 0.1254902)
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
-offset_left = 864.0
-offset_top = 1744.0
-offset_right = 976.0
-offset_bottom = 1852.0
-icon = ExtResource("9_d1hrw")
+material = ExtResource("9_vykle")
+offset_left = 135.42343
+offset_top = 1564.2384
+offset_right = 351.42343
+offset_bottom = 1783.2384
+icon = ExtResource("9_h4pyk")
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
 visible = false
@@ -998,48 +1043,6 @@ icon = ExtResource("11_6e0vd")
 flat = true
 expand_icon = true
 
-[node name="Button_Up" type="Button" parent="." unique_id=435473685]
-offset_left = 248.0
-offset_top = 1440.0
-offset_right = 391.0
-offset_bottom = 1575.0
-rotation = -1.5707964
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
-icon = ExtResource("8_vjhe2")
-expand_icon = true
-
-[node name="Button_Right" type="Button" parent="." unique_id=1602582602]
-offset_left = 376.0
-offset_top = 1568.0
-offset_right = 519.0
-offset_bottom = 1703.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
-icon = ExtResource("8_vjhe2")
-expand_icon = true
-
-[node name="Button_Left" type="Button" parent="." unique_id=503525865]
-offset_left = 120.0
-offset_top = 1568.0
-offset_right = 263.0
-offset_bottom = 1703.0
-rotation = -3.1415927
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
-icon = ExtResource("8_vjhe2")
-expand_icon = true
-
-[node name="Button_Down" type="Button" parent="." unique_id=1852277812]
-offset_left = 248.0
-offset_top = 1696.0
-offset_right = 391.0
-offset_bottom = 1831.0
-rotation = 1.5707964
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjhe2")
-icon = ExtResource("8_vjhe2")
-expand_icon = true
-
 [node name="PopUp" type="Node2D" parent="." unique_id=813955419]
 position = Vector2(-737, -1108)
 
@@ -1049,7 +1052,11 @@ offset_top = 1147.0
 offset_right = 1680.0
 offset_bottom = 1547.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme = SubResource("Theme_ttexe")
+
+[node name="Sprite2D" type="Sprite2D" parent="PopUp/ColorRect" unique_id=1437625314]
+position = Vector2(399.69403, 200.79713)
+scale = Vector2(0.7984859, 0.39886892)
+texture = ExtResource("16_6e0vd")
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
 anchors_preset = 8
@@ -1063,12 +1070,342 @@ offset_right = 1665.0
 offset_bottom = 1530.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
 theme_override_font_sizes/normal_font_size = 60
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BordureVerte13" type="Sprite2D" parent="PopUp" unique_id=1361856506]
+position = Vector2(868.31006, 1199.1056)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte14" type="Sprite2D" parent="PopUp" unique_id=2142909987]
+position = Vector2(868.31006, 1298.9381)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte15" type="Sprite2D" parent="PopUp" unique_id=956627267]
+position = Vector2(868.2714, 1397.9407)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte16" type="Sprite2D" parent="PopUp" unique_id=1075910378]
+position = Vector2(868.2714, 1497.7732)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte17" type="Sprite2D" parent="PopUp" unique_id=357094409]
+position = Vector2(1691.5305, 1199.1465)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte18" type="Sprite2D" parent="PopUp" unique_id=2093229171]
+position = Vector2(1691.5305, 1298.979)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte19" type="Sprite2D" parent="PopUp" unique_id=469864808]
+position = Vector2(1691.492, 1397.9817)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte20" type="Sprite2D" parent="PopUp" unique_id=1148702443]
+position = Vector2(1691.492, 1497.8142)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte21" type="Sprite2D" parent="PopUp" unique_id=1609626247]
+position = Vector2(931.5095, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte22" type="Sprite2D" parent="PopUp" unique_id=697985871]
+position = Vector2(1031.0487, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte23" type="Sprite2D" parent="PopUp" unique_id=1263893118]
+position = Vector2(1130.3246, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte24" type="Sprite2D" parent="PopUp" unique_id=1839332395]
+position = Vector2(1230.6537, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte25" type="Sprite2D" parent="PopUp" unique_id=1953713224]
+position = Vector2(1330.6011, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte26" type="Sprite2D" parent="PopUp" unique_id=7081219]
+position = Vector2(1430.1401, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte27" type="Sprite2D" parent="PopUp" unique_id=1055480990]
+position = Vector2(1529.416, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte28" type="Sprite2D" parent="PopUp" unique_id=1095819388]
+position = Vector2(1629.7451, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte29" type="Sprite2D" parent="PopUp" unique_id=1778395884]
+position = Vector2(930.68304, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte30" type="Sprite2D" parent="PopUp" unique_id=1087916011]
+position = Vector2(1030.2223, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte31" type="Sprite2D" parent="PopUp" unique_id=1700530948]
+position = Vector2(1129.4982, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte32" type="Sprite2D" parent="PopUp" unique_id=2074714016]
+position = Vector2(1229.8273, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte33" type="Sprite2D" parent="PopUp" unique_id=1831178693]
+position = Vector2(1329.7745, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte34" type="Sprite2D" parent="PopUp" unique_id=1351684209]
+position = Vector2(1429.3136, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte35" type="Sprite2D" parent="PopUp" unique_id=1414587348]
+position = Vector2(1528.5895, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte36" type="Sprite2D" parent="PopUp" unique_id=1796045482]
+position = Vector2(1628.5894, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_h4pyk")
+
+[node name="corner9" type="Sprite2D" parent="PopUp" unique_id=1909790002]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(1691.3137, 1559.7329)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("8_rfaug")
+
+[node name="corner10" type="Sprite2D" parent="PopUp" unique_id=362070796]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(868.4876, 1559.4194)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("8_rfaug")
+
+[node name="corner11" type="Sprite2D" parent="PopUp" unique_id=1156665824]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(868.35004, 1136.2192)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("8_rfaug")
+
+[node name="corner12" type="Sprite2D" parent="PopUp" unique_id=909836705]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(1691.0657, 1136.3813)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("8_rfaug")
+
+[node name="croix directionnelle" type="Node2D" parent="." unique_id=2101947408]
+position = Vector2(482.3075, 351.54855)
+scale = Vector2(0.8, 0.8)
+
+[node name="CroixDirectionnelleLabyrintheLettré" type="Sprite2D" parent="croix directionnelle" unique_id=1624243530]
+position = Vector2(315.4272, 1631.6753)
+rotation = 0.7853982
+scale = Vector2(1.4670013, 1.4670016)
+texture = ExtResource("9_p3ev7")
+
+[node name="Button_Up" type="Button" parent="croix directionnelle" unique_id=435473685]
+material = ExtResource("9_vykle")
+offset_left = 228.11133
+offset_top = 1439.8118
+offset_right = 401.11133
+offset_bottom = 1603.2118
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("12_h4pyk")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_Right" type="Button" parent="croix directionnelle" unique_id=1602582602]
+material = ExtResource("9_vykle")
+offset_left = 434.0066
+offset_top = 1526.5996
+offset_right = 596.8905
+offset_bottom = 1680.3711
+rotation = 0.7853982
+icon = ExtResource("13_vykle")
+flat = true
+expand_icon = true
+
+[node name="Button_Left" type="Button" parent="croix directionnelle" unique_id=503525865]
+material = ExtResource("9_vykle")
+offset_left = 122.25777
+offset_top = 1560.0975
+offset_right = 283.01505
+offset_bottom = 1711.8613
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("14_d1hrw")
+flat = true
+expand_icon = true
+
+[node name="Button_Down" type="Button" parent="croix directionnelle" unique_id=1852277812]
+material = ExtResource("9_vykle")
+offset_left = 239.22134
+offset_top = 1677.3038
+offset_right = 396.38947
+offset_bottom = 1828.0822
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+icon = ExtResource("15_7og1i")
+flat = true
+expand_icon = true
+
+[node name="BordureVerte" type="Sprite2D" parent="croix directionnelle" unique_id=355492049]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(125.349976, 1587.2169)
+rotation = 0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte2" type="Sprite2D" parent="croix directionnelle" unique_id=1844742222]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(197.62704, 1514.6061)
+rotation = 0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte3" type="Sprite2D" parent="croix directionnelle" unique_id=1543955684]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(270.41193, 1441.6045)
+rotation = 0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte4" type="Sprite2D" parent="croix directionnelle" unique_id=1977329123]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(361.2085, 1822.3081)
+rotation = 0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte5" type="Sprite2D" parent="croix directionnelle" unique_id=1972763081]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(433.4856, 1749.6973)
+rotation = 0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte6" type="Sprite2D" parent="croix directionnelle" unique_id=1216891681]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(506.27045, 1676.6958)
+rotation = 0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte7" type="Sprite2D" parent="croix directionnelle" unique_id=769557835]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(363.10358, 1441.5942)
+rotation = -0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte8" type="Sprite2D" parent="croix directionnelle" unique_id=623621330]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(434.60352, 1513.0189)
+rotation = -0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte9" type="Sprite2D" parent="croix directionnelle" unique_id=612571278]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(506.4082, 1585.0839)
+rotation = -0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte10" type="Sprite2D" parent="croix directionnelle" unique_id=440376132]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(125.60121, 1678.8885)
+rotation = -0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte11" type="Sprite2D" parent="croix directionnelle" unique_id=322936195]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(197.10115, 1750.3132)
+rotation = -0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="BordureVerte12" type="Sprite2D" parent="croix directionnelle" unique_id=1010860339]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(268.90582, 1822.3782)
+rotation = -0.7853982
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_h4pyk")
+
+[node name="corner5" type="Sprite2D" parent="croix directionnelle" unique_id=826703932]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(316.8691, 1395.6716)
+rotation = 0.7853982
+scale = Vector2(0.285975, 0.293729)
+texture = ExtResource("8_rfaug")
+
+[node name="corner6" type="Sprite2D" parent="croix directionnelle" unique_id=2081840191]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(552.15326, 1630.8644)
+rotation = 0.7853982
+scale = Vector2(0.28090057, 0.293729)
+texture = ExtResource("8_rfaug")
+
+[node name="corner7" type="Sprite2D" parent="croix directionnelle" unique_id=2106431575]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(315.14346, 1868.3667)
+rotation = 0.7853982
+scale = Vector2(0.28428575, 0.2937282)
+texture = ExtResource("8_rfaug")
+
+[node name="corner8" type="Sprite2D" parent="croix directionnelle" unique_id=343990934]
+modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
+position = Vector2(79.49053, 1632.8226)
+rotation = 0.7853982
+scale = Vector2(0.2804345, 0.28974906)
+texture = ExtResource("8_rfaug")
 
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
@@ -1076,15 +1413,15 @@ vertical_alignment = 1
 [connection signal="mouse_entered" from="Button_Fabliau" to="." method="_on_button_fabliau_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Fabliau" to="." method="_on_button_fabliau_mouse_exited"]
 [connection signal="pressed" from="Button_Fabliau" to="." method="_on_button_fabliau_pressed"]
-[connection signal="mouse_entered" from="Button_Up" to="." method="_on_button_up_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Up" to="." method="_on_button_up_mouse_exited"]
-[connection signal="pressed" from="Button_Up" to="." method="_on_button_up_pressed"]
-[connection signal="mouse_entered" from="Button_Right" to="." method="_on_button_right_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Right" to="." method="_on_button_right_mouse_exited"]
-[connection signal="pressed" from="Button_Right" to="." method="_on_button_right_pressed"]
-[connection signal="mouse_entered" from="Button_Left" to="." method="_on_button_left_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Left" to="." method="_on_button_left_mouse_exited"]
-[connection signal="pressed" from="Button_Left" to="." method="_on_button_left_pressed"]
-[connection signal="mouse_entered" from="Button_Down" to="." method="_on_button_down_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Down" to="." method="_on_button_down_mouse_exited"]
-[connection signal="pressed" from="Button_Down" to="." method="_on_button_down_pressed"]
+[connection signal="mouse_entered" from="croix directionnelle/Button_Up" to="." method="_on_button_up_mouse_entered"]
+[connection signal="mouse_exited" from="croix directionnelle/Button_Up" to="." method="_on_button_up_mouse_exited"]
+[connection signal="pressed" from="croix directionnelle/Button_Up" to="." method="_on_button_up_pressed"]
+[connection signal="mouse_entered" from="croix directionnelle/Button_Right" to="." method="_on_button_right_mouse_entered"]
+[connection signal="mouse_exited" from="croix directionnelle/Button_Right" to="." method="_on_button_right_mouse_exited"]
+[connection signal="pressed" from="croix directionnelle/Button_Right" to="." method="_on_button_right_pressed"]
+[connection signal="mouse_entered" from="croix directionnelle/Button_Left" to="." method="_on_button_left_mouse_entered"]
+[connection signal="mouse_exited" from="croix directionnelle/Button_Left" to="." method="_on_button_left_mouse_exited"]
+[connection signal="pressed" from="croix directionnelle/Button_Left" to="." method="_on_button_left_pressed"]
+[connection signal="mouse_entered" from="croix directionnelle/Button_Down" to="." method="_on_button_down_mouse_entered"]
+[connection signal="mouse_exited" from="croix directionnelle/Button_Down" to="." method="_on_button_down_mouse_exited"]
+[connection signal="pressed" from="croix directionnelle/Button_Down" to="." method="_on_button_down_pressed"]

@@ -169,42 +169,42 @@ func _on_button_return_mouse_exited() -> void:
 	if KeyOk:
 		ButtonReturn.scale = Vector2(1,1)
 
-func _on_button_fabliau_mouse_entered() -> void:
-	if KeyOk:
-		ButtonFabliau.scale = Vector2(1.05,1.05)
-
-func _on_button_fabliau_mouse_exited() -> void:
-	if KeyOk:
-		ButtonFabliau.scale = Vector2(1,1)
-
-func _on_button_up_mouse_entered() -> void:
-	if KeyOk:
-		Up.scale = Vector2(1.05,1.05)
-
-func _on_button_up_mouse_exited() -> void:
-	if KeyOk:
-		Up.scale = Vector2(1,1)
-
-func _on_button_right_mouse_entered() -> void:
-	if KeyOk:
-		Right.scale = Vector2(1.05,1.05)
-
-func _on_button_right_mouse_exited() -> void:
-	if KeyOk:
-		Right.scale = Vector2(1,1)
-
-func _on_button_left_mouse_entered() -> void:
-	if KeyOk:
-		Left.scale = Vector2(1.05,1.05)
-
-func _on_button_left_mouse_exited() -> void:
-	if KeyOk:
-		Left.scale = Vector2(1,1)
-
-func _on_button_down_mouse_entered() -> void:
-	if KeyOk:
-		Down.scale = Vector2(1.05,1.05)
-
-func _on_button_down_mouse_exited() -> void:
-	if KeyOk:
-		Down.scale = Vector2(1,1)
+#func _on_button_fabliau_mouse_entered() -> void:
+	#if KeyOk:
+		#ButtonFabliau.scale = Vector2(1.05,1.05)
+#
+#func _on_button_fabliau_mouse_exited() -> void:
+	#if KeyOk:
+		#ButtonFabliau.scale = Vector2(1,1)
+#
+#func _on_button_up_mouse_entered() -> void:
+	#if KeyOk:
+		#Up.scale = Vector2(1.05,1.05)
+#
+#func _on_button_up_mouse_exited() -> void:
+	#if KeyOk:
+		#Up.scale = Vector2(1,1)
+#
+#func _on_button_right_mouse_entered() -> void:
+	#if KeyOk:
+		#Right.scale = Vector2(1.05,1.05)
+#
+#func _on_button_right_mouse_exited() -> void:
+	#if KeyOk:
+		#Right.scale = Vector2(1,1)
+#
+#func _on_button_left_mouse_entered() -> void:
+	#if KeyOk:
+		#Left.scale = Vector2(1.05,1.05)
+#
+#func _on_button_left_mouse_exited() -> void:
+	#if KeyOk:
+		#Left.scale = Vector2(1,1)
+#
+#func _on_button_down_mouse_entered() -> void:
+	#if KeyOk:
+		#Down.scale = Vector2(1.05,1.05)
+#
+#func _on_button_down_mouse_exited() -> void:
+	#if KeyOk:
+		#Down.scale = Vector2(1,1)
