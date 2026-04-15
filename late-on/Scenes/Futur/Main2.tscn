@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="5_u1u4p"]
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
 [ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="8_kregx"]
+[ext_resource type="PackedScene" uid="uid://bfswaxvtkas6t" path="res://Scenes/PauseMenuFutur.tscn" id="11_eadg6"]
 
 [sub_resource type="FontVariation" id="FontVariation_pbw6q"]
 base_font = ExtResource("5_u1u4p")
@@ -132,6 +133,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("1_yaovl")
+scene_music = ExtResource("8_kregx")
 scene_sound = NodePath("Sound Effect")
 movement_sound = ExtResource("2_wlwuj")
 place_control = NodePath("VBoxContainer/PlaceContainer")
@@ -257,6 +259,7 @@ scroll_following = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialogue" unique_id=158385038]
 stream = SubResource("AudioStreamRandomizer_pbw6q")
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
 
@@ -306,10 +309,10 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
 libraries/ = SubResource("AnimationLibrary_rgh2o")
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1062742578]
-stream = ExtResource("8_kregx")
-autoplay = true
-
 [node name="Sound Effect" type="AudioStreamPlayer" parent="." unique_id=54745000]
+bus = &"SFX"
+
+[node name="PauseMenuFutur" parent="." unique_id=638804592 instance=ExtResource("11_eadg6")]
+layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]

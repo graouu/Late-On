@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var scene_music: AudioStream
+@export var house_music: AudioStream
 @onready var Up = $Button_Up
 @onready var RayUp = $Maze/Ball/RayCastUp
 @onready var Right = $Button_Right
@@ -37,6 +39,8 @@ var Collision: Vector2
 var initialPos: Vector2
 
 func _ready() -> void:
+	#Gestion de la musique
+	AudioManager.play_music(scene_music)
 	#PopUpText.text = "Cette boite s'ouvre en faisant en sorte que la bille du labyrinthe active les bons mots. En cas d'oubli, j'ai toujours le fabliaux me permettant de me souvenir des mots et de leur ordre."
 	if global.enigme1_Wall1 == false:
 		PopUpText.text = "Commence ta journée de travail en déloquant l'ordinateur :) Tu as sécurisé ton compte avec une page de ton livre préféré. Il faut que tu repères les mots les plus <<impactants >> ;) "
@@ -94,6 +98,7 @@ func _process(delta: float) -> void:
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
 			PopUpText.text = "C'est la bonne combinaison! Ton compte est ouvert! Félicitations petit employé :)"
 			await get_tree().create_timer(3).timeout
+			AudioManager.play_music(house_music)
 			get_parent().get_parent().current_place.name = "desktop"
 			end_puzzle.emit(dialogue_to_play)
 
@@ -129,6 +134,7 @@ func _process(delta: float) -> void:
 
 #Gestion des boutons
 func _on_button_return_pressed() -> void:
+	AudioManager.play_music(house_music)
 	quit_puzzle.emit()
 
 func _on_button_fabliau_pressed() -> void:

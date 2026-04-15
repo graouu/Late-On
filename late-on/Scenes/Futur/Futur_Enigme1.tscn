@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://btyqjjk3xtk35"]
+[gd_scene format=3 uid="uid://d4l6mmjl8c4yj"]
 
 [ext_resource type="Script" uid="uid://dmmyp14oe8062" path="res://Scripts/chapitre1_futur/Enigme1Futur.gd" id="1_jyxcw"]
+[ext_resource type="AudioStream" uid="uid://c87rk8ucbd77d" path="res://Assets/Sons/Enigma-e1.mp3" id="2_hwvpv"]
 [ext_resource type="Texture2D" uid="uid://d1rmoh1w8iwcx" path="res://Assets/Textures/Ordi.png" id="2_jyxcw"]
+[ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="3_b2q2o"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_eoiil"]
 [ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="4_xgjnp"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="5_t3sp7"]
@@ -22,6 +24,8 @@ radius = 30.149628
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_jyxcw")
+scene_music = ExtResource("2_hwvpv")
+house_music = ExtResource("3_b2q2o")
 
 [node name="Ordi" type="Sprite2D" parent="." unique_id=167802512]
 position = Vector2(389.00003, 1038)

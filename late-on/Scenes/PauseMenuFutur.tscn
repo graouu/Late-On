@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://bfswaxvtkas6t"]
+
+[ext_resource type="Script" uid="uid://cl3dosjjjk0rk" path="res://Scripts/pause_menu.gd" id="1_fhx01"]
+[ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="2_tnohf"]
+[ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="3_c6rwj"]
+[ext_resource type="Texture2D" uid="uid://ccvdnp6w2s1f7" path="res://Assets/Textures/Interactables/tongue1_rogne.png" id="4_tnohf"]
+[ext_resource type="Texture2D" uid="uid://ds8iv0dp8oir1" path="res://Assets/Textures/Interactables/wtf3_rogne.png" id="5_rjr03"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6rwj"]
+bg_color = Color(0.16078432, 0.6, 0.6, 1)
+expand_margin_top = 10.0
+expand_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey1tb"]
+bg_color = Color(0.23137255, 0.2509804, 0.5921569, 1)
+expand_margin_top = 10.0
+expand_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w4ur"]
+bg_color = Color(0.23137255, 0.2509804, 0.5921569, 0.90588236)
+expand_margin_top = 10.0
+expand_margin_bottom = 40.0
+
+[node name="PauseMenuFutur" type="Control" unique_id=638804592]
+process_mode = 3
+visible = false
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fhx01")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1154637962]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1375448845]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -78.5
+offset_right = 81.5
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=1899753166]
+modulate = Color(0.71689266, 0.7752296, 0.9607579, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tnohf")
+theme_override_font_sizes/font_size = 120
+text = "Reprendre"
+icon_alignment = 1
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer" unique_id=1166768989]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4509804, 0.7764706, 0.67058825, 1)
+theme_override_fonts/font = ExtResource("3_c6rwj")
+theme_override_font_sizes/font_size = 100
+text = "Musique"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MusicHSlider" type="HSlider" parent="VBoxContainer" unique_id=640797803]
+clip_contents = true
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_tnohf")
+theme_override_icons/grabber_highlight = ExtResource("5_rjr03")
+theme_override_icons/grabber_disabled = ExtResource("5_rjr03")
+theme_override_styles/slider = SubResource("StyleBoxFlat_c6rwj")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5w4ur")
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="FXLabel" type="Label" parent="VBoxContainer" unique_id=222135646]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4509804, 0.7764706, 0.67058825, 1)
+theme_override_fonts/font = ExtResource("3_c6rwj")
+theme_override_font_sizes/font_size = 100
+text = "Effets sonores"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="FXHSlider" type="HSlider" parent="VBoxContainer" unique_id=905933299]
+clip_contents = true
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_tnohf")
+theme_override_icons/grabber_highlight = ExtResource("5_rjr03")
+theme_override_icons/grabber_disabled = ExtResource("5_rjr03")
+theme_override_styles/slider = SubResource("StyleBoxFlat_c6rwj")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5w4ur")
+max_value = 1.0
+step = 0.1
+value = 1.0
