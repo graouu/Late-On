@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_2mj3i"]
 [ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="3_esykh"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="4_2mj3i"]
-[ext_resource type="Texture2D" uid="uid://b0fadlw8n7kxo" path="res://Assets/Textures/Items_Placeholder/Futur/login.png" id="4_8caeh"]
+[ext_resource type="Texture2D" uid="uid://cpo5i4yjkaq17" path="res://Assets/Textures/Interactables/login.png" id="4_esykh"]
 
 [sub_resource type="Resource" id="Resource_esykh"]
 script = ExtResource("2_2mj3i")
@@ -109,11 +109,13 @@ text = "down"
 
 [node name="Interactable" type="TextureButton" parent="." unique_id=730434647]
 layout_mode = 0
-offset_left = 207.0
-offset_top = 463.0
-offset_right = 807.0
-offset_bottom = 763.0
-texture_normal = ExtResource("4_8caeh")
+offset_left = 248.0
+offset_top = 561.0
+offset_right = 848.0
+offset_bottom = 761.0
+texture_normal = ExtResource("4_esykh")
+ignore_texture_size = true
+stretch_mode = 4
 script = ExtResource("4_2mj3i")
 interaction_type = 1
 puzzle = "res://Scenes/Futur/Futur_Enigme1.tscn"

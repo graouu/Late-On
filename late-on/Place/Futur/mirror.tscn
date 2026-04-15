@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cjwl8apqq8rre" path="res://Assets/Textures/Interactables/Plantepot_Chambre_Futur.png" id="7_1kd4p"]
 [ext_resource type="Texture2D" uid="uid://dod3ignagyha2" path="res://Assets/Textures/Interactables/Etagere_Chambre_Futur.png" id="7_q7y48"]
 [ext_resource type="Texture2D" uid="uid://daa4vgk2o2vf" path="res://Assets/Textures/Interactables/Commode_Chambre_futur.png" id="9_8a456"]
+[ext_resource type="Theme" uid="uid://m1kgchcfu7ik" path="res://Assets/moving_arrow_future_theme.tres" id="10_6ykny"]
 
 [sub_resource type="Resource" id="Resource_1kd4p"]
 script = ExtResource("6_e4fn7")
@@ -44,6 +45,67 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 script = ExtResource("6_e4fn7")
 text = "Aucun espace gâché, le summum de l'optimisation."
 metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Animation" id="Animation_krw1b"]
+resource_name = "Arrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mobre"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xhmbk"]
+_data = {
+&"Arrow": SubResource("Animation_krw1b"),
+&"RESET": SubResource("Animation_mobre")
+}
 
 [node name="mirror" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
@@ -125,7 +187,7 @@ script = ExtResource("5_1kd4p")
 dialogue_array = Array[ExtResource("6_e4fn7")]([SubResource("Resource_n2d4j"), SubResource("Resource_hfhd5")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
-[node name="Buttons" type="Control" parent="." unique_id=1933331614]
+[node name="Buttons" type="Control" parent="." unique_id=1746326322]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -134,7 +196,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
+[node name="Left" type="Button" parent="Buttons" unique_id=797798558]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -143,10 +205,12 @@ offset_top = -31.5
 offset_right = 73.0
 offset_bottom = 31.5
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "left"
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("10_6ykny")
+text = "<"
+flat = true
 
-[node name="Right" type="Button" parent="Buttons" unique_id=2064841768]
+[node name="Right" type="Button" parent="Buttons" unique_id=224570743]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -155,14 +219,15 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -100.0
 offset_top = -31.5
-offset_right = 0.00048828125
 offset_bottom = 31.5
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "right"
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("10_6ykny")
+text = ">"
+flat = true
 
-[node name="Up" type="Button" parent="Buttons" unique_id=147683360]
+[node name="Up" type="Button" parent="Buttons" unique_id=316420455]
 visible = false
 layout_mode = 1
 anchors_preset = 5
@@ -175,7 +240,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "up"
 
-[node name="Down" type="Button" parent="Buttons" unique_id=1930521503]
+[node name="Down" type="Button" parent="Buttons" unique_id=575287456]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -190,3 +255,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "down"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons" unique_id=784080361]
+libraries/ = SubResource("AnimationLibrary_xhmbk")
+autoplay = &"Arrow"
