@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c8cgfpvlfn3xi" path="res://Assets/Textures/Interactables/applicluedo.png" id="5_j8xeh"]
 [ext_resource type="Texture2D" uid="uid://dcrqp7ykobqe7" path="res://Assets/Textures/Interactables/applidossier.png" id="7_sugd2"]
 [ext_resource type="Texture2D" uid="uid://b017ffdmj7av7" path="res://Assets/Textures/Interactables/Tasktbar1.png" id="8_she2j"]
+[ext_resource type="Theme" uid="uid://m1kgchcfu7ik" path="res://Assets/moving_arrow_future_theme.tres" id="9_tqf2q"]
 
 [sub_resource type="Resource" id="Resource_auvlp"]
 script = ExtResource("2_j8xeh")
@@ -274,12 +275,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -57.5
-offset_top = -63.0
+offset_top = -140.95496
 offset_right = 57.5
+offset_bottom = 67.045044
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 40
-text = "down"
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("9_tqf2q")
+text = ">"
+flat = true
 
 [node name="Interactable" type="TextureButton" parent="." unique_id=1303943635]
 layout_mode = 0
