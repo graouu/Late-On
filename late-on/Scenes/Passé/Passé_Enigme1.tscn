@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
 [ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
+[ext_resource type="AudioStream" uid="uid://dmbs58lpfy8op" path="res://Assets/Sons/Enigma-e1-past.wav" id="2_vykle"]
+[ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="3_d1hrw"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
 [ext_resource type="Texture2D" uid="uid://80yxrantcqxe" path="res://Assets/Textures/Interactables/Paper_ChambreMarchand_Passe.png" id="3_ttexe"]
 [ext_resource type="Texture2D" uid="uid://o4qt4xfcjs76" path="res://Assets/BordureEtFond/FondRouge2.PNG" id="4_g7yw5"]
@@ -74,6 +76,8 @@ radius = 30.149628
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_rfaug")
+scene_music = ExtResource("2_vykle")
+house_music = ExtResource("3_d1hrw")
 dialogue_to_play = Array[ExtResource("2_rfaug")]([SubResource("Resource_tfl7k"), SubResource("Resource_67pjb"), SubResource("Resource_br2vo"), SubResource("Resource_byjhp"), SubResource("Resource_30k2d"), SubResource("Resource_ibuix"), SubResource("Resource_8y4hj")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1567124204]
@@ -1017,7 +1021,6 @@ scale = Vector2(0.54566807, 0.54566795)
 texture = ExtResource("8_rfaug")
 
 [node name="GlasseMaze" type="ColorRect" parent="." unique_id=969430746]
-visible = false
 offset_left = 120.0
 offset_top = 512.0
 offset_right = 970.0

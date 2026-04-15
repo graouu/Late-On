@@ -2,8 +2,8 @@ extends Node
 
 var current_music: AudioStreamPlayer
 
-@export var music_bus_index: int = 0
-@export var sfx_bus_index: int = 1
+@export var music_bus_index: int = 1
+@export var sfx_bus_index: int = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -5,8 +5,11 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$VBoxContainer/ResumeButton.pressed.connect(_on_resume_pressed)
-	#$VBoxContainer/MusicHSlider = global.get_volume(global.music_bus_index)
-	#$VBoxContainer/FXHSlider = global.get_volume(global.sfx_bus_index)
+	$VBoxContainer/MusicHSlider.value = AudioManager.get_volume(AudioManager.music_bus_index)
+	$VBoxContainer/FXHSlider.value = AudioManager.get_volume(AudioManager.sfx_bus_index)
+
+	$VBoxContainer/MusicHSlider.value_changed.connect(_on_music_volume_changed)
+	$VBoxContainer/FXHSlider.value_changed.connect(_on_sfx_volume_changed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,3 +25,9 @@ func _on_resume_pressed():
 	get_tree().paused = false
 	
 	visible = false
+
+func _on_music_volume_changed(value):
+	AudioManager.set_volume(AudioManager.music_bus_index, value)
+
+func _on_sfx_volume_changed(value):
+	AudioManager.set_volume(AudioManager.sfx_bus_index, value)

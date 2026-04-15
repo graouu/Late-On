@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cduf4kgl02j7y" path="res://Scenes/PauseMenu.tscn" id="2_6b3vs"]
 [ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom.tscn" id="2_m87et"]
 [ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="2_y01wl"]
-[ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
+[ext_resource type="Script" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="Texture2D" uid="uid://rhit8c3574kt" path="res://Assets/Textures/Carte/p_bedroom.png" id="3_s51ea"]
 [ext_resource type="FontFile" uid="uid://7jcrqaryuf0n" path="res://Assets/Polices/Medievilid-Regular.ttf" id="4_6b3vs"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/typewriter.mp3" id="4_rgh2o"]
@@ -133,6 +133,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_idj7w")
+scene_music = ExtResource("5_nruiq")
 place_control = NodePath("VBoxContainer/PlaceContainer")
 is_past = true
 label_place = NodePath("VBoxContainer/Panel/Label")
@@ -214,7 +215,7 @@ script = ExtResource("3_kln2b")
 dialogue_label = NodePath("ColorRect/ColorRect/DialogueText")
 name_label = NodePath("ColorRect/ColorRect/Name")
 dialogue_texture = NodePath("ColorRect/DialogueObject")
-sound_player = NodePath("AudioStreamPlayer")
+sound_player = NodePath("TextSound")
 dialogue_timer = NodePath("Timer")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogue" unique_id=1453163356]
@@ -270,8 +271,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_idj7w")
 text = "Ceci est un test de dialogue."
 scroll_following = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialogue" unique_id=158385038]
+[node name="TextSound" type="AudioStreamPlayer" parent="Dialogue" unique_id=158385038]
 stream = SubResource("AudioStreamRandomizer_pbw6q")
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
 
@@ -284,10 +286,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1506517466]
-stream = ExtResource("5_nruiq")
-autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
 visible = false
@@ -305,8 +303,7 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
 libraries/ = SubResource("AnimationLibrary_rgh2o")
 
-[node name="PauseMenu" parent="." unique_id=638804592 instance=ExtResource("2_6b3vs")]
-visible = false
+[node name="PauseMenuPast" parent="." unique_id=638804592 instance=ExtResource("2_6b3vs")]
 layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
