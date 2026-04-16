@@ -8,7 +8,7 @@ func _ready():
 	modulate = Color(Color.SKY_BLUE, 0.7)
 
 # L'espace est visible lors du drag
-func _process(delta):
+func _process(_delta):
 	if global.is_dragging and global.type == "job" :
 		visible = true
 	else:

@@ -132,7 +132,7 @@ place_right = "loge_outside"
 button_up = NodePath("Buttons/Up")
 place_up = "market_right"
 button_down = NodePath("Buttons/Down")
-place_down = "market_entrance"
+place_down = "city_center"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
 layout_mode = 1

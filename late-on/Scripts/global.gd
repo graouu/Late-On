@@ -67,3 +67,4 @@ var Duo3_NbTry = 0
 var bedroom_intro = false
 var desktop_intro = false
 var bed_intro = false
+var house_front_character_dialogue = false
