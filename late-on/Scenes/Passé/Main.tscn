@@ -10,6 +10,9 @@
 [ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="4_6b3vs"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/SFX/typewriter.mp3" id="4_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="5_nruiq"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="11_pg53n"]
+[ext_resource type="Texture2D" uid="uid://cnefq6asr0ehq" path="res://Assets/Textures/Interactables/BoutonPausePasse.png" id="12_e8d2l"]
+[ext_resource type="Script" uid="uid://dl3gy6djnmw6b" path="res://Scenes/Futur/buttonPause.gd" id="13_iswsd"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ny66p"]
 thickness = 20
@@ -326,4 +329,19 @@ mouse_filter = 1
 [node name="Sound Effect" type="AudioStreamPlayer" parent="." unique_id=1701632604]
 bus = &"SFX"
 
+[node name="Button" type="Button" parent="." unique_id=963309591]
+self_modulate = Color(1.4369954, 1.4369954, 1.4369954, 1)
+z_index = 5
+material = ExtResource("11_pg53n")
+layout_mode = 0
+offset_left = 887.02515
+offset_top = 41.0
+offset_right = 1407.0251
+offset_bottom = 561.0
+scale = Vector2(0.355, 0.355)
+icon = ExtResource("12_e8d2l")
+flat = true
+script = ExtResource("13_iswsd")
+
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
+[connection signal="pressed" from="Button" to="PauseMenu" method="_on_button_pressed"]
