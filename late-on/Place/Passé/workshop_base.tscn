@@ -320,6 +320,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Right" type="Button" parent="Buttons" unique_id=1087893728]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

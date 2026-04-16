@@ -1,10 +1,96 @@
 [gd_scene format=3 uid="uid://bxuoeoq4qi7dl"]
 
-[ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_qrmjc"]
-[ext_resource type="Texture2D" uid="uid://qro1p3n2fdfj" path="res://Assets/Textures/Place/front_house_placeholder.jpg" id="2_a38pb"]
+[ext_resource type="Script" uid="uid://caau6mofnlyk1" path="res://Scripts/Place/Passé/house_front.gd" id="1_2rouy"]
 [ext_resource type="Texture2D" uid="uid://ch06o30y863le" path="res://Assets/Textures/Carte/p_house_front.png" id="2_eht62"]
 [ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_wl42s"]
+[ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="4_2rouy"]
+[ext_resource type="Texture2D" uid="uid://bti40l3d6ytvf" path="res://Assets/Textures/Place/house_marchand.png" id="4_lp6mb"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_marq1"]
+[ext_resource type="Texture2D" uid="uid://dsr3u50b7fyq6" path="res://Assets/Textures/Interactables/characters/guiraud.png" id="6_qrmjc"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="6_vyq1i"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="7_eo82f"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="9_pxf6e"]
+[ext_resource type="Texture2D" uid="uid://bvn27ik88cr2f" path="res://Assets/Textures/Interactables/papers.png" id="10_lp6mb"]
+[ext_resource type="Texture2D" uid="uid://csb878j0s3egp" path="res://Assets/Textures/Interactables/characters/guiraud_half.png" id="10_pxf6e"]
+
+[sub_resource type="Resource" id="Resource_v7505"]
+script = ExtResource("9_pxf6e")
+text = "Merci encore pour ton aide!"
+name = "Guiraud"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_slgb5"]
+script = ExtResource("9_pxf6e")
+text = "Tu devrais aller au marché, voir si quelqu'un sait quelque chose de ce livre."
+name = "Guiraud"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_08hii"]
+shader = ExtResource("4_2rouy")
+shader_parameter/color = Color(0, 0.5, 1, 1)
+shader_parameter/frequency = 3.0
+shader_parameter/compress = 1.0
+shader_parameter/add_light = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/speed = 1.0
+shader_parameter/x_angle = 1.57
+shader_parameter/y_angle = 1.57
+shader_parameter/base_alpha = 0.8
+shader_parameter/refraction_ratio = 10.0
+shader_parameter/clear = 0.0
+shader_parameter/surf_sinpowder = 8.0
+shader_parameter/surf_speed = 1.0
+shader_parameter/surf_angle = 1.57
+shader_parameter/surf_magnitude = 0.0
+shader_parameter/s11 = 2.221
+shader_parameter/sinpowder = 8.0
+
+[sub_resource type="Resource" id="Resource_lp6mb"]
+script = ExtResource("9_pxf6e")
+text = "Bien le bonjour, monsieur."
+name = "Guiraud"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_2rouy"]
+script = ExtResource("9_pxf6e")
+text = "Bonjour, Guiraud. Quel vent t'amène?"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_08hii"]
+script = ExtResource("9_pxf6e")
+text = "Je suis bien embêté. J'ai fait tomber mes notes."
+name = "Guiraud"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_keq82"]
+script = ExtResource("9_pxf6e")
+text = "Les examens de la faculté de médecine approchent... J'ai peur de ne pas m'y retrouver."
+name = "Guiraud"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_th84v"]
+script = ExtResource("9_pxf6e")
+text = "Très bien, bon courage. Je cherche un livre en particulier, sais-tu qui pourrait m'aiguiller?"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_2u0rt"]
+script = ExtResource("9_pxf6e")
+text = "Je pourrai te présenter quelqu'un, mais il faut que je réorganise ces notes..."
+name = "Guiraud"
+texture = ExtResource("10_pxf6e")
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_w52bc"]
+script = ExtResource("9_pxf6e")
+text = "Des feuilles remplies sur le sol."
+metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
 resource_name = "Arrow"
@@ -115,7 +201,7 @@ _data = {
 &"RESET": SubResource("Animation_7bi7l")
 }
 
-[node name="house_front" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right", "button_up")]
+[node name="house_front" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -125,26 +211,81 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_qrmjc")
+mouse_filter = 2
+script = ExtResource("1_2rouy")
+dialogue_character = Array[ExtResource("9_pxf6e")]([SubResource("Resource_v7505"), SubResource("Resource_slgb5")])
 place_name = "house_front"
 map_texture = ExtResource("2_eht62")
+button_left = NodePath("Buttons/Left")
+place_left = "workshop_base"
+specific_sound_left = ExtResource("3_wl42s")
 button_right = NodePath("Buttons/Right")
 place_right = "city_center"
-button_up = NodePath("Buttons/Up")
-place_up = "workshop_base"
-specific_sound_up = ExtResource("3_wl42s")
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2")]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1917798171]
+material = SubResource("ShaderMaterial_08hii")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_a38pb")
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+modulate = Color(1, 1, 1, 0.9764706)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_lp6mb")
 expand_mode = 1
 
+[node name="Interactable" type="TextureButton" parent="." unique_id=1735986083]
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 696.0
+offset_top = 527.0
+offset_right = 874.0
+offset_bottom = 1359.0
+texture_normal = ExtResource("6_qrmjc")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("7_eo82f")
+dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_lp6mb"), SubResource("Resource_2rouy"), SubResource("Resource_08hii"), SubResource("Resource_keq82"), SubResource("Resource_th84v"), SubResource("Resource_2u0rt")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=216105386]
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 469.0
+offset_top = 1061.0
+offset_right = 681.0
+offset_bottom = 1203.0
+texture_normal = ExtResource("10_lp6mb")
+script = ExtResource("7_eo82f")
+dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_w52bc")])
+puzzle = "res://Scenes/Passé/Passé_Enigme2.tscn"
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=28398783]
+visible = false
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 685.0
+offset_top = 842.0
+offset_right = 897.0
+offset_bottom = 984.0
+scale = Vector2(0.8, 0.8)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("10_lp6mb")
+
 [node name="Buttons" type="Control" parent="." unique_id=1860647171]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -154,6 +295,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Right" type="Button" parent="Buttons" unique_id=1397954237]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -171,7 +313,6 @@ text = ">"
 flat = true
 
 [node name="Left" type="Button" parent="Buttons" unique_id=818887848]
-visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -186,6 +327,7 @@ text = "<"
 flat = true
 
 [node name="Up" type="Button" parent="Buttons" unique_id=1816784514]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.41000003

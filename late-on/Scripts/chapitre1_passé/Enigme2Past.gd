@@ -9,11 +9,16 @@ extends Node2D
 @onready var PopUp = $PopUp
 @onready var PopUpText = $PopUp/TextPopUp
 
+signal end_puzzle(dialogue : String)
+signal quit_puzzle
+
+@export var dialogue_to_play : Array[DialogueLine]
+
 func _ready() -> void:
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#Si le joueur joue, la pop up disparait
 	if global.is_dragging:
 		PopUp.visible = false
@@ -25,7 +30,7 @@ func _process(delta: float) -> void:
 		ButtonValidate.visible = false
 
 func _on_button_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Passé/Passé_Maison.tscn")
+	quit_puzzle.emit()
 
 func _on_button_return_mouse_entered() -> void:
 	ButtonReturn.scale = Vector2(1.05,1.05)
@@ -39,6 +44,7 @@ func _on_button_validate_pressed() -> void:
 		PopUp.visible = true
 		PopUpText.text = "J'ai trouvé :)"
 		global.enigme2_fini = true
+		end_puzzle.emit(dialogue_to_play)
 	else:
 		PopUpText.text = "J'ai le sentiment que ce n'est pas la bonne combinaison"
 
