@@ -6,9 +6,14 @@
 [ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="3_d1hrw"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
 [ext_resource type="Texture2D" uid="uid://80yxrantcqxe" path="res://Assets/Textures/Interactables/Paper_ChambreMarchand_Passe.png" id="3_ttexe"]
+[ext_resource type="AudioStream" uid="uid://b2w5s4fcwulxt" path="res://Assets/Sons/SFX/Boutonpierre.mp3" id="4_13ph5"]
 [ext_resource type="Texture2D" uid="uid://o4qt4xfcjs76" path="res://Assets/BordureEtFond/FondRouge2.PNG" id="4_g7yw5"]
-[ext_resource type="FontFile" uid="uid://7jcrqaryuf0n" path="res://Assets/Polices/Medievilid-Regular.ttf" id="5_g7yw5"]
+[ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="5_g7yw5"]
 [ext_resource type="Texture2D" uid="uid://cfkigvg1iyqtb" path="res://Assets/BordureEtFond/BordureVerte.PNG" id="5_h4pyk"]
+[ext_resource type="AudioStream" uid="uid://dgbjul63r2tgt" path="res://Assets/Sons/SFX/Poc.mp3" id="5_mwmwh"]
+[ext_resource type="AudioStream" uid="uid://dslfhk3k062w3" path="res://Assets/Sons/SFX/Mecanisme.mp3" id="6_j8ixr"]
+[ext_resource type="AudioStream" uid="uid://cj8sbno50ntmc" path="res://Assets/Sons/SFX/Crackmetalique.mp3" id="7_a20gd"]
+[ext_resource type="AudioStream" uid="uid://d33v1hpbwvlxq" path="res://Assets/Sons/SFX/SonVictoireEnigmePasse.mp3" id="8_3ekad"]
 [ext_resource type="Texture2D" uid="uid://dd05jgjk74ccu" path="res://Assets/BordureEtFond/CarreVert.PNG" id="8_rfaug"]
 [ext_resource type="Texture2D" uid="uid://olisvfjf16jj" path="res://Assets/Textures/Interactables/Boutonretour_Labyrinthelettre_Passe.png" id="9_h4pyk"]
 [ext_resource type="Texture2D" uid="uid://1jagxyossemh" path="res://Assets/Textures/Interactables/Croix directionnelle labyrinthe lettré.png" id="9_p3ev7"]
@@ -74,10 +79,15 @@ radius = 30.149628
 
 [sub_resource type="Theme" id="Theme_vjhe2"]
 
-[node name="Control" type="Node2D" unique_id=28566512]
+[node name="Control2" type="Node2D" unique_id=28566512 node_paths=PackedStringArray("arrows_SFX", "mecanism_SFX", "poc_SFX", "error_SFX", "success_SFX")]
 script = ExtResource("1_rfaug")
 scene_music = ExtResource("2_vykle")
 house_music = ExtResource("3_d1hrw")
+arrows_SFX = NodePath("SFX/arrows")
+mecanism_SFX = NodePath("SFX/mecanism")
+poc_SFX = NodePath("SFX/poc")
+error_SFX = NodePath("SFX/error")
+success_SFX = NodePath("SFX/success")
 dialogue_to_play = Array[ExtResource("2_rfaug")]([SubResource("Resource_tfl7k"), SubResource("Resource_67pjb"), SubResource("Resource_br2vo"), SubResource("Resource_byjhp"), SubResource("Resource_30k2d"), SubResource("Resource_ibuix"), SubResource("Resource_8y4hj")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1567124204]
@@ -1409,6 +1419,23 @@ position = Vector2(79.49053, 1632.8226)
 rotation = 0.7853982
 scale = Vector2(0.2804345, 0.28974906)
 texture = ExtResource("8_rfaug")
+
+[node name="SFX" type="Node2D" parent="." unique_id=341912130]
+
+[node name="arrows" type="AudioStreamPlayer" parent="SFX" unique_id=1588458489]
+stream = ExtResource("4_13ph5")
+
+[node name="mecanism" type="AudioStreamPlayer" parent="SFX" unique_id=66838639]
+stream = ExtResource("6_j8ixr")
+
+[node name="poc" type="AudioStreamPlayer" parent="SFX" unique_id=15735553]
+stream = ExtResource("5_mwmwh")
+
+[node name="error" type="AudioStreamPlayer" parent="SFX" unique_id=335012287]
+stream = ExtResource("7_a20gd")
+
+[node name="success" type="AudioStreamPlayer" parent="SFX" unique_id=2147250783]
+stream = ExtResource("8_3ekad")
 
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]

@@ -2,6 +2,12 @@ extends Node2D
 
 @export var scene_music: AudioStream
 @export var house_music: AudioStream
+@export var silence_music: AudioStream
+@export var arrows_SFX : AudioStreamPlayer
+@export var mecanism_SFX : AudioStreamPlayer
+@export var poc_SFX : AudioStreamPlayer
+@export var error_SFX : AudioStreamPlayer
+@export var success_SFX : AudioStreamPlayer
 @onready var Up = $Button_Up
 @onready var RayUp = $Maze/Ball/RayCastUp
 @onready var Right = $Button_Right
@@ -62,50 +68,63 @@ func _process(delta: float) -> void:
 		tweenBounce.tween_property(Ball,"global_position", Bounce, 0.2).set_ease(Tween.EASE_OUT)
 
 		if CollisionWall == Wall1 :
+			poc_SFX.play()
 			global.enigme1_Wall1 = true
 			tweenWall.tween_property(Wall1,"modulate:a", 0,0.6)
 			Wall1.process_mode = Node.PROCESS_MODE_DISABLED
 			tweenWall.tween_property(WallOff1,"modulate:a", 0,0.6)
 			WallOff1.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
+			mecanism_SFX.play()
 			if global.enigme1_Wall2 == false:
 				PopUpText.text = "Une si belle union fut troublée tout-à-coup: les parents de la pucelle l'accordèrent en mariage à un vavasseur."
 
 		elif CollisionWall == Wall2 :
+			poc_SFX.play()
 			global.enigme1_Wall2 = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
 			KeyOk = true
+			mecanism_SFX.play()
 			if global.enigme1_Wall3 == false:
 				PopUpText.text = "Gérard vient comme avant lui parler de sa tendresse, mais elle répondit que, ne pouvant désormais le voir sans crime, elle renonçait à lui pour toujours et le pria même de ne jamais se représenter devant elle."
 
 		elif CollisionWall == Wall3 :
+			poc_SFX.play()
 			global.enigme1_Wall3 = true
 			tweenWall.tween_property(WallOff3,"modulate:a", 1,0.6)
 			KeyOk = true
+			mecanism_SFX.play()
 			if global.enigme1_Wall4 == false:
 				PopUpText.text = "De désespoir, Gérard se croise pour la Terre Sainte. Cependant, il veut, avant de partir, voir encore une fois sa chère Isabeau. Il se rend chez elle et la trouve dans son verger."
 
 		elif CollisionWall == Wall4 :
+			poc_SFX.play()
 			global.enigme1_Wall4 = true
 			tweenWall.tween_property(WallOff1,"modulate:a", 1,0.6)
 			tweenWall.tween_property(WallOff4,"modulate:a", 0,0.6)
 			WallOff4.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
+			mecanism_SFX.play()
 			if global.enigme1_Wall5 == false:
 				PopUpText.text = "Ses adieux sont si touchants qu'ils réveillent tout l'amour que la dame avait pour lui; elle fond en larmes, elle l'embrasse pour la dernière fois et tombe, comme Gérard, sans connaissance."
 
 		elif CollisionWall == Wall5 :
+			poc_SFX.play()
 			global.enigme1_Wall5 = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 0,0.6)
 			WallOff2.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
+			mecanism_SFX.play()
 			if global.enigme1_fini == false:
 				PopUpText.text = "Le mari, qui voit de sa fenêtre le spectacle, en meurt de douleur, et cette mort donne à Gérard la joie d'épouser sa maîtresse."
 
 		elif CollisionWall == Wall6 :
+			poc_SFX.play()
 			global.enigme1_fini = true
 			tweenWall.tween_property(WallOff2,"modulate:a", 1,0.6)
 			PopUpText.text = "C'est bon!"
+			AudioManager.play_music(silence_music)
+			success_SFX.play()
 			await get_tree().create_timer(3).timeout
 			AudioManager.play_music(house_music)
 			end_puzzle.emit(dialogue_to_play)
@@ -114,6 +133,7 @@ func _process(delta: float) -> void:
 			tweenMove.kill()
 			tweenBounce.kill()
 			var tweenBall = get_tree().create_tween() 
+			error_SFX.play()
 			PopUpText.text = "Le mécanisme est bloqué. J'ai dû faire une erreur dans la combinaison. Aurais-je oublié l'histoire du Fabliau?"
 			tweenBall.tween_property(Ball,"modulate:a", 0,0.3)
 			Ball.global_position = initialPos
@@ -131,6 +151,7 @@ func _process(delta: float) -> void:
 
 #Gestion des boutons
 func _on_button_return_pressed() -> void:
+	arrows_SFX.play()
 	AudioManager.play_music(house_music)
 	quit_puzzle.emit()
 
@@ -140,6 +161,7 @@ func _on_button_fabliau_pressed() -> void:
 # mouvement de la balle
 func _on_button_up_pressed() -> void:
 	if KeyOk:
+		arrows_SFX.play()
 		Collision = RayUp.get_collision_point() + Vector2 (0,30)
 		CollisionWall = RayUp.get_collider()
 		Move = true
@@ -147,6 +169,7 @@ func _on_button_up_pressed() -> void:
 
 func _on_button_right_pressed() -> void:
 	if KeyOk:
+		arrows_SFX.play()
 		Collision = RayRight.get_collision_point() - Vector2 (30,0)
 		CollisionWall = RayRight.get_collider()
 		Move = true
@@ -154,6 +177,7 @@ func _on_button_right_pressed() -> void:
 
 func _on_button_left_pressed() -> void:
 	if KeyOk:
+		arrows_SFX.play()
 		Collision = RayLeft.get_collision_point() + Vector2 (30,0)
 		CollisionWall = RayLeft.get_collider()
 		Move = true
@@ -161,6 +185,7 @@ func _on_button_left_pressed() -> void:
 
 func _on_button_down_pressed() -> void:
 	if KeyOk:
+		arrows_SFX.play()
 		Collision = RayDown.get_collision_point() - Vector2 (0,30)
 		CollisionWall = RayDown.get_collider()
 		Move = true

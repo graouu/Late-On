@@ -2,6 +2,8 @@ extends Node2D
 
 @export var scene_music: AudioStream
 @export var house_music: AudioStream
+@export var silence_music: AudioStream
+@export var arrows_SFX: AudioStream
 @onready var Up = $Button_Up
 @onready var RayUp = $Maze/Ball/RayCastUp
 @onready var Right = $Button_Right
