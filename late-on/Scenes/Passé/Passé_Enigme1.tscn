@@ -1031,6 +1031,7 @@ scale = Vector2(0.54566807, 0.54566795)
 texture = ExtResource("8_rfaug")
 
 [node name="GlasseMaze" type="ColorRect" parent="." unique_id=969430746]
+visible = false
 offset_left = 120.0
 offset_top = 512.0
 offset_right = 970.0

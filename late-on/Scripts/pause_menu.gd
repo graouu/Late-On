@@ -31,3 +31,7 @@ func _on_music_volume_changed(value):
 
 func _on_sfx_volume_changed(value):
 	AudioManager.set_volume(AudioManager.sfx_bus_index, value)
+
+
+func _on_button_pressed() -> void:
+	toggle_pause()

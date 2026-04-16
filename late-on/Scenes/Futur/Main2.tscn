@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
 [ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="8_kregx"]
 [ext_resource type="PackedScene" uid="uid://bfswaxvtkas6t" path="res://Scenes/PauseMenuFutur.tscn" id="11_eadg6"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="12_hgbfj"]
+[ext_resource type="Texture2D" uid="uid://uh15omt7jts4" path="res://Assets/Textures/Interactables/5068333.png" id="13_6j8x8"]
 
 [sub_resource type="FontVariation" id="FontVariation_pbw6q"]
 base_font = ExtResource("5_u1u4p")
@@ -315,4 +317,18 @@ bus = &"SFX"
 [node name="PauseMenuFutur" parent="." unique_id=638804592 instance=ExtResource("11_eadg6")]
 layout_mode = 1
 
+[node name="Button" type="Button" parent="." unique_id=18533295]
+modulate = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+z_index = 5
+material = ExtResource("12_hgbfj")
+layout_mode = 0
+offset_left = 925.0
+offset_top = 41.0
+offset_right = 1445.0
+offset_bottom = 561.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("13_6j8x8")
+flat = true
+
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
+[connection signal="pressed" from="Button" to="PauseMenuFutur" method="_on_button_pressed"]
