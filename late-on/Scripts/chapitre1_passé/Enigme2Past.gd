@@ -16,6 +16,7 @@ extends Node2D
 @onready var ButtonValidate = $Button_Validate
 @onready var ButtonReturn = $Button_Return
 @onready var PopUpText = $Avis
+var validated = false
 
 signal end_puzzle(dialogue : String)
 signal quit_puzzle
@@ -30,9 +31,10 @@ func _process(_delta: float) -> void:
 	#Si le joueur joue, la pop up disparait
 	if global.is_dragging:
 		PopUpText.visible = false
+		validated = false
 	
 	#Si la partie menteur est complète, proposer de valider
-	if SpaceTypeMap1.name_inside != "empty" and SpaceTypeMap2.name_inside != "empty" and SpaceTypeMap3.name_inside != "empty" and SpaceTypeMap4.name_inside != "empty":
+	if SpaceTypeMap1.name_inside != "empty" and SpaceTypeMap2.name_inside != "empty" and SpaceTypeMap3.name_inside != "empty" and SpaceTypeMap4.name_inside != "empty" and validated == false:
 		ButtonValidate.visible = true
 	else:
 		ButtonValidate.visible = false
@@ -43,6 +45,8 @@ func _on_button_return_pressed() -> void:
 	quit_puzzle.emit()
 
 func _on_button_validate_pressed() -> void:
+	validated = true
+	ButtonValidate.visible = false
 	arrows_SFX.play()
 	PopUpText.visible = true
 	if SpaceTypeMap1.name_inside == "TypeMap4" and SpaceTypeMap2.name_inside == "TypeMap3" and SpaceTypeMap3.name_inside == "TypeMap2" and SpaceTypeMap4.name_inside == "TypeMap1":

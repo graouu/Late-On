@@ -3,18 +3,22 @@
 [ext_resource type="Script" uid="uid://caau6mofnlyk1" path="res://Scripts/Place/Passé/house_front.gd" id="1_2rouy"]
 [ext_resource type="Texture2D" uid="uid://ch06o30y863le" path="res://Assets/Textures/Carte/p_house_front.png" id="2_eht62"]
 [ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_wl42s"]
-[ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="4_2rouy"]
+[ext_resource type="Shader" path="res://Assets/vitrail.gdshader" id="4_2rouy"]
 [ext_resource type="Texture2D" uid="uid://bti40l3d6ytvf" path="res://Assets/Textures/Place/house_marchand.png" id="4_lp6mb"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_marq1"]
 [ext_resource type="Texture2D" uid="uid://dsr3u50b7fyq6" path="res://Assets/Textures/Interactables/characters/guiraud.png" id="6_qrmjc"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="6_vyq1i"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="7_eo82f"]
 [ext_resource type="Texture2D" uid="uid://bekbypawjdgxx" path="res://Assets/Textures/Interactables/Commode_HouseMarchand_Passe.png" id="9_08hii"]
-[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="9_pxf6e"]
-[ext_resource type="Texture2D" uid="uid://bvn27ik88cr2f" path="res://Assets/Textures/Interactables/papers.png" id="10_lp6mb"]
+[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="9_pxf6e"]
 [ext_resource type="Texture2D" uid="uid://csb878j0s3egp" path="res://Assets/Textures/Interactables/characters/guiraud_half.png" id="10_pxf6e"]
 [ext_resource type="Texture2D" uid="uid://clw2ldydo8itq" path="res://Assets/Textures/Interactables/Comptoir_HouseMarchand_Passe.png" id="11_keq82"]
 [ext_resource type="Texture2D" uid="uid://bqnpnkumousxn" path="res://Assets/Textures/Interactables/Affichage_HouseMarchand_Passe.png" id="12_th84v"]
+[ext_resource type="Texture2D" uid="uid://csjheiwk5mf72" path="res://Assets/Textures/eni2/Pochettefioles.png" id="14_w52bc"]
+[ext_resource type="Texture2D" uid="uid://dpwknnyox66fe" path="res://Assets/Textures/eni2/Fiole verte.png" id="15_2ey88"]
+[ext_resource type="Texture2D" uid="uid://dee203wsms201" path="res://Assets/Textures/eni2/Fiole rouge.png" id="16_i7un0"]
+[ext_resource type="Texture2D" uid="uid://chid65lx831pd" path="res://Assets/Textures/eni2/Fiole jaune.png" id="17_uw7m8"]
+[ext_resource type="Texture2D" uid="uid://cxppgftl5itoo" path="res://Assets/Textures/eni2/Fiole grise.png" id="18_8oxes"]
 
 [sub_resource type="Resource" id="Resource_v7505"]
 script = ExtResource("9_pxf6e")
@@ -353,27 +357,81 @@ metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 [node name="Interactable2" type="TextureButton" parent="." unique_id=216105386]
 material = ExtResource("6_vyq1i")
 layout_mode = 0
-offset_left = 469.0
-offset_top = 1061.0
-offset_right = 681.0
-offset_bottom = 1203.0
-texture_normal = ExtResource("10_lp6mb")
+offset_left = 319.00003
+offset_top = 1070.0
+offset_right = 1319.0
+offset_bottom = 1370.0
+rotation = -0.20943952
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("14_w52bc")
 script = ExtResource("7_eo82f")
 dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_w52bc")])
 puzzle = "res://Scenes/Passé/Passé_Enigme2.tscn"
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
+[node name="fioleV" type="Sprite2D" parent="Interactable2" unique_id=1527930252]
+material = ExtResource("6_vyq1i")
+position = Vector2(-114.47977, -102.712875)
+rotation = -0.80285144
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("15_2ey88")
+
+[node name="fioleR" type="Sprite2D" parent="Interactable2" unique_id=296866179]
+material = ExtResource("6_vyq1i")
+position = Vector2(-94.94996, 389.90015)
+rotation = -1.8727382
+scale = Vector2(0.8, 1)
+texture = ExtResource("16_i7un0")
+
+[node name="fioleJ" type="Sprite2D" parent="Interactable2" unique_id=1975589903]
+material = ExtResource("6_vyq1i")
+position = Vector2(964.1132, 429.1536)
+rotation = 1.0681415
+scale = Vector2(0.8, 1)
+texture = ExtResource("17_uw7m8")
+
+[node name="fioleG" type="Sprite2D" parent="Interactable2" unique_id=1267881136]
+material = ExtResource("6_vyq1i")
+position = Vector2(427.34238, 449.23138)
+rotation = 2.672099
+scale = Vector2(0.8, 1)
+texture = ExtResource("18_8oxes")
+
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=28398783]
 visible = false
 material = ExtResource("6_vyq1i")
 layout_mode = 0
-offset_left = 685.0
-offset_top = 842.0
-offset_right = 897.0
-offset_bottom = 984.0
-scale = Vector2(0.8, 0.8)
+offset_left = 285.0001
+offset_top = 774.0
+offset_right = 1285.0001
+offset_bottom = 1074.0
+scale = Vector2(0.14, 0.14)
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("10_lp6mb")
+texture = ExtResource("14_w52bc")
+
+[node name="fioleV" type="Sprite2D" parent="TextureRect2" unique_id=330736654]
+material = ExtResource("6_vyq1i")
+position = Vector2(149.80594, 140.14424)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("15_2ey88")
+
+[node name="fioleR" type="Sprite2D" parent="TextureRect2" unique_id=1537484565]
+material = ExtResource("6_vyq1i")
+position = Vector2(590.7644, 125.61444)
+scale = Vector2(0.8, 1)
+texture = ExtResource("16_i7un0")
+
+[node name="fioleJ" type="Sprite2D" parent="TextureRect2" unique_id=1266208811]
+material = ExtResource("6_vyq1i")
+position = Vector2(785.54175, 136.29645)
+scale = Vector2(0.8, 1)
+texture = ExtResource("17_uw7m8")
+
+[node name="fioleG" type="Sprite2D" parent="TextureRect2" unique_id=246915518]
+material = ExtResource("6_vyq1i")
+position = Vector2(370.19952, 127.80283)
+scale = Vector2(0.8, 1)
+texture = ExtResource("18_8oxes")
 
 [node name="Buttons" type="Control" parent="." unique_id=1860647171]
 layout_mode = 1
