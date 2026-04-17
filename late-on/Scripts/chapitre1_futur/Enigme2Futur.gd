@@ -31,12 +31,6 @@ func _process(delta: float) -> void:
 func _on_button_return_pressed() -> void:
 	quit_puzzle.emit()
 
-func _on_button_return_mouse_entered() -> void:
-	ButtonReturn.scale = Vector2(1.05,1.05)
-
-func _on_button_return_mouse_exited() -> void:
-	ButtonReturn.scale = Vector2(1,1)
-
 func _on_button_validate_pressed() -> void:
 	if SpaceTypeMap1.name_inside == "TypeMap4" and SpaceTypeMap2.name_inside == "TypeMap3" and SpaceTypeMap3.name_inside == "TypeMap2" and SpaceTypeMap4.name_inside == "TypeMap1":
 		PopUpText.text = "Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 500 points! Je suis heureux de t'avoir comme employé"
@@ -52,9 +46,3 @@ func _on_button_validate_pressed() -> void:
 			PopUpText.text = "Ce n'est pas ça. Tu as besoin d'un coup de pouce? Le dossier des tenues est tout à gauche :)"
 		if global.enigme2f_Nbtry >= 5:
 			PopUpText.text = "Ce n'est pas tout à fait ça, mais il est temps que tu passes à la prochaine étape. Voici la solution: 1) Tenues // 2) Structures // 3) documents // 4) maps"
-
-func _on_button_validate_mouse_entered() -> void:
-	ButtonValidate.scale = Vector2(1.05,1.05)
-
-func _on_button_validate_mouse_exited() -> void:
-	ButtonValidate.scale = Vector2(1,1)

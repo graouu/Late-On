@@ -1,60 +1,97 @@
 [gd_scene format=3 uid="uid://bvbjceduptepe"]
 
 [ext_resource type="Script" uid="uid://76jsleaoj4pt" path="res://Scripts/chapitre1_futur/Enigme2Futur.gd" id="1_tnt6o"]
+[ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="2_o4a2m"]
+[ext_resource type="Texture2D" uid="uid://dcrqp7ykobqe7" path="res://Assets/Textures/Interactables/applidossier.png" id="2_tnt6o"]
 [ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="3_qky71"]
 [ext_resource type="Script" uid="uid://cn4uwo2katieh" path="res://Scripts/Script_Duo3/Dropable_Job.gd" id="4_4ffsq"]
-[ext_resource type="Texture2D" uid="uid://bmqpmmbsvmv65" path="res://Assets/Textures/Buttons_Proto/SmallMap.png" id="5_ai7ch"]
-[ext_resource type="Texture2D" uid="uid://o3c7uymxvoe8" path="res://Assets/Textures/Buttons_Proto/plume.png" id="6_4uat0"]
-[ext_resource type="Texture2D" uid="uid://8jeo4377iqxo" path="res://Assets/Textures/Buttons_Proto/PlacerHolderWindmill.png" id="7_5j6ss"]
-[ext_resource type="Texture2D" uid="uid://qitpwqa1y3f" path="res://Assets/Textures/Buttons_Proto/PlacerHolderShirt.png" id="8_fyowo"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="9_aoh7o"]
-[ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="10_k0f77"]
-[ext_resource type="Texture2D" uid="uid://dlgtu4emt2mcl" path="res://Assets/Textures/pageOrdi.jpg" id="11_tnt6o"]
-[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="11_tsbiw"]
+[ext_resource type="Texture2D" uid="uid://di843c8f0o38" path="res://Assets/Textures/Interactables/sdsdsd.png" id="4_o4a2m"]
+[ext_resource type="Texture2D" uid="uid://e7u3yoapkoqm" path="res://Assets/Textures/Buttons_Proto/LogoMap.png" id="6_o4a2m"]
+[ext_resource type="Texture2D" uid="uid://b4gq1ujstfy02" path="res://Assets/Textures/Buttons_Proto/Logolivre.png" id="7_o4a2m"]
+[ext_resource type="Texture2D" uid="uid://cenld3amcjymm" path="res://Assets/Textures/Buttons_Proto/Logomaison.png" id="8_o4a2m"]
+[ext_resource type="Texture2D" uid="uid://bagkcxycsqqw0" path="res://Assets/Textures/Buttons_Proto/Logovêtement.png" id="9_o4a2m"]
+[ext_resource type="Texture2D" uid="uid://dtissiy2hsmdg" path="res://Assets/Textures/Interactables/Retour_Labyrinthelettre_Futur.png" id="10_o4a2m"]
+[ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="11_o4a2m"]
+[ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="12_b0nng"]
+[ext_resource type="Texture2D" uid="uid://boa0tu1d7frk0" path="res://Assets/Textures/Items_Placeholder/Futur/neutral.png" id="13_t436p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
-size = Vector2(5.2400002, 5.6399994)
+size = Vector2(26.000004, 25.749996)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
 size = Vector2(128, 127.5)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t436p"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_tnt6o")
 
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=1198494927]
-offset_right = 1191.0
-offset_bottom = 1924.0
+[node name="Ordi" type="Sprite2D" parent="." unique_id=1289236024]
+position = Vector2(508.12134, 958.71204)
+scale = Vector2(1.5028172, 1.5028172)
+texture = ExtResource("2_o4a2m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=67557853]
+offset_left = 30.0
+offset_top = 380.0
+offset_right = 1054.0
+offset_bottom = 1005.0
 mouse_filter = 2
 
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1851264482]
+layout_mode = 0
+offset_left = -79.0
+offset_top = -84.0
+offset_right = 1106.0
+offset_bottom = 697.0
+mouse_filter = 2
+texture = ExtResource("4_o4a2m")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1727848825]
+offset_left = 30.0
+offset_top = 1069.0
+offset_right = 1054.0
+offset_bottom = 1694.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2" unique_id=1197043037]
+layout_mode = 0
+offset_left = -79.0
+offset_top = -84.0
+offset_right = 1106.0
+offset_bottom = 697.0
+mouse_filter = 2
+texture = ExtResource("4_o4a2m")
+
 [node name="PlaceHolderScribe" type="Sprite2D" parent="." unique_id=873155954]
-position = Vector2(158, 1371.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
+position = Vector2(169, 1549)
+texture = ExtResource("2_tnt6o")
 
 [node name="PlaceHolderScribe2" type="Sprite2D" parent="." unique_id=798181834]
-position = Vector2(403, 1371.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
+position = Vector2(414, 1549)
+texture = ExtResource("2_tnt6o")
 
 [node name="PlaceHolderScribe3" type="Sprite2D" parent="." unique_id=1659869211]
-position = Vector2(651, 1371.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
+position = Vector2(662, 1549)
+texture = ExtResource("2_tnt6o")
 
 [node name="PlaceHolderScribe4" type="Sprite2D" parent="." unique_id=1986924168]
-position = Vector2(890.99994, 1374.7499)
-scale = Vector2(6.8, 9.916665)
-texture = ExtResource("11_tsbiw")
-
-[node name="PageOrdi" type="Sprite2D" parent="." unique_id=785219829]
-z_index = -1
-position = Vector2(317.5495, 807.125)
-scale = Vector2(1.9720782, 1.9720778)
-texture = ExtResource("11_tnt6o")
+position = Vector2(901.99994, 1552)
+texture = ExtResource("2_tnt6o")
 
 [node name="SpaceTypeMap1" type="StaticBody2D" parent="." unique_id=550985851 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(242.00003, 1519)
+position = Vector2(219.00003, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
@@ -78,7 +115,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap5" type="StaticBody2D" parent="." unique_id=169166464 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(143, 1067)
+position = Vector2(142.99998, 1147.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap2"
@@ -98,16 +135,17 @@ offset_right = 13.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+mouse_filter = 2
 
 [node name="SpaceTypeMap6" type="StaticBody2D" parent="." unique_id=1947754281 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(390, 1063)
+position = Vector2(390, 1143.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap6" unique_id=1875058801]
+position = Vector2(0, -0.125)
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap6" unique_id=55692885]
@@ -122,11 +160,11 @@ offset_right = 13.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+mouse_filter = 2
 
 [node name="SpaceTypeMap7" type="StaticBody2D" parent="." unique_id=1868354121 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(648, 1060)
+position = Vector2(648, 1140.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap3"
@@ -146,11 +184,11 @@ offset_right = 13.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+mouse_filter = 2
 
 [node name="SpaceTypeMap8" type="StaticBody2D" parent="." unique_id=1105592699 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(891, 1056)
+position = Vector2(890.99994, 1136.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap4"
@@ -170,11 +208,11 @@ offset_right = 13.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+mouse_filter = 2
 
 [node name="SpaceTypeMap2" type="StaticBody2D" parent="." unique_id=1032136184 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(459, 1519)
+position = Vector2(466, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
@@ -198,7 +236,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap3" type="StaticBody2D" parent="." unique_id=1426551527 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(702, 1522)
+position = Vector2(714.87, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
@@ -222,7 +260,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap4" type="StaticBody2D" parent="." unique_id=507525881 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(949, 1516)
+position = Vector2(956.83, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
@@ -246,7 +284,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TypeMap1" type="Node2D" parent="." unique_id=752903855 groups=["job"]]
 z_index = 1
-position = Vector2(389, 1068)
+position = Vector2(389, 1149)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751 node_paths=PackedStringArray("current_body")]
@@ -258,11 +296,12 @@ current_body = NodePath("../../SpaceTypeMap6")
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="Sprite2D" type="Sprite2D" parent="TypeMap1/TypeMap1" unique_id=1736216379]
-texture = ExtResource("5_ai7ch")
+scale = Vector2(0.715, 0.715)
+texture = ExtResource("6_o4a2m")
 
 [node name="TypeMap2" type="Node2D" parent="." unique_id=1615009566 groups=["job"]]
 z_index = 1
-position = Vector2(140.00006, 1071)
+position = Vector2(140.00006, 1152)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781 node_paths=PackedStringArray("current_body")]
@@ -274,12 +313,12 @@ current_body = NodePath("../../SpaceTypeMap5")
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="PlaceHolderMoney" type="Sprite2D" parent="TypeMap2/TypeMap2" unique_id=2045570607]
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("6_4uat0")
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("7_o4a2m")
 
 [node name="TypeMap3" type="Node2D" parent="." unique_id=2042054624 groups=["job"]]
 z_index = 1
-position = Vector2(653, 1057)
+position = Vector2(653, 1138)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455 node_paths=PackedStringArray("current_body")]
@@ -291,12 +330,12 @@ current_body = NodePath("../../SpaceTypeMap7")
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="PlaceHolderNobility" type="Sprite2D" parent="TypeMap3/TypeMap3" unique_id=2076171473]
-scale = Vector2(4, 4)
-texture = ExtResource("7_5j6ss")
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("8_o4a2m")
 
 [node name="TypeMap4" type="Node2D" parent="." unique_id=159153813 groups=["job"]]
 z_index = 1
-position = Vector2(893, 1053)
+position = Vector2(892.99994, 1134)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723 node_paths=PackedStringArray("current_body")]
@@ -308,23 +347,36 @@ current_body = NodePath("../../SpaceTypeMap8")
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="PlaceHolderPriest" type="Sprite2D" parent="TypeMap4/TypeMap4" unique_id=1341252645]
-scale = Vector2(4, 4)
-texture = ExtResource("8_fyowo")
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("9_o4a2m")
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
 offset_left = 825.0
 offset_top = 1708.0
-offset_right = 937.0
-offset_bottom = 1816.0
-icon = ExtResource("9_aoh7o")
+offset_right = 988.0
+offset_bottom = 1871.0
+icon = ExtResource("10_o4a2m")
+flat = true
+expand_icon = true
 
 [node name="Button_Validate" type="Button" parent="." unique_id=568960645]
-visible = false
-offset_left = 213.0
-offset_top = 1682.0
-offset_right = 557.0
-offset_bottom = 1826.0
-theme_override_font_sizes/font_size = 46
+offset_left = 153.0
+offset_top = 1726.0
+offset_right = 497.0
+offset_bottom = 1870.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("12_b0nng")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_t436p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t436p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t436p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_t436p")
 text = "Valider"
 
 [node name="Info1_Enigma" type="RichTextLabel" parent="." unique_id=199201805]
@@ -333,30 +385,38 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 9.0
-offset_top = 172.0
-offset_right = 1079.0
-offset_bottom = 572.0
+offset_left = 49.0
+offset_top = 427.0
+offset_right = 1048.9995
+offset_bottom = 964.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 36
+theme_override_constants/line_separation = -20
+theme_override_fonts/normal_font = ExtResource("11_o4a2m")
+theme_override_font_sizes/normal_font_size = 50
 text = "Ta première tache aujourd'hui est de nommer correctement tes dossiers:
+
+
 
 - Celui contenant les maps n'est pas à côté de celui des tenues
 - Le dossier constructions est à côté de celui des écrits
 - Le dossier des tenues est directement à gauche de celui des constructions"
+fit_content = true
 scroll_active = false
 metadata/_edit_use_anchors_ = true
 
 [node name="PopUp" type="Node2D" parent="." unique_id=813955419]
-position = Vector2(-673, -533)
+position = Vector2(-656, -1130)
 
-[node name="ShapePopUp" type="Sprite2D" parent="PopUp" unique_id=201039772]
-z_index = 1
-position = Vector2(1197, 1290.0001)
-scale = Vector2(10.2125025, 7.0249996)
-texture = ExtResource("10_k0f77")
+[node name="ColorRect" type="ColorRect" parent="PopUp" unique_id=2031031369]
+offset_left = 613.0
+offset_top = 1086.399
+offset_right = 1766.0
+offset_bottom = 1472.0
+mouse_filter = 2
+color = Color(0.12941177, 0.2901961, 0.6862745, 0.7294118)
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
 z_index = 1
@@ -365,48 +425,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 797.0
-offset_top = 1152.0
-offset_right = 1595.0
-offset_bottom = 1431.0
+offset_left = 689.0
+offset_top = 1156.0
+offset_right = 1541.44
+offset_bottom = 1435.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("11_o4a2m")
+theme_override_font_sizes/normal_font_size = 50
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=495495563]
-offset_left = 189.0
-offset_top = 1467.0
-offset_right = 294.0
-offset_bottom = 1571.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2030371440]
+offset_left = 791.0
+offset_top = -3.0
+offset_right = 1208.0
+offset_bottom = 354.0
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1796075527]
-offset_left = 407.0
-offset_top = 1468.0
-offset_right = 512.0
-offset_bottom = 1572.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=287256259]
-offset_left = 649.0
-offset_top = 1471.0
-offset_right = 754.0
-offset_bottom = 1575.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=1346420771]
-offset_left = 897.0
-offset_top = 1464.0
-offset_right = 1002.0
-offset_bottom = 1568.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("13_t436p")
+expand_mode = 1
+stretch_mode = 4
 
 [connection signal="body_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_exited"]
@@ -424,9 +465,5 @@ color = Color(0, 0, 0, 1)
 [connection signal="body_exited" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_body_exited"]
 [connection signal="mouse_entered" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="TypeMap4/TypeMap4" to="TypeMap4/TypeMap4" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
 [connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
-[connection signal="mouse_entered" from="Button_Validate" to="." method="_on_button_validate_mouse_entered"]
-[connection signal="mouse_exited" from="Button_Validate" to="." method="_on_button_validate_mouse_exited"]
 [connection signal="pressed" from="Button_Validate" to="." method="_on_button_validate_pressed"]
