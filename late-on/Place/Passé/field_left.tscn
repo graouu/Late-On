@@ -4,7 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://ee82n3h7tom" path="res://Assets/Textures/Carte/p_champs_left.png" id="2_4hmkv"]
 [ext_resource type="Texture2D" uid="uid://bx4tno0tk10lv" path="res://Assets/Textures/Place/field_left.png" id="2_aj6ai"]
 [ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="2_tdap2"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="5_23egs"]
+[ext_resource type="Texture2D" uid="uid://bbvxn4psan3ae" path="res://Assets/Textures/Interactables/Arbre_Champ_Passe.png" id="5_avf6k"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="5_jgn1s"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="6_l3yct"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="8_ffxso"]
+[ext_resource type="Texture2D" uid="uid://du2r5kgahsixe" path="res://Assets/Textures/Interactables/MaisonGauche_ChampGauche_Passe.png" id="9_tegaf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4hmkv"]
 shader = ExtResource("2_tdap2")
@@ -25,6 +30,21 @@ shader_parameter/surf_angle = 1.57
 shader_parameter/surf_magnitude = 0.0
 shader_parameter/s11 = 2.221
 shader_parameter/sinpowder = 8.0
+
+[sub_resource type="Resource" id="Resource_tegaf"]
+script = ExtResource("8_ffxso")
+text = "Ce grand arbre donne de l'ombre lors des chaudes nuits d'été."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_ffxso"]
+script = ExtResource("8_ffxso")
+text = "La demeure d'un paysan."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_8gjhq"]
+script = ExtResource("8_ffxso")
+text = "Mieux vaut garder ses distances..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
 resource_name = "Arrow"
@@ -135,7 +155,7 @@ _data = {
 &"RESET": SubResource("Animation_7bi7l")
 }
 
-[node name="field_left" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right")]
+[node name="field_left" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_right", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -150,6 +170,7 @@ place_name = "field_left"
 map_texture = ExtResource("2_4hmkv")
 button_right = NodePath("Buttons/Right")
 place_right = "fields"
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1851364016]
 material = SubResource("ShaderMaterial_4hmkv")
@@ -170,6 +191,30 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_aj6ai")
 expand_mode = 1
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=914967201]
+material = ExtResource("5_23egs")
+layout_mode = 0
+offset_left = 708.0
+offset_top = 163.0
+offset_right = 1081.0
+offset_bottom = 1011.0
+texture_normal = ExtResource("5_avf6k")
+script = ExtResource("6_l3yct")
+dialogue_array = Array[ExtResource("8_ffxso")]([SubResource("Resource_tegaf")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=1361764864]
+material = ExtResource("5_23egs")
+layout_mode = 0
+offset_left = 1.0
+offset_top = 556.0
+offset_right = 374.0
+offset_bottom = 900.0
+texture_normal = ExtResource("9_tegaf")
+script = ExtResource("6_l3yct")
+dialogue_array = Array[ExtResource("8_ffxso")]([SubResource("Resource_ffxso"), SubResource("Resource_8gjhq")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [node name="Buttons" type="Control" parent="." unique_id=1052945859]
 layout_mode = 1

@@ -11,7 +11,6 @@
 [ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="4_6b3vs"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/SFX/typewriter.mp3" id="4_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="5_nruiq"]
-[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="11_pg53n"]
 [ext_resource type="Texture2D" uid="uid://cnefq6asr0ehq" path="res://Assets/Textures/Interactables/BoutonPausePasse.png" id="12_e8d2l"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ny66p"]
@@ -336,7 +335,6 @@ bus = &"SFX"
 [node name="Pause" type="Button" parent="." unique_id=963309591]
 self_modulate = Color(1.4369954, 1.4369954, 1.4369954, 1)
 z_index = 5
-material = ExtResource("11_pg53n")
 layout_mode = 0
 offset_left = 85.75281
 offset_top = 44.797485
