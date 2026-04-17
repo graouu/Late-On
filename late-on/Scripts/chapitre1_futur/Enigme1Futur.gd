@@ -15,13 +15,13 @@ var tweenChronoVoice1 : Tween
 var tweenChronoVoice2 : Tween
 
 #Boutons
-@onready var Up = $Button_Up
+#@onready var Up = $Button_Up
 @onready var RayUp = $Maze/Ball/RayCastUp
-@onready var Right = $Button_Right
+#@onready var Right = $Button_Right
 @onready var RayRight = $Maze/Ball/RayCastRight
-@onready var Left = $Button_Left
+#@onready var Left = $Button_Left
 @onready var RayLeft = $Maze/Ball/RayCastLeft
-@onready var Down = $Button_Down
+#@onready var Down = $Button_Down
 @onready var RayDown = $Maze/Ball/RayCastDown
 @onready var ButtonFabliau = $Button_Fabliau
 @onready var ButtonReturn = $Button_Return

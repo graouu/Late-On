@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom.tscn" id="2_m87et"]
 [ext_resource type="AudioStream" uid="uid://h8islakkx71c" path="res://Assets/Sons/SFX/Footstep123.mp3" id="2_xjvin"]
 [ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="2_y01wl"]
+[ext_resource type="AudioStream" uid="uid://nf843a3ybggb" path="res://Assets/Sons/Before the room.wav" id="3_e8d2l"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
 [ext_resource type="Texture2D" uid="uid://rhit8c3574kt" path="res://Assets/Textures/Carte/p_bedroom.png" id="3_s51ea"]
 [ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="4_6b3vs"]
@@ -138,6 +139,8 @@ size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_idj7w")
 scene_music = ExtResource("5_nruiq")
+outside_song = ExtResource("5_nruiq")
+inside_song = ExtResource("3_e8d2l")
 scene_sound = NodePath("Sound Effect")
 movement_sound = ExtResource("2_xjvin")
 place_control = NodePath("VBoxContainer/PlaceContainer")

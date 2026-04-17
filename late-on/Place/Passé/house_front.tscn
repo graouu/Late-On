@@ -285,7 +285,6 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("10_lp6mb")
 
 [node name="Buttons" type="Control" parent="." unique_id=1860647171]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
