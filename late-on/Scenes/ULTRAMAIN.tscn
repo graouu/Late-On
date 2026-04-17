@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://cln4wp5h7uqev"]
 
 [ext_resource type="Script" uid="uid://ce3mno280o3jc" path="res://Scripts/ultramain.gd" id="1_uvqve"]
+[ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="2_ybsnw"]
+[ext_resource type="Texture2D" uid="uid://7ep76uw5jwig" path="res://Assets/Textures/menu/CadreMenuPrincipalFM.png" id="3_dp1es"]
+[ext_resource type="Texture2D" uid="uid://bk35aq1p780pr" path="res://Assets/Textures/menu/logofeudalismysteriasanscadre.png" id="4_mdqe6"]
+[ext_resource type="Texture2D" uid="uid://dmi1g1occlsl3" path="res://Assets/Textures/menu/BoutonMenuPrincipalPassé2.png" id="5_6tmp1"]
+[ext_resource type="Texture2D" uid="uid://btpo5do8xcn1x" path="res://Assets/Textures/menu/BoutonMenuPrincipalFutur.png" id="6_yopq5"]
+[ext_resource type="Texture2D" uid="uid://c83pueaivma2c" path="res://Assets/Textures/menu/BoutonMenuPrincipalQuitter.png" id="7_v6bu1"]
 
 [sub_resource type="Theme" id="Theme_uvqve"]
 PopupMenu/font_sizes/font_size = 30
@@ -13,34 +19,51 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uvqve")
-optionbutton = NodePath("OptionButton")
-optionbutton2 = NodePath("OptionButton2")
-optionbutton3 = NodePath("OptionButton3")
+optionbutton = NodePath("buttons/PlacePast")
+optionbutton2 = NodePath("buttons/PlaceFutur")
+optionbutton3 = NodePath("buttons/Puzzles")
 
-[node name="Button" type="Button" parent="." unique_id=1049067410]
-layout_mode = 0
-offset_left = 122.0
-offset_top = 390.0
-offset_right = 466.0
-offset_bottom = 580.0
+[node name="background" type="Node2D" parent="." unique_id=1356228549]
+
+[node name="page" type="Sprite2D" parent="background" unique_id=1974180880]
+position = Vector2(576, 961)
+scale = Vector2(1.377, 1.9590002)
+texture = ExtResource("2_ybsnw")
+
+[node name="bordure" type="Sprite2D" parent="background" unique_id=1875465994]
+position = Vector2(545, 962)
+texture = ExtResource("3_dp1es")
+
+[node name="titre" type="Sprite2D" parent="background" unique_id=1100501887]
+position = Vector2(542, 417)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_mdqe6")
+
+[node name="buttons" type="Node2D" parent="." unique_id=202159829]
+position = Vector2(11, 291)
+
+[node name="past" type="Button" parent="buttons" unique_id=1049067410]
+offset_left = 54.0
+offset_top = 445.0
+offset_right = 512.0
+offset_bottom = 703.0
 theme_override_font_sizes/font_size = 50
-text = "Passé"
+icon = ExtResource("5_6tmp1")
 
-[node name="Button2" type="Button" parent="." unique_id=491520656]
-layout_mode = 0
-offset_left = 596.0
-offset_top = 384.0
-offset_right = 940.0
-offset_bottom = 574.0
+[node name="futur" type="Button" parent="buttons" unique_id=491520656]
+offset_left = 553.0
+offset_top = 443.0
+offset_right = 1011.0
+offset_bottom = 701.0
 theme_override_font_sizes/font_size = 50
-text = "Futur"
+icon = ExtResource("6_yopq5")
 
-[node name="OptionButton" type="OptionButton" parent="." unique_id=1342377045]
-layout_mode = 0
-offset_left = 136.0
-offset_top = 667.0
-offset_right = 425.0
-offset_bottom = 770.0
+[node name="PlacePast" type="OptionButton" parent="buttons" unique_id=1342377045]
+visible = false
+offset_left = 51.0
+offset_top = 1197.0
+offset_right = 340.0
+offset_bottom = 1300.0
 theme = SubResource("Theme_uvqve")
 theme_override_font_sizes/font_size = 30
 selected = 0
@@ -49,12 +72,12 @@ item_count = 1
 popup/item_0/text = "Liste Places Passé"
 popup/item_0/id = 0
 
-[node name="OptionButton2" type="OptionButton" parent="." unique_id=1090664690]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 678.0
-offset_right = 907.0
-offset_bottom = 781.0
+[node name="PlaceFutur" type="OptionButton" parent="buttons" unique_id=1090664690]
+visible = false
+offset_left = 377.0
+offset_top = 1197.0
+offset_right = 666.0
+offset_bottom = 1300.0
 theme = SubResource("Theme_uvqve")
 theme_override_font_sizes/font_size = 30
 selected = 0
@@ -63,12 +86,12 @@ item_count = 1
 popup/item_0/text = "Liste Places Futur"
 popup/item_0/id = 0
 
-[node name="OptionButton3" type="OptionButton" parent="." unique_id=1433117831]
-layout_mode = 0
-offset_left = 278.0
-offset_top = 858.0
-offset_right = 567.0
-offset_bottom = 961.0
+[node name="Puzzles" type="OptionButton" parent="buttons" unique_id=1433117831]
+visible = false
+offset_left = 692.0
+offset_top = 1197.0
+offset_right = 981.0
+offset_bottom = 1300.0
 theme = SubResource("Theme_uvqve")
 theme_override_font_sizes/font_size = 30
 selected = 0
@@ -77,8 +100,16 @@ item_count = 1
 popup/item_0/text = "Puzzles"
 popup/item_0/id = 0
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
-[connection signal="item_selected" from="OptionButton2" to="." method="_on_option_button2_item_selected"]
-[connection signal="item_selected" from="OptionButton3" to="." method="_on_option_button_3_item_selected"]
+[node name="Exit" type="Button" parent="buttons" unique_id=217549150]
+offset_left = 302.0
+offset_top = 806.0
+offset_right = 760.0
+offset_bottom = 1064.0
+icon = ExtResource("7_v6bu1")
+
+[connection signal="pressed" from="buttons/past" to="." method="_on_past_pressed"]
+[connection signal="pressed" from="buttons/futur" to="." method="_on_futur_pressed"]
+[connection signal="item_selected" from="buttons/PlacePast" to="." method="_on_place_past_item_selected"]
+[connection signal="item_selected" from="buttons/PlaceFutur" to="." method="_on_place_futur_item_selected"]
+[connection signal="item_selected" from="buttons/Puzzles" to="." method="_on_puzzles_item_selected"]
+[connection signal="pressed" from="buttons/Exit" to="." method="_on_exit_pressed"]

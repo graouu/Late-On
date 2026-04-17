@@ -197,6 +197,7 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(2).timeout
 			AudioManager.play_music(house_music)
 			get_parent().get_parent().current_place.name = "desktop"
+			AudioManager.play_music(house_music)
 			end_puzzle.emit(dialogue_to_play)
 
 		else:

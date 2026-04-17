@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmmyp14oe8062" path="res://Scripts/chapitre1_futur/Enigme1Futur.gd" id="1_jyxcw"]
 [ext_resource type="AudioStream" uid="uid://c87rk8ucbd77d" path="res://Assets/Sons/Enigma-e1.mp3" id="2_hwvpv"]
-[ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="3_b2q2o"]
+[ext_resource type="AudioStream" uid="uid://66v4j7rfa5x8" path="res://Assets/Sons/Mysteris Desktop.mp3" id="3_kvr5b"]
 [ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="4_jyxcw"]
 [ext_resource type="Texture2D" uid="uid://csst3a3ivo45r" path="res://Assets/FondMinijeuFutur.png" id="5_m766a"]
 [ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="5_t3sp7"]
@@ -48,7 +48,7 @@ corner_radius_bottom_left = 33
 [node name="Control" type="Node2D" unique_id=28566512 node_paths=PackedStringArray("arrows_SFX", "mecanism_SFX", "poc_SFX", "error_SFX", "success_SFX", "ChronoVoice_SFX", "ChronoVoice_timer")]
 script = ExtResource("1_jyxcw")
 scene_music = ExtResource("2_hwvpv")
-house_music = ExtResource("3_b2q2o")
+house_music = ExtResource("3_kvr5b")
 arrows_SFX = NodePath("SFX/arrows")
 mecanism_SFX = NodePath("SFX/mecanism")
 poc_SFX = NodePath("SFX/poc")

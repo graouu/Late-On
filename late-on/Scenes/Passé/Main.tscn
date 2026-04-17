@@ -337,11 +337,11 @@ self_modulate = Color(1.4369954, 1.4369954, 1.4369954, 1)
 z_index = 5
 material = ExtResource("11_pg53n")
 layout_mode = 0
-offset_left = 85.75281
-offset_top = 44.797485
-offset_right = 605.7528
-offset_bottom = 564.7975
-scale = Vector2(0.355, 0.355)
+offset_left = 26.804077
+offset_top = 42.439514
+offset_right = 546.8041
+offset_bottom = 562.4395
+scale = Vector2(0.28, 0.28)
 icon = ExtResource("12_e8d2l")
 flat = true
 

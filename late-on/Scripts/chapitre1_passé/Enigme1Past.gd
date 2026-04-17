@@ -126,6 +126,7 @@ func _process(delta: float) -> void:
 			AudioManager.play_music(silence_music)
 			success_SFX.play()
 			await get_tree().create_timer(3).timeout
+			AudioManager.play_music(house_music)
 			end_puzzle.emit(dialogue_to_play)
 
 		else:
