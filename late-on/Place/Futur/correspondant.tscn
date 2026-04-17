@@ -32,6 +32,21 @@ script = ExtResource("2_p3cbo")
 text = "Bonne chance! Continue comme ça et tu croulera sous les crédits!"
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
+[sub_resource type="Resource" id="Resource_g6bs6"]
+script = ExtResource("2_p3cbo")
+text = "C'est la fin de cette démo!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_3wlbh"]
+script = ExtResource("2_p3cbo")
+text = "Tu peux encore te déplacer et interagir avec des objets, mais pas de contenu supplémentaire après ce point là."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_oj6ar"]
+script = ExtResource("2_p3cbo")
+text = "Merci d'avoir joué!"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
 [sub_resource type="Resource" id="Resource_xxvsk"]
 script = ExtResource("2_p3cbo")
 text = "Encore bravo! Pour la prochaine étape, appuie sur le bouton."
@@ -183,7 +198,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("1_t2omm")
-next_dialogue = Array[ExtResource("2_p3cbo")]([SubResource("Resource_ppe1o"), SubResource("Resource_jffj3"), SubResource("Resource_ekvwi"), SubResource("Resource_gd4o5")])
+next_dialogue = Array[ExtResource("2_p3cbo")]([SubResource("Resource_ppe1o"), SubResource("Resource_jffj3"), SubResource("Resource_ekvwi"), SubResource("Resource_gd4o5"), SubResource("Resource_g6bs6"), SubResource("Resource_3wlbh"), SubResource("Resource_oj6ar")])
 next_interactible_dialogue = Array[ExtResource("2_p3cbo")]([SubResource("Resource_xxvsk"), SubResource("Resource_5rkb6"), SubResource("Resource_ftkx6"), SubResource("Resource_gcy8g")])
 place_name = "correspondant"
 button_left = NodePath("Buttons/Left")
