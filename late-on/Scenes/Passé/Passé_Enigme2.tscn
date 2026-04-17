@@ -13,7 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://dpwknnyox66fe" path="res://Assets/Textures/eni2/Fiole verte.png" id="11_l3gyq"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="12_lc8gs"]
 [ext_resource type="Texture2D" uid="uid://olisvfjf16jj" path="res://Assets/Textures/Interactables/Boutonretour_Labyrinthelettre_Passe.png" id="13_4es18"]
+[ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="15_uxna5"]
+[ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="16_tmxr7"]
 [ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="17_8skwg"]
+[ext_resource type="Texture2D" uid="uid://cfkigvg1iyqtb" path="res://Assets/BordureEtFond/BordureVerte.PNG" id="17_tf8i1"]
+[ext_resource type="Texture2D" uid="uid://dd05jgjk74ccu" path="res://Assets/BordureEtFond/CarreVert.PNG" id="18_5xg35"]
 
 [sub_resource type="Resource" id="Resource_52f7w"]
 script = ExtResource("2_qqvvg")
@@ -44,7 +48,7 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 size = Vector2(38.25, 39.499996)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
-size = Vector2(215.00006, 220)
+size = Vector2(182.5, 198.75)
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_wbkpr")
@@ -71,7 +75,7 @@ texture = ExtResource("5_lc8gs")
 
 [node name="SpaceTypeMap5" type="StaticBody2D" parent="." unique_id=169166464 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(146, 709)
+position = Vector2(156, 775)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
 name_inside = "TypeMap2"
@@ -82,21 +86,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -15.5
-offset_top = -17.0
-offset_right = 24.5
-offset_bottom = 23.0
+offset_left = -20.0
+offset_top = -20.25
+offset_right = 20.0
+offset_bottom = 19.75
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap5" unique_id=1486322619]
-position = Vector2(5.25, 3.25)
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap6" type="StaticBody2D" parent="." unique_id=1947754281 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(393, 705)
+position = Vector2(402, 768)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
 name_inside = "TypeMap1"
@@ -107,21 +110,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -15.5
-offset_top = -17.0
-offset_right = 24.5
-offset_bottom = 23.0
+offset_left = -20.25
+offset_top = -19.5
+offset_right = 19.75
+offset_bottom = 20.5
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap6" unique_id=1875058801]
-position = Vector2(5.5, 2.75)
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap7" type="StaticBody2D" parent="." unique_id=1868354121 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(651, 702)
+position = Vector2(662, 768)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
 name_inside = "TypeMap3"
@@ -132,21 +134,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -15.5
-offset_top = -17.0
-offset_right = 24.5
-offset_bottom = 23.0
+offset_left = -19.75
+offset_top = -19.75
+offset_right = 20.25
+offset_bottom = 20.25
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap7" unique_id=1132314614]
-position = Vector2(4.75, 3)
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap8" type="StaticBody2D" parent="." unique_id=1105592699 groups=["dropable_job"]]
 z_index = 1
-position = Vector2(894, 698)
+position = Vector2(907, 763)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
 name_inside = "TypeMap4"
@@ -157,16 +158,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -15.5
-offset_top = -17.0
-offset_right = 24.5
-offset_bottom = 23.0
+offset_left = -20.5
+offset_top = -20.0
+offset_right = 19.5
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap8" unique_id=1229524876]
-position = Vector2(4.625, 2.75)
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap1" type="StaticBody2D" parent="." unique_id=550985851 groups=["dropable_job"]]
@@ -302,7 +302,8 @@ shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="TypeMap1" type="Node2D" parent="." unique_id=752903855 groups=["job"]]
 z_index = 1
-position = Vector2(412.99994, 716)
+material = ExtResource("12_lc8gs")
+position = Vector2(401.99994, 770)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751 node_paths=PackedStringArray("current_body")]
@@ -314,12 +315,14 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("8_l8lrs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap1/TypeMap1" unique_id=1293272795]
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(-1.249939, 0.625)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="TypeMap2" type="Node2D" parent="." unique_id=1615009566 groups=["job"]]
 z_index = 1
-position = Vector2(164, 719)
+material = ExtResource("12_lc8gs")
+position = Vector2(153, 773)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781 node_paths=PackedStringArray("current_body")]
@@ -337,7 +340,8 @@ shape = SubResource("RectangleShape2D_boa88")
 
 [node name="TypeMap3" type="Node2D" parent="." unique_id=2042054624 groups=["job"]]
 z_index = 1
-position = Vector2(673, 713)
+material = ExtResource("12_lc8gs")
+position = Vector2(662, 767)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455 node_paths=PackedStringArray("current_body")]
@@ -354,7 +358,8 @@ shape = SubResource("RectangleShape2D_boa88")
 
 [node name="TypeMap4" type="Node2D" parent="." unique_id=159153813 groups=["job"]]
 z_index = 1
-position = Vector2(916.99994, 707)
+material = ExtResource("12_lc8gs")
+position = Vector2(905.99994, 761)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723 node_paths=PackedStringArray("current_body")]
@@ -371,40 +376,23 @@ shape = SubResource("RectangleShape2D_boa88")
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
 material = ExtResource("12_lc8gs")
-offset_left = 104.0
-offset_top = 1595.0
-offset_right = 320.0
-offset_bottom = 1814.0
+offset_left = 172.0
+offset_top = 1606.0
+offset_right = 388.0
+offset_bottom = 1825.0
 scale = Vector2(0.8, 0.8)
 icon = ExtResource("13_4es18")
 
 [node name="Button_Validate" type="Button" parent="." unique_id=568960645]
-offset_left = 665.0
-offset_top = 1396.0
-offset_right = 1009.0
-offset_bottom = 1540.0
-theme_override_font_sizes/font_size = 46
+material = ExtResource("12_lc8gs")
+offset_left = 391.0
+offset_top = 1376.0
+offset_right = 735.0
+offset_bottom = 1520.0
+theme_override_colors/font_color = Color(0.90332747, 0.6823635, 0.40501544, 1)
+theme_override_fonts/font = ExtResource("16_tmxr7")
+theme_override_font_sizes/font_size = 100
 text = "Valider"
-
-[node name="Info1_Enigma" type="RichTextLabel" parent="." unique_id=199201805]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 9.0
-offset_top = 172.0
-offset_right = 1079.0
-offset_bottom = 572.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/normal_font_size = 36
-text = "- La carte de la ville n'est pas à côté de la facture du tisserant
-- Le plan du moulin est à côté de la missive
-- La facture du tisserant est directement à gauche du plan du moulin"
-scroll_active = false
-metadata/_edit_use_anchors_ = true
 
 [node name="PopUp" type="Node2D" parent="." unique_id=813955419]
 visible = false
@@ -431,6 +419,282 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
 theme_override_font_sizes/normal_font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="infos" type="Node2D" parent="." unique_id=1158195320]
+
+[node name="Papier" type="Node2D" parent="." unique_id=454361093]
+position = Vector2(-988, -1307)
+scale = Vector2(1.2, 1.2)
+
+[node name="ColorRect" type="Panel" parent="Papier" unique_id=1989865787]
+offset_left = 880.0
+offset_top = 1147.0
+offset_right = 1680.0
+offset_bottom = 1547.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Papier/ColorRect" unique_id=883101699]
+position = Vector2(399.69403, 200.79713)
+scale = Vector2(0.7984859, 0.39886892)
+texture = ExtResource("15_uxna5")
+
+[node name="BordureVerte13" type="Sprite2D" parent="Papier" unique_id=2065519353]
+position = Vector2(868.31006, 1199.1056)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte14" type="Sprite2D" parent="Papier" unique_id=1540121669]
+position = Vector2(868.31006, 1298.9381)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte15" type="Sprite2D" parent="Papier" unique_id=570308773]
+position = Vector2(868.2714, 1397.9407)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte16" type="Sprite2D" parent="Papier" unique_id=1222858423]
+position = Vector2(868.2714, 1497.7732)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte17" type="Sprite2D" parent="Papier" unique_id=1438860084]
+position = Vector2(1691.5305, 1199.1465)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte18" type="Sprite2D" parent="Papier" unique_id=562161618]
+position = Vector2(1691.5305, 1298.979)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte19" type="Sprite2D" parent="Papier" unique_id=810099306]
+position = Vector2(1691.492, 1397.9817)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte20" type="Sprite2D" parent="Papier" unique_id=149832919]
+position = Vector2(1691.492, 1497.8142)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte21" type="Sprite2D" parent="Papier" unique_id=1811395420]
+position = Vector2(931.5095, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte22" type="Sprite2D" parent="Papier" unique_id=624039119]
+position = Vector2(1031.0487, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte23" type="Sprite2D" parent="Papier" unique_id=1727176432]
+position = Vector2(1130.3246, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte24" type="Sprite2D" parent="Papier" unique_id=471515136]
+position = Vector2(1230.6537, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte25" type="Sprite2D" parent="Papier" unique_id=973335821]
+position = Vector2(1330.6011, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte26" type="Sprite2D" parent="Papier" unique_id=1848890984]
+position = Vector2(1430.1401, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte27" type="Sprite2D" parent="Papier" unique_id=1668043324]
+position = Vector2(1529.416, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte28" type="Sprite2D" parent="Papier" unique_id=2040149465]
+position = Vector2(1629.7451, 1136.4327)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte29" type="Sprite2D" parent="Papier" unique_id=1207864023]
+position = Vector2(930.68304, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte30" type="Sprite2D" parent="Papier" unique_id=433244108]
+position = Vector2(1030.2223, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte31" type="Sprite2D" parent="Papier" unique_id=448270506]
+position = Vector2(1129.4982, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte32" type="Sprite2D" parent="Papier" unique_id=71794075]
+position = Vector2(1229.8273, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte33" type="Sprite2D" parent="Papier" unique_id=1904300352]
+position = Vector2(1329.7745, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte34" type="Sprite2D" parent="Papier" unique_id=812250951]
+position = Vector2(1429.3136, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte35" type="Sprite2D" parent="Papier" unique_id=167687825]
+position = Vector2(1528.5895, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="BordureVerte36" type="Sprite2D" parent="Papier" unique_id=1604095347]
+position = Vector2(1628.5894, 1559.5731)
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_tf8i1")
+
+[node name="corner9" type="Sprite2D" parent="Papier" unique_id=1874356110]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(1691.3137, 1559.7329)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("18_5xg35")
+
+[node name="corner10" type="Sprite2D" parent="Papier" unique_id=931665014]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(868.4876, 1559.4194)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("18_5xg35")
+
+[node name="corner11" type="Sprite2D" parent="Papier" unique_id=1775991396]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(868.35004, 1136.2192)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("18_5xg35")
+
+[node name="corner12" type="Sprite2D" parent="Papier" unique_id=2011625083]
+modulate = Color(0.58431375, 0.6862745, 1, 1)
+position = Vector2(1691.0657, 1136.3813)
+scale = Vector2(0.27334705, 0.28242615)
+texture = ExtResource("18_5xg35")
+
+[node name="InfosPapier" type="RichTextLabel" parent="." unique_id=199201805]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = 76.60002
+offset_right = 1021.0
+offset_bottom = 310.00006
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_fonts/normal_font = ExtResource("16_tmxr7")
+theme_override_font_sizes/normal_font_size = 75
+text = "- Le millepertuis n'est pas à coté de la menthe
+- La guimauve officinale est à coté de la sauge
+- La menthe est directement à gauche de la  "
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="InfosPapier1" type="RichTextLabel" parent="." unique_id=776027441]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = 276.0
+offset_right = 1025.0
+offset_bottom = 367.40002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_fonts/normal_font = ExtResource("16_tmxr7")
+theme_override_font_sizes/normal_font_size = 75
+text = "guimauve officinale  "
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="InfosPapier2" type="RichTextLabel" parent="." unique_id=456261258]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 75.0
+offset_top = 304.0
+offset_right = 468.99994
+offset_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.12009502, 0.17721441, 0.15056095, 1)
+theme_override_fonts/normal_font = ExtResource("16_tmxr7")
+theme_override_font_sizes/normal_font_size = 75
+text = "Couleur de poudres:"
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="InfosPapier3" type="RichTextLabel" parent="." unique_id=963234955]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = 386.0
+offset_right = 1031.0
+offset_bottom = 536.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.12009502, 0.17721441, 0.15056095, 1)
+theme_override_fonts/normal_font = ExtResource("16_tmxr7")
+theme_override_font_sizes/normal_font_size = 76
+text = "Sauge: gris 				Millepertuis: jaune 		Guimauve officinale: rouge 	Menthe: verte"
+scroll_active = false
+vertical_alignment = 2
+
+[node name="Avis" type="RichTextLabel" parent="." unique_id=286258950]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 455.0
+offset_top = 1595.0
+offset_right = 1048.0
+offset_bottom = 1885.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("16_tmxr7")
+theme_override_font_sizes/normal_font_size = 85
+scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
