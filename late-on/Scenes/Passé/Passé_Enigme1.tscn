@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do10okj2o7pvo"]
 
 [ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
-[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
 [ext_resource type="AudioStream" uid="uid://dmbs58lpfy8op" path="res://Assets/Sons/Enigma-e1-past.wav" id="2_vykle"]
 [ext_resource type="AudioStream" uid="uid://nf843a3ybggb" path="res://Assets/Sons/Before the room.wav" id="3_13ph5"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
@@ -77,8 +77,6 @@ size = Vector2(46.75, 116)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfaug"]
 radius = 30.149628
 
-[sub_resource type="Theme" id="Theme_vjhe2"]
-
 [node name="Control2" type="Node2D" unique_id=28566512 node_paths=PackedStringArray("arrows_SFX", "mecanism_SFX", "poc_SFX", "error_SFX", "success_SFX")]
 script = ExtResource("1_rfaug")
 scene_music = ExtResource("2_vykle")
@@ -91,6 +89,7 @@ success_SFX = NodePath("SFX/success")
 dialogue_to_play = Array[ExtResource("2_rfaug")]([SubResource("Resource_tfl7k"), SubResource("Resource_67pjb"), SubResource("Resource_br2vo"), SubResource("Resource_byjhp"), SubResource("Resource_30k2d"), SubResource("Resource_ibuix"), SubResource("Resource_8y4hj")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1567124204]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -106,12 +105,12 @@ color = Color(0, 0, 0, 0.67058825)
 position = Vector2(15, -133)
 
 [node name="FondLabyrinth" type="Sprite2D" parent="Maze" unique_id=1740870359]
-position = Vector2(530.0956, 1068.9629)
+position = Vector2(529.6762, 1193.7062)
 scale = Vector2(1.1852582, 1.3357241)
 texture = ExtResource("4_g7yw5")
 
 [node name="RandomWall" type="StaticBody2D" parent="Maze" unique_id=552169867]
-position = Vector2(105, 702)
+position = Vector2(104.58062, 826.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall" unique_id=1623414521]
 position = Vector2(24, 67)
@@ -136,9 +135,10 @@ text = "histoire"
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall2" type="StaticBody2D" parent="Maze" unique_id=2001792031]
-position = Vector2(114, 845)
+position = Vector2(113.58062, 969.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall2" unique_id=2128938212]
 position = Vector2(16, 76)
@@ -163,9 +163,10 @@ theme_override_font_sizes/bold_font_size = 24
 text = "voyage"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall3" type="StaticBody2D" parent="Maze" unique_id=904974327]
-position = Vector2(116, 994)
+position = Vector2(115.58062, 1118.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall3" unique_id=1883725097]
 position = Vector2(14, 75)
@@ -189,9 +190,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "prière"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall8" type="StaticBody2D" parent="Maze" unique_id=109463121]
-position = Vector2(105, 1145)
+position = Vector2(104.58062, 1269.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall8" unique_id=578704986]
 position = Vector2(25, 76)
@@ -215,9 +217,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "fabliau"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall4" type="StaticBody2D" parent="Maze" unique_id=184594966]
-position = Vector2(105, 1295)
+position = Vector2(104.58062, 1419.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall4" unique_id=1666739773]
 position = Vector2(24, 78)
@@ -241,9 +244,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "eternel"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall5" type="StaticBody2D" parent="Maze" unique_id=2066027026]
-position = Vector2(280, 695)
+position = Vector2(279.58063, 819.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall5" unique_id=1456704010]
 position = Vector2(25, 74)
@@ -267,9 +271,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "poème"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall7" type="StaticBody2D" parent="Maze" unique_id=1032456880]
-position = Vector2(433, 844)
+position = Vector2(432.58063, 968.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall7" unique_id=869637709]
 position = Vector2(24, 73)
@@ -293,9 +298,10 @@ theme_override_font_sizes/normal_font_size = 70
 text = "discours"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall19" type="StaticBody2D" parent="Maze" unique_id=569105637]
-position = Vector2(905, 695)
+position = Vector2(904.5806, 819.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall19" unique_id=1528731676]
 position = Vector2(24, 74)
@@ -319,9 +325,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "verger"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall20" type="StaticBody2D" parent="Maze" unique_id=1362307099]
-position = Vector2(905, 845)
+position = Vector2(904.5806, 969.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall20" unique_id=1059798347]
 position = Vector2(24, 76)
@@ -345,9 +352,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "union"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall22" type="StaticBody2D" parent="Maze" unique_id=965309060]
-position = Vector2(905, 1145)
+position = Vector2(904.5806, 1269.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall22" unique_id=977769795]
 position = Vector2(25, 74)
@@ -371,9 +379,10 @@ theme_override_font_sizes/normal_font_size = 68
 text = "toujour"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall9" type="StaticBody2D" parent="Maze" unique_id=978313032]
-position = Vector2(305, 653)
+position = Vector2(304.58063, 777.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall9" unique_id=708317535]
 position = Vector2(-77, 16)
@@ -397,9 +406,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "chanson"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall10" type="StaticBody2D" parent="Maze" unique_id=1030913910]
-position = Vector2(605, 645)
+position = Vector2(604.5806, 769.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall10" unique_id=1532610823]
 position = Vector2(-77, 24)
@@ -424,9 +434,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "bonheur"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall11" type="StaticBody2D" parent="Maze" unique_id=1235759474]
-position = Vector2(756, 645)
+position = Vector2(755.5806, 769.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall11" unique_id=1080657524]
 position = Vector2(-76, 24)
@@ -451,9 +462,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "dame"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall14" type="StaticBody2D" parent="Maze" unique_id=553687162]
-position = Vector2(305, 1445)
+position = Vector2(304.58063, 1569.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall14" unique_id=2052679953]
 position = Vector2(-76, 24)
@@ -478,9 +490,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "langdoc"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall21" type="StaticBody2D" parent="Maze" unique_id=856982391]
-position = Vector2(456, 1277)
+position = Vector2(455.58063, 1401.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall21" unique_id=1158134374]
 position = Vector2(-79, 24)
@@ -505,9 +518,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "parents"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall15" type="StaticBody2D" parent="Maze" unique_id=2105674907]
-position = Vector2(455, 1445)
+position = Vector2(454.58063, 1569.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall15" unique_id=2018923222]
 position = Vector2(-78, 24)
@@ -532,9 +546,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "beau"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall16" type="StaticBody2D" parent="Maze" unique_id=396502548]
-position = Vector2(605, 1445)
+position = Vector2(604.5806, 1569.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall16" unique_id=1694016913]
 position = Vector2(-76, 24)
@@ -559,9 +574,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "troublé"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall17" type="StaticBody2D" parent="Maze" unique_id=627039758]
-position = Vector2(755, 1445)
+position = Vector2(754.5806, 1569.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall17" unique_id=560986548]
 position = Vector2(-74, 24)
@@ -585,9 +601,10 @@ theme_override_fonts/normal_font = ExtResource("5_g7yw5")
 theme_override_font_sizes/normal_font_size = 68
 text = "embrasse"
 autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall13" type="StaticBody2D" parent="Maze" unique_id=2041278927]
-position = Vector2(633, 821)
+position = Vector2(632.5806, 945.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall13" unique_id=1744448577]
 position = Vector2(-90, 24.625)
@@ -612,9 +629,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "larmes"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall24" type="StaticBody2D" parent="Maze" unique_id=452467384]
-position = Vector2(305, 1277)
+position = Vector2(304.58063, 1401.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall24" unique_id=1446880030]
 position = Vector2(-76, 24)
@@ -638,9 +656,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "amour"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall29" type="StaticBody2D" parent="Maze" unique_id=1770014216]
-position = Vector2(457, 645)
+position = Vector2(456.58063, 769.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall29" unique_id=2108039763]
 position = Vector2(-80, 24)
@@ -665,9 +684,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "fenêtre"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall25" type="StaticBody2D" parent="Maze" unique_id=681197048]
-position = Vector2(607, 1277)
+position = Vector2(606.5806, 1401.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall25" unique_id=2051408688]
 position = Vector2(-73, 24)
@@ -692,9 +712,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "douleur"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RandomWall28" type="StaticBody2D" parent="Maze" unique_id=1351279488]
-position = Vector2(755, 965)
+position = Vector2(754.5806, 1089.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/RandomWall28" unique_id=606490391]
 position = Vector2(-76, 26)
@@ -719,9 +740,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "pucelle"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall_Key1" type="StaticBody2D" parent="Maze" unique_id=1977080557]
-position = Vector2(305, 1133)
+position = Vector2(304.58063, 1257.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key1" unique_id=27505983]
 position = Vector2(-87.269714, 13.481567)
@@ -746,9 +768,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "pur"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="WallOff_Key1" type="StaticBody2D" parent="Maze" unique_id=1423623767]
-position = Vector2(433, 989)
+position = Vector2(432.58063, 1113.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key1" unique_id=1834628102]
 position = Vector2(24, 72)
@@ -772,9 +795,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "décent"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall_Key2" type="StaticBody2D" parent="Maze" unique_id=527129103]
-position = Vector2(905, 994)
+position = Vector2(904.5806, 1118.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key2" unique_id=391949123]
 position = Vector2(25, 75)
@@ -798,10 +822,11 @@ theme_override_font_sizes/normal_font_size = 63
 text = "vavasseur"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="WallOff_Key2" type="StaticBody2D" parent="Maze" unique_id=353791740]
 modulate = Color(1, 1, 1, 0.003921569)
-position = Vector2(729, 695)
+position = Vector2(728.5806, 819.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key2" unique_id=988753877]
 position = Vector2(24, 74)
@@ -825,9 +850,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "mariage"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall_Key3" type="StaticBody2D" parent="Maze" unique_id=255203589]
-position = Vector2(905, 1445)
+position = Vector2(904.5806, 1569.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key3" unique_id=1808091990]
 position = Vector2(-72, 24)
@@ -852,10 +878,11 @@ theme_override_font_sizes/normal_font_size = 66
 text = "tendresse"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="WallOff_Key3" type="StaticBody2D" parent="Maze" unique_id=21711254]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(609, 1109)
+position = Vector2(608.5806, 1233.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key3" unique_id=1723814698]
 position = Vector2(24.5, 102.5)
@@ -879,9 +906,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "crime"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall_Key4" type="StaticBody2D" parent="Maze" unique_id=384677296]
-position = Vector2(905, 1295)
+position = Vector2(904.5806, 1419.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key4" unique_id=225357602]
 position = Vector2(24, 78)
@@ -905,9 +933,10 @@ theme_override_font_sizes/normal_font_size = 68
 text = "désespoir"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="WallOff_Key4" type="StaticBody2D" parent="Maze" unique_id=9675499]
-position = Vector2(905, 965)
+position = Vector2(904.5806, 1089.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/WallOff_Key4" unique_id=448523680]
 position = Vector2(-75, 26)
@@ -932,9 +961,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "maison"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall_Key5" type="StaticBody2D" parent="Maze" unique_id=818182566]
-position = Vector2(905, 645)
+position = Vector2(904.5806, 769.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key5" unique_id=1118086923]
 position = Vector2(-72, 24)
@@ -958,9 +988,10 @@ theme_override_font_sizes/normal_font_size = 72
 text = "adieux"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Wall_Key6" type="StaticBody2D" parent="Maze" unique_id=1518199892]
-position = Vector2(433, 694)
+position = Vector2(432.58063, 818.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Wall_Key6" unique_id=1835960658]
 position = Vector2(24, 75)
@@ -983,9 +1014,10 @@ theme_override_font_sizes/normal_font_size = 76
 text = "joie"
 autowrap_mode = 0
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Ball" type="CharacterBody2D" parent="Maze" unique_id=1086981326]
-position = Vector2(217, 773)
+position = Vector2(216.58063, 897.7433)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maze/Ball" unique_id=796264831]
 shape = SubResource("CircleShape2D_rfaug")
@@ -1006,45 +1038,36 @@ target_position = Vector2(-1064, 0)
 [node name="RayCastUp" type="RayCast2D" parent="Maze/Ball" unique_id=1953768741]
 target_position = Vector2(8, -904)
 
-[node name="corner" type="Sprite2D" parent="." unique_id=2049356763]
+[node name="corner" type="Sprite2D" parent="Maze" unique_id=2049356763]
 modulate = Color(0.25518164, 0.44620728, 0.4371556, 1)
-position = Vector2(145.39003, 534.1222)
+position = Vector2(129.97064, 791.86554)
 scale = Vector2(0.552567, 0.5525669)
 texture = ExtResource("8_rfaug")
 
-[node name="corner2" type="Sprite2D" parent="." unique_id=1001168584]
+[node name="corner2" type="Sprite2D" parent="Maze" unique_id=1001168584]
 modulate = Color(0.25490198, 0.44705883, 0.43529412, 1)
-position = Vector2(944.6096, 534.4585)
+position = Vector2(929.19025, 792.2018)
 scale = Vector2(0.54566807, 0.54566795)
 texture = ExtResource("8_rfaug")
 
-[node name="corner3" type="Sprite2D" parent="." unique_id=102026062]
+[node name="corner3" type="Sprite2D" parent="Maze" unique_id=102026062]
 modulate = Color(0.25490198, 0.44705883, 0.43529412, 1)
-position = Vector2(944.7542, 1337.5615)
+position = Vector2(929.33484, 1595.3048)
 scale = Vector2(0.54566807, 0.54566795)
 texture = ExtResource("8_rfaug")
 
-[node name="corner4" type="Sprite2D" parent="." unique_id=1705372749]
+[node name="corner4" type="Sprite2D" parent="Maze" unique_id=1705372749]
 modulate = Color(0.25490198, 0.44705883, 0.43529412, 1)
-position = Vector2(145.85722, 1337.2737)
+position = Vector2(130.43784, 1595.017)
 scale = Vector2(0.54566807, 0.54566795)
 texture = ExtResource("8_rfaug")
-
-[node name="GlasseMaze" type="ColorRect" parent="." unique_id=969430746]
-visible = false
-offset_left = 120.0
-offset_top = 512.0
-offset_right = 970.0
-offset_bottom = 1362.0
-theme = SubResource("Theme_vjhe2")
-color = Color(0.4764691, 0.563753, 0.5996934, 0.1254902)
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
 material = ExtResource("9_vykle")
-offset_left = 135.42343
-offset_top = 1564.2384
-offset_right = 351.42343
-offset_bottom = 1783.2384
+offset_left = 149.0
+offset_top = 1616.2329
+offset_right = 365.0
+offset_bottom = 1835.2329
 icon = ExtResource("9_h4pyk")
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
@@ -1068,9 +1091,47 @@ offset_bottom = 1547.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="PopUp/ColorRect" unique_id=1437625314]
-position = Vector2(399.69403, 200.79713)
-scale = Vector2(0.7984859, 0.39886892)
+position = Vector2(399.69403, 279.18134)
+scale = Vector2(0.7984859, 0.5556373)
 texture = ExtResource("16_6e0vd")
+
+[node name="TextureRect" type="TextureRect" parent="PopUp" unique_id=2028418050]
+offset_left = 863.0
+offset_top = 1148.0
+offset_right = 949.0
+offset_bottom = 3952.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_h4pyk")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="PopUp" unique_id=1220424866]
+offset_left = 1679.0
+offset_top = 1148.0
+offset_right = 1765.0
+offset_bottom = 3962.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_h4pyk")
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="PopUp" unique_id=614449203]
+offset_left = 1696.4756
+offset_top = 1131.0001
+offset_right = 1782.4756
+offset_bottom = 5296.021
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_h4pyk")
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="PopUp" unique_id=1589713236]
+offset_left = 1696.0
+offset_top = 1704.0
+offset_right = 1782.0
+offset_bottom = 5869.021
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_h4pyk")
+stretch_mode = 1
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
 anchors_preset = 8
@@ -1078,195 +1139,35 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 900.0
-offset_top = 1167.0
+offset_left = 894.0
+offset_top = 1153.0
 offset_right = 1665.0
-offset_bottom = 1530.0
+offset_bottom = 1691.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -20
 theme_override_fonts/normal_font = ExtResource("5_g7yw5")
-theme_override_font_sizes/normal_font_size = 60
-fit_content = true
+theme_override_font_sizes/normal_font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="BordureVerte13" type="Sprite2D" parent="PopUp" unique_id=1361856506]
-position = Vector2(868.31006, 1199.1056)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte14" type="Sprite2D" parent="PopUp" unique_id=2142909987]
-position = Vector2(868.31006, 1298.9381)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte15" type="Sprite2D" parent="PopUp" unique_id=956627267]
-position = Vector2(868.2714, 1397.9407)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte16" type="Sprite2D" parent="PopUp" unique_id=1075910378]
-position = Vector2(868.2714, 1497.7732)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte17" type="Sprite2D" parent="PopUp" unique_id=357094409]
-position = Vector2(1691.5305, 1199.1465)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte18" type="Sprite2D" parent="PopUp" unique_id=2093229171]
-position = Vector2(1691.5305, 1298.979)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte19" type="Sprite2D" parent="PopUp" unique_id=469864808]
-position = Vector2(1691.492, 1397.9817)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte20" type="Sprite2D" parent="PopUp" unique_id=1148702443]
-position = Vector2(1691.492, 1497.8142)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte21" type="Sprite2D" parent="PopUp" unique_id=1609626247]
-position = Vector2(931.5095, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte22" type="Sprite2D" parent="PopUp" unique_id=697985871]
-position = Vector2(1031.0487, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte23" type="Sprite2D" parent="PopUp" unique_id=1263893118]
-position = Vector2(1130.3246, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte24" type="Sprite2D" parent="PopUp" unique_id=1839332395]
-position = Vector2(1230.6537, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte25" type="Sprite2D" parent="PopUp" unique_id=1953713224]
-position = Vector2(1330.6011, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte26" type="Sprite2D" parent="PopUp" unique_id=7081219]
-position = Vector2(1430.1401, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte27" type="Sprite2D" parent="PopUp" unique_id=1055480990]
-position = Vector2(1529.416, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte28" type="Sprite2D" parent="PopUp" unique_id=1095819388]
-position = Vector2(1629.7451, 1136.4327)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte29" type="Sprite2D" parent="PopUp" unique_id=1778395884]
-position = Vector2(930.68304, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte30" type="Sprite2D" parent="PopUp" unique_id=1087916011]
-position = Vector2(1030.2223, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte31" type="Sprite2D" parent="PopUp" unique_id=1700530948]
-position = Vector2(1129.4982, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte32" type="Sprite2D" parent="PopUp" unique_id=2074714016]
-position = Vector2(1229.8273, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte33" type="Sprite2D" parent="PopUp" unique_id=1831178693]
-position = Vector2(1329.7745, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte34" type="Sprite2D" parent="PopUp" unique_id=1351684209]
-position = Vector2(1429.3136, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte35" type="Sprite2D" parent="PopUp" unique_id=1414587348]
-position = Vector2(1528.5895, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="BordureVerte36" type="Sprite2D" parent="PopUp" unique_id=1796045482]
-position = Vector2(1628.5894, 1559.5731)
-rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_h4pyk")
-
-[node name="corner9" type="Sprite2D" parent="PopUp" unique_id=1909790002]
-modulate = Color(0.58431375, 0.6862745, 1, 1)
-position = Vector2(1691.3137, 1559.7329)
-scale = Vector2(0.27334705, 0.28242615)
-texture = ExtResource("8_rfaug")
-
-[node name="corner10" type="Sprite2D" parent="PopUp" unique_id=362070796]
-modulate = Color(0.58431375, 0.6862745, 1, 1)
-position = Vector2(868.4876, 1559.4194)
-scale = Vector2(0.27334705, 0.28242615)
-texture = ExtResource("8_rfaug")
-
-[node name="corner11" type="Sprite2D" parent="PopUp" unique_id=1156665824]
-modulate = Color(0.58431375, 0.6862745, 1, 1)
-position = Vector2(868.35004, 1136.2192)
-scale = Vector2(0.27334705, 0.28242615)
-texture = ExtResource("8_rfaug")
-
-[node name="corner12" type="Sprite2D" parent="PopUp" unique_id=909836705]
-modulate = Color(0.58431375, 0.6862745, 1, 1)
-position = Vector2(1691.0657, 1136.3813)
-scale = Vector2(0.27334705, 0.28242615)
-texture = ExtResource("8_rfaug")
 
 [node name="croix directionnelle" type="Node2D" parent="." unique_id=2101947408]
 position = Vector2(482.3075, 351.54855)
 scale = Vector2(0.8, 0.8)
 
 [node name="CroixDirectionnelleLabyrintheLettré" type="Sprite2D" parent="croix directionnelle" unique_id=1624243530]
-position = Vector2(315.4272, 1631.6753)
+position = Vector2(332.3979, 1696.6685)
 rotation = 0.7853982
 scale = Vector2(1.4670013, 1.4670016)
 texture = ExtResource("9_p3ev7")
 
 [node name="Button_Up" type="Button" parent="croix directionnelle" unique_id=435473685]
 material = ExtResource("9_vykle")
-offset_left = 228.11133
-offset_top = 1439.8118
-offset_right = 401.11133
-offset_bottom = 1603.2118
+offset_left = 245.08203
+offset_top = 1504.8049
+offset_right = 418.08203
+offset_bottom = 1668.205
 rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 icon = ExtResource("12_h4pyk")
@@ -1276,10 +1177,10 @@ expand_icon = true
 
 [node name="Button_Right" type="Button" parent="croix directionnelle" unique_id=1602582602]
 material = ExtResource("9_vykle")
-offset_left = 434.0066
-offset_top = 1526.5996
-offset_right = 596.8905
-offset_bottom = 1680.3711
+offset_left = 450.9773
+offset_top = 1591.5928
+offset_right = 613.8612
+offset_bottom = 1745.3643
 rotation = 0.7853982
 icon = ExtResource("13_vykle")
 flat = true
@@ -1287,10 +1188,10 @@ expand_icon = true
 
 [node name="Button_Left" type="Button" parent="croix directionnelle" unique_id=503525865]
 material = ExtResource("9_vykle")
-offset_left = 122.25777
-offset_top = 1560.0975
-offset_right = 283.01505
-offset_bottom = 1711.8613
+offset_left = 139.22849
+offset_top = 1625.0907
+offset_right = 299.98578
+offset_bottom = 1776.8545
 rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 icon = ExtResource("14_d1hrw")
@@ -1299,10 +1200,10 @@ expand_icon = true
 
 [node name="Button_Down" type="Button" parent="croix directionnelle" unique_id=1852277812]
 material = ExtResource("9_vykle")
-offset_left = 239.22134
-offset_top = 1677.3038
-offset_right = 396.38947
-offset_bottom = 1828.0822
+offset_left = 256.19205
+offset_top = 1742.297
+offset_right = 413.36017
+offset_bottom = 1893.0753
 rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 icon = ExtResource("15_7og1i")
@@ -1311,112 +1212,112 @@ expand_icon = true
 
 [node name="BordureVerte" type="Sprite2D" parent="croix directionnelle" unique_id=355492049]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(125.349976, 1587.2169)
+position = Vector2(142.32068, 1652.2101)
 rotation = 0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte2" type="Sprite2D" parent="croix directionnelle" unique_id=1844742222]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(197.62704, 1514.6061)
+position = Vector2(214.59775, 1579.5992)
 rotation = 0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte3" type="Sprite2D" parent="croix directionnelle" unique_id=1543955684]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(270.41193, 1441.6045)
+position = Vector2(287.38263, 1506.5977)
 rotation = 0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte4" type="Sprite2D" parent="croix directionnelle" unique_id=1977329123]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(361.2085, 1822.3081)
+position = Vector2(378.1792, 1887.3013)
 rotation = 0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte5" type="Sprite2D" parent="croix directionnelle" unique_id=1972763081]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(433.4856, 1749.6973)
+position = Vector2(450.4563, 1814.6904)
 rotation = 0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte6" type="Sprite2D" parent="croix directionnelle" unique_id=1216891681]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(506.27045, 1676.6958)
+position = Vector2(523.24115, 1741.689)
 rotation = 0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte7" type="Sprite2D" parent="croix directionnelle" unique_id=769557835]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(363.10358, 1441.5942)
+position = Vector2(380.07428, 1506.5874)
 rotation = -0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte8" type="Sprite2D" parent="croix directionnelle" unique_id=623621330]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(434.60352, 1513.0189)
+position = Vector2(451.57422, 1578.0121)
 rotation = -0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte9" type="Sprite2D" parent="croix directionnelle" unique_id=612571278]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(506.4082, 1585.0839)
+position = Vector2(523.3789, 1650.077)
 rotation = -0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte10" type="Sprite2D" parent="croix directionnelle" unique_id=440376132]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(125.60121, 1678.8885)
+position = Vector2(142.57193, 1743.8817)
 rotation = -0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte11" type="Sprite2D" parent="croix directionnelle" unique_id=322936195]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(197.10115, 1750.3132)
+position = Vector2(214.07187, 1815.3064)
 rotation = -0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="BordureVerte12" type="Sprite2D" parent="croix directionnelle" unique_id=1010860339]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(268.90582, 1822.3782)
+position = Vector2(285.87653, 1887.3713)
 rotation = -0.7853982
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_h4pyk")
 
 [node name="corner5" type="Sprite2D" parent="croix directionnelle" unique_id=826703932]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(316.8691, 1395.6716)
+position = Vector2(333.8398, 1460.6648)
 rotation = 0.7853982
 scale = Vector2(0.285975, 0.293729)
 texture = ExtResource("8_rfaug")
 
 [node name="corner6" type="Sprite2D" parent="croix directionnelle" unique_id=2081840191]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(552.15326, 1630.8644)
+position = Vector2(569.12396, 1695.8575)
 rotation = 0.7853982
 scale = Vector2(0.28090057, 0.293729)
 texture = ExtResource("8_rfaug")
 
 [node name="corner7" type="Sprite2D" parent="croix directionnelle" unique_id=2106431575]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(315.14346, 1868.3667)
+position = Vector2(332.11417, 1933.3599)
 rotation = 0.7853982
 scale = Vector2(0.28428575, 0.2937282)
 texture = ExtResource("8_rfaug")
 
 [node name="corner8" type="Sprite2D" parent="croix directionnelle" unique_id=343990934]
 modulate = Color(0.3764706, 0.4627451, 0.39215687, 1)
-position = Vector2(79.49053, 1632.8226)
+position = Vector2(96.46124, 1697.8158)
 rotation = 0.7853982
 scale = Vector2(0.2804345, 0.28974906)
 texture = ExtResource("8_rfaug")
