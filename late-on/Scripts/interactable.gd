@@ -13,6 +13,7 @@ var timer = 0
 #La ligne de dialogue de l'interactable
 @export var dialogue_array : Array[DialogueLine]
 @export var puzzle : String
+@export var sound_cue : AudioStream
 
 func _ready() -> void:
 	if !pressed.is_connected(_on_pressed):
@@ -23,9 +24,9 @@ func _on_pressed() -> void:
 	print(name, " has been pressed")
 	#Quand l'interactable est pressé, on envoie un signal pour jouer ce dialogue
 	if interaction_type == Type.DIALOGUE:
-		open_dialogue.emit(dialogue_array)
+		open_dialogue.emit(dialogue_array, sound_cue)
 	else:
-		open_puzzle.emit(puzzle)
+		open_puzzle.emit(puzzle, sound_cue)
 
 #func _process(delta: float) -> void:
 	#timer += delta

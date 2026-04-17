@@ -3,7 +3,7 @@ extends Area2D
 var draggable = false
 var is_inside_dropable = false
 var body_ref
-var current_body
+@export var current_body : StaticBody2D
 var initialPos: Vector2
 var offset: Vector2
 

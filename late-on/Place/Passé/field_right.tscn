@@ -5,6 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://doep2qfjwq6iq" path="res://Assets/Textures/Place/field_right.png" id="3_ax3kg"]
 [ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="3_oh2se"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_ax3kg"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="5_qkl73"]
+[ext_resource type="Texture2D" uid="uid://cf5pdso5klljl" path="res://Assets/Textures/Interactables/Tonneau_ChampDroit_Passe.png" id="5_ttnvg"]
+[ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="6_x2ssj"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="7_4qis0"]
+[ext_resource type="Texture2D" uid="uid://dndbb2u0x6lf8" path="res://Assets/Textures/Interactables/Vignes_ChampDroit_Passe.png" id="9_vs1io"]
+[ext_resource type="Texture2D" uid="uid://cueoxdcscvtt7" path="res://Assets/Textures/Interactables/Maison_Champ_Droit.png" id="10_f4kr2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x2ssj"]
 shader = ExtResource("3_oh2se")
@@ -25,6 +31,36 @@ shader_parameter/surf_angle = 1.57
 shader_parameter/surf_magnitude = 0.0
 shader_parameter/s11 = 2.221
 shader_parameter/sinpowder = 8.0
+
+[sub_resource type="Resource" id="Resource_qkl73"]
+script = ExtResource("7_4qis0")
+text = "Tonneau aidant à la confection de délicats breuvages viticoles."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_4qis0"]
+script = ExtResource("7_4qis0")
+text = "On écrase avec ses pieds le raisin placé dans le tonneau pour en faire du jus, un travail salissant..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_vs1io"]
+script = ExtResource("7_4qis0")
+text = "De magnifiques vignes à n'en point douter, cette couleur d'un violet profond me donne l'eau à la bouche."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_f4kr2"]
+script = ExtResource("7_4qis0")
+text = "Mieux vaut ne pas se servir..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_qubuo"]
+script = ExtResource("7_4qis0")
+text = "La maison du paysan qui exploite ces vignes."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_shavp"]
+script = ExtResource("7_4qis0")
+text = "Une bâtisse très humble..."
+metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
 resource_name = "Arrow"
@@ -135,7 +171,7 @@ _data = {
 &"RESET": SubResource("Animation_7bi7l")
 }
 
-[node name="field_right" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left")]
+[node name="field_right" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
 anchor_right = 1.0
@@ -150,6 +186,7 @@ place_name = "field_right"
 map_texture = ExtResource("2_e6g6f")
 button_left = NodePath("Buttons/Left")
 place_left = "fields"
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2"), NodePath("Interactable3")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2122178563]
 material = SubResource("ShaderMaterial_x2ssj")
@@ -170,6 +207,46 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_ax3kg")
 expand_mode = 1
+
+[node name="Interactable" type="TextureButton" parent="." unique_id=123542881]
+material = ExtResource("5_qkl73")
+layout_mode = 0
+offset_left = 738.0
+offset_top = 878.0
+offset_right = 874.0
+offset_bottom = 1008.0
+texture_normal = ExtResource("5_ttnvg")
+script = ExtResource("6_x2ssj")
+dialogue_array = Array[ExtResource("7_4qis0")]([SubResource("Resource_qkl73"), SubResource("Resource_4qis0")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable2" type="TextureButton" parent="." unique_id=493968948]
+material = ExtResource("5_qkl73")
+layout_mode = 0
+offset_left = 18.0
+offset_top = 696.0
+offset_right = 515.0
+offset_bottom = 1016.0
+texture_normal = ExtResource("9_vs1io")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("6_x2ssj")
+dialogue_array = Array[ExtResource("7_4qis0")]([SubResource("Resource_vs1io"), SubResource("Resource_f4kr2")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable3" type="TextureButton" parent="." unique_id=1076556323]
+material = ExtResource("5_qkl73")
+layout_mode = 0
+offset_left = 742.0
+offset_top = 554.0
+offset_right = 1269.0
+offset_bottom = 894.0
+texture_normal = ExtResource("10_f4kr2")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("6_x2ssj")
+dialogue_array = Array[ExtResource("7_4qis0")]([SubResource("Resource_qubuo"), SubResource("Resource_shavp")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [node name="Buttons" type="Control" parent="." unique_id=986965438]
 layout_mode = 1

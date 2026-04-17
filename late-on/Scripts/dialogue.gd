@@ -10,13 +10,17 @@ class_name DialogueManager extends Control
 @export var sound_player : AudioStreamPlayer
 #Le Timer qui gère le temps que prend le dialogue à se jouer
 @export var dialogue_timer : Timer
+@export var cue_player : AudioStreamPlayer
 
 var next_dialogue : String
 var tween : Tween
 
 signal is_done
 
-func play_dialogue_array(dialogue_array : Array[DialogueLine]):
+func play_dialogue_array(dialogue_array : Array[DialogueLine], audio_cue : AudioStream = null):
+	if audio_cue:
+		cue_player.stream = audio_cue
+		cue_player.play()
 	for dialogue in dialogue_array:
 		play_dialogue(dialogue)
 		await is_done

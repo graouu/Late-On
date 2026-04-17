@@ -9,9 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://dsr3u50b7fyq6" path="res://Assets/Textures/Interactables/characters/guiraud.png" id="6_qrmjc"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="6_vyq1i"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="7_eo82f"]
+[ext_resource type="Texture2D" uid="uid://bekbypawjdgxx" path="res://Assets/Textures/Interactables/Commode_HouseMarchand_Passe.png" id="9_08hii"]
 [ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="9_pxf6e"]
 [ext_resource type="Texture2D" uid="uid://bvn27ik88cr2f" path="res://Assets/Textures/Interactables/papers.png" id="10_lp6mb"]
 [ext_resource type="Texture2D" uid="uid://csb878j0s3egp" path="res://Assets/Textures/Interactables/characters/guiraud_half.png" id="10_pxf6e"]
+[ext_resource type="Texture2D" uid="uid://clw2ldydo8itq" path="res://Assets/Textures/Interactables/Comptoir_HouseMarchand_Passe.png" id="11_keq82"]
+[ext_resource type="Texture2D" uid="uid://bqnpnkumousxn" path="res://Assets/Textures/Interactables/Affichage_HouseMarchand_Passe.png" id="12_th84v"]
 
 [sub_resource type="Resource" id="Resource_v7505"]
 script = ExtResource("9_pxf6e")
@@ -46,6 +49,46 @@ shader_parameter/surf_angle = 1.57
 shader_parameter/surf_magnitude = 0.0
 shader_parameter/s11 = 2.221
 shader_parameter/sinpowder = 8.0
+
+[sub_resource type="Resource" id="Resource_2ey88"]
+script = ExtResource("9_pxf6e")
+text = "Ma commode à épices, ça sent fort !"
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_i7un0"]
+script = ExtResource("9_pxf6e")
+text = "Mon comptoir de vente."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_uw7m8"]
+script = ExtResource("9_pxf6e")
+text = "Du millepertuis que je fais sécher à l'air libre."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_8oxes"]
+script = ExtResource("9_pxf6e")
+text = "Mon affiche \"Épices\", je l'ai fait peindre par un de mes artistes favoris."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_20hwg"]
+script = ExtResource("9_pxf6e")
+text = "Il était de passage il y a de cela un an, c'était une belle journée ensoleillée de printemps."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_ytwuq"]
+script = ExtResource("9_pxf6e")
+text = "C'est étrange, quand je pense au printemps je pense aussi aux épices, aux fleurs."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_bf2m5"]
+script = ExtResource("9_pxf6e")
+text = "Les arômes de la nature qui se mélangent et ces expressions si singulières."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
+[sub_resource type="Resource" id="Resource_1loiy"]
+script = ExtResource("9_pxf6e")
+text = "En fait les épices, c'est ma passion."
+metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_lp6mb"]
 script = ExtResource("9_pxf6e")
@@ -221,7 +264,7 @@ place_left = "workshop_base"
 specific_sound_left = ExtResource("3_wl42s")
 button_right = NodePath("Buttons/Right")
 place_right = "city_center"
-interactable_list = [NodePath("Interactable"), NodePath("Interactable2")]
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2"), NodePath("Interactable3"), NodePath("Interactable4"), NodePath("Interactable5"), NodePath("Interactable6")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1917798171]
 material = SubResource("ShaderMaterial_08hii")
@@ -244,6 +287,54 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("4_lp6mb")
 expand_mode = 1
+
+[node name="Interactable3" type="TextureButton" parent="." unique_id=89607880]
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 484.0
+offset_top = 828.0
+offset_right = 673.0
+offset_bottom = 1006.0
+texture_normal = ExtResource("9_08hii")
+script = ExtResource("7_eo82f")
+dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_2ey88")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable4" type="TextureButton" parent="." unique_id=309171578]
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 752.0
+offset_top = 707.0
+offset_right = 1080.0
+offset_bottom = 885.0
+texture_normal = ExtResource("11_keq82")
+script = ExtResource("7_eo82f")
+dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_i7un0")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable5" type="TextureButton" parent="." unique_id=1181659494]
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 752.0
+offset_top = 707.0
+offset_right = 1080.0
+offset_bottom = 885.0
+texture_normal = ExtResource("11_keq82")
+script = ExtResource("7_eo82f")
+dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_uw7m8")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
+[node name="Interactable6" type="TextureButton" parent="." unique_id=583790476]
+material = ExtResource("6_vyq1i")
+layout_mode = 0
+offset_left = 49.0
+offset_top = 106.0
+offset_right = 391.0
+offset_bottom = 350.0
+texture_normal = ExtResource("12_th84v")
+script = ExtResource("7_eo82f")
+dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_8oxes"), SubResource("Resource_20hwg"), SubResource("Resource_ytwuq"), SubResource("Resource_bf2m5"), SubResource("Resource_1loiy")])
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [node name="Interactable" type="TextureButton" parent="." unique_id=1735986083]
 material = ExtResource("6_vyq1i")

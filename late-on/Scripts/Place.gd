@@ -71,8 +71,8 @@ func pressed_button_down():
 	else:
 		go_to.emit(place_down)
 
-func send_dialogue_request(dialogue_array : Array[DialogueLine]):
-	open_dialogue.emit(dialogue_array)
+func send_dialogue_request(dialogue_array : Array[DialogueLine], audio_cue : AudioStream = null):
+	open_dialogue.emit(dialogue_array, audio_cue)
 
-func send_puzzle_request(puzzle : String):
-	open_puzzle.emit(puzzle)
+func send_puzzle_request(puzzle : String, audio_cue : AudioStream = null):
+	open_puzzle.emit(puzzle, audio_cue)
