@@ -1,38 +1,42 @@
-[gd_scene format=3 uid="uid://cjqlkkd5sknxd"]
+[gd_scene format=3 uid="uid://cp1yqfwtdinj1"]
 
-[ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_yaovl"]
-[ext_resource type="PackedScene" uid="uid://b3cc4wrt08aad" path="res://Place/Futur/bed.tscn" id="2_gbstf"]
-[ext_resource type="AudioStream" uid="uid://h8islakkx71c" path="res://Assets/Sons/SFX/Footstep123.mp3" id="2_wlwuj"]
-[ext_resource type="AudioStream" uid="uid://66v4j7rfa5x8" path="res://Assets/Sons/Mysteris Desktop.mp3" id="3_6j8x8"]
-[ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
-[ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/SFX/typewriter.mp3" id="4_23hvo"]
-[ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="4_kregx"]
-[ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="5_u1u4p"]
-[ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="8_kregx"]
-[ext_resource type="Texture2D" uid="uid://tkp2xxpebrqp" path="res://Assets/Textures/Carte/cartefutur.png" id="10_hgbfj"]
-[ext_resource type="PackedScene" uid="uid://bfswaxvtkas6t" path="res://Scenes/PauseMenuFutur.tscn" id="11_eadg6"]
-[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="12_hgbfj"]
-[ext_resource type="Texture2D" uid="uid://uh15omt7jts4" path="res://Assets/Textures/Interactables/5068333.png" id="13_6j8x8"]
+[ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_idj7w"]
+[ext_resource type="PackedScene" uid="uid://cduf4kgl02j7y" path="res://Scenes/PauseMenu.tscn" id="2_6b3vs"]
+[ext_resource type="PackedScene" uid="uid://yp4c7m60iw67" path="res://Place/Passé/bedroom.tscn" id="2_m87et"]
+[ext_resource type="AudioStream" uid="uid://h8islakkx71c" path="res://Assets/Sons/SFX/Footstep123.mp3" id="2_xjvin"]
+[ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="2_y01wl"]
+[ext_resource type="AudioStream" uid="uid://nf843a3ybggb" path="res://Assets/Sons/Before the room.wav" id="3_e8d2l"]
+[ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_kln2b"]
+[ext_resource type="Texture2D" uid="uid://rhit8c3574kt" path="res://Assets/Textures/Carte/p_bedroom.png" id="3_s51ea"]
+[ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="4_6b3vs"]
+[ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/SFX/typewriter.mp3" id="4_rgh2o"]
+[ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="5_nruiq"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="11_pg53n"]
+[ext_resource type="Texture2D" uid="uid://cnefq6asr0ehq" path="res://Assets/Textures/Interactables/BoutonPausePasse.png" id="12_e8d2l"]
+[ext_resource type="Script" uid="uid://dl3gy6djnmw6b" path="res://Scenes/Futur/buttonPause.gd" id="13_iswsd"]
 
-[sub_resource type="FontVariation" id="FontVariation_pbw6q"]
-base_font = ExtResource("5_u1u4p")
-variation_embolden = 1.03
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ny66p"]
+thickness = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6b3vs"]
+content_margin_left = 20.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_pbw6q"]
-font = SubResource("FontVariation_pbw6q")
-font_size = 60
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_size = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idj7w"]
 content_margin_left = 40.0
 content_margin_top = 20.0
 content_margin_right = 40.0
 content_margin_bottom = 20.0
-bg_color = Color(0, 0, 0, 0.5176471)
+bg_color = Color(0, 0, 0, 0.7529412)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pbw6q"]
 random_pitch = 1.587401
 streams_count = 1
-stream_0/stream = ExtResource("4_23hvo")
+stream_0/stream = ExtResource("4_rgh2o")
 
 [sub_resource type="Animation" id="Animation_idj7w"]
 length = 0.001
@@ -124,7 +128,7 @@ _data = {
 &"transition": SubResource("Animation_kln2b")
 }
 
-[node name="Main2" type="Control" unique_id=1327342452 node_paths=PackedStringArray("scene_sound", "place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager")]
+[node name="Main" type="Control" unique_id=1327342452 node_paths=PackedStringArray("scene_sound", "place_control", "label_place", "puzzle_control", "black_anim", "dialogue_manager", "map_texture_holder")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -133,18 +137,20 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-mouse_filter = 2
-script = ExtResource("1_yaovl")
-scene_music = ExtResource("8_kregx")
-outside_song = ExtResource("8_kregx")
-inside_song = ExtResource("3_6j8x8")
+mouse_filter = 1
+script = ExtResource("1_idj7w")
+scene_music = ExtResource("5_nruiq")
+outside_song = ExtResource("5_nruiq")
+inside_song = ExtResource("3_e8d2l")
 scene_sound = NodePath("Sound Effect")
-movement_sound = ExtResource("2_wlwuj")
+movement_sound = ExtResource("2_xjvin")
 place_control = NodePath("VBoxContainer/PlaceContainer")
+is_past = true
 label_place = NodePath("VBoxContainer/Panel/Label")
 puzzle_control = NodePath("PuzzleContainer")
 black_anim = NodePath("ColorRect/AnimationPlayer")
 dialogue_manager = NodePath("Dialogue")
+map_texture_holder = NodePath("VBoxContainer/Panel/TextureRect")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1192546312]
 layout_mode = 1
@@ -153,49 +159,66 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1604058810]
+[node name="Panel" type="TextureRect" parent="VBoxContainer" unique_id=566181785]
 custom_minimum_size = Vector2(1080, 640)
 layout_mode = 2
-mouse_filter = 2
+texture = ExtResource("2_y01wl")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=1937576611]
-visible = false
-top_level = true
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel" unique_id=1046294942]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_s51ea")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=624180130]
 layout_mode = 0
-offset_top = 535.0
-offset_right = 1080.0
-offset_bottom = 590.0
-theme_override_font_sizes/font_size = 40
-text = "Placeholder"
+offset_left = 328.0
+offset_top = 509.0
+offset_right = 795.0
+offset_bottom = 584.0
+mouse_filter = 1
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_6b3vs")
+theme_override_font_sizes/font_size = 80
+text = "PLACEHOLDER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Main Menu" type="Button" parent="VBoxContainer/Panel" unique_id=1006003216]
-visible = false
+[node name="Main Menu" type="Button" parent="VBoxContainer/Panel" unique_id=1621430179]
 top_level = true
 layout_mode = 0
-offset_left = 352.0
-offset_top = 444.0
-offset_right = 739.0
-offset_bottom = 521.0
-mouse_filter = 2
+offset_left = 35.0
+offset_top = 19.0
+offset_right = 422.0
+offset_bottom = 96.0
+mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "Reload to Menu"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1889397697]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxLine_ny66p")
 
 [node name="PlaceContainer" type="Control" parent="VBoxContainer" unique_id=722058883]
 layout_mode = 2
 size_flags_vertical = 3
-mouse_filter = 2
+mouse_filter = 1
 
-[node name="bed" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_gbstf")]
+[node name="bedroom_intro" parent="VBoxContainer/PlaceContainer" unique_id=975123972 instance=ExtResource("2_m87et")]
 layout_mode = 1
 offset_bottom = 426.23993
-mouse_filter = 2
+mouse_filter = 1
 
-[node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "dialogue_texture", "sound_player", "dialogue_timer")]
+[node name="Dialogue" type="Control" parent="." unique_id=404936649 node_paths=PackedStringArray("dialogue_label", "name_label", "dialogue_texture", "sound_player", "dialogue_timer", "cue_player")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -203,13 +226,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("3_xbf76")
+mouse_filter = 1
+script = ExtResource("3_kln2b")
 dialogue_label = NodePath("ColorRect/ColorRect/DialogueText")
 name_label = NodePath("ColorRect/ColorRect/Name")
 dialogue_texture = NodePath("ColorRect/DialogueObject")
 sound_player = NodePath("AudioStreamPlayer")
 dialogue_timer = NodePath("Timer")
+cue_player = NodePath("../Sound Effect")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogue" unique_id=1453163356]
 custom_minimum_size = Vector2(200, 300)
@@ -218,7 +242,8 @@ offset_top = 640.0
 offset_right = 1080.0
 offset_bottom = 1920.0
 size_flags_vertical = 3
-color = Color(0, 0, 0, 0.42352942)
+mouse_filter = 1
+color = Color(0, 0, 0, 0.7254902)
 
 [node name="DialogueObject" type="TextureRect" parent="Dialogue/ColorRect" unique_id=1291847530]
 custom_minimum_size = Vector2(400, 400)
@@ -228,12 +253,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -200.0
+offset_top = -328.0
+offset_right = 200.0
+offset_bottom = 337.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch_mode = 4
 
 [node name="ColorRect" type="VBoxContainer" parent="Dialogue/ColorRect" unique_id=162503297]
 custom_minimum_size = Vector2(0, 400)
@@ -248,8 +274,10 @@ grow_vertical = 0
 
 [node name="Name" type="Label" parent="Dialogue/ColorRect/ColorRect" unique_id=1109448770]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_kregx")
-theme_override_font_sizes/font_size = 25
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_6b3vs")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6b3vs")
 text = "Lorem Ipsum"
 label_settings = SubResource("LabelSettings_pbw6q")
 vertical_alignment = 1
@@ -257,8 +285,9 @@ vertical_alignment = 1
 [node name="DialogueText" type="RichTextLabel" parent="Dialogue/ColorRect/ColorRect" unique_id=1892270292]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("4_kregx")
-theme_override_font_sizes/normal_font_size = 70
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("4_6b3vs")
+theme_override_font_sizes/normal_font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_idj7w")
 text = "Ceci est un test de dialogue."
 scroll_following = true
@@ -269,16 +298,6 @@ bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="Dialogue" unique_id=1801061678]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1494347851]
-layout_mode = 0
-offset_left = 3.0
-offset_top = -22.0
-offset_right = 1080.0
-offset_bottom = 640.0
-mouse_filter = 2
-texture = ExtResource("10_hgbfj")
-expand_mode = 1
-
 [node name="PuzzleContainer" type="Control" parent="." unique_id=1421887023]
 visible = false
 custom_minimum_size = Vector2(1080, 1920)
@@ -288,42 +307,45 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
 visible = false
 self_modulate = Color(1, 1, 1, 0)
+top_level = true
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+mouse_filter = 1
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1560630781]
 libraries/ = SubResource("AnimationLibrary_rgh2o")
 
-[node name="Sound Effect" type="AudioStreamPlayer" parent="." unique_id=54745000]
+[node name="PauseMenu" parent="." unique_id=638804592 instance=ExtResource("2_6b3vs")]
+layout_mode = 1
+mouse_filter = 1
+
+[node name="Sound Effect" type="AudioStreamPlayer" parent="." unique_id=1701632604]
 bus = &"SFX"
 
-[node name="PauseMenuFutur" parent="." unique_id=638804592 instance=ExtResource("11_eadg6")]
-layout_mode = 1
-
-[node name="Button" type="Button" parent="." unique_id=18533295]
-visible = false
-modulate = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+[node name="Button" type="Button" parent="." unique_id=963309591]
+self_modulate = Color(1.4369954, 1.4369954, 1.4369954, 1)
 z_index = 5
-material = ExtResource("12_hgbfj")
+material = ExtResource("11_pg53n")
 layout_mode = 0
-offset_left = 43.0
-offset_top = 43.0
-offset_right = 563.0
-offset_bottom = 563.0
-scale = Vector2(0.25, 0.25)
-icon = ExtResource("13_6j8x8")
+offset_left = 887.02515
+offset_top = 41.0
+offset_right = 1407.0251
+offset_bottom = 561.0
+scale = Vector2(0.355, 0.355)
+icon = ExtResource("12_e8d2l")
 flat = true
+script = ExtResource("13_iswsd")
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
-[connection signal="pressed" from="Button" to="PauseMenuFutur" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="PauseMenu" method="_on_button_pressed"]

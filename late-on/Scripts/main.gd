@@ -116,7 +116,10 @@ func move(place : String, audio : AudioStreamMP3 = movement_sound):
 	#On joue le 'fadeaway' inverse
 	black_anim.play('detransition')
 
-func load_puzzle(puzzle : String):
+func load_puzzle(puzzle : String, sound_cue : AudioStream):
+	if sound_cue:
+		scene_sound.stream = sound_cue
+		scene_sound.play()
 	black_anim.play('transition')
 	await black_anim.animation_finished
 	puzzle_control.show()

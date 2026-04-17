@@ -59,6 +59,8 @@ z_index = 1
 position = Vector2(245.00003, 1161)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+is_inside_empty = true
+name_inside = "empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap1" unique_id=363056687]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -82,6 +84,7 @@ z_index = 1
 position = Vector2(146, 709)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+name_inside = "TypeMap2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap5" unique_id=1486322619]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -105,6 +108,7 @@ z_index = 1
 position = Vector2(393, 705)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+name_inside = "TypeMap1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap6" unique_id=1875058801]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -128,6 +132,7 @@ z_index = 1
 position = Vector2(651, 702)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+name_inside = "TypeMap3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap7" unique_id=1132314614]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -151,6 +156,7 @@ z_index = 1
 position = Vector2(894, 698)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+name_inside = "TypeMap4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap8" unique_id=1229524876]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -174,6 +180,8 @@ z_index = 1
 position = Vector2(462, 1161)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+is_inside_empty = true
+name_inside = "empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap2" unique_id=1726349601]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -197,6 +205,8 @@ z_index = 1
 position = Vector2(705, 1164)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+is_inside_empty = true
+name_inside = "empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap3" unique_id=791209221]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -220,6 +230,8 @@ z_index = 1
 position = Vector2(952, 1158)
 scale = Vector2(4, 4)
 script = ExtResource("6_pn1p6")
+is_inside_empty = true
+name_inside = "empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap4" unique_id=919069790]
 shape = SubResource("RectangleShape2D_i5y8v")
@@ -243,8 +255,9 @@ z_index = 1
 position = Vector2(392, 710.00006)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751]
+[node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751 node_paths=PackedStringArray("current_body")]
 script = ExtResource("7_51p3o")
+current_body = NodePath("../../SpaceTypeMap6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap1/TypeMap1" unique_id=1293272795]
 shape = SubResource("RectangleShape2D_boa88")
@@ -257,8 +270,9 @@ z_index = 1
 position = Vector2(143.00006, 713.00006)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781]
+[node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781 node_paths=PackedStringArray("current_body")]
 script = ExtResource("7_51p3o")
+current_body = NodePath("../../SpaceTypeMap5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap2/TypeMap2" unique_id=1631313715]
 shape = SubResource("RectangleShape2D_boa88")
@@ -272,8 +286,9 @@ z_index = 1
 position = Vector2(656, 699.00006)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455]
+[node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455 node_paths=PackedStringArray("current_body")]
 script = ExtResource("7_51p3o")
+current_body = NodePath("../../SpaceTypeMap7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap3/TypeMap3" unique_id=1309479811]
 shape = SubResource("RectangleShape2D_boa88")
@@ -287,8 +302,9 @@ z_index = 1
 position = Vector2(896, 695.00006)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723]
+[node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723 node_paths=PackedStringArray("current_body")]
 script = ExtResource("7_51p3o")
+current_body = NodePath("../../SpaceTypeMap8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap4/TypeMap4" unique_id=744732967]
 shape = SubResource("RectangleShape2D_boa88")

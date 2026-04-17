@@ -1,8 +1,8 @@
 extends StaticBody2D
 
-var is_inside_empty = true
+@export var is_inside_empty : bool
 var soluce_ok = false
-var name_inside = "empty"
+@export var name_inside : String
 
 func _ready():
 	modulate = Color(Color.SKY_BLUE, 0.7)
