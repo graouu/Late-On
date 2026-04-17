@@ -5,10 +5,10 @@ extends Place
 
 func _ready() -> void:
 	if global.house_front_character_dialogue:
-		interactable_list[0].dialogue_array = dialogue_character
 		interactable_list[1].interaction_type = 1
 	if global.enigme2_fini:
 		$Buttons/Right.show()
+		interactable_list[0].dialogue_array = dialogue_character
 		interactable_list[1].interaction_type = 0
 		$Interactable2.hide()
 		$TextureRect2.show()

@@ -327,10 +327,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 36
-text = "Je t'ai rapporté les manuscrits, merci pour le pres.
-Comme tu aimes les énigmes essaye donc de les ranger sans avoir à les ouvrir, juste en suivant mes indices:
-
-- La carte de la ville n'est pas à côté de la facture du tisserant
+text = "- La carte de la ville n'est pas à côté de la facture du tisserant
 - Le plan du moulin est à côté de la missive
 - La facture du tisserant est directement à gauche du plan du moulin"
 scroll_active = false

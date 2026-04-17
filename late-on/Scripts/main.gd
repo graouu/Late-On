@@ -2,6 +2,8 @@ extends Control
 
 @export_category("Sound")
 @export var scene_music: AudioStream
+@export var outside_song : AudioStream
+@export var inside_song : AudioStream
 @export var scene_sound : AudioStreamPlayer
 @export var movement_sound : AudioStream
 
@@ -31,6 +33,10 @@ var loaded_puzzle
 func _ready() -> void:
 	
 	#Gestion de la musique
+	if is_past :
+		scene_music = inside_song
+	else:
+		scene_music = outside_song
 	AudioManager.play_music(scene_music)
 	
 	#On utilise la fonction qui charge tous les endroits
@@ -64,6 +70,7 @@ func load_places():
 #Retire l'endroit actuel et le remplace par l'endroit 'place'
 func move(place : String, audio : AudioStreamMP3 = movement_sound):
 	
+	
 	scene_sound.stream = audio
 	scene_sound.play()
 	
@@ -71,6 +78,16 @@ func move(place : String, audio : AudioStreamMP3 = movement_sound):
 	black_anim.play('transition')
 	#On attend qu'elle finisse
 	await black_anim.animation_finished
+	
+	if place in ["bedroom", "church_inside", "city_hotel_inside", "loge_inside", "workshop_base", "desktop", "login", "correspondant"]:
+		if scene_music != inside_song:
+			scene_music = inside_song
+			AudioManager.play_music(scene_music)
+	else:
+		if scene_music != outside_song:
+			scene_music = outside_song
+			AudioManager.play_music(scene_music)
+		
 	
 	current_place = place_dic[place].instantiate()
 	
@@ -124,6 +141,7 @@ func quit_puzzle():
 	await black_anim.animation_finished
 	puzzle_control.hide()
 	puzzle_control.get_child(0).queue_free()
+	AudioManager.play_music(scene_music)
 	black_anim.play('detransition')
 	
 

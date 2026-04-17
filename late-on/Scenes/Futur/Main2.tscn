@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://t1e017gfkw6r" path="res://Scripts/main.gd" id="1_yaovl"]
 [ext_resource type="PackedScene" uid="uid://b3cc4wrt08aad" path="res://Place/Futur/bed.tscn" id="2_gbstf"]
-[ext_resource type="Texture2D" uid="uid://g5exml6x7lk5" path="res://Assets/Textures/Items_Placeholder/screen_render.png" id="2_hvuyj"]
 [ext_resource type="AudioStream" uid="uid://h8islakkx71c" path="res://Assets/Sons/SFX/Footstep123.mp3" id="2_wlwuj"]
+[ext_resource type="AudioStream" uid="uid://66v4j7rfa5x8" path="res://Assets/Sons/Mysteris Desktop.mp3" id="3_6j8x8"]
 [ext_resource type="Script" uid="uid://ck34aswnwun53" path="res://Scripts/dialogue.gd" id="3_xbf76"]
 [ext_resource type="AudioStream" uid="uid://dmhkt7y0mm0u3" path="res://Assets/Sons/SFX/typewriter.mp3" id="4_23hvo"]
 [ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="4_kregx"]
 [ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="5_u1u4p"]
-[ext_resource type="Texture2D" uid="uid://c3udr0wnpitmm" path="res://Assets/Textures/Items_Placeholder/Futur/bg.jpg" id="6_gbstf"]
 [ext_resource type="AudioStream" uid="uid://bhlimpn8q8b5g" path="res://Assets/Sons/My Future Room OST.mp3" id="8_kregx"]
+[ext_resource type="Texture2D" uid="uid://tkp2xxpebrqp" path="res://Assets/Textures/Carte/cartefutur.png" id="10_hgbfj"]
 [ext_resource type="PackedScene" uid="uid://bfswaxvtkas6t" path="res://Scenes/PauseMenuFutur.tscn" id="11_eadg6"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="12_hgbfj"]
 [ext_resource type="Texture2D" uid="uid://uh15omt7jts4" path="res://Assets/Textures/Interactables/5068333.png" id="13_6j8x8"]
@@ -136,6 +136,8 @@ size_flags_vertical = 3
 mouse_filter = 2
 script = ExtResource("1_yaovl")
 scene_music = ExtResource("8_kregx")
+outside_song = ExtResource("8_kregx")
+inside_song = ExtResource("3_6j8x8")
 scene_sound = NodePath("Sound Effect")
 movement_sound = ExtResource("2_wlwuj")
 place_control = NodePath("VBoxContainer/PlaceContainer")
@@ -160,6 +162,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Panel" unique_id=1937576611]
+visible = false
 top_level = true
 layout_mode = 0
 offset_top = 535.0
@@ -272,17 +275,7 @@ offset_top = -22.0
 offset_right = 1080.0
 offset_bottom = 640.0
 mouse_filter = 2
-texture = ExtResource("2_hvuyj")
-expand_mode = 1
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=143931187]
-layout_mode = 0
-offset_left = 116.0
-offset_top = 51.0
-offset_right = 949.0
-offset_bottom = 504.0
-mouse_filter = 2
-texture = ExtResource("6_gbstf")
+texture = ExtResource("10_hgbfj")
 expand_mode = 1
 
 [node name="PuzzleContainer" type="Control" parent="." unique_id=1421887023]

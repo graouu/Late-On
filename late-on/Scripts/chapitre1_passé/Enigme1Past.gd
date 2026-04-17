@@ -8,13 +8,13 @@ extends Node2D
 @export var poc_SFX : AudioStreamPlayer
 @export var error_SFX : AudioStreamPlayer
 @export var success_SFX : AudioStreamPlayer
-@onready var Up = $Button_Up
+#@onready var Up = $Button_Up
 @onready var RayUp = $Maze/Ball/RayCastUp
-@onready var Right = $Button_Right
+#@onready var Right = $Button_Right
 @onready var RayRight = $Maze/Ball/RayCastRight
-@onready var Left = $Button_Left
+#@onready var Left = $Button_Left
 @onready var RayLeft = $Maze/Ball/RayCastLeft
-@onready var Down = $Button_Down
+#@onready var Down = $Button_Down
 @onready var RayDown = $Maze/Ball/RayCastDown
 @onready var ButtonFabliau = $Button_Fabliau
 @onready var ButtonReturn = $Button_Return
@@ -126,7 +126,6 @@ func _process(delta: float) -> void:
 			AudioManager.play_music(silence_music)
 			success_SFX.play()
 			await get_tree().create_timer(3).timeout
-			AudioManager.play_music(house_music)
 			end_puzzle.emit(dialogue_to_play)
 
 		else:
@@ -152,7 +151,6 @@ func _process(delta: float) -> void:
 #Gestion des boutons
 func _on_button_return_pressed() -> void:
 	arrows_SFX.play()
-	AudioManager.play_music(house_music)
 	quit_puzzle.emit()
 
 func _on_button_fabliau_pressed() -> void:
