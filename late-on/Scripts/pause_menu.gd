@@ -37,5 +37,6 @@ func _on_button_pressed() -> void:
 	toggle_pause()
 
 func _on_menu_pressed() -> void:
+	toggle_pause()
 	get_tree().change_scene_to_file("res://Scenes/ULTRAMAIN.tscn")
 	queue_free()
