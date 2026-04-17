@@ -169,10 +169,10 @@ func _process(delta: float) -> void:
 			WallOff2.process_mode = Node.PROCESS_MODE_DISABLED
 			KeyOk = true
 			mecanism_SFX.play()
-			ChronoVoice_timer.wait_time = 0.02 * "Wahoo! dernier paragraphe: La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé.>>".length()
+			ChronoVoice_timer.wait_time = 0.02 * "Wahoo! dernier paragraphe: La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé.>> Extrait du livre de Zéro à Un de Peter Thiel".length()
 			chronoPote.texture = chrono_happy
 			PopUpText.text = ""
-			tweenChronoVoice2.tween_property(PopUpText,"text","Wahoo! dernier paragraphe: " + '\n' + "<<	La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé.>>", ChronoVoice_timer.wait_time)
+			tweenChronoVoice2.tween_property(PopUpText,"text","Wahoo! dernier paragraphe: " + '\n' + "<<	La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé.>>" + '\n' +"Extrait du livre de Zéro à Un de Peter Thiel", ChronoVoice_timer.wait_time)
 			ChronoVoice_timer.start()
 			ChronoVoice_SFX.play()
 			await ChronoVoice_timer.timeout

@@ -1,5 +1,14 @@
 extends Node2D
 
+#Sound
+@export var scene_music: AudioStream
+@export var out_music: AudioStream
+@export var silence_music: AudioStream
+@export var poc_SFX : AudioStreamPlayer
+@export var error_SFX : AudioStreamPlayer
+@export var success_SFX : AudioStreamPlayer
+
+#Positions
 @onready var SpaceTypeMap1 = $SpaceTypeMap1
 @onready var SpaceTypeMap2 = $SpaceTypeMap2
 @onready var SpaceTypeMap3 = $SpaceTypeMap3
@@ -15,8 +24,8 @@ signal quit_puzzle
 @export var dialogue_to_play : Array[DialogueLine]
 
 func _ready() -> void:
-	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	#Gestion de la musique
+	AudioManager.play_music(scene_music)
 
 func _process(_delta: float) -> void:
 	#Si le joueur joue, la pop up disparait

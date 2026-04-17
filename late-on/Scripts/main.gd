@@ -128,6 +128,6 @@ func quit_puzzle():
 	
 
 
-func _on_go_to_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/ULTRAMAIN.tscn")
-	queue_free()
+#func _on_go_to_menu_pressed() -> void:
+	#get_tree().change_scene_to_file("res://Scenes/ULTRAMAIN.tscn")
+	#queue_free()

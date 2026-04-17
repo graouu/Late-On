@@ -49,7 +49,7 @@ func _ready() -> void:
 	AudioManager.play_music(scene_music)
 	#PopUpText.text = "Cette boite s'ouvre en faisant en sorte que la bille du labyrinthe active les bons mots. En cas d'oubli, j'ai toujours le fabliaux me permettant de me souvenir des mots et de leur ordre."
 	if global.enigme1_Wall1 == false:
-		PopUpText.text = "Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent."
+		PopUpText.text = "La combinaison a suivre pour débloquer le mécanisme est cachée dans mon fabliau préféré:" + '\n' + "Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent."
 	else :
 		PopUpText.text = "Repartons du premier paragraphe du fabliau. Gérard attend la joie mais j'aimerais bien qu'il l'atteigne"
 
