@@ -4,7 +4,7 @@ extends Node2D
 @export var scene_music: AudioStream
 @export var out_music: AudioStream
 @export var silence_music: AudioStream
-@export var poc_SFX : AudioStreamPlayer
+@export var arrows_SFX : AudioStreamPlayer
 @export var error_SFX : AudioStreamPlayer
 @export var success_SFX : AudioStreamPlayer
 
@@ -38,26 +38,33 @@ func _process(_delta: float) -> void:
 		ButtonValidate.visible = false
 
 func _on_button_return_pressed() -> void:
+	arrows_SFX.play()
+	AudioManager.play_music(out_music)
 	quit_puzzle.emit()
 
-func _on_button_return_mouse_entered() -> void:
-	ButtonReturn.scale = Vector2(1.05,1.05)
-
-func _on_button_return_mouse_exited() -> void:
-	ButtonReturn.scale = Vector2(1,1)
-
 func _on_button_validate_pressed() -> void:
+	arrows_SFX.play()
 	PopUpText.visible = true
 	if SpaceTypeMap1.name_inside == "TypeMap4" and SpaceTypeMap2.name_inside == "TypeMap3" and SpaceTypeMap3.name_inside == "TypeMap2" and SpaceTypeMap4.name_inside == "TypeMap1":
-		PopUpText.visible = true
+		AudioManager.play_music(silence_music)
+		success_SFX.play()
 		PopUpText.text = "J'ai trouvé :)"
 		global.enigme2_fini = true
+		await get_tree().create_timer(1.5).timeout
+		AudioManager.play_music(out_music)
 		end_puzzle.emit(dialogue_to_play)
 	else:
+		error_SFX.play()
 		PopUpText.text = "J'ai le sentiment que ce n'est pas la bonne combinaison"
 
-func _on_button_validate_mouse_entered() -> void:
-	ButtonValidate.scale = Vector2(1.05,1.05)
-
-func _on_button_validate_mouse_exited() -> void:
-	ButtonValidate.scale = Vector2(1,1)
+#func _on_button_validate_mouse_entered() -> void:
+	#ButtonValidate.scale = Vector2(1.05,1.05)
+#
+#func _on_button_validate_mouse_exited() -> void:
+	#ButtonValidate.scale = Vector2(1,1)
+	#
+#func _on_button_return_mouse_entered() -> void:
+	#ButtonReturn.scale = Vector2(1.05,1.05)
+#
+#func _on_button_return_mouse_exited() -> void:
+	#ButtonReturn.scale = Vector2(1,1)

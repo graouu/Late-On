@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dulu7x4o0b3pu" path="res://Scripts/chapitre1_passé/Enigme2Past.gd" id="1_wbkpr"]
 [ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_qqvvg"]
+[ext_resource type="AudioStream" uid="uid://dmbs58lpfy8op" path="res://Assets/Sons/Enigma-e1-past.wav" id="2_woxd2"]
 [ext_resource type="Texture2D" uid="uid://csb878j0s3egp" path="res://Assets/Textures/Interactables/characters/guiraud_half.png" id="3_52f7w"]
+[ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="3_uq0rs"]
 [ext_resource type="Texture2D" uid="uid://csjheiwk5mf72" path="res://Assets/Textures/eni2/Pochettefioles.png" id="4_l8lrs"]
 [ext_resource type="Texture2D" uid="uid://h8c8ouch8kip" path="res://Assets/Textures/eni2/Pochettefiolesdevant.png" id="5_lc8gs"]
 [ext_resource type="Script" uid="uid://dbfi5qnceg7xq" path="res://Scripts/Script_Duo3/SpaceDrop_Job.gd" id="6_pn1p6"]
@@ -18,6 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="17_8skwg"]
 [ext_resource type="Texture2D" uid="uid://cfkigvg1iyqtb" path="res://Assets/BordureEtFond/BordureVerte.PNG" id="17_tf8i1"]
 [ext_resource type="Texture2D" uid="uid://dd05jgjk74ccu" path="res://Assets/BordureEtFond/CarreVert.PNG" id="18_5xg35"]
+[ext_resource type="AudioStream" uid="uid://b2w5s4fcwulxt" path="res://Assets/Sons/SFX/Boutonpierre.mp3" id="19_a1r3r"]
+[ext_resource type="AudioStream" uid="uid://dgbjul63r2tgt" path="res://Assets/Sons/SFX/Poc.mp3" id="20_8fe6f"]
+[ext_resource type="AudioStream" uid="uid://cj8sbno50ntmc" path="res://Assets/Sons/SFX/Crackmetalique.mp3" id="21_woxd2"]
+[ext_resource type="AudioStream" uid="uid://d33v1hpbwvlxq" path="res://Assets/Sons/SFX/SonVictoireEnigmePasse.mp3" id="22_uq0rs"]
 
 [sub_resource type="Resource" id="Resource_52f7w"]
 script = ExtResource("2_qqvvg")
@@ -50,8 +56,13 @@ size = Vector2(38.25, 39.499996)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
 size = Vector2(182.5, 198.75)
 
-[node name="Control" type="Node2D" unique_id=28566512]
+[node name="Control" type="Node2D" unique_id=28566512 node_paths=PackedStringArray("arrows_SFX", "error_SFX", "success_SFX")]
 script = ExtResource("1_wbkpr")
+scene_music = ExtResource("2_woxd2")
+out_music = ExtResource("3_uq0rs")
+arrows_SFX = NodePath("SFX/arrows")
+error_SFX = NodePath("SFX/error")
+success_SFX = NodePath("SFX/success")
 dialogue_to_play = Array[ExtResource("2_qqvvg")]([SubResource("Resource_52f7w"), SubResource("Resource_qqvvg"), SubResource("Resource_l8lrs"), SubResource("Resource_lc8gs")])
 
 [node name="ColorRect5" type="ColorRect" parent="." unique_id=655846973]
@@ -306,9 +317,10 @@ material = ExtResource("12_lc8gs")
 position = Vector2(401.99994, 770)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751 node_paths=PackedStringArray("current_body")]
+[node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751 node_paths=PackedStringArray("current_body", "poc_SFX")]
 script = ExtResource("7_51p3o")
 current_body = NodePath("../../SpaceTypeMap6")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="Sprite2D" type="Sprite2D" parent="TypeMap1/TypeMap1" unique_id=1736216379]
 scale = Vector2(1.2, 1.2)
@@ -325,9 +337,10 @@ material = ExtResource("12_lc8gs")
 position = Vector2(153, 773)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781 node_paths=PackedStringArray("current_body")]
+[node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781 node_paths=PackedStringArray("current_body", "poc_SFX")]
 script = ExtResource("7_51p3o")
 current_body = NodePath("../../SpaceTypeMap5")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="PlaceHolderMoney" type="Sprite2D" parent="TypeMap2/TypeMap2" unique_id=2045570607]
 scale = Vector2(1.2, 1.2)
@@ -344,9 +357,10 @@ material = ExtResource("12_lc8gs")
 position = Vector2(662, 767)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455 node_paths=PackedStringArray("current_body")]
+[node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455 node_paths=PackedStringArray("current_body", "poc_SFX")]
 script = ExtResource("7_51p3o")
 current_body = NodePath("../../SpaceTypeMap7")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="PlaceHolderNobility" type="Sprite2D" parent="TypeMap3/TypeMap3" unique_id=2076171473]
 scale = Vector2(1.2, 1.2)
@@ -362,9 +376,10 @@ material = ExtResource("12_lc8gs")
 position = Vector2(905.99994, 761)
 scale = Vector2(0.8, 0.8)
 
-[node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723 node_paths=PackedStringArray("current_body")]
+[node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723 node_paths=PackedStringArray("current_body", "poc_SFX")]
 script = ExtResource("7_51p3o")
 current_body = NodePath("../../SpaceTypeMap8")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="PlaceHolderPriest" type="Sprite2D" parent="TypeMap4/TypeMap4" unique_id=1341252645]
 scale = Vector2(1.2, 1.2)
@@ -384,6 +399,7 @@ scale = Vector2(0.8, 0.8)
 icon = ExtResource("13_4es18")
 
 [node name="Button_Validate" type="Button" parent="." unique_id=568960645]
+visible = false
 material = ExtResource("12_lc8gs")
 offset_left = 391.0
 offset_top = 1376.0
@@ -685,10 +701,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 455.0
-offset_top = 1595.0
-offset_right = 1048.0
-offset_bottom = 1885.0
+offset_left = 461.0
+offset_top = 1548.0
+offset_right = 1054.0
+offset_bottom = 1838.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
@@ -697,6 +713,24 @@ theme_override_font_sizes/normal_font_size = 85
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SFX" type="Node2D" parent="." unique_id=681753894]
+
+[node name="arrows" type="AudioStreamPlayer" parent="SFX" unique_id=24022119]
+stream = ExtResource("19_a1r3r")
+bus = &"SFX"
+
+[node name="poc" type="AudioStreamPlayer" parent="SFX" unique_id=1820280168]
+stream = ExtResource("20_8fe6f")
+bus = &"SFX"
+
+[node name="error" type="AudioStreamPlayer" parent="SFX" unique_id=479871556]
+stream = ExtResource("21_woxd2")
+bus = &"SFX"
+
+[node name="success" type="AudioStreamPlayer" parent="SFX" unique_id=799596263]
+stream = ExtResource("22_uq0rs")
+bus = &"SFX"
 
 [connection signal="body_entered" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TypeMap1/TypeMap1" to="TypeMap1/TypeMap1" method="_on_area_2d_body_exited"]

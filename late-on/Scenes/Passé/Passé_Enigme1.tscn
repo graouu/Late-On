@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do10okj2o7pvo"]
 
 [ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
-[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
+[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
 [ext_resource type="AudioStream" uid="uid://dmbs58lpfy8op" path="res://Assets/Sons/Enigma-e1-past.wav" id="2_vykle"]
 [ext_resource type="AudioStream" uid="uid://nf843a3ybggb" path="res://Assets/Sons/Before the room.wav" id="3_13ph5"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
@@ -1326,18 +1326,23 @@ texture = ExtResource("8_rfaug")
 
 [node name="arrows" type="AudioStreamPlayer" parent="SFX" unique_id=1588458489]
 stream = ExtResource("4_13ph5")
+bus = &"SFX"
 
 [node name="mecanism" type="AudioStreamPlayer" parent="SFX" unique_id=66838639]
 stream = ExtResource("6_j8ixr")
+bus = &"SFX"
 
 [node name="poc" type="AudioStreamPlayer" parent="SFX" unique_id=15735553]
 stream = ExtResource("5_mwmwh")
+bus = &"SFX"
 
 [node name="error" type="AudioStreamPlayer" parent="SFX" unique_id=335012287]
 stream = ExtResource("7_a20gd")
+bus = &"SFX"
 
 [node name="success" type="AudioStreamPlayer" parent="SFX" unique_id=2147250783]
 stream = ExtResource("8_3ekad")
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]

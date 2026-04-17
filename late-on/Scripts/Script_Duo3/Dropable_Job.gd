@@ -4,6 +4,7 @@ var draggable = false
 var is_inside_dropable = false
 var body_ref
 @export var current_body : StaticBody2D
+@export var poc_SFX : AudioStreamPlayer
 var initialPos: Vector2
 var offset: Vector2
 
@@ -12,6 +13,7 @@ func _process(_delta: float) -> void:
 	if draggable:
 		# Makes the object follow the mouse cursor
 		if Input.is_action_just_pressed("click"):
+			poc_SFX.play()
 			print("dragging")
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
@@ -25,6 +27,7 @@ func _process(_delta: float) -> void:
 			#Snap inside area when released inside droppable area
 			if is_inside_dropable:
 				tween.tween_property(self,"global_position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
+				poc_SFX.play()
 				body_ref.is_inside_empty = false
 				body_ref.name_inside = self.name
 				global.type = "empty"
@@ -32,6 +35,7 @@ func _process(_delta: float) -> void:
 			#Return to original pos when released outside droppable area
 			else:
 				tween.tween_property(self,"global_position",initialPos, 0.2).set_ease(Tween.EASE_OUT)
+				poc_SFX.play()
 
 #Change le scale de l'icon et le rend drag
 func _on_area_2d_mouse_entered():
