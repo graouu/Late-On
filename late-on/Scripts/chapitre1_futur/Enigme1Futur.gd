@@ -47,6 +47,8 @@ var chrono_success = preload("res://Assets/Textures/ChronoPote/heart.png")
 @onready var WallOff3 = $Maze/WallOff_Key3
 @onready var WallOff4 = $Maze/WallOff_Key4
 
+@onready var fabliau = $"FabliauPassé"
+
 signal end_puzzle(dialogue : String)
 signal quit_puzzle
 
@@ -60,6 +62,9 @@ var Collision: Vector2
 var initialPos: Vector2
 
 func _ready() -> void:
+	
+	fabliau.hide()
+	
 	tweenChronoVoice1 = get_tree().create_tween()
 	initialPos = Ball.global_position
 
@@ -251,7 +256,8 @@ func _on_button_return_pressed() -> void:
 	quit_puzzle.emit()
 
 func _on_button_fabliau_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Futur/Page_Futur.tscn")
+	fabliau.visible = !fabliau.visible
+	PopUpText.visible = !PopUpText.visible
 
 # mouvement de la balle
 func _on_button_up_pressed() -> void:

@@ -15,6 +15,7 @@
 [ext_resource type="Shader" uid="uid://c8c75432n7uf4" path="res://Assets/Outline.gdshader" id="12_e62uj"]
 [ext_resource type="Texture2D" uid="uid://80yxrantcqxe" path="res://Assets/Textures/Interactables/Paper_ChambreMarchand_Passe.png" id="12_lgato"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="14_tflmn"]
+[ext_resource type="AudioStream" uid="uid://biv7j01vtqk5o" path="res://Assets/Sons/SFX/Papier.mp3" id="15_rhhfa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2vfkn"]
 shader = ExtResource("2_uxevq")
@@ -87,8 +88,8 @@ gradient = SubResource("Gradient_fe1yi")
 shader = ExtResource("12_e62uj")
 shader_parameter/color_gradient = SubResource("GradientTexture1D_kplcs")
 shader_parameter/size_effect = 2.0000001043084
-shader_parameter/speed = 0.5
-shader_parameter/highlight_strength = 0.20000006258504044
+shader_parameter/speed = 0.677
+shader_parameter/highlight_strength = 0.3000000640751601
 shader_parameter/color_mode_toggle = true
 shader_parameter/is_horizontal = false
 shader_parameter/pause_duration = 0.1
@@ -220,7 +221,7 @@ place_left = "bedroom"
 button_right = NodePath("Buttons/Right")
 place_right = "house_front"
 specific_sound_right = ExtResource("3_p1wvo")
-interactable_list = [NodePath("Coffre"), NodePath("Chaise"), NodePath("Table"), NodePath("Fenetre")]
+interactable_list = [NodePath("Coffre"), NodePath("Chaise"), NodePath("Table"), NodePath("Fenetre"), NodePath("Papier")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=122417949]
 material = SubResource("ShaderMaterial_2vfkn")
@@ -299,7 +300,6 @@ dialogue_array = Array[ExtResource("6_w5wpv")]([SubResource("Resource_gpgwj"), S
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [node name="Papier" type="TextureButton" parent="." unique_id=2875562]
-visible = false
 material = SubResource("ShaderMaterial_tflmn")
 layout_mode = 0
 offset_left = 545.0
@@ -308,6 +308,9 @@ offset_right = 766.0
 offset_bottom = 949.0
 texture_normal = ExtResource("12_lgato")
 script = ExtResource("4_mwksj")
+interaction_type = 1
+puzzle = "res://Scenes/placeholder_puzzles/Fabliau.tscn"
+sound_cue = ExtResource("15_rhhfa")
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
 [node name="Buttons" type="Control" parent="." unique_id=453306201]

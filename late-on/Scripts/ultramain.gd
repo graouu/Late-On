@@ -15,6 +15,11 @@ func _ready() -> void:
 	for file_name in DirAccess.get_files_at("res://Scenes/Passé/"):
 		if file_name.contains("Enigme"):
 			optionbutton3.add_item("res://Scenes/Passé/"+file_name.replace(".remap",""))
+	if OS.has_feature("editor"):
+		print("helo")
+		optionbutton.show()
+		optionbutton2.show()
+		optionbutton3.show()
 
 func _on_past_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Passé/Main.tscn")

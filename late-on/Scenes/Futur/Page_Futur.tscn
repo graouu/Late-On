@@ -1,9 +1,8 @@
-[gd_scene format=3 uid="uid://ctj7kafbmqf1j"]
+[gd_scene format=3 uid="uid://dx2jjiuq248jo"]
 
 [ext_resource type="Script" uid="uid://cyot8ku8hh1se" path="res://Scripts/chapitre1_passé/fabliau_passé.gd" id="1_4orp8"]
 [ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="2_o8j6l"]
 [ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="3_7bq0r"]
-[ext_resource type="Script" uid="uid://dim4gbwajwjhe" path="res://Scripts/chapitre1_futur/button_return_futur.gd" id="4_i1mch"]
 
 [node name="FabliauPassé" type="Node2D" unique_id=449457060]
 script = ExtResource("1_4orp8")
@@ -105,8 +104,6 @@ offset_top = 1723.0
 offset_right = 1010.0
 offset_bottom = 1841.0
 icon = ExtResource("3_7bq0r")
-script = ExtResource("4_i1mch")
 
 [connection signal="mouse_entered" from="Button_Return" to="Button_Return" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="Button_Return" method="_on_mouse_exited"]
-[connection signal="pressed" from="Button_Return" to="Button_Return" method="_on_pressed"]

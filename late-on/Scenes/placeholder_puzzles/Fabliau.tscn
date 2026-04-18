@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dljsjnnqd3cpn"]
+
+[ext_resource type="Script" uid="uid://bpul6c7q1xqu8" path="res://Scripts/puzzle_placeholder.gd" id="1_kjs3u"]
+[ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="2_t668j"]
+[ext_resource type="Texture2D" uid="uid://olisvfjf16jj" path="res://Assets/Textures/Interactables/Boutonretour_Labyrinthelettre_Passe.png" id="3_wj0uc"]
+
+[node name="Fabliau" type="Node2D" unique_id=2014099653]
+script = ExtResource("1_kjs3u")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1334902894]
+custom_minimum_size = Vector2(1080, 1920)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.57254905)
+
+[node name="Label" type="Label" parent="." unique_id=1310129015]
+offset_left = 60.0
+offset_top = 73.0
+offset_right = 1030.0
+offset_bottom = 1772.0
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = -10
+theme_override_fonts/font = ExtResource("2_t668j")
+theme_override_font_sizes/font_size = 75
+text = "Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent.
+
+Une si belle union fut troublée tout-à-coup: les parents de la pucelle l'accordèrent en mariage à un vavasseur.
+
+Gérard vient comme avant lui parler de sa tendresse, mais elle répondit que, ne pouvant désormais le voir sans crime, elle renonçait à lui pour toujours et le pria même de ne jamais se représenter devant elle.
+
+De désespoir, Gérard se croise pour la Terre Sainte. Cependant, il veut, avant de partir, voir encore une fois sa chère Isabeau. Il se rend chez elle et la trouve dans son verger.
+
+Ses adieux sont si touchants qu'ils réveillent tout l'amour que la dame avait pour lui; elle fond en larmes, elle l'embrasse pour la dernière fois et tombe, comme Gérard, sans connaissance."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="." unique_id=2140684890]
+offset_left = 791.0
+offset_top = 1672.0
+offset_right = 1007.0
+offset_bottom = 1891.0
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("3_wj0uc")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

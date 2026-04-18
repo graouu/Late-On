@@ -24,6 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://buyicly50uki1" path="res://Assets/Textures/Interactables/CroixdirectionnelleLLGauche.png" id="14_d1hrw"]
 [ext_resource type="Texture2D" uid="uid://dxswdixj7hudc" path="res://Assets/Textures/Interactables/CroixdirectionnelleLLBas.png" id="15_7og1i"]
 [ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="16_6e0vd"]
+[ext_resource type="Script" uid="uid://cyot8ku8hh1se" path="res://Scripts/chapitre1_passé/fabliau_passé.gd" id="25_3ekad"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="26_on7t7"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="27_nmuhd"]
 
 [sub_resource type="Resource" id="Resource_tfl7k"]
 script = ExtResource("2_rfaug")
@@ -1070,7 +1073,6 @@ offset_bottom = 1835.2329
 icon = ExtResource("9_h4pyk")
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
-visible = false
 offset_left = 612.0
 offset_top = 1392.0
 offset_right = 920.0
@@ -1343,6 +1345,120 @@ bus = &"SFX"
 stream = ExtResource("8_3ekad")
 bus = &"SFX"
 
+[node name="FabliauPassé" type="Node2D" parent="." unique_id=449457060]
+visible = false
+script = ExtResource("25_3ekad")
+
+[node name="Ending2" type="Sprite2D" parent="FabliauPassé" unique_id=410019186]
+position = Vector2(1376, 969.00006)
+scale = Vector2(5.305804, 5.3058033)
+texture = ExtResource("26_on7t7")
+
+[node name="Titre_Fabliau" type="RichTextLabel" parent="FabliauPassé" unique_id=1988056071]
+offset_left = 14.0
+offset_top = 138.0
+offset_right = 1074.0
+offset_bottom = 283.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_font_size = 56
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "[b]Belle Isabeau, pucelle bien apprise[/b]
+				[i]par Audefroi le Bâtard[/i]"
+horizontal_alignment = 1
+
+[node name="Texte_Fabliau" type="RichTextLabel" parent="FabliauPassé" unique_id=279600867]
+offset_left = 36.0
+offset_top = 328.0
+offset_right = 1044.0
+offset_bottom = 549.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent.
+									[b][i]Gérard attend la joie[/i][/b]"
+
+[node name="Texte_Fabliau2" type="RichTextLabel" parent="FabliauPassé" unique_id=1680569132]
+visible = false
+offset_left = 37.0
+offset_top = 547.0
+offset_right = 1045.0
+offset_bottom = 722.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Une si belle union fut troublée tout-à-coup: les parents de la pucelle l'accordèrent en mariage à un vavasseur.
+									[b][i]Gérard attend la joie[/i][/b]
+"
+
+[node name="Texte_Fabliau3" type="RichTextLabel" parent="FabliauPassé" unique_id=2019970555]
+visible = false
+offset_left = 36.0
+offset_top = 708.0
+offset_right = 1044.0
+offset_bottom = 994.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Gérard vient comme avant lui parler de sa tendresse, mais elle répondit que, ne pouvant désormais le voir sans crime, elle renonçait à lui pour toujours et le pria même de ne jamais se représenter devant elle.
+									[b][i]Gérard attend la joie[/i][/b]
+"
+
+[node name="Texte_Fabliau4" type="RichTextLabel" parent="FabliauPassé" unique_id=1441044215]
+visible = false
+offset_left = 40.0
+offset_top = 967.0
+offset_right = 1048.0
+offset_bottom = 1248.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	De désespoir, Gérard se croise pour la Terre Sainte. Cependant, il veut, avant de partir, voir encore une fois sa chère Isabeau. Il se rend chez elle et la trouve dans son verger.
+									[b][i]Gérard attend la joie[/i][/b]
+"
+
+[node name="Texte_Fabliau5" type="RichTextLabel" parent="FabliauPassé" unique_id=959253023]
+visible = false
+offset_left = 38.0
+offset_top = 1238.0
+offset_right = 1046.0
+offset_bottom = 1513.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Ses adieux sont si touchants qu'ils réveillent tout l'amour que la dame avait pour lui; elle fond en larmes, elle l'embrasse pour la dernière fois et tombre, comme Gérard, sans connaissance.
+									[b][i]Gérard attend la joie[/i][/b]"
+
+[node name="Texte_Fabliau6" type="RichTextLabel" parent="FabliauPassé" unique_id=1486995091]
+visible = false
+offset_left = 35.0
+offset_top = 1510.0
+offset_right = 1043.0
+offset_bottom = 1673.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Le mari, qui voit de sa fenêtre le spectacle, en meurt de douleur, et cette mort donne à Gérard la joie d'épouser sa maîtresse."
+
+[node name="Button_Return" type="Button" parent="FabliauPassé" unique_id=1822020871]
+offset_left = 896.0
+offset_top = 1663.0
+offset_right = 1010.0
+offset_bottom = 1781.0
+icon = ExtResource("27_nmuhd")
+
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
 [connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
@@ -1361,3 +1477,7 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="croix directionnelle/Button_Down" to="." method="_on_button_down_mouse_entered"]
 [connection signal="mouse_exited" from="croix directionnelle/Button_Down" to="." method="_on_button_down_mouse_exited"]
 [connection signal="pressed" from="croix directionnelle/Button_Down" to="." method="_on_button_down_pressed"]
+[connection signal="visibility_changed" from="FabliauPassé" to="FabliauPassé" method="_on_visibility_changed"]
+[connection signal="mouse_entered" from="FabliauPassé/Button_Return" to="FabliauPassé/Button_Return" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FabliauPassé/Button_Return" to="FabliauPassé/Button_Return" method="_on_mouse_exited"]
+[connection signal="pressed" from="FabliauPassé/Button_Return" to="." method="_on_button_fabliau_pressed"]

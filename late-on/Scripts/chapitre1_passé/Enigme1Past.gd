@@ -32,6 +32,8 @@ extends Node2D
 @onready var WallOff3 = $Maze/WallOff_Key3
 @onready var WallOff4 = $Maze/WallOff_Key4
 
+@onready var fabliau = $"FabliauPassé"
+
 signal end_puzzle(dialogue : String)
 signal quit_puzzle
 
@@ -45,6 +47,8 @@ var Collision: Vector2
 var initialPos: Vector2
 
 func _ready() -> void:
+	
+	fabliau.hide()
 	#Gestion de la musique
 	AudioManager.play_music(scene_music)
 	#PopUpText.text = "Cette boite s'ouvre en faisant en sorte que la bille du labyrinthe active les bons mots. En cas d'oubli, j'ai toujours le fabliaux me permettant de me souvenir des mots et de leur ordre."
@@ -155,7 +159,8 @@ func _on_button_return_pressed() -> void:
 	quit_puzzle.emit()
 
 func _on_button_fabliau_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Passé/Fabliau_passé.tscn")
+	fabliau.visible = !fabliau.visible
+	PopUpText.visible = !PopUpText.visible
 
 # mouvement de la balle
 func _on_button_up_pressed() -> void:

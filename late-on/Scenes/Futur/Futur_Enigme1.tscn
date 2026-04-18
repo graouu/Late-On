@@ -19,6 +19,9 @@
 [ext_resource type="AudioStream" uid="uid://b8pxe2nb3sdqv" path="res://Assets/Sons/SFX/Death.mp3" id="16_smfsl"]
 [ext_resource type="AudioStream" uid="uid://cwi5cuo1ddb73" path="res://Assets/Sons/SFX/PC Starting Sound.mp3" id="17_217jj"]
 [ext_resource type="AudioStream" uid="uid://w4px0aubjkj1" path="res://Assets/Sons/SFX/Mascotte2.mp3" id="18_vbs24"]
+[ext_resource type="Script" uid="uid://cyot8ku8hh1se" path="res://Scripts/chapitre1_passé/fabliau_passé.gd" id="20_sqglf"]
+[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="21_6dlqa"]
+[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="22_bgaus"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2q2o"]
 texture = ExtResource("5_m766a")
@@ -987,7 +990,6 @@ icon = ExtResource("6_m766a")
 flat = true
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
-visible = false
 offset_left = 591.0
 offset_top = 1437.0
 offset_right = 899.0
@@ -1113,6 +1115,112 @@ bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="SFX" unique_id=2007560115]
 
+[node name="FabliauPassé" type="Node2D" parent="." unique_id=449457060]
+script = ExtResource("20_sqglf")
+
+[node name="Ending2" type="Sprite2D" parent="FabliauPassé" unique_id=410019186]
+position = Vector2(1349, 977.00006)
+scale = Vector2(5.4622765, 5.7154016)
+texture = ExtResource("21_6dlqa")
+
+[node name="Titre_Fabliau" type="RichTextLabel" parent="FabliauPassé" unique_id=1988056071]
+offset_left = 14.0
+offset_top = 138.0
+offset_right = 1074.0
+offset_bottom = 283.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_font_size = 46
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "[b]De zéro à un: Comment construire le futur[/b]
+				[i]de Peter Thiel avec Blake Masters[/i]"
+horizontal_alignment = 1
+
+[node name="Texte_Fabliau" type="RichTextLabel" parent="FabliauPassé" unique_id=279600867]
+offset_left = 28.0
+offset_top = 341.0
+offset_right = 1036.0
+offset_bottom = 559.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison."
+
+[node name="Texte_Fabliau2" type="RichTextLabel" parent="FabliauPassé" unique_id=1680569132]
+visible = false
+offset_left = 31.0
+offset_top = 575.0
+offset_right = 1039.0
+offset_bottom = 781.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avenir plus grand et plus radieux.
+"
+
+[node name="Texte_Fabliau3" type="RichTextLabel" parent="FabliauPassé" unique_id=2019970555]
+visible = false
+offset_left = 33.0
+offset_top = 817.0
+offset_right = 1041.0
+offset_bottom = 1047.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Selon la doxa de la \"Nouvelle Economie\", le nombre de pages consultées sur Internet était considéré comme un indicateur financier plus fiable et plus prospectif qu'un critère aussi prosaïque que le bénéfice net."
+
+[node name="Texte_Fabliau4" type="RichTextLabel" parent="FabliauPassé" unique_id=1441044215]
+visible = false
+offset_left = 32.0
+offset_top = 1055.0
+offset_right = 1040.0
+offset_bottom = 1223.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de \"bulle\"."
+
+[node name="Texte_Fabliau5" type="RichTextLabel" parent="FabliauPassé" unique_id=959253023]
+visible = false
+offset_left = 34.0
+offset_top = 1253.0
+offset_right = 1042.0
+offset_bottom = 1528.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	Mais les distorsions qu'entraînent les bulles ne disparaissent pas dès qu'elles éclatent. La folie Internet des années 1990 était la plus grosse bulle depuis le krach de 1929 et les leçons qu'on a retenues définissent et altèrent presque toute la vision technologique actuelle."
+
+[node name="Texte_Fabliau6" type="RichTextLabel" parent="FabliauPassé" unique_id=1486995091]
+visible = false
+offset_left = 39.0
+offset_top = 1547.0
+offset_right = 1047.0
+offset_bottom = 1710.0
+theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+bbcode_enabled = true
+text = "	La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé."
+
+[node name="Button_Return" type="Button" parent="FabliauPassé" unique_id=1822020871]
+offset_left = 896.0
+offset_top = 1723.0
+offset_right = 1010.0
+offset_bottom = 1841.0
+icon = ExtResource("22_bgaus")
+
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
 [connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
@@ -1131,3 +1239,7 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="croixDirectionnelle/Button_Down" to="." method="_on_button_down_mouse_entered"]
 [connection signal="mouse_exited" from="croixDirectionnelle/Button_Down" to="." method="_on_button_down_mouse_exited"]
 [connection signal="pressed" from="croixDirectionnelle/Button_Down" to="." method="_on_button_down_pressed"]
+[connection signal="visibility_changed" from="FabliauPassé" to="FabliauPassé" method="_on_visibility_changed"]
+[connection signal="mouse_entered" from="FabliauPassé/Button_Return" to="FabliauPassé/Button_Return" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FabliauPassé/Button_Return" to="FabliauPassé/Button_Return" method="_on_mouse_exited"]
+[connection signal="pressed" from="FabliauPassé/Button_Return" to="." method="_on_button_fabliau_pressed"]

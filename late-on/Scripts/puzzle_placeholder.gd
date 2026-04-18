@@ -1,9 +1,6 @@
 class_name Puzzle extends Node2D
 
-signal end_puzzle(place : String)
+signal quit_puzzle
 
-@export var dialogue_to_play : Array[DialogueLine]
-
-func win_puzzle() -> void:
-	global.enigme1_fini = true
-	end_puzzle.emit(dialogue_to_play)
+func quit():
+	quit_puzzle.emit()
