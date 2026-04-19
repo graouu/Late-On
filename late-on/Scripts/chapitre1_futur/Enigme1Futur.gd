@@ -27,6 +27,9 @@ var tweenChronoVoice2 : Tween
 @onready var ButtonReturn = $Button_Return
 @onready var chronoPote = $PopUp/chronopote
 
+#Page du livre
+@onready var livre = $LivreFutur
+
 #Other
 var chrono_happy = preload("res://Assets/Textures/ChronoPote/tongue.png")
 var chrono_neutral = preload("res://Assets/Textures/ChronoPote/neutral.png")
@@ -47,8 +50,6 @@ var chrono_success = preload("res://Assets/Textures/ChronoPote/heart.png")
 @onready var WallOff3 = $Maze/WallOff_Key3
 @onready var WallOff4 = $Maze/WallOff_Key4
 
-@onready var fabliau = $"FabliauPassé"
-
 signal end_puzzle(dialogue : String)
 signal quit_puzzle
 
@@ -63,14 +64,11 @@ var initialPos: Vector2
 
 func _ready() -> void:
 	
-	fabliau.hide()
-	
 	tweenChronoVoice1 = get_tree().create_tween()
 	initialPos = Ball.global_position
 
 	#Gestion de la musique
 	AudioManager.play_music(scene_music)
-	#PopUpText.text = "Cette boite s'ouvre en faisant en sorte que la bille du labyrinthe active les bons mots. En cas d'oubli, j'ai toujours le fabliaux me permettant de me souvenir des mots et de leur ordre."
 	if global.enigme1_Wall1 == false:
 		ChronoVoice_timer.wait_time = 0.02 * "Tu as sécurisé ton compte avec une page de ton livre préféré: il faut que tu repères les mots les plus <<impactants >> <<Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>".length()
 		chronoPote.texture = chrono_neutral
@@ -255,9 +253,14 @@ func _on_button_return_pressed() -> void:
 	AudioManager.play_music(house_music)
 	quit_puzzle.emit()
 
+
 func _on_button_fabliau_pressed() -> void:
-	fabliau.visible = !fabliau.visible
-	PopUpText.visible = !PopUpText.visible
+	livre.visible = true
+	PopUpText.visible = false
+
+func _on_button_return_page_pressed() -> void:
+	livre.visible = false
+	PopUpText.visible = true
 
 # mouvement de la balle
 func _on_button_up_pressed() -> void:

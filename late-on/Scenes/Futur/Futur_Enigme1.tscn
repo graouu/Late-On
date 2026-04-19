@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://66v4j7rfa5x8" path="res://Assets/Sons/Mysteris Desktop.mp3" id="3_kvr5b"]
 [ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="4_jyxcw"]
 [ext_resource type="Texture2D" uid="uid://csst3a3ivo45r" path="res://Assets/FondMinijeuFutur.png" id="5_m766a"]
-[ext_resource type="Texture2D" uid="uid://btp8mpfd3mjxk" path="res://Assets/Textures/Buttons_Proto/placeHolderScribe.png" id="5_t3sp7"]
 [ext_resource type="Texture2D" uid="uid://c4iej3tgkost1" path="res://Assets/Textures/Items_Placeholder/lock_close.png" id="6_b2q2o"]
 [ext_resource type="FontFile" uid="uid://jp7bfkq2m00l" path="res://Assets/Polices/Formalid-Regular.ttf" id="6_hwvpv"]
 [ext_resource type="Texture2D" uid="uid://dtissiy2hsmdg" path="res://Assets/Textures/Interactables/Retour_Labyrinthelettre_Futur.png" id="6_m766a"]
@@ -13,15 +12,16 @@
 [ext_resource type="Texture2D" uid="uid://bltn4hos5at74" path="res://Assets/Textures/Interactables/Croixdirectionnelle_Labyrinthelettre_Futur.png" id="9_hwvpv"]
 [ext_resource type="Texture2D" uid="uid://irimx2ef7aw1" path="res://Assets/Textures/ChronoPote/judgment (1).png" id="9_m766a"]
 [ext_resource type="Texture2D" uid="uid://0fab8lbeiths" path="res://Assets/Textures/Interactables/Fleche_Labyrinthelettre_Futur.png" id="10_b2q2o"]
+[ext_resource type="Texture2D" uid="uid://b4gq1ujstfy02" path="res://Assets/Textures/Buttons_Proto/Logolivre.png" id="10_sqglf"]
 [ext_resource type="AudioStream" uid="uid://bkuh23b40omx0" path="res://Assets/Sons/SFX/Click.mp3" id="13_rsjje"]
 [ext_resource type="AudioStream" uid="uid://5dssj3v8oilp" path="res://Assets/Sons/SFX/Notification.mp3" id="14_vbs24"]
 [ext_resource type="AudioStream" uid="uid://bncfsvdqqf444" path="res://Assets/Sons/SFX/Pop-up.mp3" id="15_kvr5b"]
 [ext_resource type="AudioStream" uid="uid://b8pxe2nb3sdqv" path="res://Assets/Sons/SFX/Death.mp3" id="16_smfsl"]
 [ext_resource type="AudioStream" uid="uid://cwi5cuo1ddb73" path="res://Assets/Sons/SFX/PC Starting Sound.mp3" id="17_217jj"]
 [ext_resource type="AudioStream" uid="uid://w4px0aubjkj1" path="res://Assets/Sons/SFX/Mascotte2.mp3" id="18_vbs24"]
-[ext_resource type="Script" uid="uid://cyot8ku8hh1se" path="res://Scripts/chapitre1_passé/fabliau_passé.gd" id="20_sqglf"]
-[ext_resource type="Texture2D" uid="uid://dtjeku4bw5ui5" path="res://Assets/Textures/Place/ending2.png" id="21_6dlqa"]
-[ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="22_bgaus"]
+[ext_resource type="Texture2D" uid="uid://di843c8f0o38" path="res://Assets/Textures/Interactables/sdsdsd.png" id="20_smfsl"]
+[ext_resource type="FontFile" uid="uid://b5bkaqd4a4ywu" path="res://Assets/Polices/Brutalid-Regular.ttf" id="21_217jj"]
+[ext_resource type="Texture2D" uid="uid://dncyyqsvem57m" path="res://Assets/Textures/Buttons_Proto/black-close-icon-3.png" id="22_sqglf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2q2o"]
 texture = ExtResource("5_m766a")
@@ -981,20 +981,23 @@ target_position = Vector2(8, -904)
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
 material = ExtResource("8_kvr5b")
-offset_left = 133.67188
-offset_top = 1558.1141
-offset_right = 653.6719
-offset_bottom = 2078.1143
-scale = Vector2(0.5, 0.5)
+offset_left = 84.39075
+offset_top = 1581.4579
+offset_right = 604.39075
+offset_bottom = 2101.458
+scale = Vector2(0.4, 0.4)
 icon = ExtResource("6_m766a")
 flat = true
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
-offset_left = 591.0
-offset_top = 1437.0
-offset_right = 899.0
-offset_bottom = 1734.0
-icon = ExtResource("5_t3sp7")
+modulate = Color(0.973535, 0.9735351, 0.973535, 1)
+self_modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+material = ExtResource("8_kvr5b")
+offset_left = 341.6078
+offset_top = 1533.2708
+offset_right = 649.6078
+offset_bottom = 1830.2708
+icon = ExtResource("10_sqglf")
 flat = true
 expand_icon = true
 
@@ -1032,8 +1035,8 @@ scale = Vector2(0.26082066, 0.26082066)
 texture = ExtResource("9_m766a")
 
 [node name="croixDirectionnelle" type="Node2D" parent="." unique_id=1908314021]
-position = Vector2(798.54816, 1669.5992)
-scale = Vector2(1.3055848, 1.3055848)
+position = Vector2(855.6104, 1677.3805)
+scale = Vector2(1.1, 1.1)
 
 [node name="CroixdirectionnelleLabyrinthelettreFutur" type="Sprite2D" parent="croixDirectionnelle" unique_id=118625882]
 scale = Vector2(0.99999994, 0.99999994)
@@ -1115,111 +1118,114 @@ bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="SFX" unique_id=2007560115]
 
-[node name="FabliauPassé" type="Node2D" parent="." unique_id=449457060]
-script = ExtResource("20_sqglf")
+[node name="LivreFutur" type="Node2D" parent="." unique_id=449457060]
+visible = false
+position = Vector2(-5.706299, 57.06247)
 
-[node name="Ending2" type="Sprite2D" parent="FabliauPassé" unique_id=410019186]
-position = Vector2(1349, 977.00006)
-scale = Vector2(5.4622765, 5.7154016)
-texture = ExtResource("21_6dlqa")
+[node name="backgroundPage" type="ColorRect" parent="LivreFutur" unique_id=1172157021]
+offset_left = 30.0
+offset_top = 115.4382
+offset_right = 1054.0
+offset_bottom = 1785.7167
+mouse_filter = 2
 
-[node name="Titre_Fabliau" type="RichTextLabel" parent="FabliauPassé" unique_id=1988056071]
-offset_left = 14.0
-offset_top = 138.0
-offset_right = 1074.0
-offset_bottom = 283.0
+[node name="ColorRect4" type="ColorRect" parent="LivreFutur/backgroundPage" unique_id=564800177]
+layout_mode = 0
+offset_left = 5.0318604
+offset_top = -84.0455
+offset_right = 1023.58044
+offset_bottom = 422.12082
+
+[node name="TextureRect" type="TextureRect" parent="LivreFutur/backgroundPage" unique_id=1427050409]
+layout_mode = 0
+offset_left = -79.0
+offset_top = -172.18727
+offset_right = 1106.0
+offset_bottom = 679.55115
+mouse_filter = 2
+texture = ExtResource("20_smfsl")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="LivreFutur/backgroundPage" unique_id=1962269627]
+layout_mode = 0
+offset_left = -78.99988
+offset_top = 901.62244
+offset_right = 1106.0001
+offset_bottom = 1753.3608
+mouse_filter = 2
+texture = ExtResource("20_smfsl")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="LivreFutur/backgroundPage" unique_id=1455892752]
+layout_mode = 0
+offset_left = 3.5283203
+offset_top = 525.05804
+offset_right = 1022.0769
+offset_bottom = 1031.2244
+
+[node name="ColorRect2" type="ColorRect" parent="LivreFutur/backgroundPage" unique_id=199899369]
+layout_mode = 0
+offset_left = -5.119385
+offset_top = 501.20245
+offset_right = 6.1170044
+offset_bottom = 1031.2244
+color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="LivreFutur/backgroundPage" unique_id=678097630]
+layout_mode = 0
+offset_left = 1020.58826
+offset_top = 511.41266
+offset_right = 1031.8247
+offset_bottom = 1028.8665
+color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+
+[node name="titre" type="RichTextLabel" parent="LivreFutur" unique_id=401494007]
+offset_left = 47.487305
+offset_top = 95.53705
+offset_right = 999.16846
+offset_bottom = 320.39703
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/bold_font_size = 46
-theme_override_font_sizes/italics_font_size = 36
+theme_override_fonts/bold_font = ExtResource("21_217jj")
+theme_override_fonts/italics_font = ExtResource("6_hwvpv")
+theme_override_font_sizes/bold_font_size = 75
+theme_override_font_sizes/italics_font_size = 34
 bbcode_enabled = true
 text = "[b]De zéro à un: Comment construire le futur[/b]
 				[i]de Peter Thiel avec Blake Masters[/i]"
 horizontal_alignment = 1
 
-[node name="Texte_Fabliau" type="RichTextLabel" parent="FabliauPassé" unique_id=279600867]
-offset_left = 28.0
-offset_top = 341.0
-offset_right = 1036.0
-offset_bottom = 559.0
-theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
-theme_override_font_sizes/normal_font_size = 36
-theme_override_font_sizes/bold_italics_font_size = 36
-theme_override_font_sizes/italics_font_size = 36
-bbcode_enabled = true
-text = "	Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison."
+[node name="texte" type="RichTextLabel" parent="LivreFutur" unique_id=540908091]
+offset_left = 53.14685
+offset_top = 326.56357
+offset_right = 1038.8528
+offset_bottom = 1744.9492
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -15
+theme_override_constants/paragraph_separation = -11
+theme_override_fonts/normal_font = ExtResource("6_hwvpv")
+theme_override_font_sizes/normal_font_size = 48
+text = "	Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.
 
-[node name="Texte_Fabliau2" type="RichTextLabel" parent="FabliauPassé" unique_id=1680569132]
-visible = false
-offset_left = 31.0
-offset_top = 575.0
-offset_right = 1039.0
-offset_bottom = 781.0
-theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
-theme_override_font_sizes/normal_font_size = 36
-theme_override_font_sizes/bold_italics_font_size = 36
-theme_override_font_sizes/italics_font_size = 36
-bbcode_enabled = true
-text = "	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avenir plus grand et plus radieux.
-"
+	Mais il ne l'était pas tant que ça à la fin des années 1990, quand les pertes les plus lourdes étaient présentées comme un moyen d'investir dans un avenir plus grand et plus radieux.
 
-[node name="Texte_Fabliau3" type="RichTextLabel" parent="FabliauPassé" unique_id=2019970555]
-visible = false
-offset_left = 33.0
-offset_top = 817.0
-offset_right = 1041.0
-offset_bottom = 1047.0
-theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
-theme_override_font_sizes/normal_font_size = 36
-theme_override_font_sizes/bold_italics_font_size = 36
-theme_override_font_sizes/italics_font_size = 36
-bbcode_enabled = true
-text = "	Selon la doxa de la \"Nouvelle Economie\", le nombre de pages consultées sur Internet était considéré comme un indicateur financier plus fiable et plus prospectif qu'un critère aussi prosaïque que le bénéfice net."
+		Selon la doxa de la \"Nouvelle Economie\", le nombre de pages consultées sur Internet était considéré comme un indicateur financier plus fiable et plus prospectif qu'un critère aussi prosaïque que le bénéfice net.
 
-[node name="Texte_Fabliau4" type="RichTextLabel" parent="FabliauPassé" unique_id=1441044215]
-visible = false
-offset_left = 32.0
-offset_top = 1055.0
-offset_right = 1040.0
-offset_bottom = 1223.0
-theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
-theme_override_font_sizes/normal_font_size = 36
-theme_override_font_sizes/bold_italics_font_size = 36
-theme_override_font_sizes/italics_font_size = 36
-bbcode_enabled = true
-text = "	C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de \"bulle\"."
+		C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de \"bulle\".
 
-[node name="Texte_Fabliau5" type="RichTextLabel" parent="FabliauPassé" unique_id=959253023]
-visible = false
-offset_left = 34.0
-offset_top = 1253.0
-offset_right = 1042.0
-offset_bottom = 1528.0
-theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
-theme_override_font_sizes/normal_font_size = 36
-theme_override_font_sizes/bold_italics_font_size = 36
-theme_override_font_sizes/italics_font_size = 36
-bbcode_enabled = true
-text = "	Mais les distorsions qu'entraînent les bulles ne disparaissent pas dès qu'elles éclatent. La folie Internet des années 1990 était la plus grosse bulle depuis le krach de 1929 et les leçons qu'on a retenues définissent et altèrent presque toute la vision technologique actuelle."
+		Mais les distorsions qu'entraînent les bulles ne disparaissent pas dès qu'elles éclatent. La folie Internet des années 1990 était la plus grosse bulle depuis le krach de 1929 et les leçons qu'on a retenues définissent et altèrent presque toute la vision technologique actuelle.
 
-[node name="Texte_Fabliau6" type="RichTextLabel" parent="FabliauPassé" unique_id=1486995091]
-visible = false
-offset_left = 39.0
-offset_top = 1547.0
-offset_right = 1047.0
-offset_bottom = 1710.0
-theme_override_colors/default_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
-theme_override_font_sizes/normal_font_size = 36
-theme_override_font_sizes/bold_italics_font_size = 36
-theme_override_font_sizes/italics_font_size = 36
-bbcode_enabled = true
-text = "	La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé."
+		La première étape vers une pensée claire consiste à remettre en cause ce que nous croyons savoir du passé."
 
-[node name="Button_Return" type="Button" parent="FabliauPassé" unique_id=1822020871]
-offset_left = 896.0
-offset_top = 1723.0
-offset_right = 1010.0
-offset_bottom = 1841.0
-icon = ExtResource("22_bgaus")
+[node name="Button_ReturnPage" type="Button" parent="LivreFutur" unique_id=413078223]
+modulate = Color(5.980086, 0, 1.0996635, 1)
+material = ExtResource("8_kvr5b")
+offset_left = 912.1324
+offset_top = 78.166595
+offset_right = 1268.0776
+offset_bottom = 441.24518
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("22_sqglf")
+flat = true
 
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]
@@ -1239,7 +1245,6 @@ icon = ExtResource("22_bgaus")
 [connection signal="mouse_entered" from="croixDirectionnelle/Button_Down" to="." method="_on_button_down_mouse_entered"]
 [connection signal="mouse_exited" from="croixDirectionnelle/Button_Down" to="." method="_on_button_down_mouse_exited"]
 [connection signal="pressed" from="croixDirectionnelle/Button_Down" to="." method="_on_button_down_pressed"]
-[connection signal="visibility_changed" from="FabliauPassé" to="FabliauPassé" method="_on_visibility_changed"]
-[connection signal="mouse_entered" from="FabliauPassé/Button_Return" to="FabliauPassé/Button_Return" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="FabliauPassé/Button_Return" to="FabliauPassé/Button_Return" method="_on_mouse_exited"]
-[connection signal="pressed" from="FabliauPassé/Button_Return" to="." method="_on_button_fabliau_pressed"]
+[connection signal="mouse_entered" from="LivreFutur/Button_ReturnPage" to="." method="_on_button_return_mouse_entered"]
+[connection signal="mouse_exited" from="LivreFutur/Button_ReturnPage" to="." method="_on_button_return_mouse_exited"]
+[connection signal="pressed" from="LivreFutur/Button_ReturnPage" to="." method="_on_button_return_page_pressed"]

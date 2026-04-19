@@ -357,10 +357,10 @@ metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 [node name="Interactable2" type="TextureButton" parent="." unique_id=216105386]
 material = ExtResource("6_vyq1i")
 layout_mode = 0
-offset_left = 319.00003
-offset_top = 1070.0
-offset_right = 1319.0
-offset_bottom = 1370.0
+offset_left = -40.626804
+offset_top = 969.021
+offset_right = 959.37317
+offset_bottom = 1269.021
 rotation = -0.20943952
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("14_w52bc")
