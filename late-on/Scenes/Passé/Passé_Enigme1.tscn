@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do10okj2o7pvo"]
 
 [ext_resource type="Script" uid="uid://crwf3bmwy6p6g" path="res://Scripts/chapitre1_passé/Enigme1Past.gd" id="1_rfaug"]
-[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
+[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_rfaug"]
 [ext_resource type="AudioStream" uid="uid://dmbs58lpfy8op" path="res://Assets/Sons/Enigma-e1-past.wav" id="2_vykle"]
 [ext_resource type="AudioStream" uid="uid://nf843a3ybggb" path="res://Assets/Sons/Before the room.wav" id="3_13ph5"]
 [ext_resource type="Texture2D" uid="uid://7x8lo6d7p75j" path="res://Assets/Textures/Buttons_Proto/ball.png" id="3_g7yw5"]
@@ -1073,6 +1073,7 @@ offset_bottom = 1835.2329
 icon = ExtResource("9_h4pyk")
 
 [node name="Button_Fabliau" type="Button" parent="." unique_id=1965333815]
+visible = false
 offset_left = 612.0
 offset_top = 1392.0
 offset_right = 920.0

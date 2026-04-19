@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://dljsjnnqd3cpn"]
+[gd_scene format=3 uid="uid://b42gua8jkgcbk"]
 
 [ext_resource type="Script" uid="uid://bpul6c7q1xqu8" path="res://Scripts/puzzle_placeholder.gd" id="1_kjs3u"]
+[ext_resource type="Texture2D" uid="uid://durjypoe53xra" path="res://Assets/Textures/topscreen.png" id="2_rw343"]
 [ext_resource type="FontFile" uid="uid://hnryusar5m4v" path="res://Assets/Polices/Medievilid-Regular.ttf" id="2_t668j"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="3_738av"]
+[ext_resource type="Texture2D" uid="uid://7ep76uw5jwig" path="res://Assets/Textures/menu/CadreMenuPrincipalFM.png" id="3_dt451"]
 [ext_resource type="Texture2D" uid="uid://olisvfjf16jj" path="res://Assets/Textures/Interactables/Boutonretour_Labyrinthelettre_Passe.png" id="3_wj0uc"]
 
 [node name="Fabliau" type="Node2D" unique_id=2014099653]
@@ -18,13 +21,42 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.57254905)
 
+[node name="page" type="Sprite2D" parent="ColorRect" unique_id=1495818863]
+position = Vector2(547.8756, 940.22644)
+scale = Vector2(0.9675487, 1.7342981)
+texture = ExtResource("2_rw343")
+
+[node name="cadre" type="Sprite2D" parent="ColorRect" unique_id=1734719065]
+position = Vector2(547.2798, 946.6625)
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("3_dt451")
+
+[node name="Titre_Fabliau" type="RichTextLabel" parent="." unique_id=20223921]
+offset_left = 7.7231445
+offset_top = 152.49123
+offset_right = 1067.7231
+offset_bottom = 340.28796
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -13
+theme_override_fonts/normal_font = ExtResource("2_t668j")
+theme_override_fonts/bold_font = ExtResource("2_t668j")
+theme_override_fonts/italics_font = ExtResource("2_t668j")
+theme_override_font_sizes/bold_font_size = 100
+theme_override_font_sizes/italics_font_size = 65
+bbcode_enabled = true
+text = "[b]Belle Isabeau, pucelle bien apprise[/b]
+				[i]par Audefroi le Bâtard[/i]"
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="." unique_id=1310129015]
-offset_left = 60.0
-offset_top = 73.0
-offset_right = 1030.0
-offset_bottom = 1772.0
-theme_override_constants/line_spacing = 0
-theme_override_constants/paragraph_spacing = -10
+offset_left = 113.9823
+offset_top = 359.44495
+offset_right = 1013.2107
+offset_bottom = 1742.445
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0.26661146, 0.09644299, 0.010861245, 1)
+theme_override_constants/line_spacing = -12
+theme_override_constants/paragraph_spacing = -13
 theme_override_fonts/font = ExtResource("2_t668j")
 theme_override_font_sizes/font_size = 75
 text = "Gérard aimait Isabeau, Isabeau aimait Gérard, mais leur amour était, ainsi que l'amour doit toujours l'être, pur et décent.
@@ -38,13 +70,15 @@ De désespoir, Gérard se croise pour la Terre Sainte. Cependant, il veut, avant
 Ses adieux sont si touchants qu'ils réveillent tout l'amour que la dame avait pour lui; elle fond en larmes, elle l'embrasse pour la dernière fois et tombe, comme Gérard, sans connaissance."
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="." unique_id=2140684890]
-offset_left = 791.0
-offset_top = 1672.0
-offset_right = 1007.0
-offset_bottom = 1891.0
+[node name="return" type="Button" parent="." unique_id=2140684890]
+material = ExtResource("3_738av")
+offset_left = 819.65393
+offset_top = 1683.3923
+offset_right = 1035.6539
+offset_bottom = 1902.3923
+scale = Vector2(0.8, 0.8)
 theme_override_font_sizes/font_size = 50
 icon = ExtResource("3_wj0uc")
 flat = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]
