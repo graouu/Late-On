@@ -41,6 +41,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [node name="Control" type="Node2D" unique_id=28566512 node_paths=PackedStringArray("arrows_SFX", "error_SFX", "success_SFX", "ChronoVoice_SFX", "ChronoVoice_timer")]
+z_index = 9
 script = ExtResource("1_tnt6o")
 scene_music = ExtResource("2_yqi6g")
 computer_music = ExtResource("3_nia08")
@@ -50,19 +51,25 @@ success_SFX = NodePath("SFX/success")
 ChronoVoice_SFX = NodePath("SFX/mascotte")
 ChronoVoice_timer = NodePath("SFX/Timer")
 
-[node name="Ordi" type="Sprite2D" parent="." unique_id=1289236024]
-position = Vector2(508.12134, 958.71204)
-scale = Vector2(1.5028172, 1.5028172)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=357467479]
+z_index = 5
+offset_left = -517.0
+offset_top = -612.0
+offset_right = 1870.0
+offset_bottom = 2220.0
 texture = ExtResource("2_o4a2m")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=67557853]
+z_index = 9
 offset_left = 30.0
 offset_top = 380.0
 offset_right = 1054.0
 offset_bottom = 1005.0
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1851264482]
+z_index = 9
 layout_mode = 0
 offset_left = -79.0
 offset_top = -84.0
@@ -70,15 +77,19 @@ offset_right = 1106.0
 offset_bottom = 697.0
 mouse_filter = 2
 texture = ExtResource("4_o4a2m")
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1727848825]
+z_index = 9
 offset_left = 30.0
 offset_top = 1069.0
 offset_right = 1054.0
 offset_bottom = 1694.0
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect2" unique_id=1197043037]
+z_index = 9
 layout_mode = 0
 offset_left = -79.0
 offset_top = -84.0
@@ -86,34 +97,41 @@ offset_right = 1106.0
 offset_bottom = 697.0
 mouse_filter = 2
 texture = ExtResource("4_o4a2m")
+metadata/_edit_use_anchors_ = true
 
 [node name="PlaceHolderScribe" type="Sprite2D" parent="." unique_id=873155954]
+z_index = 9
 position = Vector2(169, 1549)
 texture = ExtResource("2_tnt6o")
 
 [node name="PlaceHolderScribe2" type="Sprite2D" parent="." unique_id=798181834]
+z_index = 9
 position = Vector2(414, 1549)
 texture = ExtResource("2_tnt6o")
 
 [node name="PlaceHolderScribe3" type="Sprite2D" parent="." unique_id=1659869211]
+z_index = 9
 position = Vector2(662, 1549)
 texture = ExtResource("2_tnt6o")
 
 [node name="PlaceHolderScribe4" type="Sprite2D" parent="." unique_id=1986924168]
+z_index = 9
 position = Vector2(901.99994, 1552)
 texture = ExtResource("2_tnt6o")
 
 [node name="SpaceTypeMap1" type="StaticBody2D" parent="." unique_id=550985851 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(219.00003, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap1" unique_id=363056687]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap1" unique_id=922671647]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -128,16 +146,18 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap5" type="StaticBody2D" parent="." unique_id=169166464 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(142.99998, 1147.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap5" unique_id=1486322619]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap5" unique_id=823195355]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -150,19 +170,22 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap6" type="StaticBody2D" parent="." unique_id=1947754281 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(390, 1143.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap6" unique_id=1875058801]
+z_index = 9
 position = Vector2(0, -0.125)
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap6" unique_id=55692885]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -175,18 +198,21 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap7" type="StaticBody2D" parent="." unique_id=1868354121 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(648, 1140.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap7" unique_id=1132314614]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap7" unique_id=687103689]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -199,18 +225,21 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap8" type="StaticBody2D" parent="." unique_id=1105592699 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(890.99994, 1136.9999)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 name_inside = "TypeMap4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap8" unique_id=1229524876]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap8" unique_id=1847977631]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -223,18 +252,21 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap2" type="StaticBody2D" parent="." unique_id=1032136184 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(466, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap2" unique_id=1726349601]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap2" unique_id=1642403505]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -249,16 +281,18 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap3" type="StaticBody2D" parent="." unique_id=1426551527 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(714.87, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap3" unique_id=791209221]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap3" unique_id=1434213147]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -273,16 +307,18 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="SpaceTypeMap4" type="StaticBody2D" parent="." unique_id=507525881 groups=["dropable_job"]]
-z_index = 1
+z_index = 9
 position = Vector2(956.83, 1568.2501)
 scale = Vector2(4, 4)
 script = ExtResource("3_qky71")
 is_inside_empty = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap4" unique_id=919069790]
+z_index = 9
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="ColorRect" type="ColorRect" parent="SpaceTypeMap4" unique_id=1801030490]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -297,78 +333,87 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TypeMap1" type="Node2D" parent="." unique_id=752903855 groups=["job"]]
-z_index = 1
+z_index = 9
 position = Vector2(389, 1149)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap1" type="Area2D" parent="TypeMap1" unique_id=47875751 node_paths=PackedStringArray("current_body", "poc_SFX")]
-z_index = 10
+z_index = 9
 script = ExtResource("4_4ffsq")
 current_body = NodePath("../../SpaceTypeMap6")
 poc_SFX = NodePath("../../SFX/poc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap1/TypeMap1" unique_id=1293272795]
+z_index = 9
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="Sprite2D" type="Sprite2D" parent="TypeMap1/TypeMap1" unique_id=1736216379]
+z_index = 9
 scale = Vector2(0.715, 0.715)
 texture = ExtResource("6_o4a2m")
 
 [node name="TypeMap2" type="Node2D" parent="." unique_id=1615009566 groups=["job"]]
-z_index = 1
+z_index = 9
 position = Vector2(140.00006, 1152)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap2" type="Area2D" parent="TypeMap2" unique_id=1445900781 node_paths=PackedStringArray("current_body", "poc_SFX")]
-z_index = 10
+z_index = 9
 script = ExtResource("4_4ffsq")
 current_body = NodePath("../../SpaceTypeMap5")
 poc_SFX = NodePath("../../SFX/poc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap2/TypeMap2" unique_id=1631313715]
+z_index = 9
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="PlaceHolderMoney" type="Sprite2D" parent="TypeMap2/TypeMap2" unique_id=2045570607]
+z_index = 9
 scale = Vector2(0.765, 0.765)
 texture = ExtResource("7_o4a2m")
 
 [node name="TypeMap3" type="Node2D" parent="." unique_id=2042054624 groups=["job"]]
-z_index = 1
+z_index = 9
 position = Vector2(653, 1138)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap3" type="Area2D" parent="TypeMap3" unique_id=1167932455 node_paths=PackedStringArray("current_body", "poc_SFX")]
-z_index = 10
+z_index = 9
 script = ExtResource("4_4ffsq")
 current_body = NodePath("../../SpaceTypeMap7")
 poc_SFX = NodePath("../../SFX/poc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap3/TypeMap3" unique_id=1309479811]
+z_index = 9
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="PlaceHolderNobility" type="Sprite2D" parent="TypeMap3/TypeMap3" unique_id=2076171473]
+z_index = 9
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("8_o4a2m")
 
 [node name="TypeMap4" type="Node2D" parent="." unique_id=159153813 groups=["job"]]
-z_index = 1
+z_index = 9
 position = Vector2(892.99994, 1134)
 scale = Vector2(0.8, 0.8)
 
 [node name="TypeMap4" type="Area2D" parent="TypeMap4" unique_id=682713723 node_paths=PackedStringArray("current_body", "poc_SFX")]
-z_index = 10
+z_index = 9
 script = ExtResource("4_4ffsq")
 current_body = NodePath("../../SpaceTypeMap8")
 poc_SFX = NodePath("../../SFX/poc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap4/TypeMap4" unique_id=744732967]
+z_index = 9
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="PlaceHolderPriest" type="Sprite2D" parent="TypeMap4/TypeMap4" unique_id=1341252645]
+z_index = 9
 scale = Vector2(0.725, 0.725)
 texture = ExtResource("9_o4a2m")
 
 [node name="Button_Return" type="Button" parent="." unique_id=953520752]
+z_index = 9
 offset_left = 825.0
 offset_top = 1708.0
 offset_right = 988.0
@@ -376,8 +421,10 @@ offset_bottom = 1871.0
 icon = ExtResource("10_o4a2m")
 flat = true
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Button_Validate" type="Button" parent="." unique_id=568960645]
+z_index = 9
 offset_left = 153.0
 offset_top = 1726.0
 offset_right = 497.0
@@ -396,8 +443,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_t436p")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t436p")
 theme_override_styles/focus = SubResource("StyleBoxFlat_t436p")
 text = "Valider"
+metadata/_edit_use_anchors_ = true
 
 [node name="Info1_Enigma" type="RichTextLabel" parent="." unique_id=199201805]
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -429,15 +478,17 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-656, -1130)
 
 [node name="ColorRect" type="ColorRect" parent="PopUp" unique_id=2031031369]
+z_index = 9
 offset_left = 613.0
 offset_top = 1086.399
 offset_right = 1766.0
 offset_bottom = 1472.0
 mouse_filter = 2
 color = Color(0.12941177, 0.2901961, 0.6862745, 0.7294118)
+metadata/_edit_use_anchors_ = true
 
 [node name="TextPopUp" type="RichTextLabel" parent="PopUp" unique_id=854465747]
-z_index = 1
+z_index = 9
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -458,6 +509,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ChronoPote" type="TextureRect" parent="." unique_id=2030371440]
+z_index = 9
 offset_left = 791.0
 offset_top = -3.0
 offset_right = 1208.0
@@ -468,6 +520,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="SFX" type="Node2D" parent="." unique_id=1749828045]
+z_index = 9
 
 [node name="arrows" type="AudioStreamPlayer" parent="SFX" unique_id=1212972807]
 stream = ExtResource("15_dua6a")
