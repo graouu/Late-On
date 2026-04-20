@@ -50,12 +50,12 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="." unique_id=1310129015]
 offset_left = 113.9823
-offset_top = 359.44495
+offset_top = 317.44495
 offset_right = 1013.2107
-offset_bottom = 1742.445
+offset_bottom = 1700.445
 size_flags_stretch_ratio = 0.0
 theme_override_colors/font_color = Color(0.26661146, 0.09644299, 0.010861245, 1)
-theme_override_constants/line_spacing = -12
+theme_override_constants/line_spacing = -47
 theme_override_constants/paragraph_spacing = -13
 theme_override_fonts/font = ExtResource("2_t668j")
 theme_override_font_sizes/font_size = 75

@@ -1,9 +1,30 @@
 [gd_scene format=3 uid="uid://cjj12tponpoax"]
 
 [ext_resource type="Script" uid="uid://bhhspe80tiaxg" path="res://Scripts/Place.gd" id="1_4yuwk"]
-[ext_resource type="Texture2D" uid="uid://cliq00ju2xg6" path="res://Assets/Textures/Place/centre-ville_placeholder.jpg" id="2_dyeko"]
 [ext_resource type="Texture2D" uid="uid://chk631vq2co2e" path="res://Assets/Textures/Carte/p_centre_ville.png" id="2_rac6r"]
+[ext_resource type="Texture2D" uid="uid://dud8jnykusiw6" path="res://Assets/Textures/Place/town_center.png" id="3_6wpnv"]
+[ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="3_xr0d5"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_6wpnv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_riywq"]
+shader = ExtResource("3_xr0d5")
+shader_parameter/color = Color(0, 0.5, 1, 1)
+shader_parameter/frequency = 3.0
+shader_parameter/compress = 1.0
+shader_parameter/add_light = 0.0
+shader_parameter/scale = 1.0
+shader_parameter/speed = 1.0
+shader_parameter/x_angle = 1.57
+shader_parameter/y_angle = 1.57
+shader_parameter/base_alpha = 0.8
+shader_parameter/refraction_ratio = 10.0
+shader_parameter/clear = 0.0
+shader_parameter/surf_sinpowder = 8.0
+shader_parameter/surf_speed = 1.0
+shader_parameter/surf_angle = 1.57
+shader_parameter/surf_magnitude = 0.0
+shader_parameter/s11 = 2.221
+shader_parameter/sinpowder = 8.0
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
 resource_name = "Arrow"
@@ -134,14 +155,24 @@ place_up = "market_left"
 button_down = NodePath("Buttons/Down")
 place_down = "house_front"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1658947519]
+material = SubResource("ShaderMaterial_riywq")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_dyeko")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
+modulate = Color(1, 1, 1, 0.9607843)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6wpnv")
 expand_mode = 1
 
 [node name="Buttons" type="Control" parent="." unique_id=2052207046]

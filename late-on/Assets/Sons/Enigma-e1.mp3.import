@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Enigma-e1.mp3-914d0e6de4931b3bd0398f5f846557a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -48,8 +48,8 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		if dialogue_timer.is_stopped():
 			is_done.emit()
-		else:
-			tween.kill()
-			dialogue_label.text = next_dialogue
-			dialogue_timer.stop()
-			sound_player.stop()
+		#else:
+			#tween.kill()
+			#dialogue_label.text = next_dialogue
+			#dialogue_timer.stop()
+			#sound_player.stop()

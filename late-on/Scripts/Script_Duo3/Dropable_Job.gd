@@ -39,13 +39,11 @@ func _process(_delta: float) -> void:
 
 #Change le scale de l'icon et le rend drag
 func _on_area_2d_mouse_entered():
-	print("area_entered")
 	if not global.is_dragging:
 		draggable = true
 		scale = Vector2(1.05,1.05)
 
 func _on_area_2d_mouse_exited():
-	print("area_exited")
 	if not global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
@@ -53,6 +51,7 @@ func _on_area_2d_mouse_exited():
  #Quand l icon est sur une zone de drop
 func _on_area_2d_body_entered(body:StaticBody2D):
 	if body.is_in_group('dropable_job') and body.is_inside_empty:
+		print("drop area entered")
 		is_inside_dropable = true
 		body.modulate = Color(Color.SKY_BLUE, 1)
 		body_ref = body
@@ -63,5 +62,6 @@ func _on_area_2d_body_entered(body:StaticBody2D):
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group('dropable_job'):
+		print("drop area exited")
 		is_inside_dropable = false
 		body.modulate = Color(Color.SKY_BLUE, 0.7)

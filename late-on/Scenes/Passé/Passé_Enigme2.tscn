@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://boa3aroi7ggpu"]
 
 [ext_resource type="Script" uid="uid://dulu7x4o0b3pu" path="res://Scripts/chapitre1_passé/Enigme2Past.gd" id="1_wbkpr"]
-[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_qqvvg"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_qqvvg"]
 [ext_resource type="AudioStream" uid="uid://dmbs58lpfy8op" path="res://Assets/Sons/Enigma-e1-past.wav" id="2_woxd2"]
 [ext_resource type="Texture2D" uid="uid://csb878j0s3egp" path="res://Assets/Textures/Interactables/characters/guiraud_half.png" id="3_52f7w"]
 [ext_resource type="AudioStream" uid="uid://br7atle8dha60" path="res://Assets/Sons/Manoir.wav" id="3_uq0rs"]
@@ -68,7 +68,7 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 size = Vector2(38.25, 39.499996)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
-size = Vector2(182.5, 198.75)
+size = Vector2(91.25, 99.375)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fe6f"]
 bg_color = Color(0.0768358, 0.07683582, 0.076835774, 1)
@@ -233,6 +233,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap1" unique_id=363056687]
+z_index = 10
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap2" type="StaticBody2D" parent="." unique_id=1032136184 groups=["dropable_job"]]
@@ -267,6 +268,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap2" unique_id=1726349601]
+z_index = 10
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap3" type="StaticBody2D" parent="." unique_id=1426551527 groups=["dropable_job"]]
@@ -301,9 +303,11 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap3" unique_id=791209221]
+z_index = 10
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="SpaceTypeMap4" type="StaticBody2D" parent="." unique_id=507525881 groups=["dropable_job"]]
+visible = false
 z_index = 1
 position = Vector2(864, 1381.7)
 scale = Vector2(4, 4)
@@ -335,6 +339,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceTypeMap4" unique_id=919069790]
+z_index = 10
 shape = SubResource("RectangleShape2D_i5y8v")
 
 [node name="TypeMap1" type="Node2D" parent="." unique_id=752903855 groups=["job"]]
@@ -374,7 +379,7 @@ texture = ExtResource("9_lc8gs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TypeMap2/TypeMap2" unique_id=1631313715]
 position = Vector2(3.75, 2.5)
-scale = Vector2(0.99999946, 0.99999946)
+scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="TypeMap3" type="Node2D" parent="." unique_id=2042054624 groups=["job"]]
@@ -557,6 +562,7 @@ offset_right = 1018.0
 offset_bottom = 430.39996
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
 theme_override_fonts/normal_font = ExtResource("16_tmxr7")
 theme_override_font_sizes/normal_font_size = 75
@@ -577,6 +583,7 @@ offset_right = 855.0
 offset_bottom = 554.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0.12009502, 0.17721441, 0.15056095, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_8fe6f")
 theme_override_font_sizes/normal_font_size = 75
@@ -597,6 +604,7 @@ offset_right = 1008.0
 offset_bottom = 705.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0.12009502, 0.17721441, 0.15056095, 1)
 theme_override_fonts/normal_font = ExtResource("16_tmxr7")
 theme_override_font_sizes/normal_font_size = 76

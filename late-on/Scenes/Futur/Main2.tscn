@@ -27,7 +27,7 @@ content_margin_left = 40.0
 content_margin_top = 20.0
 content_margin_right = 40.0
 content_margin_bottom = 20.0
-bg_color = Color(0, 0, 0, 0.5176471)
+bg_color = Color(0, 0, 0, 0.7294118)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pbw6q"]
 random_pitch = 1.587401
@@ -218,7 +218,7 @@ offset_top = 640.0
 offset_right = 1080.0
 offset_bottom = 1920.0
 size_flags_vertical = 3
-color = Color(0, 0, 0, 0.42352942)
+color = Color(0, 0, 0, 0.64705884)
 
 [node name="DialogueObject" type="TextureRect" parent="Dialogue/ColorRect" unique_id=1291847530]
 custom_minimum_size = Vector2(400, 400)
@@ -293,7 +293,7 @@ mouse_filter = 2
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073400302]
 visible = false
 self_modulate = Color(1, 1, 1, 0)
-z_index = 10
+z_index = 11
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -313,18 +313,18 @@ bus = &"SFX"
 layout_mode = 1
 
 [node name="Button" type="Button" parent="." unique_id=18533295]
-visible = false
 modulate = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
 z_index = 5
 material = ExtResource("12_hgbfj")
 layout_mode = 0
-offset_left = 43.0
-offset_top = 43.0
-offset_right = 563.0
-offset_bottom = 563.0
+offset_left = 5.0
+offset_top = -21.0
+offset_right = 345.0
+offset_bottom = 371.0
 scale = Vector2(0.25, 0.25)
 icon = ExtResource("13_6j8x8")
 flat = true
+expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/Panel/Main Menu" to="." method="_on_go_to_menu_pressed"]
 [connection signal="pressed" from="Button" to="PauseMenuFutur" method="_on_button_pressed"]

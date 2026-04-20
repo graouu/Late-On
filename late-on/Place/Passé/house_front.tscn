@@ -3,16 +3,17 @@
 [ext_resource type="Script" uid="uid://caau6mofnlyk1" path="res://Scripts/Place/Passé/house_front.gd" id="1_2rouy"]
 [ext_resource type="Texture2D" uid="uid://ch06o30y863le" path="res://Assets/Textures/Carte/p_house_front.png" id="2_eht62"]
 [ext_resource type="AudioStream" uid="uid://dvfwdpc1euqhk" path="res://Assets/Sons/SFX/Porte.mp3" id="3_wl42s"]
-[ext_resource type="Shader" path="res://Assets/vitrail.gdshader" id="4_2rouy"]
+[ext_resource type="Shader" uid="uid://dhlepaqipnnp2" path="res://Assets/vitrail.gdshader" id="4_2rouy"]
 [ext_resource type="Texture2D" uid="uid://bti40l3d6ytvf" path="res://Assets/Textures/Place/house_marchand.png" id="4_lp6mb"]
 [ext_resource type="Theme" uid="uid://bh6ctwx22w71a" path="res://Assets/moving_arrow_theme.tres" id="4_marq1"]
 [ext_resource type="Texture2D" uid="uid://dsr3u50b7fyq6" path="res://Assets/Textures/Interactables/characters/guiraud.png" id="6_qrmjc"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="6_vyq1i"]
 [ext_resource type="Script" uid="uid://c70aoc2fy1bfp" path="res://Scripts/interactable.gd" id="7_eo82f"]
 [ext_resource type="Texture2D" uid="uid://bekbypawjdgxx" path="res://Assets/Textures/Interactables/Commode_HouseMarchand_Passe.png" id="9_08hii"]
-[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="9_pxf6e"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="9_pxf6e"]
 [ext_resource type="Texture2D" uid="uid://csb878j0s3egp" path="res://Assets/Textures/Interactables/characters/guiraud_half.png" id="10_pxf6e"]
 [ext_resource type="Texture2D" uid="uid://clw2ldydo8itq" path="res://Assets/Textures/Interactables/Comptoir_HouseMarchand_Passe.png" id="11_keq82"]
+[ext_resource type="Texture2D" uid="uid://cagod00leglh5" path="res://Assets/Textures/Interactables/Herbes_HouseMarchand_Passe.png" id="12_2ey88"]
 [ext_resource type="Texture2D" uid="uid://bqnpnkumousxn" path="res://Assets/Textures/Interactables/Affichage_HouseMarchand_Passe.png" id="12_th84v"]
 [ext_resource type="Texture2D" uid="uid://csjheiwk5mf72" path="res://Assets/Textures/eni2/Pochettefioles.png" id="14_w52bc"]
 [ext_resource type="Texture2D" uid="uid://dpwknnyox66fe" path="res://Assets/Textures/eni2/Fiole verte.png" id="15_2ey88"]
@@ -86,7 +87,7 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_bf2m5"]
 script = ExtResource("9_pxf6e")
-text = "Les arômes de la nature qui se mélangent et ces expressions si singulières."
+text = "Les aromes de la nature qui se mélangent et ces expressions si singulières."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_1loiy"]
@@ -96,7 +97,7 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_lp6mb"]
 script = ExtResource("9_pxf6e")
-text = "Bien le bonjour, monsieur."
+text = "Bien le bonjour, oncle."
 name = "Guiraud"
 texture = ExtResource("10_pxf6e")
 metadata/_custom_type_script = "uid://c3h3244feas37"
@@ -109,7 +110,7 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_08hii"]
 script = ExtResource("9_pxf6e")
-text = "Je suis bien embêté. J'ai fait tomber mes notes."
+text = "Je suis bien embêté. J'ai fait tomber mes fioles."
 name = "Guiraud"
 texture = ExtResource("10_pxf6e")
 metadata/_custom_type_script = "uid://c3h3244feas37"
@@ -129,14 +130,14 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_2u0rt"]
 script = ExtResource("9_pxf6e")
-text = "Je pourrai te présenter quelqu'un, mais il faut que je réorganise ces notes..."
+text = "Je pourrai te présenter quelqu'un, mais il faut que je réorganise ces fioles..."
 name = "Guiraud"
 texture = ExtResource("10_pxf6e")
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_w52bc"]
 script = ExtResource("9_pxf6e")
-text = "Des feuilles remplies sur le sol."
+text = "De nombreuses fioles en bazar par terre."
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Animation" id="Animation_ds5ss"]
@@ -319,11 +320,11 @@ metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 [node name="Interactable5" type="TextureButton" parent="." unique_id=1181659494]
 material = ExtResource("6_vyq1i")
 layout_mode = 0
-offset_left = 752.0
-offset_top = 707.0
-offset_right = 1080.0
-offset_bottom = 885.0
-texture_normal = ExtResource("11_keq82")
+offset_left = 807.0
+offset_top = 387.0
+offset_right = 1135.0
+offset_bottom = 565.0
+texture_normal = ExtResource("12_2ey88")
 script = ExtResource("7_eo82f")
 dialogue_array = Array[ExtResource("9_pxf6e")]([SubResource("Resource_uw7m8")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
