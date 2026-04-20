@@ -73,7 +73,6 @@ func _process(_delta: float) -> void:
 func _on_area_2d_mouse_entered():
 	if not global.is_dragging:
 		draggable = true
-		scale = Vector2(1.05,1.05)
 		Ep2A.visible = true
 		Ep2C.visible = true
 		Ep2D.visible = true
@@ -81,7 +80,6 @@ func _on_area_2d_mouse_entered():
 func _on_area_2d_mouse_exited():
 	if not global.is_dragging:
 		draggable = false
-		scale = Vector2(1,1)
 		if placed == false:
 			Ep2A.visible = false
 			Ep2C.visible = false

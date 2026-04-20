@@ -1,5 +1,16 @@
 extends Node2D
 
+#Sound
+@export var scene_music: AudioStream
+@export var out_music: AudioStream
+@export var silence_music: AudioStream
+@export var arrows_SFX : AudioStreamPlayer
+@export var error_SFX : AudioStreamPlayer
+@export var success_SFX : AudioStreamPlayer
+
+signal end_puzzle(dialogue : String)
+signal quit_puzzle
+
 var conditionOk = true
 var conditionPb = 0
 @onready var Epouv1 = $Epouv1/Epouv1
@@ -37,39 +48,41 @@ var conditionPb = 0
 @onready var F4 = $PositionGrid/F4
 
 func _ready() -> void:
-	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	#Gestion de la musique
+	AudioManager.play_music(scene_music)
 
 func _process(delta: float) -> void:
 	#Si le joueur joue, la pop up disparait
 	if global.is_dragging:
 		PopUp.visible = false
-	if Epouv1.placed == true and Epouv1.placed == true and Epouv1.placed == true:
+	if Epouv1.placed == true and Epouv2.placed == true and Epouv3.placed == true:
 		ButtonValidate.visible = true
 	else:
 		ButtonValidate.visible = false
 
 func _on_button_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
-
-func _on_button_return_mouse_entered() -> void:
-	ButtonReturn.scale = Vector2(1.05,1.05)
-
-func _on_button_return_mouse_exited() -> void:
-	ButtonReturn.scale = Vector2(1,1)
+	arrows_SFX.play()
+	AudioManager.play_music(out_music)
+	quit_puzzle.emit()
 
 func _on_button_validate_pressed() -> void:
 	PopUp.visible = true
 	conditionOk = true
+	arrows_SFX.play()
 	validate_conditions()
 	if conditionOk :
+		AudioManager.play_music(silence_music)
+		success_SFX.play()
 		PopUpText.text = "Cette combinaison correspond à l'attendu. Merci employé, tu as très bien travaillé. Tu as bien mérité 500 points!"
 		global.enigme3f_fini = true
-		await get_tree().create_timer(3).timeout
-		get_tree().change_scene_to_file("res://Scenes/Futur/Futur_Ordi.tscn")
+		await get_tree().create_timer(1.5).timeout
+		AudioManager.play_music(out_music)
+		end_puzzle.emit()
+		quit_puzzle.emit()
 
 	else:
 		global.enigme3f_Nbtry += 1
+		error_SFX.play()
 		if conditionPb == 1 :
 			PopUpText.text = "Le manoir manque de connection. C'est un membre de l'élite, on ne peux pas laisser la situation ainsi :("
 		if conditionPb == 2 :
@@ -82,11 +95,6 @@ func _on_button_validate_pressed() -> void:
 			PopUpText.text += '\n' + "petit indice: l'émetteur bleue va sur le manoir ;) "
 		if global.enigme3f_Nbtry >= 4:
 			PopUpText.text += '\n' + "Bleu sur manoir // Vert à gauche du bleu // Rouge 2 espaces à gauche du vert"
-func _on_button_validate_mouse_entered() -> void:
-	ButtonValidate.scale = Vector2(1.05,1.05)
-
-func _on_button_validate_mouse_exited() -> void:
-	ButtonValidate.scale = Vector2(1,1)
 
 func validate_conditions():
 	#Calcul de la somme pour chaque title utile
@@ -121,3 +129,15 @@ func validate_conditions():
 	if B1.valueTot > 0 or B2.valueTot > 0 or C1.valueTot > 0 or C2.valueTot > 0 or D4.valueTot > 0 or E4.valueTot > 0 or F1.valueTot > 0 or F2.valueTot > 0 :
 		conditionPb = 3
 		conditionOk = false
+
+#func _on_button_return_mouse_entered() -> void:
+	#ButtonReturn.scale = Vector2(1.05,1.05)
+#
+#func _on_button_return_mouse_exited() -> void:
+	#ButtonReturn.scale = Vector2(1,1)
+
+#func _on_button_validate_mouse_entered() -> void:
+	#ButtonValidate.scale = Vector2(1.05,1.05)
+#
+#func _on_button_validate_mouse_exited() -> void:
+	#ButtonValidate.scale = Vector2(1,1)

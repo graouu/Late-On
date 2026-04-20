@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://b46mub7hes54k"]
+[gd_scene format=3 uid="uid://dvxcc30uy17xv"]
 
 [ext_resource type="Script" uid="uid://cxvsaaa175uqy" path="res://Scripts/Place/Futur/desktop.gd" id="1_gog4p"]
 [ext_resource type="AudioStream" uid="uid://dg6vnsy7403td" path="res://Assets/Sons/SFX/ChairTransition.mp3" id="2_85y76"]
-[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_j8xeh"]
+[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_j8xeh"]
 [ext_resource type="AudioStream" uid="uid://bncfsvdqqf444" path="res://Assets/Sons/SFX/Pop-up.mp3" id="2_jqdwm"]
 [ext_resource type="Texture2D" uid="uid://boa0tu1d7frk0" path="res://Assets/Textures/Items_Placeholder/Futur/neutral.png" id="3_sugd2"]
 [ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="4_gog4p"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://c8cgfpvlfn3xi" path="res://Assets/Textures/Interactables/applicluedo.png" id="5_j8xeh"]
 [ext_resource type="Texture2D" uid="uid://dcrqp7ykobqe7" path="res://Assets/Textures/Interactables/applidossier.png" id="7_sugd2"]
 [ext_resource type="Texture2D" uid="uid://b017ffdmj7av7" path="res://Assets/Textures/Interactables/Tasktbar1.png" id="8_she2j"]
-[ext_resource type="Theme" uid="uid://m1kgchcfu7ik" path="res://Assets/moving_arrow_future_theme.tres" id="9_tqf2q"]
+[ext_resource type="Theme" path="res://Assets/moving_arrow_future_theme.tres" id="9_tqf2q"]
+[ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="12_em62h"]
+[ext_resource type="Texture2D" uid="uid://cb6iff6nakp3g" path="res://Assets/Textures/Interactables/appliEpouvantchamps.png" id="13_mvpno"]
 
 [sub_resource type="Resource" id="Resource_auvlp"]
 script = ExtResource("2_j8xeh")
@@ -167,6 +169,11 @@ name = "Chronopote"
 texture = SubResource("CompressedTexture2D_tqf2q")
 metadata/_custom_type_script = "uid://c3h3244feas37"
 
+[sub_resource type="Resource" id="Resource_fe0sr"]
+script = ExtResource("2_j8xeh")
+text = "Un gros coffre en bois ouvert."
+metadata/_custom_type_script = "uid://c3h3244feas37"
+
 [node name="desktop" type="Control" unique_id=975123972 node_paths=PackedStringArray("button_left", "button_down", "interactable_list")]
 custom_minimum_size = Vector2(1080, 1280)
 layout_mode = 3
@@ -177,6 +184,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 1
 script = ExtResource("1_gog4p")
 place_name = "desktop"
 button_left = NodePath("Buttons/Left")
@@ -185,7 +193,7 @@ specific_sound_left = ExtResource("2_jqdwm")
 button_down = NodePath("Buttons/Down")
 place_down = "desk"
 specific_sound_down = ExtResource("2_85y76")
-interactable_list = [NodePath("Interactable"), NodePath("Interactable2")]
+interactable_list = [NodePath("Interactable"), NodePath("Interactable2"), NodePath("AppliChamp")]
 dialogue_list = Array[ExtResource("2_j8xeh")]([SubResource("Resource_auvlp"), SubResource("Resource_7nxwm"), SubResource("Resource_uknis"), SubResource("Resource_x0liy"), SubResource("Resource_8hxjr"), SubResource("Resource_sh7tu"), SubResource("Resource_cml1u"), SubResource("Resource_4iv2k"), SubResource("Resource_yf3hy"), SubResource("Resource_qrk2t"), SubResource("Resource_6kcf5"), SubResource("Resource_u2bti")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=944351953]
@@ -195,6 +203,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gog4p")
 expand_mode = 1
 
@@ -210,6 +219,7 @@ offset_top = -81.0
 offset_right = 540.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 texture = ExtResource("8_she2j")
 
 [node name="Buttons" type="Control" parent="." unique_id=1933331614]
@@ -219,6 +229,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Left" type="Button" parent="Buttons" unique_id=1901832010]
 layout_mode = 1
@@ -312,5 +323,22 @@ script = ExtResource("5_85y76")
 dialogue_array = Array[ExtResource("2_j8xeh")]([SubResource("Resource_sugd2"), SubResource("Resource_she2j"), SubResource("Resource_jqdwm"), SubResource("Resource_8gfwx")])
 metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
 
+[node name="AppliChamp" type="TextureButton" parent="." unique_id=632107593]
+material = ExtResource("12_em62h")
+layout_mode = 0
+offset_left = 848.9474
+offset_top = 286.0624
+offset_right = 1101.389
+offset_bottom = 547.04004
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("13_mvpno")
+ignore_texture_size = true
+script = ExtResource("5_85y76")
+interaction_type = 1
+dialogue_array = Array[ExtResource("2_j8xeh")]([SubResource("Resource_fe0sr")])
+puzzle = "res://Scenes/Futur/Futur_Enigme3.tscn"
+metadata/_custom_type_script = "uid://c70aoc2fy1bfp"
+
 [connection signal="pressed" from="Interactable" to="Interactable" method="_on_pressed"]
 [connection signal="pressed" from="Interactable2" to="Interactable2" method="_on_pressed"]
+[connection signal="pressed" from="AppliChamp" to="AppliChamp" method="_on_pressed"]
