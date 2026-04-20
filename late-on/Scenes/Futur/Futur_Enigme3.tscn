@@ -1,29 +1,34 @@
 [gd_scene format=3 uid="uid://byels5vtycweo"]
 
-[ext_resource type="Script" path="res://Scripts/chapitre1_futur/Enigme3Futur.gd" id="1_0wefs"]
+[ext_resource type="Script" uid="uid://bainbhysdj52f" path="res://Scripts/chapitre1_futur/Enigme3Futur.gd" id="1_0wefs"]
 [ext_resource type="Texture2D" uid="uid://iiywfuvv43tj" path="res://Assets/Textures/Buttons_Proto/enigme3/BackgroundMapjpg.jpg" id="2_0wefs"]
-[ext_resource type="Script" path="res://Scripts/chapitre1_passé/SpaceDrop_enigme3.gd" id="3_xmp70"]
+[ext_resource type="Script" uid="uid://bpot5gewrmuvt" path="res://Scripts/chapitre1_passé/SpaceDrop_enigme3.gd" id="3_xmp70"]
 [ext_resource type="Texture2D" uid="uid://omu6vnm5pd1m" path="res://Assets/Textures/Buttons_Proto/keyReturn.png" id="4_oa4nx"]
 [ext_resource type="Texture2D" uid="uid://dned2wl2vkbu5" path="res://Assets/Textures/Buttons_Proto/LittleTxt.png" id="5_8uu51"]
 [ext_resource type="Texture2D" uid="uid://fbvb1p3yo7uf" path="res://Assets/Textures/Buttons_Proto/enigme3/TilteManor.png" id="6_0wefs"]
 [ext_resource type="Texture2D" uid="uid://dw2df8wikm8oo" path="res://Assets/Textures/Buttons_Proto/enigme3/TilteTente.png" id="7_vqjod"]
 [ext_resource type="Texture2D" uid="uid://48gqr4e65guq" path="res://Assets/Textures/Buttons_Proto/enigme3/TilteMaison.png" id="8_xx6h3"]
 [ext_resource type="Texture2D" uid="uid://maupfripi4p5" path="res://Assets/Textures/Buttons_Proto/enigme3/TitleEntreprise.png" id="9_helkb"]
-[ext_resource type="Script" path="res://Scripts/chapitre1_passé/Dropable_epouv1.gd" id="10_q1oc1"]
+[ext_resource type="Script" uid="uid://c5d8iub1j6kyg" path="res://Scripts/chapitre1_passé/Dropable_epouv1.gd" id="10_q1oc1"]
 [ext_resource type="Texture2D" uid="uid://dmgg5gdg0kfhl" path="res://Assets/Textures/Buttons_Proto/enigme3/PlaceHolderTower2.png" id="11_31e3j"]
 [ext_resource type="Texture2D" uid="uid://dsb5w6dex42ex" path="res://Assets/Textures/Buttons_Proto/enigme3/tilteRed.png" id="12_lnevi"]
-[ext_resource type="Script" path="res://Scripts/chapitre1_passé/Dropable_epouv2.gd" id="13_x1bkc"]
+[ext_resource type="Script" uid="uid://84c2mac40o3r" path="res://Scripts/chapitre1_passé/Dropable_epouv2.gd" id="13_x1bkc"]
 [ext_resource type="Texture2D" uid="uid://bxk68eorvynxs" path="res://Assets/Textures/Buttons_Proto/enigme3/PlaceHolderTower1.png" id="14_1fdp5"]
 [ext_resource type="Texture2D" uid="uid://bcebq5h41dkyt" path="res://Assets/Textures/Buttons_Proto/enigme3/tilteGreen.png" id="15_av20m"]
-[ext_resource type="Script" path="res://Scripts/chapitre1_passé/Dropable_epouv3.gd" id="16_dl8h0"]
+[ext_resource type="Script" uid="uid://b6vqguenehdel" path="res://Scripts/chapitre1_passé/Dropable_epouv3.gd" id="16_dl8h0"]
 [ext_resource type="Texture2D" uid="uid://cxmxggudvs86o" path="res://Assets/Textures/Buttons_Proto/enigme3/PlaceHolderTower3.png" id="17_ood1f"]
 [ext_resource type="Texture2D" uid="uid://cmhung3uuv5s" path="res://Assets/Textures/Buttons_Proto/enigme3/tilteBlue.png" id="18_cpixf"]
+[ext_resource type="AudioStream" uid="uid://bkuh23b40omx0" path="res://Assets/Sons/SFX/Click.mp3" id="19_1fdp5"]
+[ext_resource type="AudioStream" uid="uid://bncfsvdqqf444" path="res://Assets/Sons/SFX/Pop-up.mp3" id="20_ood1f"]
+[ext_resource type="AudioStream" uid="uid://b8pxe2nb3sdqv" path="res://Assets/Sons/SFX/Death.mp3" id="21_pi7f7"]
+[ext_resource type="AudioStream" uid="uid://cwi5cuo1ddb73" path="res://Assets/Sons/SFX/PC Starting Sound.mp3" id="22_c3i2k"]
+[ext_resource type="AudioStream" uid="uid://w4px0aubjkj1" path="res://Assets/Sons/SFX/Mascotte2.mp3" id="23_cbsk6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5y8v"]
 size = Vector2(5.2400002, 5.6399994)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boa88"]
-size = Vector2(128, 127.5)
+size = Vector2(81.5, 95.00001)
 
 [node name="Control" type="Node2D" unique_id=28566512]
 script = ExtResource("1_0wefs")
@@ -867,9 +872,10 @@ z_index = 2
 position = Vector2(104, 904)
 scale = Vector2(0.8, 0.8)
 
-[node name="Epouv1" type="Area2D" parent="Epouv1" unique_id=47875751]
+[node name="Epouv1" type="Area2D" parent="Epouv1" unique_id=47875751 node_paths=PackedStringArray("poc_SFX")]
 rotation = 1.5707964
 script = ExtResource("10_q1oc1")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="Sprite2D" type="Sprite2D" parent="Epouv1/Epouv1" unique_id=1736216379]
 scale = Vector2(3.9999993, 3.9999993)
@@ -897,7 +903,8 @@ scale = Vector2(1.05, 1.093)
 texture = ExtResource("12_lnevi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Epouv1/Epouv1" unique_id=1293272795]
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(2.5000305, -1.2500029)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_boa88")
 
 [node name="Epouv2" type="Node2D" parent="." unique_id=1615009566 groups=["job"]]
@@ -905,8 +912,9 @@ z_index = 2
 position = Vector2(104, 1088)
 scale = Vector2(0.8, 0.8)
 
-[node name="Epouv2" type="Area2D" parent="Epouv2" unique_id=1445900781]
+[node name="Epouv2" type="Area2D" parent="Epouv2" unique_id=1445900781 node_paths=PackedStringArray("poc_SFX")]
 script = ExtResource("13_x1bkc")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Epouv2/Epouv2" unique_id=1631313715]
 shape = SubResource("RectangleShape2D_boa88")
@@ -944,8 +952,9 @@ z_index = 2
 position = Vector2(104, 1264)
 scale = Vector2(0.8, 0.8)
 
-[node name="Epouv3" type="Area2D" parent="Epouv3" unique_id=1167932455]
+[node name="Epouv3" type="Area2D" parent="Epouv3" unique_id=1167932455 node_paths=PackedStringArray("poc_SFX")]
 script = ExtResource("16_dl8h0")
+poc_SFX = NodePath("../../SFX/poc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Epouv3/Epouv3" unique_id=1309479811]
 shape = SubResource("RectangleShape2D_boa88")
@@ -977,6 +986,31 @@ position = Vector2(39.6875, -3.0517578e-05)
 rotation = 1.5707964
 scale = Vector2(1.0499995, 1.0929996)
 texture = ExtResource("18_cpixf")
+
+[node name="SFX" type="Node2D" parent="." unique_id=1132538695]
+
+[node name="arrows" type="AudioStreamPlayer" parent="SFX" unique_id=1477071821]
+stream = ExtResource("19_1fdp5")
+bus = &"SFX"
+
+[node name="poc" type="AudioStreamPlayer" parent="SFX" unique_id=1479617861]
+stream = ExtResource("20_ood1f")
+bus = &"SFX"
+
+[node name="error" type="AudioStreamPlayer" parent="SFX" unique_id=110523770]
+stream = ExtResource("21_pi7f7")
+bus = &"SFX"
+
+[node name="success" type="AudioStreamPlayer" parent="SFX" unique_id=1012275079]
+stream = ExtResource("22_c3i2k")
+bus = &"SFX"
+
+[node name="mascotte" type="AudioStreamPlayer" parent="SFX" unique_id=619756832]
+stream = ExtResource("23_cbsk6")
+pitch_scale = 5.0
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="SFX" unique_id=1998981721]
 
 [connection signal="mouse_entered" from="Button_Return" to="." method="_on_button_return_mouse_entered"]
 [connection signal="mouse_exited" from="Button_Return" to="." method="_on_button_return_mouse_exited"]

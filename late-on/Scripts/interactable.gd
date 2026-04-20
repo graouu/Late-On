@@ -26,6 +26,7 @@ func _on_pressed() -> void:
 	if interaction_type == Type.DIALOGUE:
 		open_dialogue.emit(dialogue_array, sound_cue)
 	else:
+		print("puzzle pressed")
 		open_puzzle.emit(puzzle, sound_cue)
 
 #func _process(delta: float) -> void:
