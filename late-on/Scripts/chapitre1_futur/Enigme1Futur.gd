@@ -70,9 +70,9 @@ func _ready() -> void:
 	#Gestion de la musique
 	AudioManager.play_music(scene_music)
 	if global.enigme1_Wall1 == false:
-		ChronoVoice_timer.wait_time = 0.02 * "Tu as sécurisé ton compte avec une page de ton livre préféré: il faut que tu repères les mots les plus <<impactants >> <<Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>".length()
+		ChronoVoice_timer.wait_time = 0.02 * "Prouve que tu n'es pas un robot! Il faut que tu repères les mots les plus 'impactants'. <<Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>".length()
 		chronoPote.texture = chrono_neutral
-		tweenChronoVoice1.tween_property(PopUpText,"text","Tu as sécurisé ton compte avec une page de ton livre préféré: il faut que tu repères les mots les plus <<impactants >>" + '\n' + "<<Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>", ChronoVoice_timer.wait_time)
+		tweenChronoVoice1.tween_property(PopUpText,"text","Prouve que tu n'es pas un robot! Il faut que tu repères les mots les plus 'impactants' de cet extrait." + '\n' + "<<Prenons une proposition élémentaire: les entreprises existent pour gagner de l'argent, pas pour en perdre. Ce principe devrait être évident pour tout individu doué de raison.>>", ChronoVoice_timer.wait_time)
 		ChronoVoice_timer.start()
 		ChronoVoice_SFX.play()
 		await ChronoVoice_timer.timeout
@@ -139,10 +139,10 @@ func _process(delta: float) -> void:
 			tweenWall.tween_property(WallOff3,"modulate:a", 1,0.6)
 			KeyOk = true
 			mecanism_SFX.play()
-			ChronoVoice_timer.wait_time = 0.02 * "Tu y es presque! 4ème paragraphe: C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de <<bulle>>.>>".length()
+			ChronoVoice_timer.wait_time = 0.02 * "Tu y es presque! 4ème paragraphe: C'est retrospectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de <<bulle>>.>>".length()
 			chronoPote.texture = chrono_happy
 			PopUpText.text = ""
-			tweenChronoVoice2.tween_property(PopUpText,"text","Tu y es presque! 4ème paragraphe: " + '\n' + "<<	C'est retrosectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de <<bulle>>.>>", ChronoVoice_timer.wait_time)
+			tweenChronoVoice2.tween_property(PopUpText,"text","Tu y es presque! 4ème paragraphe: " + '\n' + "<<	C'est retrospectivement que les croyances communes finissent par sembler arbitraires et fausses; chaque fois que l'une d'elles s'effondre, nous la qualifions de 'bulle'.>>", ChronoVoice_timer.wait_time)
 			ChronoVoice_timer.start()
 			ChronoVoice_SFX.play()
 			await ChronoVoice_timer.timeout

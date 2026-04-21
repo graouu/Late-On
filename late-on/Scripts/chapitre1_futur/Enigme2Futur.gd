@@ -41,10 +41,10 @@ func _process(delta: float) -> void:
 	#LA premiere fois qu'il joue le chronopote parle
 	if global.is_dragging and first_talk:
 		first_talk = false
-		ChronoVoice_timer.wait_time = 0.02 * "Je crois en toi! tu peux le faire! Pense à tous ces points que tu vas gagner!!!".length()
+		ChronoVoice_timer.wait_time = 0.02 * "Je crois en toi! tu peux le faire! Pense à tous ces crédits que tu vas gagner!!!".length()
 		chronoPote.texture = chrono_happy
 		tweenChronoVoice1 = get_tree().create_tween()
-		tweenChronoVoice1.tween_property(PopUpText,"text","Je crois en toi! tu peux le faire! Pense à tous ces points que tu vas gagner!!!", ChronoVoice_timer.wait_time)
+		tweenChronoVoice1.tween_property(PopUpText,"text","Je crois en toi! tu peux le faire! Pense à tous ces crédits que tu vas gagner!!!", ChronoVoice_timer.wait_time)
 		ChronoVoice_timer.start()
 		ChronoVoice_SFX.play()
 		await ChronoVoice_timer.timeout
@@ -68,11 +68,11 @@ func _on_button_validate_pressed() -> void:
 	if SpaceTypeMap1.name_inside == "TypeMap4" and SpaceTypeMap2.name_inside == "TypeMap3" and SpaceTypeMap3.name_inside == "TypeMap2" and SpaceTypeMap4.name_inside == "TypeMap1":
 		
 		#blabla Chronopote
-		ChronoVoice_timer.wait_time = 0.02 * "Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 500 points! Je suis heureux de t'avoir comme employé".length()
+		ChronoVoice_timer.wait_time = 0.02 * "Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 10 crédits! Je suis heureux de t'avoir comme employé ".length()
 		chronoPote.texture = chrono_success
 		PopUpText.text = ""
 		tweenChronoVoice2 = get_tree().create_tween()
-		tweenChronoVoice2.tween_property(PopUpText,"text","Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 500 points! Je suis heureux de t'avoir comme employé", ChronoVoice_timer.wait_time)
+		tweenChronoVoice2.tween_property(PopUpText,"text","Bravo c'est la bonne solution! Tu es vraiment trop fort! Tu as bien mérité ces 10 crédits! Je suis heureux de t'avoir comme employé ", ChronoVoice_timer.wait_time)
 		ChronoVoice_timer.start()
 		ChronoVoice_SFX.play()
 		await ChronoVoice_timer.timeout
@@ -86,8 +86,6 @@ func _on_button_validate_pressed() -> void:
 		success_SFX.play()
 		await get_tree().create_timer(2).timeout
 		AudioManager.play_music(computer_music)
-		get_parent().get_parent().current_place.name = "desktop"
-		AudioManager.play_music(computer_music)
 		end_puzzle.emit(dialogue_to_play)
 
 	else:
@@ -100,7 +98,7 @@ func _on_button_validate_pressed() -> void:
 			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas tout à fait ça. En relisant les consignes, je suis sûr que tu peux y arriver!".length()
 			PopUpText.text = ""
 			tweenChronoVoice2 = get_tree().create_tween()
-			tweenChronoVoice2.tween_property(PopUpText,"text","Ce n'est pas tout à fait ça. En relisant les consignes, je suis sûr que tu peux y arriver!", ChronoVoice_timer.wait_time)
+			tweenChronoVoice2.tween_property(PopUpText,"text","Ce n'est pas tout à fait ça. En relisant les consignes, je suis sûr que tu peux y arriver! ", ChronoVoice_timer.wait_time)
 			ChronoVoice_timer.start()
 			ChronoVoice_SFX.play()
 			await ChronoVoice_timer.timeout
@@ -111,10 +109,10 @@ func _on_button_validate_pressed() -> void:
 			
 		if global.enigme2f_Nbtry == 2:
 			#blabla Chronopote
-			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas ça. Tu as besoin d'un coup de pouce? Le dossier des tenues est tout à gauche".length()
+			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas ça. Tu as besoin d'un coup de pouce? Le dossier des tenues est tout à gauche ".length()
 			PopUpText.text = ""
 			tweenChronoVoice2 = get_tree().create_tween()
-			tweenChronoVoice2.tween_property(PopUpText,"text","Ce n'est pas ça. Tu as besoin d'un coup de pouce? Le dossier des tenues est tout à gauche", ChronoVoice_timer.wait_time)
+			tweenChronoVoice2.tween_property(PopUpText,"text","Ce n'est pas ça. Tu as besoin d'un coup de pouce? Le dossier des tenues est tout à gauche ", ChronoVoice_timer.wait_time)
 			ChronoVoice_timer.start()
 			ChronoVoice_SFX.play()
 			await ChronoVoice_timer.timeout
@@ -125,10 +123,10 @@ func _on_button_validate_pressed() -> void:
 
 		if global.enigme2f_Nbtry >= 3:
 			#blabla Chronopote
-			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas tout à fait ça, mais il est temps que tu passes à la prochaine étape. Voici la solution: 1) Tenues // 2) Batiments // 3) documents // 4) maps".length()
+			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas tout à fait ça, mais il est temps que tu passes à la prochaine étape. Voici la solution: 1) Tenues, 2) Batiments, 3) documents, 4) maps ".length()
 			PopUpText.text = ""
 			tweenChronoVoice2 = get_tree().create_tween()
-			tweenChronoVoice2.tween_property(PopUpText,"text","Ce n'est pas tout à fait ça, mais il est temps que tu passes à la prochaine étape. Voici la solution: 1) Tenues // 2) Batiments // 3) documents // 4) maps", ChronoVoice_timer.wait_time)
+			tweenChronoVoice2.tween_property(PopUpText,"text","Ce n'est pas tout à fait ça, mais il est temps que tu passes à la prochaine étape. Voici la solution: 1) Tenues, 2) bâtiments, 3) documents, 4) maps ", ChronoVoice_timer.wait_time)
 			ChronoVoice_timer.start()
 			ChronoVoice_SFX.play()
 			await ChronoVoice_timer.timeout

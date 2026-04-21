@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxvsaaa175uqy" path="res://Scripts/Place/Futur/desktop.gd" id="1_gog4p"]
 [ext_resource type="AudioStream" uid="uid://dg6vnsy7403td" path="res://Assets/Sons/SFX/ChairTransition.mp3" id="2_85y76"]
-[ext_resource type="Script" path="res://Scripts/dialogue_line.gd" id="2_j8xeh"]
+[ext_resource type="Script" uid="uid://c3h3244feas37" path="res://Scripts/dialogue_line.gd" id="2_j8xeh"]
 [ext_resource type="AudioStream" uid="uid://bncfsvdqqf444" path="res://Assets/Sons/SFX/Pop-up.mp3" id="2_jqdwm"]
 [ext_resource type="Texture2D" uid="uid://boa0tu1d7frk0" path="res://Assets/Textures/Items_Placeholder/Futur/neutral.png" id="3_sugd2"]
 [ext_resource type="Texture2D" uid="uid://bnmhsfixpiibg" path="res://Assets/Textures/Place/Fonddecranfruitigerclownfich.png" id="4_gog4p"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c8cgfpvlfn3xi" path="res://Assets/Textures/Interactables/applicluedo.png" id="5_j8xeh"]
 [ext_resource type="Texture2D" uid="uid://dcrqp7ykobqe7" path="res://Assets/Textures/Interactables/applidossier.png" id="7_sugd2"]
 [ext_resource type="Texture2D" uid="uid://b017ffdmj7av7" path="res://Assets/Textures/Interactables/Tasktbar1.png" id="8_she2j"]
-[ext_resource type="Theme" path="res://Assets/moving_arrow_future_theme.tres" id="9_tqf2q"]
+[ext_resource type="Theme" uid="uid://m1kgchcfu7ik" path="res://Assets/moving_arrow_future_theme.tres" id="9_tqf2q"]
 [ext_resource type="Material" uid="uid://dwo1djfmuv0d1" path="res://Assets/new_shader_material.tres" id="12_em62h"]
 [ext_resource type="Texture2D" uid="uid://cb6iff6nakp3g" path="res://Assets/Textures/Interactables/appliEpouvantchamps.png" id="13_mvpno"]
 
@@ -53,7 +53,7 @@ metadata/_custom_type_script = "uid://c3h3244feas37"
 
 [sub_resource type="Resource" id="Resource_cml1u"]
 script = ExtResource("2_j8xeh")
-text = "Il s'agit d'un marchant au XIIIe siècle! Quelle chance de pouvoir l'aider à remplir sa mission!"
+text = "Il s'agit d'un marchand au XIIIe siècle! Quelle chance de pouvoir l'aider à remplir sa mission!"
 name = "Chronopote"
 texture = ExtResource("3_sugd2")
 metadata/_custom_type_script = "uid://c3h3244feas37"
@@ -127,7 +127,7 @@ load_path = "res://.godot/imported/neutral.png-40d01986a514060cfd2d93b269cd269a.
 
 [sub_resource type="Resource" id="Resource_y0b10"]
 script = ExtResource("2_j8xeh")
-text = "Tu peux le faire! Je crois en toi."
+text = "Tu peux le faire! Je crois en toi. Elle ressemble à un C."
 name = "Chronopote"
 texture = SubResource("CompressedTexture2D_8hxjr")
 metadata/_custom_type_script = "uid://c3h3244feas37"

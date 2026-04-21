@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://dwo1djfmuv0d1"]
 
-[ext_resource type="Shader" path="res://Assets/Outline.gdshader" id="1_fe1yi"]
+[ext_resource type="Shader" uid="uid://c8c75432n7uf4" path="res://Assets/Outline.gdshader" id="1_fe1yi"]
 
 [sub_resource type="Gradient" id="Gradient_fe1yi"]
 offsets = PackedFloat32Array(0.9811321)
