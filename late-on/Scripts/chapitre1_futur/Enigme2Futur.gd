@@ -109,7 +109,7 @@ func _on_button_validate_pressed() -> void:
 			ChronoVoice_SFX.stop()
 			chronoPote.texture = chrono_neutral
 			
-		if global.enigme2f_Nbtry >= 2 and global.enigme2f_Nbtry <= 5:
+		if global.enigme2f_Nbtry == 2:
 			#blabla Chronopote
 			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas ça. Tu as besoin d'un coup de pouce? Le dossier des tenues est tout à gauche".length()
 			PopUpText.text = ""
@@ -123,7 +123,7 @@ func _on_button_validate_pressed() -> void:
 			ChronoVoice_SFX.stop()
 			chronoPote.texture = chrono_neutral
 
-		if global.enigme2f_Nbtry >= 5:
+		if global.enigme2f_Nbtry >= 3:
 			#blabla Chronopote
 			ChronoVoice_timer.wait_time = 0.02 * "Ce n'est pas tout à fait ça, mais il est temps que tu passes à la prochaine étape. Voici la solution: 1) Tenues // 2) Batiments // 3) documents // 4) maps".length()
 			PopUpText.text = ""
